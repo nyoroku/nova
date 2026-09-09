@@ -18,6 +18,7 @@ sitemaps = {
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
     
     # Nova Primary Architecture (§9)
     path('', include('core.urls')),

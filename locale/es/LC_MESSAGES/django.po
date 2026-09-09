@@ -1,121 +1,287 @@
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: Nova 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:00+0300\n"
+"PO-Revision-Date: 2026-09-09 12:00+0300\n"
 "Language: es\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "Home"
 msgstr "Inicio"
 
-msgid "Explore Tours"
-msgstr "Explorar tours"
+msgid "Boat Rides Naivasha"
+msgstr "Paseos en Barco en Naivasha"
 
-msgid "Journal"
-msgstr "Guía"
+msgid "Boat Rides"
+msgstr "Paseos en Barco"
+
+msgid "From Your Hotel"
+msgstr "Desde su Hotel"
 
 msgid "Stay"
 msgstr "Alojamiento"
 
-msgid "FAQ"
-msgstr "Preguntas"
+msgid "Packages"
+msgstr "Paquetes"
 
-msgid "Language"
-msgstr "Idioma"
+msgid "Prices"
+msgstr "Precios"
 
-msgid "Book Now"
-msgstr "Reservar"
+msgid "Plan Naivasha"
+msgstr "Planificar Naivasha"
+
+msgid "Journal"
+msgstr "Diario"
+
+msgid "Book / WhatsApp"
+msgstr "Reservar / WhatsApp"
+
+msgid "From Your Hotel (Pickup / Jetty)"
+msgstr "Desde su Hotel (Embarcadero / Traslado)"
+
+msgid "Stay by the Lake"
+msgstr "Alojarse Junto al Lago"
+
+msgid "Stay + Ride Packages"
+msgstr "Paquetes Alojamiento + Barco"
+
+msgid "Price Truth & Estimator"
+msgstr "Precios Claros & Calculadora"
+
+msgid "Captain's Journal"
+msgstr "Diario del Capitán"
+
+msgid "About Nova & Captains"
+msgstr "Sobre Nova y Capitanes"
+
+msgid "Contact & Directions"
+msgstr "Contacto y Cómo Llegar"
+
+msgid "Plan My Ride"
+msgstr "Planear Mi Paseo"
+
+msgid "Chat on WhatsApp"
+msgstr "Chatear por WhatsApp"
+
+msgid ""
+"The lake-access layer for visitors and hotels. Seamless departures from "
+"approved hotel jetties and Nova Lake Base."
+msgstr ""
+"El acceso confiable al lago Naivasha para visitantes y hoteles. Salidas "
+"cómodas desde embarcaderos de hoteles autorizados y la base de Nova."
+
+msgid "Naivasha starts here."
+msgstr "Naivasha empieza aquí."
+
+msgid "Lake Experiences"
+msgstr "Experiencias en el Lago"
+
+msgid "Stays & Departure"
+msgstr "Alojamientos y Salidas"
+
+msgid "Curated Lakeside Stays"
+msgstr "Alojamientos Seleccionados Junto al Lago"
+
+msgid "Transparent Pricing"
+msgstr "Precios Transparentes"
+
+msgid "Booking FAQs"
+msgstr "Preguntas Frecuentes"
+
+msgid "Launch Base"
+msgstr "Base de Embarque"
+
+msgid "Hours:"
+msgstr "Horario:"
+
+msgid "Direct WhatsApp Access"
+msgstr "Contacto Directo por WhatsApp"
+
+msgid "About Nova"
+msgstr "Sobre Nova"
+
+msgid "Safety & Policies"
+msgstr "Seguridad y Políticas"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "WhatsApp Nova"
+msgstr "WhatsApp Nova"
 
 msgid "Choose language"
 msgstr "Elegir idioma"
 
-msgid "Book Your Experience"
-msgstr "Reserva tu experiencia"
+msgid "Language"
+msgstr "Idioma"
 
-msgid "Friendly Lake Naivasha"
-msgstr "Descubre el lago Naivasha"
+msgid "Skip to main content"
+msgstr "Saltar al contenido principal"
 
-msgid "Boat Rides by Rafiki"
-msgstr "Paseos en barco con Rafiki"
+msgid "CERTIFIED BOAT RIDES NAIVASHA • SOUTH LAKE ROAD"
+msgstr "PASEOS EN BARCO CERTIFICADOS EN NAIVASHA • SOUTH LAKE ROAD"
 
-msgid "Hippo safaris, sunset cruises, Crescent Island transfers, and relaxed private rides with local guides."
-msgstr "Safaris de hipopótamos, cruceros al atardecer, traslados a Crescent Island y paseos privados con guías locales."
+msgid "Lake Naivasha Boat Ride & Safari:"
+msgstr "Paseo en Barco y Safari en Lago Naivasha:"
 
-msgid "Book on WhatsApp"
-msgstr "Reservar por WhatsApp"
+msgid "Naivasha Starts Here."
+msgstr "Naivasha Empieza Aquí."
 
-msgid "Guides"
-msgstr "Guías"
+msgid "Book a Naivasha Boat Ride"
+msgstr "Reservar Paseo en Barco en Naivasha"
 
-msgid "Flexible"
-msgstr "Flexible"
+msgid "Explore Boat Rides"
+msgstr "Explorar Paseos en Barco"
 
-msgid "Direct"
-msgstr "Directo"
+msgid "Boat Timing Guide"
+msgstr "Guía de Horarios de Barco"
 
-msgid "What We Offer"
-msgstr "Lo que ofrecemos"
+msgid "8 Boat Rides"
+msgstr "8 Paseos en Barco"
 
-msgid "Top Boating Destinations"
-msgstr "Destinos destacados"
+msgid "Shared & Private Charters"
+msgstr "Paseos Compartidos y Privados"
 
-msgid "Popular Naivasha Boat Rides"
-msgstr "Paseos populares en Naivasha"
+msgid "Optimal Boat Timing"
+msgstr "Horarios Óptimos"
 
-msgid "Stay Near the Lake"
-msgstr "Alójate cerca del lago"
+msgid "Review Score"
+msgstr "Puntuación de Reseñas"
 
-msgid "How It Works"
-msgstr "Cómo funciona"
+msgid "Verified Reviews"
+msgstr "Reseñas Verificadas"
 
-msgid "Guest Reviews"
-msgstr "Opiniones de viajeros"
+msgid "Hotel Jetties"
+msgstr "Embarcaderos de Hotel"
 
-msgid "From Our Journal"
-msgstr "Desde nuestra guía"
+msgid "Direct Resort Boarding"
+msgstr "Embarque Directo en el Hotel"
+
+msgid "Verified Lake-Access"
+msgstr "Acceso al Lago Verificado"
+
+msgid "Approved Hotel Jetties & Nova Base"
+msgstr "Embarcaderos de Hotel Aprobados y Base Nova"
+
+msgid "Hotel-First Convenience"
+msgstr "Comodidad Directa desde el Hotel"
+
+msgid "Starting your Naivasha boat ride from a hotel?"
+msgstr "¿Desea iniciar su paseo en barco desde su hotel en Naivasha?"
+
+msgid ""
+"Already staying at a Lake Naivasha hotel or lodge? Nova checks whether your "
+"property has approved jetty boarding or road pickup coordination."
+msgstr ""
+"¿Ya se hospeda en un hotel de Lago Naivasha? Nova comprueba si su "
+"alojamiento tiene embarcadero autorizado o coordina traslado por carretera."
+
+msgid "Select Your Hotel / Stay"
+msgstr "Seleccione su Hotel / Alojamiento"
+
+msgid "-- Choose your property --"
+msgstr "-- Elija su hotel --"
+
+msgid "Or Enter Other Hotel"
+msgstr "O Escriba Otro Hotel"
+
+msgid "Check My Pickup Options &rarr;"
+msgstr "Comprobar Mis Opciones de Traslado &rarr;"
+
+msgid "Certified Captains"
+msgstr "Capitanes Certificados"
+
+msgid "Licensed for every boat ride Naivasha"
+msgstr "Con licencia para cada paseo en barco en Naivasha"
+
+msgid "Hotel Jetty Access"
+msgstr "Acceso por Embarcadero de Hotel"
+
+msgid "Board your boat ride Naivasha from your lawn"
+msgstr "Suba a su barco en Naivasha directamente desde el jardín de su hotel"
+
+msgid "Safety-First Gear"
+msgstr "Equipos con Máxima Seguridad"
+
+msgid "Adult & child life jackets"
+msgstr "Chalecos salvavidas para adultos y niños"
+
+msgid "Instant Confirmation"
+msgstr "Confirmación Inmediata"
+
+msgid "Direct booking via WhatsApp & MPesa"
+msgstr "Reserva directa por WhatsApp y M-Pesa"
+
+msgid "Curated Lake Naivasha Boat Rides & Safaris"
+msgstr "Paseos y Safaris en Barco Seleccionados en Lago Naivasha"
+
+msgid "Instant Ride Estimator"
+msgstr "Calculadora Instantánea de Paseos"
+
+msgid "Calculate the exact price for your Lake Naivasha boat ride."
+msgstr "Calcule el precio exacto de su paseo en barco en el Lago Naivasha."
+
+msgid "Select Boat Experience"
+msgstr "Seleccionar Experiencia"
+
+msgid "Number of Passengers"
+msgstr "Número de Pasajeros"
+
+msgid "Residency Status"
+msgstr "Estado de Residencia"
+
+msgid "Kenyan Citizen / Resident"
+msgstr "Ciudadano / Residente de Kenia"
+
+msgid "International Visitor"
+msgstr "Visitante Internacional"
+
+msgid "Estimated Ride Cost"
+msgstr "Coste Estimado del Paseo"
+
+msgid "Book This Estimate on WhatsApp &rarr;"
+msgstr "Reservar Este Presupuesto por WhatsApp &rarr;"
 
 msgid "Frequently Asked Questions"
-msgstr "Preguntas frecuentes"
+msgstr "Preguntas Frecuentes"
 
-msgid "Safe Wildlife"
-msgstr "Fauna segura"
+msgid "Verified Lake Naivasha Boat Reviews"
+msgstr "Reseñas Verificadas de Barcos en Lago Naivasha"
 
-msgid "Hippo Safaris"
-msgstr "Safaris de hipopótamos"
+msgid "What travelers and hotel guests say about Nova boat rides."
+msgstr "Lo que viajeros y huéspedes opinan de los paseos de Nova."
 
-msgid "Cruise the lake with guides who know the channels, birdlife, and respectful wildlife distances."
-msgstr "Navega con guías que conocen los canales, las aves y las distancias seguras para observar la fauna."
+msgid "Optimal Lake Naivasha Boat Timing & Schedule"
+msgstr "Horarios Óptimos para Paseos en Lago Naivasha"
 
-msgid "Golden Hour"
-msgstr "Hora dorada"
+msgid "Best times of day for wildlife, calm waters, and photography."
+msgstr "Mejores momentos del día para fauna, aguas calmas y fotografía."
 
-msgid "Sunset Cruises"
-msgstr "Cruceros al atardecer"
+msgid "Ready to Experience Lake Naivasha?"
+msgstr "¿Listo para Disfrutar del Lago Naivasha?"
 
-msgid "A warm, easygoing lake ride for couples, families, birthdays, and proposals."
-msgstr "Un paseo tranquilo por el lago para parejas, familias, cumpleaños y propuestas."
+msgid "Book your boat ride in Naivasha today or chat with Captain John."
+msgstr ""
+"Reserve hoy su paseo en barco en Naivasha o hable con el capitán John."
 
-msgid "Crescent Island"
-msgstr "Isla Crescent"
+msgid "Classic Lake Safari"
+msgstr "Safari Clásico por el Lago"
 
-msgid "Walking Safaris"
-msgstr "Safaris a pie"
+msgid "Hippo & Bird Safari"
+msgstr "Safari de Hipopótamos y Aves"
 
-msgid "Cross by boat and walk among giraffes, zebras, and open plains with flexible timing."
-msgstr "Cruza en barco y camina entre jirafas, cebras y llanuras abiertas con horarios flexibles."
+msgid "Crescent Island Tour"
+msgstr "Excursión a Crescent Island"
 
-msgid "Birdwatcher's"
-msgstr "Paraíso de aves"
+msgid "Sunset Lake Cruise"
+msgstr "Crucero al Atardecer"
 
-msgid "Lake Escape"
-msgstr "Escapada al lago"
+msgid "Private Boat Charter"
+msgstr "Alquiler de Barco Privado"
 
-msgid "Slow the boat down for fish eagles, pelicans, kingfishers, and quiet papyrus edges."
-msgstr "Navega despacio para observar águilas pescadoras, pelícanos, martines pescadores y papiros."
-
-msgid "Local"
-msgstr "Local"
-
-msgid "Private or Shared"
-msgstr "Privado o compartido"
-
-msgid "WhatsApp Booking"
-msgstr "Reserva por WhatsApp"
+msgid "All rights reserved. Registered in Kenya."
+msgstr "Todos los derechos reservados. Registrado en Kenia."

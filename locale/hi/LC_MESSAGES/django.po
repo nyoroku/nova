@@ -1,121 +1,286 @@
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: Nova 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:00+0300\n"
+"PO-Revision-Date: 2026-09-09 12:00+0300\n"
 "Language: hi\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "Home"
 msgstr "होम"
 
-msgid "Explore Tours"
-msgstr "टूर देखें"
+msgid "Boat Rides Naivasha"
+msgstr "नैवाशा नाव की सवारी"
 
-msgid "Journal"
-msgstr "यात्रा गाइड"
+msgid "Boat Rides"
+msgstr "नाव की सवारी"
+
+msgid "From Your Hotel"
+msgstr "अपने होटल से"
 
 msgid "Stay"
-msgstr "ठहरने की जगह"
+msgstr "होटल और रिज़ॉर्ट"
 
-msgid "FAQ"
-msgstr "सवाल"
+msgid "Packages"
+msgstr "पैकेज"
 
-msgid "Language"
-msgstr "भाषा"
+msgid "Prices"
+msgstr "कीमतें"
 
-msgid "Book Now"
-msgstr "अभी बुक करें"
+msgid "Plan Naivasha"
+msgstr "नैवाशा यात्रा की योजना"
+
+msgid "Journal"
+msgstr "जर्नल"
+
+msgid "Book / WhatsApp"
+msgstr "बुक करें / WhatsApp"
+
+msgid "From Your Hotel (Pickup / Jetty)"
+msgstr "होटल से प्रस्थान (जेटी / पिकअप)"
+
+msgid "Stay by the Lake"
+msgstr "झील के किनारे ठहरें"
+
+msgid "Stay + Ride Packages"
+msgstr "स्टे + बोट कॉम्बो पैकेज"
+
+msgid "Price Truth & Estimator"
+msgstr "सटीक दरें और कैलकुलेटर"
+
+msgid "Captain's Journal"
+msgstr "कप्तान की डायरी"
+
+msgid "About Nova & Captains"
+msgstr "नोवा और कप्तानों के बारे में"
+
+msgid "Contact & Directions"
+msgstr "संपर्क और मार्ग"
+
+msgid "Plan My Ride"
+msgstr "मेरी सवारी की योजना बनाएं"
+
+msgid "Chat on WhatsApp"
+msgstr "WhatsApp पर चैट करें"
+
+msgid ""
+"The lake-access layer for visitors and hotels. Seamless departures from "
+"approved hotel jetties and Nova Lake Base."
+msgstr ""
+"पर्यटकों और होटलों के लिए लेक नैवाशा का विश्वसनीय नाव प्रदाता। होटल जेटी और "
+"नोवा बेस से आरामदायक प्रस्थान।"
+
+msgid "Naivasha starts here."
+msgstr "नैवाशा की शुरुआत यहीं से होती है।"
+
+msgid "Lake Experiences"
+msgstr "झील के अनुभव"
+
+msgid "Stays & Departure"
+msgstr "रहने की जगह और प्रस्थान"
+
+msgid "Curated Lakeside Stays"
+msgstr "झील किनारे चयनित होटल"
+
+msgid "Transparent Pricing"
+msgstr "पारदर्शी मूल्य"
+
+msgid "Booking FAQs"
+msgstr "अक्सर पूछे जाने वाले प्रश्न"
+
+msgid "Launch Base"
+msgstr "प्रस्थान केंद्र"
+
+msgid "Hours:"
+msgstr "समय:"
+
+msgid "Direct WhatsApp Access"
+msgstr "सीधा WhatsApp संपर्क"
+
+msgid "About Nova"
+msgstr "नोवा के बारे में"
+
+msgid "Safety & Policies"
+msgstr "सुरक्षा और नियम"
+
+msgid "Contact"
+msgstr "संपर्क"
+
+msgid "WhatsApp Nova"
+msgstr "WhatsApp नोवा"
 
 msgid "Choose language"
 msgstr "भाषा चुनें"
 
-msgid "Book Your Experience"
-msgstr "अपना अनुभव बुक करें"
+msgid "Language"
+msgstr "भाषा"
 
-msgid "Friendly Lake Naivasha"
-msgstr "लेक नैवाशा का अनुभव"
+msgid "Skip to main content"
+msgstr "मुख्य सामग्री पर जाएं"
 
-msgid "Boat Rides by Rafiki"
-msgstr "रफीकी के साथ बोट राइड"
+msgid "CERTIFIED BOAT RIDES NAIVASHA • SOUTH LAKE ROAD"
+msgstr "प्रमाणित नैवाशा बोट राइड्स • साउथ लेक रोड"
 
-msgid "Hippo safaris, sunset cruises, Crescent Island transfers, and relaxed private rides with local guides."
-msgstr "स्थानीय गाइडों के साथ हिप्पो सफारी, सनसेट क्रूज़, क्रिसेंट आइलैंड ट्रांसफर और निजी बोट राइड।"
+msgid "Lake Naivasha Boat Ride & Safari:"
+msgstr "लेक नैवाशा नाव की सवारी और सफारी:"
 
-msgid "Book on WhatsApp"
-msgstr "WhatsApp पर बुक करें"
+msgid "Naivasha Starts Here."
+msgstr "नैवाशा की शुरुआत यहीं से होती है।"
 
-msgid "Guides"
-msgstr "गाइड"
+msgid "Book a Naivasha Boat Ride"
+msgstr "नैवाशा बोट राइड बुक करें"
 
-msgid "Flexible"
-msgstr "लचीला"
+msgid "Explore Boat Rides"
+msgstr "सभी बोट राइड्स देखें"
 
-msgid "Direct"
-msgstr "सीधा"
+msgid "Boat Timing Guide"
+msgstr "नाव का सही समय गाइड"
 
-msgid "What We Offer"
-msgstr "हम क्या पेश करते हैं"
+msgid "8 Boat Rides"
+msgstr "8 बोट टूर्स"
 
-msgid "Top Boating Destinations"
-msgstr "लोकप्रिय बोटिंग स्थान"
+msgid "Shared & Private Charters"
+msgstr "शेयर्ड और प्राइवेट बोट्स"
 
-msgid "Popular Naivasha Boat Rides"
-msgstr "लोकप्रिय नैवाशा बोट राइड"
+msgid "Optimal Boat Timing"
+msgstr "उत्तम बोट का समय"
 
-msgid "Stay Near the Lake"
-msgstr "झील के पास ठहरें"
+msgid "Review Score"
+msgstr "समीक्षा स्कोर"
 
-msgid "How It Works"
-msgstr "यह कैसे काम करता है"
+msgid "Verified Reviews"
+msgstr "सत्यापित समीक्षाएं"
 
-msgid "Guest Reviews"
-msgstr "मेहमानों की समीक्षाएँ"
+msgid "Hotel Jetties"
+msgstr "होटल जेटी"
 
-msgid "From Our Journal"
-msgstr "हमारी यात्रा गाइड"
+msgid "Direct Resort Boarding"
+msgstr "होटल से सीधा बोर्डिंग"
+
+msgid "Verified Lake-Access"
+msgstr "प्रमाणित लेक एक्सेस"
+
+msgid "Approved Hotel Jetties & Nova Base"
+msgstr "अनुमोदित होटल जेटी और नोवा बेस"
+
+msgid "Hotel-First Convenience"
+msgstr "होटल से प्रस्थान की सुविधा"
+
+msgid "Starting your Naivasha boat ride from a hotel?"
+msgstr "क्या आप अपने होटल से नैवाशा नाव की सवारी शुरू करना चाहते हैं?"
+
+msgid ""
+"Already staying at a Lake Naivasha hotel or lodge? Nova checks whether your "
+"property has approved jetty boarding or road pickup coordination."
+msgstr ""
+"क्या आप पहले से ही लेक नैवाशा के किसी होटल या लॉज में रुके हैं? नोवा जांच "
+"करता है कि क्या आपके होटल में जेटी उपलब्ध है या पिकअप की आवश्यकता है।"
+
+msgid "Select Your Hotel / Stay"
+msgstr "अपना होटल / आवास चुनें"
+
+msgid "-- Choose your property --"
+msgstr "-- होटल चुनें --"
+
+msgid "Or Enter Other Hotel"
+msgstr "या किसी अन्य होटल का नाम दर्ज करें"
+
+msgid "Check My Pickup Options &rarr;"
+msgstr "पिकअप विकल्प देखें &rarr;"
+
+msgid "Certified Captains"
+msgstr "प्रमाणित और अनुभवी कप्तान"
+
+msgid "Licensed for every boat ride Naivasha"
+msgstr "नैवाशा की हर बोट राइड के लिए अधिकृत लाइसेंस प्राप्त"
+
+msgid "Hotel Jetty Access"
+msgstr "होटल जेटी सुविधा"
+
+msgid "Board your boat ride Naivasha from your lawn"
+msgstr "अपने होटल के लॉन से सीधे नाव पर सवार हों"
+
+msgid "Safety-First Gear"
+msgstr "सुरक्षा उपकरण सर्वप्रथम"
+
+msgid "Adult & child life jackets"
+msgstr "वयस्कों और बच्चों के लिए लाइफ जैकेट"
+
+msgid "Instant Confirmation"
+msgstr "तत्काल पुष्टि"
+
+msgid "Direct booking via WhatsApp & MPesa"
+msgstr "WhatsApp और M-Pesa द्वारा सीधी बुकिंग"
+
+msgid "Curated Lake Naivasha Boat Rides & Safaris"
+msgstr "लेक नैवाशा के सर्वश्रेष्ठ नाव सफारी टूर"
+
+msgid "Instant Ride Estimator"
+msgstr "त्वरित बोट किराया कैलकुलेटर"
+
+msgid "Calculate the exact price for your Lake Naivasha boat ride."
+msgstr "अपनी लेक नैवाशा बोट राइड की सटीक कीमत की गणना करें।"
+
+msgid "Select Boat Experience"
+msgstr "बोट अनुभव चुनें"
+
+msgid "Number of Passengers"
+msgstr "यात्रियों की संख्या"
+
+msgid "Residency Status"
+msgstr "निवास स्थिति"
+
+msgid "Kenyan Citizen / Resident"
+msgstr "केन्याई नागरिक / निवासी"
+
+msgid "International Visitor"
+msgstr "अंतर्राष्ट्रीय पर्यटक"
+
+msgid "Estimated Ride Cost"
+msgstr "अनुमानित किराया"
+
+msgid "Book This Estimate on WhatsApp &rarr;"
+msgstr "यह अनुमान WhatsApp पर बुक करें &rarr;"
 
 msgid "Frequently Asked Questions"
 msgstr "अक्सर पूछे जाने वाले सवाल"
 
-msgid "Safe Wildlife"
-msgstr "सुरक्षित वन्यजीव"
+msgid "Verified Lake Naivasha Boat Reviews"
+msgstr "लेक नैवाशा बोट राइड की सत्यापित समीक्षाएं"
 
-msgid "Hippo Safaris"
-msgstr "हिप्पो सफारी"
+msgid "What travelers and hotel guests say about Nova boat rides."
+msgstr "नोवा बोट राइड्स के बारे में पर्यटकों और होटल मेहमानों के अनुभव।"
 
-msgid "Cruise the lake with guides who know the channels, birdlife, and respectful wildlife distances."
-msgstr "ऐसे स्थानीय गाइडों के साथ झील पर जाएँ जो जलमार्ग, पक्षियों और सुरक्षित वन्यजीव दूरी को जानते हैं।"
+msgid "Optimal Lake Naivasha Boat Timing & Schedule"
+msgstr "लेक नैवाशा बोट राइड का सर्वोत्तम समय"
 
-msgid "Golden Hour"
-msgstr "सुनहरा समय"
+msgid "Best times of day for wildlife, calm waters, and photography."
+msgstr "वन्यजीवों, शांत पानी और फोटोग्राफी के लिए दिन का सबसे अच्छा समय।"
 
-msgid "Sunset Cruises"
-msgstr "सनसेट क्रूज़"
+msgid "Ready to Experience Lake Naivasha?"
+msgstr "लेक नैवाशा का अद्भुत अनुभव लेने के लिए तैयार हैं?"
 
-msgid "A warm, easygoing lake ride for couples, families, birthdays, and proposals."
-msgstr "कपल, परिवार, जन्मदिन और खास मौकों के लिए शांत झील यात्रा।"
+msgid "Book your boat ride in Naivasha today or chat with Captain John."
+msgstr "आज ही अपनी नैवाशा बोट राइड बुक करें या कप्तान जॉन से संपर्क करें।"
 
-msgid "Crescent Island"
-msgstr "क्रिसेंट आइलैंड"
+msgid "Classic Lake Safari"
+msgstr "क्लासिक लेक सफारी"
 
-msgid "Walking Safaris"
-msgstr "वॉकिंग सफारी"
+msgid "Hippo & Bird Safari"
+msgstr "हिप्पो और पक्षी सफारी"
 
-msgid "Cross by boat and walk among giraffes, zebras, and open plains with flexible timing."
-msgstr "नाव से पार जाएँ और सुविधाजनक समय पर जिराफ, ज़ेब्रा और खुले मैदानों के बीच चलें।"
+msgid "Crescent Island Tour"
+msgstr "क्रेसेंट द्वीप टूर"
 
-msgid "Birdwatcher's"
-msgstr "पक्षी प्रेमियों का"
+msgid "Sunset Lake Cruise"
+msgstr "सूर्यास्त बोट क्रूज"
 
-msgid "Lake Escape"
-msgstr "झील अनुभव"
+msgid "Private Boat Charter"
+msgstr "निजी नाव चार्टर"
 
-msgid "Slow the boat down for fish eagles, pelicans, kingfishers, and quiet papyrus edges."
-msgstr "फिश ईगल, पेलिकन, किंगफिशर और शांत पपीरस किनारों को देखने के लिए धीमी नाव यात्रा।"
-
-msgid "Local"
-msgstr "स्थानीय"
-
-msgid "Private or Shared"
-msgstr "निजी या साझा"
-
-msgid "WhatsApp Booking"
-msgstr "WhatsApp बुकिंग"
+msgid "All rights reserved. Registered in Kenya."
+msgstr "सर्वाधिकार सुरक्षित। केन्या में पंजीकृत।"

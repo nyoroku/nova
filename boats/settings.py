@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
                 'core.context_processors.nova_site_context',
             ],
         },
@@ -118,10 +119,18 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 LANGUAGES = [
     ('en', 'English'),
     ('sw', 'Kiswahili'),
+    ('fr', 'Français'),
+    ('de', 'Deutsch'),
+    ('es', 'Español'),
+    ('it', 'Italiano'),
+    ('zh-hans', '中文 (简体)'),
+    ('ar', 'العربية'),
+    ('hi', 'हिन्दी'),
+    ('nl', 'Nederlands'),
 ]
 LOCALE_PATHS = [BASE_DIR / 'locale']
 TIME_ZONE = 'Africa/Nairobi'

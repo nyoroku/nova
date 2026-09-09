@@ -5,278 +5,282 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-09 12:00+0300\n"
 "PO-Revision-Date: 2026-09-09 12:00+0300\n"
-"Language: zh-hans\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Home"
-msgstr "首页"
+msgstr "Home"
 
 msgid "Boat Rides Naivasha"
-msgstr "奈瓦沙游船之旅"
+msgstr "Boat Rides Naivasha"
 
 msgid "Boat Rides"
-msgstr "游船巡游"
+msgstr "Boat Rides"
 
 msgid "From Your Hotel"
-msgstr "从您的酒店出发"
+msgstr "From Your Hotel"
 
 msgid "Stay"
-msgstr "湖畔住宿"
+msgstr "Stay"
 
 msgid "Packages"
-msgstr "特惠套餐"
+msgstr "Packages"
 
 msgid "Prices"
-msgstr "价格明细"
+msgstr "Prices"
 
 msgid "Plan Naivasha"
-msgstr "行程规划"
+msgstr "Plan Naivasha"
 
 msgid "Journal"
-msgstr "船长日志"
+msgstr "Journal"
 
 msgid "Book / WhatsApp"
-msgstr "预订 / WhatsApp"
+msgstr "Book / WhatsApp"
 
 msgid "From Your Hotel (Pickup / Jetty)"
-msgstr "酒店出发（专属码头 / 接送）"
+msgstr "From Your Hotel (Pickup / Jetty)"
 
 msgid "Stay by the Lake"
-msgstr "湖畔精选度假酒店"
+msgstr "Stay by the Lake"
 
 msgid "Stay + Ride Packages"
-msgstr "住宿 + 游船全包套餐"
+msgstr "Stay + Ride Packages"
 
 msgid "Price Truth & Estimator"
-msgstr "透明价格与在线估价"
+msgstr "Price Truth & Estimator"
 
 msgid "Captain's Journal"
-msgstr "船长旅行日志"
+msgstr "Captain's Journal"
 
 msgid "About Nova & Captains"
-msgstr "关于Nova及持证船长"
+msgstr "About Nova & Captains"
 
 msgid "Contact & Directions"
-msgstr "联系我们与交通路线"
+msgstr "Contact & Directions"
 
 msgid "Plan My Ride"
-msgstr "规划我的行程"
+msgstr "Plan My Ride"
 
 msgid "Chat on WhatsApp"
-msgstr "WhatsApp 在线咨询"
+msgstr "Chat on WhatsApp"
 
 msgid ""
 "The lake-access layer for visitors and hotels. Seamless departures from "
 "approved hotel jetties and Nova Lake Base."
-msgstr "为游客与酒店提供可靠的奈瓦沙湖水上通行服务。支持合作酒店码头直航与Nova基地出发。"
+msgstr ""
+"The lake-access layer for visitors and hotels. Seamless departures from "
+"approved hotel jetties and Nova Lake Base."
 
 msgid "Naivasha starts here."
-msgstr "奈瓦沙之旅，由此启程。"
+msgstr "Naivasha starts here."
 
 msgid "Lake Experiences"
-msgstr "湖泊游览体验"
+msgstr "Lake Experiences"
 
 msgid "Stays & Departure"
-msgstr "湖畔住宿与登船码头"
+msgstr "Stays & Departure"
 
 msgid "Curated Lakeside Stays"
-msgstr "严选湖畔度假酒店"
+msgstr "Curated Lakeside Stays"
 
 msgid "Transparent Pricing"
-msgstr "公开透明价格"
+msgstr "Transparent Pricing"
 
 msgid "Booking FAQs"
-msgstr "常见预订问题"
+msgstr "Booking FAQs"
 
 msgid "Launch Base"
-msgstr "登船基地"
+msgstr "Launch Base"
 
 msgid "Hours:"
-msgstr "营业时间："
+msgstr "Hours:"
 
 msgid "Direct WhatsApp Access"
-msgstr "WhatsApp 直接联系"
+msgstr "Direct WhatsApp Access"
 
 msgid "About Nova"
-msgstr "关于 Nova"
+msgstr "About Nova"
 
 msgid "Safety & Policies"
-msgstr "安全规范与政策"
+msgstr "Safety & Policies"
 
 msgid "Contact"
-msgstr "联系我们"
+msgstr "Contact"
 
 msgid "WhatsApp Nova"
-msgstr "WhatsApp 咨询"
+msgstr "WhatsApp Nova"
 
 msgid "Choose language"
-msgstr "选择语言"
+msgstr "Choose language"
 
 msgid "Language"
-msgstr "语言"
+msgstr "Language"
 
 msgid "Skip to main content"
-msgstr "跳至主要内容"
+msgstr "Skip to main content"
 
 msgid "CERTIFIED BOAT RIDES NAIVASHA • SOUTH LAKE ROAD"
-msgstr "奈瓦沙官方认证游船巡游 • 南湖路"
+msgstr "CERTIFIED BOAT RIDES NAIVASHA • SOUTH LAKE ROAD"
 
 msgid "Lake Naivasha Boat Ride & Safari:"
-msgstr "奈瓦沙湖游船巡游与野生动物游猎："
+msgstr "Lake Naivasha Boat Ride & Safari:"
 
 msgid "Naivasha Starts Here."
-msgstr "奈瓦沙之旅，由此启程。"
+msgstr "Naivasha Starts Here."
 
 msgid "Book a Naivasha Boat Ride"
-msgstr "预订奈瓦沙游船"
+msgstr "Book a Naivasha Boat Ride"
 
 msgid "Explore Boat Rides"
-msgstr "探索所有游船项目"
+msgstr "Explore Boat Rides"
 
 msgid "Boat Timing Guide"
-msgstr "游船最佳时刻指南"
+msgstr "Boat Timing Guide"
 
 msgid "8 Boat Rides"
-msgstr "8款精选航线"
+msgstr "8 Boat Rides"
 
 msgid "Shared & Private Charters"
-msgstr "拼船与私人包船"
+msgstr "Shared & Private Charters"
 
 msgid "Optimal Boat Timing"
-msgstr "最佳游览时间"
+msgstr "Optimal Boat Timing"
 
 msgid "Review Score"
-msgstr "用户评分"
+msgstr "Review Score"
 
 msgid "Verified Reviews"
-msgstr "真实游客好评"
+msgstr "Verified Reviews"
 
 msgid "Hotel Jetties"
-msgstr "酒店专属码头"
+msgstr "Hotel Jetties"
 
 msgid "Direct Resort Boarding"
-msgstr "酒店草坪直接登船"
+msgstr "Direct Resort Boarding"
 
 msgid "Verified Lake-Access"
-msgstr "官方认证水上准入"
+msgstr "Verified Lake-Access"
 
 msgid "Approved Hotel Jetties & Nova Base"
-msgstr "认证酒店码头及Nova核心基地"
+msgstr "Approved Hotel Jetties & Nova Base"
 
 msgid "Hotel-First Convenience"
-msgstr "酒店直达专属便利"
+msgstr "Hotel-First Convenience"
 
 msgid "Starting your Naivasha boat ride from a hotel?"
-msgstr "打算直接从酒店码头开始游船吗？"
+msgstr "Starting your Naivasha boat ride from a hotel?"
 
 msgid ""
 "Already staying at a Lake Naivasha hotel or lodge? Nova checks whether your "
 "property has approved jetty boarding or road pickup coordination."
-msgstr "已入住奈瓦沙湖畔酒店或度假村？Nova可为您查询是否有官方认证码头登船或安排专车接送。"
+msgstr ""
+"Already staying at a Lake Naivasha hotel or lodge? Nova checks whether your "
+"property has approved jetty boarding or road pickup coordination."
 
 msgid "Select Your Hotel / Stay"
-msgstr "选择您入住的酒店 / 住所"
+msgstr "Select Your Hotel / Stay"
 
 msgid "-- Choose your property --"
-msgstr "-- 请选择酒店 --"
+msgstr "-- Choose your property --"
 
 msgid "Or Enter Other Hotel"
-msgstr "或输入其他酒店名称"
+msgstr "Or Enter Other Hotel"
 
 msgid "Check My Pickup Options &rarr;"
-msgstr "查询接送方案 &rarr;"
+msgstr "Check My Pickup Options &rarr;"
 
 msgid "Certified Captains"
-msgstr "持证专业船长"
+msgstr "Certified Captains"
 
 msgid "Licensed for every boat ride Naivasha"
-msgstr "具备肯尼亚海事局全程安全航行执照"
+msgstr "Licensed for every boat ride Naivasha"
 
 msgid "Hotel Jetty Access"
-msgstr "酒店码头直接登船"
+msgstr "Hotel Jetty Access"
 
 msgid "Board your boat ride Naivasha from your lawn"
-msgstr "从酒店花园直接登船畅游"
+msgstr "Board your boat ride Naivasha from your lawn"
 
 msgid "Safety-First Gear"
-msgstr "最高安全防护装备"
+msgstr "Safety-First Gear"
 
 msgid "Adult & child life jackets"
-msgstr "配备成人及儿童救生衣"
+msgstr "Adult & child life jackets"
 
 msgid "Instant Confirmation"
-msgstr "即时确认"
+msgstr "Instant Confirmation"
 
 msgid "Direct booking via WhatsApp & MPesa"
-msgstr "支持 WhatsApp 及 M-Pesa 便捷预订"
+msgstr "Direct booking via WhatsApp & MPesa"
 
 msgid "Curated Lake Naivasha Boat Rides & Safaris"
-msgstr "精选奈瓦沙湖游船巡游与游猎航线"
+msgstr "Curated Lake Naivasha Boat Rides & Safaris"
 
 msgid "Instant Ride Estimator"
-msgstr "即时价格估算器"
+msgstr "Instant Ride Estimator"
 
 msgid "Calculate the exact price for your Lake Naivasha boat ride."
-msgstr "精准计算您的奈瓦沙湖游船巡游费用。"
+msgstr "Calculate the exact price for your Lake Naivasha boat ride."
 
 msgid "Select Boat Experience"
-msgstr "选择游船体验项目"
+msgstr "Select Boat Experience"
 
 msgid "Number of Passengers"
-msgstr "乘客人数"
+msgstr "Number of Passengers"
 
 msgid "Residency Status"
-msgstr "居留身份"
+msgstr "Residency Status"
 
 msgid "Kenyan Citizen / Resident"
-msgstr "肯尼亚公民 / 居民"
+msgstr "Kenyan Citizen / Resident"
 
 msgid "International Visitor"
-msgstr "国际游客"
+msgstr "International Visitor"
 
 msgid "Estimated Ride Cost"
-msgstr "预估游船费用"
+msgstr "Estimated Ride Cost"
 
 msgid "Book This Estimate on WhatsApp &rarr;"
-msgstr "在 WhatsApp 上按此报价预订 &rarr;"
+msgstr "Book This Estimate on WhatsApp &rarr;"
 
 msgid "Frequently Asked Questions"
-msgstr "常见问题解答"
+msgstr "Frequently Asked Questions"
 
 msgid "Verified Lake Naivasha Boat Reviews"
-msgstr "奈瓦沙湖游船真实游客评价"
+msgstr "Verified Lake Naivasha Boat Reviews"
 
 msgid "What travelers and hotel guests say about Nova boat rides."
-msgstr "探索游客与酒店住客对Nova游船服务的评价与体验。"
+msgstr "What travelers and hotel guests say about Nova boat rides."
 
 msgid "Optimal Lake Naivasha Boat Timing & Schedule"
-msgstr "奈瓦沙湖最佳游船时刻与时间表"
+msgstr "Optimal Lake Naivasha Boat Timing & Schedule"
 
 msgid "Best times of day for wildlife, calm waters, and photography."
-msgstr "观赏河马飞鸟、拍摄静谧湖光水色的最佳时段。"
+msgstr "Best times of day for wildlife, calm waters, and photography."
 
 msgid "Ready to Experience Lake Naivasha?"
-msgstr "准备好畅游奈瓦沙湖了吗？"
+msgstr "Ready to Experience Lake Naivasha?"
 
 msgid "Book your boat ride in Naivasha today or chat with Captain John."
-msgstr "立即预订奈瓦沙游船，或与约翰船长在线沟通。"
+msgstr "Book your boat ride in Naivasha today or chat with Captain John."
 
 msgid "Classic Lake Safari"
-msgstr "经典湖泊游猎"
+msgstr "Classic Lake Safari"
 
 msgid "Hippo & Bird Safari"
-msgstr "河马与珍禽观赏游"
+msgstr "Hippo & Bird Safari"
 
 msgid "Crescent Island Tour"
-msgstr "新月岛徒步登陆巡游"
+msgstr "Crescent Island Tour"
 
 msgid "Sunset Lake Cruise"
-msgstr "日落黄金巡航"
+msgstr "Sunset Lake Cruise"
 
 msgid "Private Boat Charter"
-msgstr "私人专属包船"
+msgstr "Private Boat Charter"
 
 msgid "All rights reserved. Registered in Kenya."
-msgstr "版权所有。肯尼亚合法注册。"
+msgstr "All rights reserved. Registered in Kenya."

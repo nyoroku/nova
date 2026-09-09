@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block meta_title %}Boat Rides Naivasha | Lake Naivasha Boat Ride & Safari — Nova{% endblock %}
 {% block meta_description %}Book the premier boat rides Naivasha has to offer with Nova. Experience Lake Naivasha boat ride & safari tours, Crescent Island transfers, optimal lake naivasha boat timing, verified boat reviews, and direct hotel jetty departures.{% endblock %}
@@ -117,9 +117,9 @@
       
       <!-- Text & Value Propositions -->
       <div>
-        <span class="nova-kicker nova-kicker-lime">CERTIFIED BOAT RIDES NAIVASHA • SOUTH LAKE ROAD</span>
+        <span class="nova-kicker nova-kicker-lime">{% trans "CERTIFIED BOAT RIDES NAIVASHA • SOUTH LAKE ROAD" %}</span>
         <h1 class="nova-title-hero" style="color: #FFFFFF; margin-top: 12px; margin-bottom: 22px; font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.08;">
-          Lake Naivasha Boat Ride & Safari: <span style="color: var(--color-acid-lime);">Naivasha Starts Here.</span>
+          {% trans "Lake Naivasha Boat Ride & Safari:" %} <span style="color: var(--color-acid-lime);">{% trans "Naivasha Starts Here." %}</span>
         </h1>
         <p style="font-size: 1.18rem; line-height: 1.6; color: rgba(255, 255, 255, 0.88); margin-bottom: 28px; max-width: 560px;">
           Experience the premier <strong>Lake Naivasha boat ride</strong> with Nova. We coordinate authentic <strong>boat rides Naivasha</strong> visitors and hotel guests rely on—from wildlife-packed <strong>Lake Naivasha boat safari</strong> cruises among resident hippo pods to Crescent Island crossings and sunset departures directly from approved hotel jetties. Whether you desire a private <strong>boat ride Naivasha</strong> day excursion or a relaxing group cruise, your journey begins with trusted local captains.
@@ -128,33 +128,33 @@
         <!-- Hero Conversion CTAs -->
         <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px;">
           <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20plan%20a%20Lake%20Naivasha%20boat%20ride." target="_blank" rel="noopener" class="nova-btn-primary" style="font-size: 1rem; padding: 12px 26px;">
-            Book a Naivasha Boat Ride &rarr;
+            {% trans "Book a Naivasha Boat Ride" %} &rarr;
           </a>
           <a href="{% url 'tours:tour_list' %}" class="nova-btn-secondary" style="font-size: 1rem; padding: 12px 24px;">
-            Explore Boat Rides
+            {% trans "Explore Boat Rides" %}
           </a>
           <a href="#boat-timing" class="nova-btn-secondary" style="border-color: var(--color-acid-lime); color: var(--color-acid-lime); background: rgba(200, 240, 74, 0.08); font-size: 1rem; padding: 12px 22px;">
-            Boat Timing Guide
+            {% trans "Boat Timing Guide" %}
           </a>
         </div>
 
         <!-- Pillar Indicators for AEO/GEO Signals -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 16px; font-size: 0.84rem; font-weight: 600; color: rgba(255,255,255,0.8); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
           <div>
-            <div style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem;">8 Boat Rides</div>
-            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">Shared & Private Charters</div>
+            <div style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem;">{% trans "8 Boat Rides" %}</div>
+            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">{% trans "Shared & Private Charters" %}</div>
           </div>
           <div>
             <div style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem;">6:30 AM – 6:30 PM</div>
-            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">Optimal Boat Timing</div>
+            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">{% trans "Optimal Boat Timing" %}</div>
           </div>
           <div>
-            <a href="#boat-reviews" style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem; text-decoration: none; display: block;">4.9 ★ Review Score</a>
-            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">180+ Verified Reviews</div>
+            <a href="#boat-reviews" style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem; text-decoration: none; display: block;">4.9 ★ {% trans "Review Score" %}</a>
+            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">{% trans "Verified Reviews" %}</div>
           </div>
           <div>
-            <div style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem;">Hotel Jetties</div>
-            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">Direct Resort Boarding</div>
+            <div style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem;">{% trans "Hotel Jetties" %}</div>
+            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">{% trans "Direct Resort Boarding" %}</div>
           </div>
         </div>
       </div>
@@ -166,8 +166,8 @@
         </div>
         <div style="position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(19, 18, 24, 0.9); backdrop-filter: blur(12px); padding: 16px 20px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; align-items: center;">
           <div>
-            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-acid-lime); font-weight: 700;">Verified Lake-Access</span>
-            <div style="font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: #FFF;">Approved Hotel Jetties & Nova Base</div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-acid-lime); font-weight: 700;">{% trans "Verified Lake-Access" %}</span>
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: #FFF;">{% trans "Approved Hotel Jetties & Nova Base" %}</div>
           </div>
           <span class="nova-badge nova-badge-lime">Daily 6:30 AM–6:30 PM</span>
         </div>
@@ -182,19 +182,19 @@
   <div class="nova-shell">
     <div style="background-color: var(--color-ultraviolet); border-radius: var(--radius-xl); padding: 32px 36px; color: #FFFFFF; box-shadow: var(--shadow-electric);">
       <div style="max-width: 680px; margin-bottom: 24px;">
-        <span class="nova-kicker" style="color: var(--color-acid-lime);">Hotel-First Convenience</span>
-        <h2 style="font-size: 1.85rem; color: #FFFFFF; margin-bottom: 8px;">Starting your Naivasha boat ride from a hotel?</h2>
+        <span class="nova-kicker" style="color: var(--color-acid-lime);">{% trans "Hotel-First Convenience" %}</span>
+        <h2 style="font-size: 1.85rem; color: #FFFFFF; margin-bottom: 8px;">{% trans "Starting your Naivasha boat ride from a hotel?" %}</h2>
         <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem;">
-          Already staying at a Lake Naivasha hotel or lodge? Nova checks whether your property has approved jetty boarding or road pickup coordination.
+          {% trans "Already staying at a Lake Naivasha hotel or lodge? Nova checks whether your property has approved jetty boarding or road pickup coordination." %}
         </p>
       </div>
 
       <!-- HTMX Hotel Checker Form -->
       <form hx-get="{% url 'partners:hotel_check' %}" hx-target="#hotel-service-result" hx-swap="innerHTML" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; align-items: end;">
         <div>
-          <label class="nova-label nova-label-light">Select Your Hotel / Stay</label>
+          <label class="nova-label nova-label-light">{% trans "Select Your Hotel / Stay" %}</label>
           <select name="hotel_id" class="nova-form-select" style="background: #FFFFFF; color: #131218; font-weight: 600;">
-            <option value="">-- Choose your property --</option>
+            <option value="">{% trans "-- Choose your property --" %}</option>
             {% for partner in hotel_partners %}
             <option value="{{ partner.id }}">{{ partner.name }}</option>
             {% endfor %}
@@ -202,12 +202,12 @@
         </div>
 
         <div>
-          <label class="nova-label nova-label-light">Or Enter Other Hotel</label>
+          <label class="nova-label nova-label-light">{% trans "Or Enter Other Hotel" %}</label>
           <input type="text" name="custom_hotel_name" placeholder="e.g. Sopa, Enashipai, Chui Lodge..." class="nova-form-input">
         </div>
 
         <button type="submit" class="nova-btn-primary" style="height: 48px;">
-          Check My Pickup Options &rarr;
+          {% trans "Check My Pickup Options &rarr;" %}
         </button>
       </form>
 
@@ -225,32 +225,32 @@
       <div style="display: flex; align-items: center; gap: 14px;">
         <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#9875;</div>
         <div>
-          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">Certified Captains</div>
-          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Licensed for every boat ride Naivasha</div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">{% trans "Certified Captains" %}</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">{% trans "Licensed for every boat ride Naivasha" %}</div>
         </div>
       </div>
 
       <div style="display: flex; align-items: center; gap: 14px;">
         <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#127969;</div>
         <div>
-          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">Hotel Jetty Access</div>
-          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Board your boat ride Naivasha from your lawn</div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">{% trans "Hotel Jetty Access" %}</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">{% trans "Board your boat ride Naivasha from your lawn" %}</div>
         </div>
       </div>
 
       <div style="display: flex; align-items: center; gap: 14px;">
         <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#128737;</div>
         <div>
-          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">Safety-First Gear</div>
-          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Adult & child life jackets</div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">{% trans "Safety-First Gear" %}</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">{% trans "Adult & child life jackets" %}</div>
         </div>
       </div>
 
       <div style="display: flex; align-items: center; gap: 14px;">
         <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#128172;</div>
         <div>
-          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">Direct Confirmation</div>
-          <div style="font-size: 0.82rem; color: var(--color-text-muted);">WhatsApp price & trip plan</div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">{% trans "Instant Confirmation" %}</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">{% trans "Direct booking via WhatsApp & MPesa" %}</div>
         </div>
       </div>
 
@@ -842,7 +842,7 @@
   <div class="nova-shell-narrow">
     <div style="text-align: center; margin-bottom: 40px;">
       <span class="nova-kicker">DIRECT ANSWERS • AEO KNOWLEDGE BASE</span>
-      <h2 class="nova-title-section">Frequently Asked Questions About Boat Rides in Naivasha</h2>
+      <h2 class="nova-title-section">{% trans "Frequently Asked Questions" %}</h2>
       <p style="color: var(--color-text-muted); margin-top: 8px;">Clear facts about Lake Naivasha boat rides, safari prices, timing, safety, and hotel pickups.</p>
     </div>
 
@@ -865,9 +865,9 @@
 <!-- 17. FINAL CONVERSION CLOSE -->
 <section class="nova-section nova-section-dark" style="text-align: center;">
   <div class="nova-shell-narrow">
-    <span class="nova-kicker nova-kicker-lime">NAIVASHA STARTS HERE</span>
+    <span class="nova-kicker nova-kicker-lime">{% trans "Naivasha Starts Here." %}</span>
     <h2 class="nova-title-hero" style="color: #FFFFFF; margin-top: 10px; margin-bottom: 20px;">
-      Ready for the Ultimate Naivasha Boat Ride?<br>
+      {% trans "Ready to Experience Lake Naivasha?" %}<br>
       We'll plan the lake from there.
     </h2>
     <p style="font-size: 1.15rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 36px;">
@@ -876,10 +876,10 @@
 
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
       <a href="{% url 'bookings:book' %}" class="nova-btn-primary" style="min-height: 52px; font-size: 1rem; padding: 14px 32px;">
-        Plan My Ride &rarr;
+        {% trans "Plan My Ride" %} &rarr;
       </a>
       <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20book%20a%20Lake%20Naivasha%20boat%20ride." target="_blank" rel="noopener" class="nova-btn-secondary" style="min-height: 52px; font-size: 1rem; padding: 14px 32px;">
-        WhatsApp Nova Direct
+        {% trans "WhatsApp Nova" %}
       </a>
     </div>
 

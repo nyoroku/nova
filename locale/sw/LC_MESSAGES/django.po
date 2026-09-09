@@ -1,5 +1,10 @@
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: Nova 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:00+0300\n"
+"PO-Revision-Date: 2026-09-09 12:00+0300\n"
 "Language: sw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -8,15 +13,279 @@ msgstr ""
 msgid "Home"
 msgstr "Mwanzo"
 
-msgid "Explore Tours"
-msgstr "Gundua safari"
+msgid "Boat Rides Naivasha"
+msgstr "Safari za Mashua Naivasha"
 
-msgid "Book Now"
-msgstr "Weka nafasi sasa"
+msgid "Boat Rides"
+msgstr "Safari za Mashua"
+
+msgid "From Your Hotel"
+msgstr "Kutoka Hotelini Mwako"
+
+msgid "Stay"
+msgstr "Malazi"
+
+msgid "Packages"
+msgstr "Vifurushi"
+
+msgid "Prices"
+msgstr "Bei na Gharama"
+
+msgid "Plan Naivasha"
+msgstr "Panga Ziara ya Naivasha"
+
+msgid "Journal"
+msgstr "Jarida"
+
+msgid "Book / WhatsApp"
+msgstr "Weka Nafasi / WhatsApp"
+
+msgid "From Your Hotel (Pickup / Jetty)"
+msgstr "Kutoka Hotelini Mwako (Kituo / Gati)"
+
+msgid "Stay by the Lake"
+msgstr "Malazi Kandokando ya Ziwa"
+
+msgid "Stay + Ride Packages"
+msgstr "Vifurushi vya Malazi na Mashua"
+
+msgid "Price Truth & Estimator"
+msgstr "Bei Rasmi na Kikokotoo"
+
+msgid "Captain's Journal"
+msgstr "Jarida la Nahodha"
+
+msgid "About Nova & Captains"
+msgstr "Kuhusu Nova na Manahodha"
+
+msgid "Contact & Directions"
+msgstr "Mawasiliano na Maelekezo"
+
+msgid "Plan My Ride"
+msgstr "Panga Safari Yangu"
+
+msgid "Chat on WhatsApp"
+msgstr "Zungumza Nasi WhatsApp"
+
+msgid ""
+"The lake-access layer for visitors and hotels. Seamless departures from "
+"approved hotel jetties and Nova Lake Base."
+msgstr ""
+"Ufikiaji rahisi wa Ziwa Naivasha kwa wageni na hoteli. Safari zinaanzia "
+"kwenye gati zilizoidhinishwa za hoteli na Kituo Kikuu cha Nova."
+
+msgid "Naivasha starts here."
+msgstr "Naivasha inaanzia hapa."
+
+msgid "Lake Experiences"
+msgstr "Matukio ya Ziwani"
+
+msgid "Stays & Departure"
+msgstr "Malazi na Vituo vya Kuondokea"
+
+msgid "Curated Lakeside Stays"
+msgstr "Malazi Teule Kandokando ya Ziwa"
+
+msgid "Transparent Pricing"
+msgstr "Bei Wazi na Thabiti"
+
+msgid "Booking FAQs"
+msgstr "Maswali Yanayoulizwa Mara kwa Mara"
+
+msgid "Launch Base"
+msgstr "Kituo cha Kuondokea"
+
+msgid "Hours:"
+msgstr "Masaa ya Kazi:"
+
+msgid "Direct WhatsApp Access"
+msgstr "Wasiliana Nasi Moja kwa Moja WhatsApp"
+
+msgid "About Nova"
+msgstr "Kuhusu Nova"
+
+msgid "Safety & Policies"
+msgstr "Usalama na Miongozo"
+
+msgid "Contact"
+msgstr "Mawasiliano"
+
+msgid "WhatsApp Nova"
+msgstr "WhatsApp Nova"
 
 msgid "Choose language"
-msgstr "Chagua lugha"
+msgstr "Chagua Lugha"
 
-msgid "Services"
-msgstr "Huduma"
+msgid "Language"
+msgstr "Lugha"
 
+msgid "Skip to main content"
+msgstr "Ruka hadi maudhui kuu"
+
+msgid "CERTIFIED BOAT RIDES NAIVASHA • SOUTH LAKE ROAD"
+msgstr "SAFARI ZA MASHUA ZILIZOIDHINISHWA NAIVASHA • BARABARA YA SOUTH LAKE"
+
+msgid "Lake Naivasha Boat Ride & Safari:"
+msgstr "Safari ya Mashua ya Ziwa Naivasha:"
+
+msgid "Naivasha Starts Here."
+msgstr "Naivasha Inaanzia Hapa."
+
+msgid "Book a Naivasha Boat Ride"
+msgstr "Weka Nafasi ya Safari ya Mashua Naivasha"
+
+msgid "Explore Boat Rides"
+msgstr "Gundua Safari za Mashua"
+
+msgid "Boat Timing Guide"
+msgstr "Mwongozo wa Ratiba ya Mashua"
+
+msgid "8 Boat Rides"
+msgstr "Aina 8 za Safari za Mashua"
+
+msgid "Shared & Private Charters"
+msgstr "Safari za Pamoja na Mashua Binafsi"
+
+msgid "Optimal Boat Timing"
+msgstr "Muda Bora wa Mashua"
+
+msgid "Review Score"
+msgstr "Alama ya Maoni"
+
+msgid "Verified Reviews"
+msgstr "Maoni Yaliyothibitishwa"
+
+msgid "Hotel Jetties"
+msgstr "Magati ya Hoteli"
+
+msgid "Direct Resort Boarding"
+msgstr "Kupanda Moja kwa Moja Hotelini"
+
+msgid "Verified Lake-Access"
+msgstr "Ufikiaji wa Ziwa Uliothibitishwa"
+
+msgid "Approved Hotel Jetties & Nova Base"
+msgstr "Magati Yaliyoidhinishwa ya Hoteli na Kituo cha Nova"
+
+msgid "Hotel-First Convenience"
+msgstr "Urahisi wa Kuanzia Hotelini"
+
+msgid "Starting your Naivasha boat ride from a hotel?"
+msgstr "Unaanza safari yako ya mashua Naivasha kutoka hotelini?"
+
+msgid ""
+"Already staying at a Lake Naivasha hotel or lodge? Nova checks whether your "
+"property has approved jetty boarding or road pickup coordination."
+msgstr ""
+"Je, tayari umelala kwenye hoteli au loji ya Ziwa Naivasha? Nova "
+"inathibitisha ikiwa hoteli yako ina gati lililoidhinishwa au inahitaji "
+"usafiri wa barabara."
+
+msgid "Select Your Hotel / Stay"
+msgstr "Chagua Hoteli / Malazi Yako"
+
+msgid "-- Choose your property --"
+msgstr "-- Chagua hoteli yako --"
+
+msgid "Or Enter Other Hotel"
+msgstr "Au Andika Jina la Hoteli Nyingine"
+
+msgid "Check My Pickup Options &rarr;"
+msgstr "Angalia Chaguo za Usafiri &rarr;"
+
+msgid "Certified Captains"
+msgstr "Manahodha Walioidhinishwa"
+
+msgid "Licensed for every boat ride Naivasha"
+msgstr "Wenye leseni kwa kila safari ya mashua Naivasha"
+
+msgid "Hotel Jetty Access"
+msgstr "Kupandia Gati la Hoteli"
+
+msgid "Board your boat ride Naivasha from your lawn"
+msgstr "Panda mashua yako ya Naivasha moja kwa moja kutoka uwanja wa hoteli"
+
+msgid "Safety-First Gear"
+msgstr "Vifaa vya Usalama Kwanza"
+
+msgid "Adult & child life jackets"
+msgstr "Jaketi za kuokoa maisha za watu wazima na watoto"
+
+msgid "Instant Confirmation"
+msgstr "Uthibitisho wa Papo Hapo"
+
+msgid "Direct booking via WhatsApp & MPesa"
+msgstr "Weka nafasi moja kwa moja kupitia WhatsApp na M-Pesa"
+
+msgid "Curated Lake Naivasha Boat Rides & Safaris"
+msgstr "Safari Teule za Mashua za Ziwa Naivasha"
+
+msgid "Instant Ride Estimator"
+msgstr "Kikokotoo cha Papo Hapo cha Gharama"
+
+msgid "Calculate the exact price for your Lake Naivasha boat ride."
+msgstr "Hesabu bei kamili ya safari yako ya mashua Ziwa Naivasha."
+
+msgid "Select Boat Experience"
+msgstr "Chagua Aina ya Safari ya Mashua"
+
+msgid "Number of Passengers"
+msgstr "Idadi ya Abiria"
+
+msgid "Residency Status"
+msgstr "Hali ya Ukaazi"
+
+msgid "Kenyan Citizen / Resident"
+msgstr "Mkenya / Mkaazi"
+
+msgid "International Visitor"
+msgstr "Mgeni wa Kimataifa"
+
+msgid "Estimated Ride Cost"
+msgstr "Makadirio ya Gharama ya Safari"
+
+msgid "Book This Estimate on WhatsApp &rarr;"
+msgstr "Weka Nafasi kwa Makadirio Haya WhatsApp &rarr;"
+
+msgid "Frequently Asked Questions"
+msgstr "Maswali Yanayoulizwa Mara kwa Mara"
+
+msgid "Verified Lake Naivasha Boat Reviews"
+msgstr "Maoni Yaliyothibitishwa ya Mashua Ziwa Naivasha"
+
+msgid "What travelers and hotel guests say about Nova boat rides."
+msgstr ""
+"Maoni ya wasafiri na wageni wa hoteli kuhusu safari za mashua za Nova."
+
+msgid "Optimal Lake Naivasha Boat Timing & Schedule"
+msgstr "Ratiba Bora ya Safari za Mashua Ziwa Naivasha"
+
+msgid "Best times of day for wildlife, calm waters, and photography."
+msgstr ""
+"Nyakati bora za siku kwa kuona wanyamapori, maji tulivu, na picha nzuri."
+
+msgid "Ready to Experience Lake Naivasha?"
+msgstr "Uko Tayari Kufurahia Ziwa Naivasha?"
+
+msgid "Book your boat ride in Naivasha today or chat with Captain John."
+msgstr ""
+"Weka nafasi ya safari yako ya mashua Naivasha leo au zungumza na Nahodha "
+"John."
+
+msgid "Classic Lake Safari"
+msgstr "Safari ya Kawaida ya Ziwa"
+
+msgid "Hippo & Bird Safari"
+msgstr "Safari ya Viboko na Ndege"
+
+msgid "Crescent Island Tour"
+msgstr "Ziara ya Kisiwa cha Crescent"
+
+msgid "Sunset Lake Cruise"
+msgstr "Safari ya Machweo Ziwani"
+
+msgid "Private Boat Charter"
+msgstr "Mashua Binafsi ya Kukodi"
+
+msgid "All rights reserved. Registered in Kenya."
+msgstr "Haki zote zimehifadhiwa. Imesajiliwa Kenya."

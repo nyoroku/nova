@@ -1,121 +1,286 @@
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: Nova 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:00+0300\n"
+"PO-Revision-Date: 2026-09-09 12:00+0300\n"
 "Language: ar\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 msgid "Home"
 msgstr "الرئيسية"
 
-msgid "Explore Tours"
-msgstr "استكشف الجولات"
+msgid "Boat Rides Naivasha"
+msgstr "رحلات القوارب في نايفاشا"
 
-msgid "Journal"
-msgstr "دليل السفر"
+msgid "Boat Rides"
+msgstr "رحلات القوارب"
+
+msgid "From Your Hotel"
+msgstr "من فندقك مباشرة"
 
 msgid "Stay"
 msgstr "الإقامة"
 
-msgid "FAQ"
-msgstr "الأسئلة"
+msgid "Packages"
+msgstr "الباقات"
 
-msgid "Language"
-msgstr "اللغة"
+msgid "Prices"
+msgstr "الأسعار"
 
-msgid "Book Now"
-msgstr "احجز الآن"
+msgid "Plan Naivasha"
+msgstr "تخطيط رحلة نايفاشا"
+
+msgid "Journal"
+msgstr "المجلة"
+
+msgid "Book / WhatsApp"
+msgstr "الحجز / واتساب"
+
+msgid "From Your Hotel (Pickup / Jetty)"
+msgstr "من فندقك (مرسى خاص / نقل)"
+
+msgid "Stay by the Lake"
+msgstr "الإقامة بجانب البحيرة"
+
+msgid "Stay + Ride Packages"
+msgstr "باقات الإقامة والقوارب"
+
+msgid "Price Truth & Estimator"
+msgstr "الأسعار الشفافة وحاسبة التكلفة"
+
+msgid "Captain's Journal"
+msgstr "يوميات القبطان"
+
+msgid "About Nova & Captains"
+msgstr "عن نوفا وقباطنتنا"
+
+msgid "Contact & Directions"
+msgstr "التواصل والاتجاهات"
+
+msgid "Plan My Ride"
+msgstr "خطط لرحلتي"
+
+msgid "Chat on WhatsApp"
+msgstr "تواصل عبر واتساب"
+
+msgid ""
+"The lake-access layer for visitors and hotels. Seamless departures from "
+"approved hotel jetties and Nova Lake Base."
+msgstr ""
+"بوابتك الموثوقة لبحيرة نايفاشا للزوار والفنادق. انطلاق سلس من مراسي الفنادق "
+"المعتمدة وقاعدة نوفا."
+
+msgid "Naivasha starts here."
+msgstr "نايفاشا تبدأ من هنا."
+
+msgid "Lake Experiences"
+msgstr "تجارب البحيرة"
+
+msgid "Stays & Departure"
+msgstr "الإقامة ونقاط الانطلاق"
+
+msgid "Curated Lakeside Stays"
+msgstr "أفضل خيارات الإقامة على البحيرة"
+
+msgid "Transparent Pricing"
+msgstr "أسعار واضحة وشفافة"
+
+msgid "Booking FAQs"
+msgstr "الأسئلة الشائعة"
+
+msgid "Launch Base"
+msgstr "قاعدة الانطلاق"
+
+msgid "Hours:"
+msgstr "ساعات العمل:"
+
+msgid "Direct WhatsApp Access"
+msgstr "تواصل مباشر عبر واتساب"
+
+msgid "About Nova"
+msgstr "عن نوفا"
+
+msgid "Safety & Policies"
+msgstr "السلامة والسياسات"
+
+msgid "Contact"
+msgstr "اتصل بنا"
+
+msgid "WhatsApp Nova"
+msgstr "واتساب نوفا"
 
 msgid "Choose language"
 msgstr "اختر اللغة"
 
-msgid "Book Your Experience"
-msgstr "احجز تجربتك"
+msgid "Language"
+msgstr "اللغة"
 
-msgid "Friendly Lake Naivasha"
-msgstr "اكتشف بحيرة نيفاشا"
+msgid "Skip to main content"
+msgstr "انتقل إلى المحتوى الرئيسي"
 
-msgid "Boat Rides by Rafiki"
-msgstr "رحلات القوارب مع رفيقي"
+msgid "CERTIFIED BOAT RIDES NAIVASHA • SOUTH LAKE ROAD"
+msgstr "رحلات قوارب معتمدة في نايفاشا • طريق ساوث ليك"
 
-msgid "Hippo safaris, sunset cruises, Crescent Island transfers, and relaxed private rides with local guides."
-msgstr "رحلات لمشاهدة أفراس النهر وغروب الشمس وجزيرة كريسنت ورحلات خاصة مع مرشدين محليين."
+msgid "Lake Naivasha Boat Ride & Safari:"
+msgstr "رحلة وسفاري قوارب بحيرة نايفاشا:"
 
-msgid "Book on WhatsApp"
-msgstr "احجز عبر واتساب"
+msgid "Naivasha Starts Here."
+msgstr "نايفاشا تبدأ من هنا."
 
-msgid "Guides"
-msgstr "مرشدون"
+msgid "Book a Naivasha Boat Ride"
+msgstr "احجز رحلة قارب في نايفاشا"
 
-msgid "Flexible"
-msgstr "مرن"
+msgid "Explore Boat Rides"
+msgstr "استكشف رحلات القوارب"
 
-msgid "Direct"
-msgstr "مباشر"
+msgid "Boat Timing Guide"
+msgstr "دليل أفضل أوقات الإبحار"
 
-msgid "What We Offer"
-msgstr "ما نقدمه"
+msgid "8 Boat Rides"
+msgstr "8 رحلات بحرية مميزة"
 
-msgid "Top Boating Destinations"
-msgstr "أفضل وجهات القوارب"
+msgid "Shared & Private Charters"
+msgstr "رحلات مشتركة وقوارب خاصة"
 
-msgid "Popular Naivasha Boat Rides"
-msgstr "أشهر رحلات القوارب في نيفاشا"
+msgid "Optimal Boat Timing"
+msgstr "أفضل أوقات الإبحار"
 
-msgid "Stay Near the Lake"
-msgstr "أقم بالقرب من البحيرة"
+msgid "Review Score"
+msgstr "تقييم النزلاء"
 
-msgid "How It Works"
-msgstr "كيف تعمل الخدمة"
+msgid "Verified Reviews"
+msgstr "تقييمات موثقة"
 
-msgid "Guest Reviews"
-msgstr "آراء الضيوف"
+msgid "Hotel Jetties"
+msgstr "مراسي الفنادق"
 
-msgid "From Our Journal"
-msgstr "من دليل السفر"
+msgid "Direct Resort Boarding"
+msgstr "صعود مباشر من منتجعك"
+
+msgid "Verified Lake-Access"
+msgstr "دخول معتمد وموثق للبحيرة"
+
+msgid "Approved Hotel Jetties & Nova Base"
+msgstr "مراسي الفنادق المعتمدة وقاعدة نوفا"
+
+msgid "Hotel-First Convenience"
+msgstr "راحة تامة بالانطلاق من فندقك"
+
+msgid "Starting your Naivasha boat ride from a hotel?"
+msgstr "هل ترغب في بدء رحلتك البحرية من فندقك في نايفاشا؟"
+
+msgid ""
+"Already staying at a Lake Naivasha hotel or lodge? Nova checks whether your "
+"property has approved jetty boarding or road pickup coordination."
+msgstr ""
+"هل تقيم بالفعل في أحد فنادق أو منتجعات بحيرة نايفاشا؟ نوفا تتأكد من وجود "
+"مرسى معتمد أو توفر سيارة نقل خاصة."
+
+msgid "Select Your Hotel / Stay"
+msgstr "اختر فندقك / مكان إقامتك"
+
+msgid "-- Choose your property --"
+msgstr "-- اختر مكان إقامتك --"
+
+msgid "Or Enter Other Hotel"
+msgstr "أو أدخل اسم فندق آخر"
+
+msgid "Check My Pickup Options &rarr;"
+msgstr "تحقق من خيارات النقل &rarr;"
+
+msgid "Certified Captains"
+msgstr "قباطنة مرخصون ومعتمدون"
+
+msgid "Licensed for every boat ride Naivasha"
+msgstr "تراخيص رسمية لجميع الرحلات في نايفاشا"
+
+msgid "Hotel Jetty Access"
+msgstr "إمكانية الصعود من مرسى الفندق"
+
+msgid "Board your boat ride Naivasha from your lawn"
+msgstr "اصعد على متن قاربك مباشرة من حديقة فندقك"
+
+msgid "Safety-First Gear"
+msgstr "معدات سلامة متكاملة"
+
+msgid "Adult & child life jackets"
+msgstr "سترات نجاة مخصصة للكبار والأطفال"
+
+msgid "Instant Confirmation"
+msgstr "تأكيد فوري للحجز"
+
+msgid "Direct booking via WhatsApp & MPesa"
+msgstr "حجز مباشر وسهل عبر واتساب وM-Pesa"
+
+msgid "Curated Lake Naivasha Boat Rides & Safaris"
+msgstr "أفضل جولات وسفاري القوارب في بحيرة نايفاشا"
+
+msgid "Instant Ride Estimator"
+msgstr "حاسبة تكلفة الرحلة الفورية"
+
+msgid "Calculate the exact price for your Lake Naivasha boat ride."
+msgstr "احسب السعر الدقيق لرحلتك البحرية في بحيرة نايفاشا."
+
+msgid "Select Boat Experience"
+msgstr "اختر نوع الرحلة"
+
+msgid "Number of Passengers"
+msgstr "عدد الركاب"
+
+msgid "Residency Status"
+msgstr "نوع الإقامة"
+
+msgid "Kenyan Citizen / Resident"
+msgstr "مواطن / مقيم في كينيا"
+
+msgid "International Visitor"
+msgstr "زائر دولي"
+
+msgid "Estimated Ride Cost"
+msgstr "التكلفة التقديرية للرحلة"
+
+msgid "Book This Estimate on WhatsApp &rarr;"
+msgstr "احجز هذا السعر عبر واتساب &rarr;"
 
 msgid "Frequently Asked Questions"
 msgstr "الأسئلة الشائعة"
 
-msgid "Safe Wildlife"
-msgstr "مشاهدة آمنة"
+msgid "Verified Lake Naivasha Boat Reviews"
+msgstr "تقييمات موثقة لرحلات قوارب نايفاشا"
 
-msgid "Hippo Safaris"
-msgstr "رحلات أفراس النهر"
+msgid "What travelers and hotel guests say about Nova boat rides."
+msgstr "آراء وتجارب المسافرين ونزلاء الفنادق مع رحلات نوفا."
 
-msgid "Cruise the lake with guides who know the channels, birdlife, and respectful wildlife distances."
-msgstr "أبحر مع مرشدين يعرفون ممرات البحيرة والطيور ومسافات المشاهدة الآمنة."
+msgid "Optimal Lake Naivasha Boat Timing & Schedule"
+msgstr "أفضل أوقات وجدول رحلات قوارب بحيرة نايفاشا"
 
-msgid "Golden Hour"
-msgstr "الساعة الذهبية"
+msgid "Best times of day for wildlife, calm waters, and photography."
+msgstr "أفضل فترات اليوم لمشاهدة الحياة البرية وهدوء المياه والتصوير."
 
-msgid "Sunset Cruises"
-msgstr "رحلات الغروب"
+msgid "Ready to Experience Lake Naivasha?"
+msgstr "هل أنت مستعد لخوض تجربة بحيرة نايفاشا؟"
 
-msgid "A warm, easygoing lake ride for couples, families, birthdays, and proposals."
-msgstr "رحلة هادئة للأزواج والعائلات وأعياد الميلاد والمناسبات الخاصة."
+msgid "Book your boat ride in Naivasha today or chat with Captain John."
+msgstr "احجز رحلتك البحرية في نايفاشا اليوم أو تحدث مع القبطان جون."
 
-msgid "Crescent Island"
-msgstr "جزيرة كريسنت"
+msgid "Classic Lake Safari"
+msgstr "سفاري البحيرة الكلاسيكي"
 
-msgid "Walking Safaris"
-msgstr "رحلات سفاري سيراً"
+msgid "Hippo & Bird Safari"
+msgstr "سفاري أفراس النهر والطيور"
 
-msgid "Cross by boat and walk among giraffes, zebras, and open plains with flexible timing."
-msgstr "اعبر بالقارب وتجول بين الزرافات والحمر الوحشية والسهول المفتوحة بوقت مرن."
+msgid "Crescent Island Tour"
+msgstr "جولة جزيرة كريسنت"
 
-msgid "Birdwatcher's"
-msgstr "لعشاق الطيور"
+msgid "Sunset Lake Cruise"
+msgstr "رحلة غروب الشمس البحرية"
 
-msgid "Lake Escape"
-msgstr "رحلة البحيرة"
+msgid "Private Boat Charter"
+msgstr "قارب خاص للإيجار"
 
-msgid "Slow the boat down for fish eagles, pelicans, kingfishers, and quiet papyrus edges."
-msgstr "رحلة بطيئة لمشاهدة نسور السمك والبجع والرفراف وحواف البردي الهادئة."
-
-msgid "Local"
-msgstr "محلي"
-
-msgid "Private or Shared"
-msgstr "خاصة أو مشتركة"
-
-msgid "WhatsApp Booking"
-msgstr "حجز عبر واتساب"
+msgid "All rights reserved. Registered in Kenya."
+msgstr "جميع الحقوق محفوظة. مسجل رسمياً في كينيا."
