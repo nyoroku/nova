@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Language: hi\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Home"
+msgstr "होम"
+
+msgid "Explore Tours"
+msgstr "टूर देखें"
+
+msgid "Journal"
+msgstr "यात्रा गाइड"
+
+msgid "Stay"
+msgstr "ठहरने की जगह"
+
+msgid "FAQ"
+msgstr "सवाल"
+
+msgid "Language"
+msgstr "भाषा"
+
+msgid "Book Now"
+msgstr "अभी बुक करें"
+
+msgid "Choose language"
+msgstr "भाषा चुनें"
+
+msgid "Book Your Experience"
+msgstr "अपना अनुभव बुक करें"
+
+msgid "Friendly Lake Naivasha"
+msgstr "लेक नैवाशा का अनुभव"
+
+msgid "Boat Rides by Rafiki"
+msgstr "रफीकी के साथ बोट राइड"
+
+msgid "Hippo safaris, sunset cruises, Crescent Island transfers, and relaxed private rides with local guides."
+msgstr "स्थानीय गाइडों के साथ हिप्पो सफारी, सनसेट क्रूज़, क्रिसेंट आइलैंड ट्रांसफर और निजी बोट राइड।"
+
+msgid "Book on WhatsApp"
+msgstr "WhatsApp पर बुक करें"
+
+msgid "Guides"
+msgstr "गाइड"
+
+msgid "Flexible"
+msgstr "लचीला"
+
+msgid "Direct"
+msgstr "सीधा"
+
+msgid "What We Offer"
+msgstr "हम क्या पेश करते हैं"
+
+msgid "Top Boating Destinations"
+msgstr "लोकप्रिय बोटिंग स्थान"
+
+msgid "Popular Naivasha Boat Rides"
+msgstr "लोकप्रिय नैवाशा बोट राइड"
+
+msgid "Stay Near the Lake"
+msgstr "झील के पास ठहरें"
+
+msgid "How It Works"
+msgstr "यह कैसे काम करता है"
+
+msgid "Guest Reviews"
+msgstr "मेहमानों की समीक्षाएँ"
+
+msgid "From Our Journal"
+msgstr "हमारी यात्रा गाइड"
+
+msgid "Frequently Asked Questions"
+msgstr "अक्सर पूछे जाने वाले सवाल"
+
+msgid "Safe Wildlife"
+msgstr "सुरक्षित वन्यजीव"
+
+msgid "Hippo Safaris"
+msgstr "हिप्पो सफारी"
+
+msgid "Cruise the lake with guides who know the channels, birdlife, and respectful wildlife distances."
+msgstr "ऐसे स्थानीय गाइडों के साथ झील पर जाएँ जो जलमार्ग, पक्षियों और सुरक्षित वन्यजीव दूरी को जानते हैं।"
+
+msgid "Golden Hour"
+msgstr "सुनहरा समय"
+
+msgid "Sunset Cruises"
+msgstr "सनसेट क्रूज़"
+
+msgid "A warm, easygoing lake ride for couples, families, birthdays, and proposals."
+msgstr "कपल, परिवार, जन्मदिन और खास मौकों के लिए शांत झील यात्रा।"
+
+msgid "Crescent Island"
+msgstr "क्रिसेंट आइलैंड"
+
+msgid "Walking Safaris"
+msgstr "वॉकिंग सफारी"
+
+msgid "Cross by boat and walk among giraffes, zebras, and open plains with flexible timing."
+msgstr "नाव से पार जाएँ और सुविधाजनक समय पर जिराफ, ज़ेब्रा और खुले मैदानों के बीच चलें।"
+
+msgid "Birdwatcher's"
+msgstr "पक्षी प्रेमियों का"
+
+msgid "Lake Escape"
+msgstr "झील अनुभव"
+
+msgid "Slow the boat down for fish eagles, pelicans, kingfishers, and quiet papyrus edges."
+msgstr "फिश ईगल, पेलिकन, किंगफिशर और शांत पपीरस किनारों को देखने के लिए धीमी नाव यात्रा।"
+
+msgid "Local"
+msgstr "स्थानीय"
+
+msgid "Private or Shared"
+msgstr "निजी या साझा"
+
+msgid "WhatsApp Booking"
+msgstr "WhatsApp बुकिंग"

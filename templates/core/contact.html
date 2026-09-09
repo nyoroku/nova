@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Contact Nova & Launch Base Directions | Lake Naivasha{% endblock %}
+{% block meta_description %}Contact Nova Boat Rides Naivasha. Base location on South Lake Road, GPS coordinates, gate access instructions, direct WhatsApp desk, and booking coordination.{% endblock %}
+
+{% block content %}
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">CONTACT & LAUNCH BASE</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
+      Find Nova on Lake Naivasha
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6;">
+      Depart directly from Nova Lake Base on South Lake Road or arrange seamless pickup from your hotel's approved jetty.
+    </p>
+  </div>
+</section>
+
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-bottom: 60px;">
+      
+      <!-- Operations Desk -->
+      <div class="nova-card" style="padding: 36px;">
+        <span class="nova-kicker">Operations Desk</span>
+        <h2 style="font-size: 1.6rem; margin-bottom: 20px;">Direct Coordination</h2>
+        
+        <div style="display: flex; flex-direction: column; gap: 20px; font-size: 0.95rem;">
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">WhatsApp Direct Desk</div>
+            <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-obsidian); margin-top: 4px;">
+              {{ site_settings.phone_display }}
+            </div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 2px;">Instant replies 06:30 to 20:00 EAT</div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">Official Email</div>
+            <div style="font-size: 1.1rem; font-weight: 600; color: var(--color-obsidian); margin-top: 4px;">
+              {{ site_settings.email }}
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">Operating Hours</div>
+            <div style="font-size: 1.05rem; font-weight: 600; color: var(--color-obsidian); margin-top: 4px;">
+              {{ site_settings.operating_hours }}
+            </div>
+            <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 2px;">Boats operate 7 days a week, weather permitting</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 12px;">
+          <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20inquire%20about%20a%20boat%20ride%20departure." target="_blank" rel="noopener" class="nova-btn-primary" style="width: 100%; text-align: center;">
+            Chat Directly on WhatsApp
+          </a>
+          <a href="{% url 'bookings:book' %}" class="nova-btn-secondary" style="width: 100%; text-align: center;">
+            Submit Online Booking Request
+          </a>
+        </div>
+      </div>
+
+      <!-- Launch Base Location & GPS -->
+      <div class="nova-card" style="padding: 36px; background: var(--color-ice); border: 1px solid var(--color-ice-muted);">
+        <span class="nova-kicker">Launch Base Coordinates</span>
+        <h2 style="font-size: 1.6rem; margin-bottom: 20px;">{{ site_settings.standard_launch_name }}</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 16px; font-size: 0.95rem;">
+          <div>
+            <strong>Physical Address:</strong><br>
+            South Lake Road (14 km from Naivasha Town junction), Naivasha, Nakuru County, Kenya.
+          </div>
+
+          <div>
+            <strong>GPS Coordinates:</strong><br>
+            <code style="font-size: 1rem; background: #FFF; padding: 6px 12px; border-radius: 6px; display: inline-block; margin-top: 4px; border: 1px solid rgba(0,0,0,0.1);">
+              {{ site_settings.standard_launch_lat }}, {{ site_settings.standard_launch_lng }}
+            </code>
+          </div>
+
+          <div>
+            <strong>Arrival & Parking Facilities:</strong>
+            <p style="font-size: 0.88rem; color: var(--color-text-body); margin-top: 4px;">
+              Guarded on-site perimeter parking, shaded briefing pavilion, clean passenger washrooms, life jacket fitting station, and paved jetty access.
+            </p>
+          </div>
+
+          <div style="padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.08);">
+            <span class="nova-badge nova-badge-purple">Hotel Departures Note</span>
+            <p style="font-size: 0.85rem; color: var(--color-text-body); margin-top: 8px;">
+              Staying along the lake? You don't need to drive to Nova Base. Check our <a href="{% url 'partners:hotel_hub' %}" style="color: var(--color-ultraviolet); font-weight: 700;">Hotel Departure Hub</a> to confirm if our boats can pick you up directly from your hotel jetty.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Map & Directions Guide -->
+    <div class="nova-card" style="padding: 36px;">
+      <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Driving Directions from Naivasha Town</h3>
+      <ol style="margin-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: var(--color-text-body);">
+        <li>From Naivasha Town roundabout or Nairobi highway exit, turn onto <strong>Moi South Lake Road</strong> heading towards Hell's Gate National Park.</li>
+        <li>Proceed past Buffalo Mall and continue along the tarmac for approximately 14 km.</li>
+        <li>Look for the clear <strong>Nova Boat Rides Base</strong> signage on the lakeside (right-hand side when coming from town).</li>
+        <li>Security clearance at the gate is immediate for reserved Nova guests. Quote your booking name or captain reference.</li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

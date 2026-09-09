@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Language: zh_Hans\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Home"
+msgstr "首页"
+
+msgid "Explore Tours"
+msgstr "探索行程"
+
+msgid "Journal"
+msgstr "旅行指南"
+
+msgid "Stay"
+msgstr "住宿"
+
+msgid "FAQ"
+msgstr "常见问题"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Book Now"
+msgstr "立即预订"
+
+msgid "Choose language"
+msgstr "选择语言"
+
+msgid "Book Your Experience"
+msgstr "预订您的体验"
+
+msgid "Friendly Lake Naivasha"
+msgstr "探索奈瓦沙湖"
+
+msgid "Boat Rides by Rafiki"
+msgstr "Rafiki 游船体验"
+
+msgid "Hippo safaris, sunset cruises, Crescent Island transfers, and relaxed private rides with local guides."
+msgstr "在当地向导陪同下体验河马观赏、日落巡游、新月岛接送和私人游船。"
+
+msgid "Book on WhatsApp"
+msgstr "通过 WhatsApp 预订"
+
+msgid "Guides"
+msgstr "向导"
+
+msgid "Flexible"
+msgstr "灵活"
+
+msgid "Direct"
+msgstr "直接"
+
+msgid "What We Offer"
+msgstr "我们的体验"
+
+msgid "Top Boating Destinations"
+msgstr "热门游船目的地"
+
+msgid "Popular Naivasha Boat Rides"
+msgstr "奈瓦沙热门游船"
+
+msgid "Stay Near the Lake"
+msgstr "湖畔住宿"
+
+msgid "How It Works"
+msgstr "预订流程"
+
+msgid "Guest Reviews"
+msgstr "游客评价"
+
+msgid "From Our Journal"
+msgstr "旅行指南"
+
+msgid "Frequently Asked Questions"
+msgstr "常见问题"
+
+msgid "Safe Wildlife"
+msgstr "安全观赏野生动物"
+
+msgid "Hippo Safaris"
+msgstr "河马探索之旅"
+
+msgid "Cruise the lake with guides who know the channels, birdlife, and respectful wildlife distances."
+msgstr "由熟悉水道、鸟类和安全观赏距离的当地向导带您巡游湖面。"
+
+msgid "Golden Hour"
+msgstr "黄金时刻"
+
+msgid "Sunset Cruises"
+msgstr "日落巡游"
+
+msgid "A warm, easygoing lake ride for couples, families, birthdays, and proposals."
+msgstr "适合情侣、家庭、生日和特别时刻的轻松湖上之旅。"
+
+msgid "Crescent Island"
+msgstr "新月岛"
+
+msgid "Walking Safaris"
+msgstr "徒步观兽之旅"
+
+msgid "Cross by boat and walk among giraffes, zebras, and open plains with flexible timing."
+msgstr "乘船前往岛上，在长颈鹿、斑马和开阔草原间自由漫步。"
+
+msgid "Birdwatcher's"
+msgstr "观鸟者的"
+
+msgid "Lake Escape"
+msgstr "湖上秘境"
+
+msgid "Slow the boat down for fish eagles, pelicans, kingfishers, and quiet papyrus edges."
+msgstr "放慢船速，观赏鱼鹰、鹈鹕、翠鸟和宁静的纸莎草湖岸。"
+
+msgid "Local"
+msgstr "本地"
+
+msgid "Private or Shared"
+msgstr "私人或拼船"
+
+msgid "WhatsApp Booking"
+msgstr "WhatsApp 预订"

@@ -1,0 +1,9 @@
+Django
+python-decouple
+django-taggit
+django-tinymce
+Pillow
+beautifulsoup4
+qrcode[pil]
+gunicorn
+whitenoise

@@ -1,0 +1,62 @@
+<div style="background: var(--color-obsidian); color: #FFF; border-radius: var(--radius-lg); padding: 24px; border: 1px solid rgba(255,255,255,0.1);">
+  <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-acid-lime); letter-spacing: 0.08em; margin-bottom: 6px;">
+    Package Estimate Breakdown
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 16px;">
+    <span style="font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.7);">KES</span>
+    <span style="font-size: 2.2rem; font-weight: 800; font-family: var(--font-display); color: #FFF;">
+      {{ total_estimate|floatformat:0 }}
+    </span>
+  </div>
+
+  <!-- Componentized Line Items -->
+  <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; margin-bottom: 18px;">
+    
+    <!-- Boat Line Item -->
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <span style="color: #FFF; font-weight: 600;">Boat Safari:</span>
+        <span style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.6);">{{ adults }} adult(s){% if children %}, {{ children }} child(ren){% endif %}</span>
+      </div>
+      <div style="font-weight: 700; color: #FFF;">KES {{ boat_amount|floatformat:0 }}</div>
+    </div>
+
+    <!-- Logistics Line Item -->
+    {% if positioning_amount > 0 %}
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <span style="color: #FFF; font-weight: 600;">Hotel Jetty Transfer:</span>
+        <span style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.6);">Boat positioning & staging</span>
+      </div>
+      <div style="font-weight: 700; color: #FFF;">KES {{ positioning_amount|floatformat:0 }}</div>
+    </div>
+    {% endif %}
+
+    <!-- Accommodation Line Item -->
+    {% if selected_stay %}
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div>
+        <span style="color: #FFF; font-weight: 600;">Room: {{ selected_stay.name }}</span>
+        <span style="display: block; font-size: 0.75rem; color: rgba(255,255,255,0.6);">{{ package.duration_nights }} night(s)</span>
+        {% if is_provisional %}
+          <span style="font-size: 0.72rem; color: var(--color-acid-lime); background: rgba(200,240,74,0.15); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 2px;">
+            Subject to hotel confirmation
+          </span>
+        {% endif %}
+      </div>
+      <div style="font-weight: 700; color: #FFF;">KES {{ stay_amount|floatformat:0 }}</div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <a href="{% url 'bookings:book' %}?package={{ package.slug }}{% if selected_stay %}&stay={{ selected_stay.slug }}{% endif %}&adults={{ adults }}&children={{ children }}" class="nova-btn-primary" style="width: 100%; text-align: center;">
+      Reserve This Package
+    </a>
+    <a href="{{ brand.whatsapp_url }}?text={{ whatsapp_text|urlencode }}" target="_blank" rel="noopener" class="nova-btn-secondary" style="width: 100%; text-align: center; border-color: rgba(255,255,255,0.2); color: #FFF;">
+      WhatsApp Package Desk
+    </a>
+  </div>
+</div>

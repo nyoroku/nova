@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}About Nova Boat Rides Naivasha | Trust, Captains & Lake Access{% endblock %}
+{% block meta_description %}Learn about Nova Boat Rides Naivasha. Operator-level local knowledge, certified captains, verified hotel jetty coordination, and passenger safety.{% endblock %}
+
+{% block content %}
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">ABOUT NOVA</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
+      The Lake-Access Layer for Naivasha
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 650px; line-height: 1.6;">
+      Nova is not merely another Lake Naivasha boat operator. Nova is the lake-access layer for visitors and hotel partners: discover a ride, start from the most convenient approved jetty or launch point, and coordinate the complete stay and lake day through one trusted local team.
+    </p>
+  </div>
+</section>
+
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+      <div>
+        <span class="nova-kicker">Our Philosophy</span>
+        <h2 class="nova-title-section" style="margin-bottom: 16px;">Fewer handoffs. Better lake days.</h2>
+        <p class="nova-prose">
+          Visitors to Lake Naivasha frequently face fragmented logistics: booking accommodation with one hotel, searching for an unverified boat ride on a public beach, negotiating prices without transparency, and struggling to coordinate gate clearances or water level access.
+        </p>
+        <p class="nova-prose">
+          Nova coordinates the entire experience: your boat experience, your hotel pickup or jetty access, your Crescent Island guide, and your accommodation options under one clear standard.
+        </p>
+      </div>
+
+      <div style="background: var(--color-ice); border-radius: var(--radius-xl); padding: 36px; border: 1px solid var(--color-ice-muted);">
+        <h3 style="font-size: 1.4rem; margin-bottom: 16px;">The Nova Standards</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem;">
+          <li style="display: flex; gap: 12px;">
+            <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+            <span><strong>Verified Operations:</strong> We only claim partner access points where physical depth and agreements are verified.</span>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+            <span><strong>Mandatory Marine Safety:</strong> Every passenger is fitted with an approved life jacket before stepping onto any jetty.</span>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+            <span><strong>Truth in Pricing:</strong> Tiered prices published publicly with no hidden tourist markups at the launch site.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Captains Grid -->
+    <div style="margin-top: 40px;">
+      <span class="nova-kicker">The People Behind the Plan</span>
+      <h2 class="nova-title-section" style="margin-bottom: 30px;">Certified Lake Captains</h2>
+      
+      <div class="nova-grid-2">
+        {% for cap in captains %}
+        <div class="nova-card" style="padding: 30px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
+          <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; background: #23222B; flex-shrink: 0;">
+            <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ cap.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1; min-width: 200px;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 4px;">{{ cap.name }}</h3>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-ultraviolet); margin-bottom: 10px;">
+              {{ cap.role_title }} &bull; {{ cap.years_on_lake }} Years on Lake Naivasha
+            </div>
+            <p style="font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 12px;">
+              {{ cap.bio }}
+            </p>
+            <div style="font-size: 0.8rem; color: var(--color-text-muted);">
+              <strong>Specialties:</strong> {{ cap.route_specialties }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

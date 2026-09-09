@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}{{ property.name }} | Lakeside Accommodation Naivasha | Nova{% endblock %}
+{% block meta_description %}{{ property.summary }} Located in {{ property.location_area }}. Pair your stay with verified Nova boat rides and lakeside jetty departures.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+      <a href="{% url 'stays:stay_list' %}" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem;">&larr; All Accommodations</a>
+      <span style="color: rgba(255,255,255,0.3);">/</span>
+      <span class="nova-badge nova-badge-lime">{{ property.get_property_type_display }}</span>
+      <span class="nova-badge nova-badge-purple">{{ property.location_area }}</span>
+      {% if property.has_jetty_access %}
+        <span class="nova-badge nova-badge-lime">Direct Jetty Departure</span>
+      {% endif %}
+    </div>
+
+    <h1 class="nova-title-hero" style="color: #FFF; margin-bottom: 16px;">
+      {{ property.name }}
+    </h1>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
+      <div>📍 <strong>Location:</strong> {{ property.location_area }}</div>
+      <div>⚓ <strong>Lake Access:</strong> {% if property.has_jetty_access %}On-site jetty boarding{% else %}Road transfer to Nova Base{% endif %}</div>
+      <div>
+        <strong>Booking Mode:</strong> 
+        {% if property.inventory_mode == 'ALLOTMENT' %}Contracted Allotment
+        {% elif property.inventory_mode == 'MANAGED' %}Directly Managed
+        {% else %}Reservation Enquiry{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detail Section -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px;" class="stay-detail-layout">
+      
+      <!-- Main Content -->
+      <div>
+        <!-- Featured Image -->
+        <div style="height: 380px; border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 36px; background: #131218;">
+          {% if property.featured_image %}
+            <img src="{{ property.featured_image.url }}" alt="{{ property.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% else %}
+            <img src="{% static 'images/hero_sunset.webp' %}" alt="{{ property.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% endif %}
+        </div>
+
+        <!-- Description -->
+        <div style="margin-bottom: 40px;">
+          <span class="nova-kicker">About the Property</span>
+          <h2 class="nova-title-section" style="margin-bottom: 16px;">The Experience at {{ property.name }}</h2>
+          <div class="nova-prose" style="font-size: 1.05rem; line-height: 1.7;">
+            {{ property.description|linebreaks }}
+          </div>
+        </div>
+
+        <!-- Available Room Types -->
+        {% if room_types %}
+        <div style="margin-bottom: 40px;">
+          <span class="nova-kicker">Room Categories</span>
+          <h2 class="nova-title-section" style="margin-bottom: 20px;">Accommodations at This Property</h2>
+
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            {% for rt in room_types %}
+            <div class="nova-card" style="padding: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+              <div style="flex: 1; min-width: 240px;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 4px;">{{ rt.name }}</h3>
+                <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.4; margin-bottom: 8px;">
+                  {{ rt.description }}
+                </p>
+                <div style="display: flex; gap: 16px; font-size: 0.82rem; color: var(--color-text-muted);">
+                  <span>👥 Up to {{ rt.max_occupancy }} guests</span>
+                  <span>🛏 {{ rt.bed_configuration }}</span>
+                </div>
+              </div>
+
+              <div style="text-align: right; flex-shrink: 0;">
+                {% if rt.base_rate > 0 %}
+                  <div style="font-size: 1.3rem; font-weight: 800; color: var(--color-ultraviolet);">
+                    KES {{ rt.base_rate|floatformat:0 }}
+                  </div>
+                  <div style="font-size: 0.78rem; color: var(--color-text-muted);">per night</div>
+                {% else %}
+                  <div style="font-size: 1rem; font-weight: 700; color: var(--color-text-body);">Rate on Enquiry</div>
+                {% endif %}
+                <a href="{% url 'bookings:book' %}?stay={{ property.slug }}" class="nova-btn-primary" style="margin-top: 8px; font-size: 0.82rem; padding: 6px 14px; display: inline-block;">
+                  Select Room
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Pairable Boat Rides -->
+        {% if pairable_tours %}
+        <div style="background: var(--color-ice); border-radius: var(--radius-xl); padding: 36px; border: 1px solid var(--color-ice-muted);">
+          <span class="nova-kicker">Recommended Boat Pairings</span>
+          <h2 style="font-size: 1.4rem; margin-bottom: 12px;">Add a Boat Safari to Your Stay</h2>
+          <p class="nova-prose" style="font-size: 0.95rem; margin-bottom: 24px;">
+            Coordinate your lakeside room and lake excursion under one seamless booking with Nova.
+          </p>
+
+          <div class="nova-grid-3">
+            {% for tour in pairable_tours %}
+            <div class="nova-card" style="padding: 20px; background: #FFFFFF; display: flex; flex-direction: column;">
+              <h4 style="font-size: 1.05rem; margin-bottom: 6px;">{{ tour.name }}</h4>
+              <div style="font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 12px;">⏱ {{ tour.duration_display }}</div>
+              <div style="font-weight: 800; font-size: 1.1rem; color: var(--color-ultraviolet); margin-top: auto; margin-bottom: 10px;">
+                From KES {{ tour.get_starting_price|floatformat:0 }}
+              </div>
+              <a href="{% url 'bookings:book' %}?stay={{ property.slug }}&tour={{ tour.slug }}" class="nova-btn-secondary" style="font-size: 0.82rem; padding: 6px 12px; text-align: center;">
+                Pair with Stay
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside>
+        <div style="position: sticky; top: 90px;">
+          <div class="nova-card" style="padding: 30px; margin-bottom: 20px;">
+            <span class="nova-kicker">Accommodation Inquiry</span>
+            <div style="display: flex; align-items: baseline; gap: 8px; margin: 12px 0 16px;">
+              {% if property.starting_price > 0 %}
+                <span style="font-size: 1.1rem; font-weight: 700; color: var(--color-text-muted);">From</span>
+                <span style="font-size: 2rem; font-weight: 800; font-family: var(--font-display); color: var(--color-ultraviolet);">
+                  KES {{ property.starting_price|floatformat:0 }}
+                </span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);">/ night</span>
+              {% else %}
+                <span style="font-size: 1.3rem; font-weight: 800; color: var(--color-obsidian);">Rates on Request</span>
+              {% endif %}
+            </div>
+
+            <!-- Transparency Notice -->
+            <div style="background: var(--color-ice); border-radius: var(--radius-md); padding: 14px; margin-bottom: 20px; font-size: 0.82rem; line-height: 1.4; color: var(--color-text-body);">
+              {% if property.inventory_mode == 'ALLOTMENT' %}
+                <strong>Contracted Inventory:</strong> Nova holds contracted rooms for quick confirmation and preferential package rates.
+              {% elif property.inventory_mode == 'MANAGED' %}
+                <strong>Directly Managed:</strong> Real-time room availability managed directly with property team.
+              {% else %}
+                <strong>Enquiry Mode:</strong> Nova reservations team confirms room availability directly with property reservations within 2 hours.
+              {% endif %}
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <a href="{% url 'bookings:book' %}?stay={{ property.slug }}" class="nova-btn-primary" style="width: 100%; text-align: center;">
+                Book or Enquire Stay
+              </a>
+              <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20enquire%20about%20staying%20at%20{{ property.name|urlencode }}." target="_blank" rel="noopener" class="nova-btn-secondary" style="width: 100%; text-align: center;">
+                WhatsApp Reservations
+              </a>
+            </div>
+          </div>
+
+          <div style="background: #FFFFFF; border-radius: var(--radius-lg); padding: 20px; border: 1px solid var(--color-ice-muted); font-size: 0.85rem; color: var(--color-text-muted);">
+            <strong>Have Special Requirements?</strong><br>
+            Family suites, group retreats, or conference arrangements can be coordinated directly with our team at <strong>{{ site_settings.phone_display }}</strong>.
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@media (min-width: 992px) {
+  .stay-detail-layout {
+    grid-template-columns: 1.8fr 1fr !important;
+  }
+}
+</style>
+{% endblock %}

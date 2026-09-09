@@ -1,0 +1,65 @@
+{% if hotel %}
+  <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 24px; border: 1px solid var(--color-ice-muted);">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+      <div>
+        <span class="nova-badge nova-badge-lime" style="margin-bottom: 6px;">Verified Partner Location</span>
+        <h4 style="font-size: 1.25rem; margin-top: 4px; color: var(--color-obsidian);">{{ hotel.name }}</h4>
+        <div style="font-size: 0.85rem; color: var(--color-text-muted);">{{ hotel.location_area }}</div>
+      </div>
+      <span style="font-size: 1.5rem;">⚓</span>
+    </div>
+
+    {% if service_point %}
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; font-size: 0.9rem;">
+        <div>
+          <strong>Departure Mode:</strong> 
+          <span style="color: var(--color-ultraviolet); font-weight: 700;">{{ service_point.get_point_type_display }}</span>
+        </div>
+        <div>
+          <strong>Boarding Logistics:</strong> 
+          <span style="color: var(--color-text-body);">{{ service_point.boarding_instructions|default:"Meet Nova captain at the lakeshore jetty." }}</span>
+        </div>
+        {% if service_point.advance_notice_hours %}
+        <div>
+          <strong>Required Advance Notice:</strong> 
+          <span>{{ service_point.advance_notice_hours }} hour(s)</span>
+        </div>
+        {% endif %}
+        {% if service_point.positioning_fee > 0 %}
+        <div>
+          <strong>Boat Positioning Fee:</strong> 
+          <span>KES {{ service_point.positioning_fee|floatformat:0 }} (covers boat transit from base)</span>
+        </div>
+        {% endif %}
+      </div>
+    {% else %}
+      <p style="font-size: 0.9rem; color: var(--color-text-body); margin-bottom: 14px;">
+        Pickup from {{ hotel.name }} is coordinated through our central dispatch. Road transfer to Nova Base or jetty boarding available based on current lake level.
+      </p>
+    {% endif %}
+
+    <div style="display: flex; gap: 10px; margin-top: 16px;">
+      <a href="{% url 'bookings:book' %}?hotel={{ hotel.slug }}" class="nova-btn-primary" style="flex: 1; text-align: center; font-size: 0.88rem; padding: 10px 14px;">
+        Book from {{ hotel.name }}
+      </a>
+      <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20am%20staying%20at%20{{ hotel.name|urlencode }}%20and%20would%20like%20to%20arrange%20a%20boat%20departure." target="_blank" rel="noopener" class="nova-btn-secondary" style="font-size: 0.88rem; padding: 10px 14px;">
+        WhatsApp Dispatch
+      </a>
+    </div>
+  </div>
+{% elif custom_name %}
+  <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 24px; border: 1px solid var(--color-ice-muted);">
+    <span class="nova-badge nova-badge-purple" style="margin-bottom: 6px;">Custom Location Check</span>
+    <h4 style="font-size: 1.2rem; margin-top: 4px; margin-bottom: 10px; color: var(--color-obsidian);">{{ custom_name }}</h4>
+    <p style="font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 16px;">
+      We routinely arrange boat pick-ups and road staging across all South Lake Road properties. Our lake dispatch verifies jetty water depth and property gate permissions in advance.
+    </p>
+    <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20am%20staying%20at%20{{ custom_name|urlencode }}%20on%20Lake%20Naivasha.%20Can%20you%20pick%20us%20up%20for%20a%20boat%20ride%3F" target="_blank" rel="noopener" class="nova-btn-primary" style="display: block; text-align: center; font-size: 0.88rem;">
+      Inquire on WhatsApp for {{ custom_name }}
+    </a>
+  </div>
+{% else %}
+  <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 24px; text-align: center; color: var(--color-text-muted); font-size: 0.92rem;">
+    Select your hotel above or type in your property name to see boarding logistics, positioning fees, and notice requirements.
+  </div>
+{% endif %}

@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Language: es\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Home"
+msgstr "Inicio"
+
+msgid "Explore Tours"
+msgstr "Explorar tours"
+
+msgid "Journal"
+msgstr "Guía"
+
+msgid "Stay"
+msgstr "Alojamiento"
+
+msgid "FAQ"
+msgstr "Preguntas"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Book Now"
+msgstr "Reservar"
+
+msgid "Choose language"
+msgstr "Elegir idioma"
+
+msgid "Book Your Experience"
+msgstr "Reserva tu experiencia"
+
+msgid "Friendly Lake Naivasha"
+msgstr "Descubre el lago Naivasha"
+
+msgid "Boat Rides by Rafiki"
+msgstr "Paseos en barco con Rafiki"
+
+msgid "Hippo safaris, sunset cruises, Crescent Island transfers, and relaxed private rides with local guides."
+msgstr "Safaris de hipopótamos, cruceros al atardecer, traslados a Crescent Island y paseos privados con guías locales."
+
+msgid "Book on WhatsApp"
+msgstr "Reservar por WhatsApp"
+
+msgid "Guides"
+msgstr "Guías"
+
+msgid "Flexible"
+msgstr "Flexible"
+
+msgid "Direct"
+msgstr "Directo"
+
+msgid "What We Offer"
+msgstr "Lo que ofrecemos"
+
+msgid "Top Boating Destinations"
+msgstr "Destinos destacados"
+
+msgid "Popular Naivasha Boat Rides"
+msgstr "Paseos populares en Naivasha"
+
+msgid "Stay Near the Lake"
+msgstr "Alójate cerca del lago"
+
+msgid "How It Works"
+msgstr "Cómo funciona"
+
+msgid "Guest Reviews"
+msgstr "Opiniones de viajeros"
+
+msgid "From Our Journal"
+msgstr "Desde nuestra guía"
+
+msgid "Frequently Asked Questions"
+msgstr "Preguntas frecuentes"
+
+msgid "Safe Wildlife"
+msgstr "Fauna segura"
+
+msgid "Hippo Safaris"
+msgstr "Safaris de hipopótamos"
+
+msgid "Cruise the lake with guides who know the channels, birdlife, and respectful wildlife distances."
+msgstr "Navega con guías que conocen los canales, las aves y las distancias seguras para observar la fauna."
+
+msgid "Golden Hour"
+msgstr "Hora dorada"
+
+msgid "Sunset Cruises"
+msgstr "Cruceros al atardecer"
+
+msgid "A warm, easygoing lake ride for couples, families, birthdays, and proposals."
+msgstr "Un paseo tranquilo por el lago para parejas, familias, cumpleaños y propuestas."
+
+msgid "Crescent Island"
+msgstr "Isla Crescent"
+
+msgid "Walking Safaris"
+msgstr "Safaris a pie"
+
+msgid "Cross by boat and walk among giraffes, zebras, and open plains with flexible timing."
+msgstr "Cruza en barco y camina entre jirafas, cebras y llanuras abiertas con horarios flexibles."
+
+msgid "Birdwatcher's"
+msgstr "Paraíso de aves"
+
+msgid "Lake Escape"
+msgstr "Escapada al lago"
+
+msgid "Slow the boat down for fish eagles, pelicans, kingfishers, and quiet papyrus edges."
+msgstr "Navega despacio para observar águilas pescadoras, pelícanos, martines pescadores y papiros."
+
+msgid "Local"
+msgstr "Local"
+
+msgid "Private or Shared"
+msgstr "Privado o compartido"
+
+msgid "WhatsApp Booking"
+msgstr "Reserva por WhatsApp"

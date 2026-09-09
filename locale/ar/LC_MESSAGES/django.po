@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "Explore Tours"
+msgstr "استكشف الجولات"
+
+msgid "Journal"
+msgstr "دليل السفر"
+
+msgid "Stay"
+msgstr "الإقامة"
+
+msgid "FAQ"
+msgstr "الأسئلة"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Book Now"
+msgstr "احجز الآن"
+
+msgid "Choose language"
+msgstr "اختر اللغة"
+
+msgid "Book Your Experience"
+msgstr "احجز تجربتك"
+
+msgid "Friendly Lake Naivasha"
+msgstr "اكتشف بحيرة نيفاشا"
+
+msgid "Boat Rides by Rafiki"
+msgstr "رحلات القوارب مع رفيقي"
+
+msgid "Hippo safaris, sunset cruises, Crescent Island transfers, and relaxed private rides with local guides."
+msgstr "رحلات لمشاهدة أفراس النهر وغروب الشمس وجزيرة كريسنت ورحلات خاصة مع مرشدين محليين."
+
+msgid "Book on WhatsApp"
+msgstr "احجز عبر واتساب"
+
+msgid "Guides"
+msgstr "مرشدون"
+
+msgid "Flexible"
+msgstr "مرن"
+
+msgid "Direct"
+msgstr "مباشر"
+
+msgid "What We Offer"
+msgstr "ما نقدمه"
+
+msgid "Top Boating Destinations"
+msgstr "أفضل وجهات القوارب"
+
+msgid "Popular Naivasha Boat Rides"
+msgstr "أشهر رحلات القوارب في نيفاشا"
+
+msgid "Stay Near the Lake"
+msgstr "أقم بالقرب من البحيرة"
+
+msgid "How It Works"
+msgstr "كيف تعمل الخدمة"
+
+msgid "Guest Reviews"
+msgstr "آراء الضيوف"
+
+msgid "From Our Journal"
+msgstr "من دليل السفر"
+
+msgid "Frequently Asked Questions"
+msgstr "الأسئلة الشائعة"
+
+msgid "Safe Wildlife"
+msgstr "مشاهدة آمنة"
+
+msgid "Hippo Safaris"
+msgstr "رحلات أفراس النهر"
+
+msgid "Cruise the lake with guides who know the channels, birdlife, and respectful wildlife distances."
+msgstr "أبحر مع مرشدين يعرفون ممرات البحيرة والطيور ومسافات المشاهدة الآمنة."
+
+msgid "Golden Hour"
+msgstr "الساعة الذهبية"
+
+msgid "Sunset Cruises"
+msgstr "رحلات الغروب"
+
+msgid "A warm, easygoing lake ride for couples, families, birthdays, and proposals."
+msgstr "رحلة هادئة للأزواج والعائلات وأعياد الميلاد والمناسبات الخاصة."
+
+msgid "Crescent Island"
+msgstr "جزيرة كريسنت"
+
+msgid "Walking Safaris"
+msgstr "رحلات سفاري سيراً"
+
+msgid "Cross by boat and walk among giraffes, zebras, and open plains with flexible timing."
+msgstr "اعبر بالقارب وتجول بين الزرافات والحمر الوحشية والسهول المفتوحة بوقت مرن."
+
+msgid "Birdwatcher's"
+msgstr "لعشاق الطيور"
+
+msgid "Lake Escape"
+msgstr "رحلة البحيرة"
+
+msgid "Slow the boat down for fish eagles, pelicans, kingfishers, and quiet papyrus edges."
+msgstr "رحلة بطيئة لمشاهدة نسور السمك والبجع والرفراف وحواف البردي الهادئة."
+
+msgid "Local"
+msgstr "محلي"
+
+msgid "Private or Shared"
+msgstr "خاصة أو مشتركة"
+
+msgid "WhatsApp Booking"
+msgstr "حجز عبر واتساب"

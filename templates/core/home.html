@@ -1,0 +1,650 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}{{ site_settings.business_name }} | {{ site_settings.tagline }}{% endblock %}
+{% block meta_description %}{{ site_settings.supporting_proposition }}{% endblock %}
+
+{% block content %}
+
+<!-- 02. HERO SECTION -->
+<section style="background-color: var(--color-obsidian); color: #FFFFFF; padding: 40px 0 80px 0; overflow: hidden; position: relative;">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+      
+      <!-- Text & Propositions -->
+      <div>
+        <span class="nova-kicker nova-kicker-lime">LAKE NAIVASHA, KENYA</span>
+        <h1 class="nova-title-hero" style="color: #FFFFFF; margin-top: 10px; margin-bottom: 24px;">
+          Naivasha <span style="color: var(--color-acid-lime);">starts here.</span>
+        </h1>
+        <p style="font-size: 1.2rem; line-height: 1.6; color: rgba(255, 255, 255, 0.82); margin-bottom: 32px; max-width: 540px;">
+          {{ site_settings.supporting_proposition }}
+        </p>
+        
+        <!-- Hero Conversion CTAs -->
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px;">
+          <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20plan%20a%20Lake%20Naivasha%20boat%20ride." target="_blank" rel="noopener" class="nova-btn-primary">
+            Book on WhatsApp &rarr;
+          </a>
+          <a href="{% url 'tours:tour_list' %}" class="nova-btn-secondary">
+            Explore Rides
+          </a>
+          <a href="{% url 'packages:package_list' %}" class="nova-btn-secondary" style="border-color: var(--color-ultraviolet); background: rgba(103, 80, 232, 0.2);">
+            Stay + Ride
+          </a>
+        </div>
+
+        <!-- Pillar Indicators -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.75);">
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <span style="color: var(--color-acid-lime);">●</span> Boat Rides
+          </span>
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <span style="color: var(--color-acid-lime);">●</span> Hotel Pickup
+          </span>
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <span style="color: var(--color-acid-lime);">●</span> Places to Stay
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Canvas -->
+      <div style="position: relative;">
+        <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); aspect-ratio: 4/3; background: #23222B;">
+          <img src="{% static 'images/hero_sunset.webp' %}" alt="Lake Naivasha boat ride at sunset" style="width: 100%; height: 100%; object-fit: cover;" fetchpriority="high">
+        </div>
+        <div style="position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(19, 18, 24, 0.85); backdrop-filter: blur(10px); padding: 16px 20px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-acid-lime); font-weight: 700;">Verified Access</span>
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: #FFF;">Approved Hotel Jetties & Nova Base</div>
+          </div>
+          <span class="nova-badge nova-badge-lime">Daily 6:30 AM–6:30 PM</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 03. HOTEL-FIRST PROMPT -->
+<section style="margin-top: -30px; position: relative; z-index: 20;">
+  <div class="nova-shell">
+    <div style="background-color: var(--color-ultraviolet); border-radius: var(--radius-xl); padding: 32px 36px; color: #FFFFFF; box-shadow: var(--shadow-electric);">
+      <div style="max-width: 680px; margin-bottom: 24px;">
+        <span class="nova-kicker" style="color: var(--color-acid-lime);">Hotel-First Convenience</span>
+        <h2 style="font-size: 1.85rem; color: #FFFFFF; margin-bottom: 8px;">Where are you starting your lake day?</h2>
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem;">
+          Already staying at a Naivasha hotel or lodge? Nova checks whether your property has approved jetty boarding or road pickup coordination.
+        </p>
+      </div>
+
+      <!-- HTMX Hotel Checker Form -->
+      <form hx-get="{% url 'partners:hotel_check' %}" hx-target="#hotel-service-result" hx-swap="innerHTML" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; align-items: end;">
+        <div>
+          <label class="nova-label nova-label-light">Select Your Hotel / Stay</label>
+          <select name="hotel_id" class="nova-form-select" style="background: #FFFFFF; color: #131218; font-weight: 600;">
+            <option value="">-- Choose your property --</option>
+            {% for partner in hotel_partners %}
+            <option value="{{ partner.id }}">{{ partner.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div>
+          <label class="nova-label nova-label-light">Or Enter Other Hotel</label>
+          <input type="text" name="custom_hotel_name" placeholder="e.g. Sopa, Enashipai, Chui Lodge..." class="nova-form-input">
+        </div>
+
+        <button type="submit" class="nova-btn-primary" style="height: 48px;">
+          Check My Pickup Options &rarr;
+        </button>
+      </form>
+
+      <!-- HTMX Result Target Area -->
+      <div id="hotel-service-result" style="margin-top: 16px;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04. TRUST STRIP -->
+<section style="padding: 40px 0; background: var(--color-white); border-bottom: 1px solid var(--color-ice-muted);">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+      
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#9875;</div>
+        <div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">Certified Captains</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Licensed local lake guides</div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#127969;</div>
+        <div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">Hotel Jetty Access</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Board direct from your lawn</div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#128737;</div>
+        <div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">Safety-First Gear</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Adult & child life jackets</div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#128172;</div>
+        <div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">Direct Confirmation</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">WhatsApp price & trip plan</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 05. SIGNATURE RIDES -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 36px; gap: 16px;">
+      <div>
+        <span class="nova-kicker">Signature Rides</span>
+        <h2 class="nova-title-section">Lake Naivasha Experiences</h2>
+        <p style="color: var(--color-text-muted); font-size: 1.05rem; margin-top: 6px;">
+          Factual durations, real wildlife sightings, and clear tiered starting prices.
+        </p>
+      </div>
+      <a href="{% url 'tours:tour_list' %}" style="font-weight: 700; color: var(--color-ultraviolet); font-size: 0.95rem;">
+        View All 8 Experiences &rarr;
+      </a>
+    </div>
+
+    <!-- Tour Cards Grid -->
+    <div class="nova-grid-4">
+      {% for tour in featured_tours %}
+      <article class="nova-card">
+        <a href="{{ tour.get_absolute_url }}" style="display: block; position: relative; aspect-ratio: 4/3; background: #23222B; overflow: hidden;">
+          <img src="{% if tour.slug == 'sunset-cruise' %}{% static 'images/hero_sunset.webp' %}{% elif tour.slug == 'crescent-island' %}{% static 'images/hero_crescent.webp' %}{% else %}{% static 'images/hero_wildlife.webp' %}{% endif %}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+          <span class="nova-badge nova-badge-dark" style="position: absolute; top: 12px; left: 12px;">
+            {{ tour.duration_hours }} Hours
+          </span>
+          {% if tour.hotel_pickup_available %}
+          <span class="nova-badge nova-badge-lime" style="position: absolute; bottom: 12px; left: 12px;">
+            Hotel Pickup
+          </span>
+          {% endif %}
+        </a>
+
+        <div style="padding: 20px;">
+          <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-ultraviolet); margin-bottom: 6px;">
+            {{ tour.best_for|truncatewords:4 }}
+          </div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 8px;">
+            <a href="{{ tour.get_absolute_url }}">{{ tour.name }}</a>
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 16px;">
+            {{ tour.summary|truncatewords:16 }}
+          </p>
+          
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-top: 14px; border-top: 1px solid var(--color-ice-muted);">
+            <div>
+              <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-muted); display: block;">From</span>
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--color-obsidian);">
+                KES {{ tour.get_starting_price|floatformat:0 }}
+              </span>
+              <span style="font-size: 0.75rem; color: var(--color-text-muted);">/ person</span>
+            </div>
+            <a href="{{ tour.get_absolute_url }}" class="nova-btn-primary" style="min-height: 38px; padding: 6px 16px; font-size: 0.85rem;">
+              View Ride
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 06. FROM YOUR HOTEL -->
+<section style="background-color: var(--color-ultraviolet); color: #FFFFFF; padding: 80px 0;">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+      
+      <div>
+        <span class="nova-kicker nova-kicker-lime">HOTEL-ORIGIN BOARDING</span>
+        <h2 style="color: #FFFFFF; font-size: 2.6rem; line-height: 1.1; margin-bottom: 20px;">
+          Already by the lake? We bring the boat closer.
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: rgba(255,255,255,0.85); margin-bottom: 30px;">
+          Forget travelling down public access tracks. Where water levels permit and partner arrangements are verified, Nova positions a boat right to your resort jetty.
+        </p>
+
+        <!-- 3-Step Process -->
+        <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px;">
+          <div style="display: flex; gap: 16px;">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--color-acid-lime); color: var(--color-obsidian); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+              <div style="font-weight: 700; font-size: 1rem; color: #FFF;">Select Your Hotel</div>
+              <div style="font-size: 0.88rem; color: rgba(255,255,255,0.75);">Choose your property or tell Nova where you are staying.</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px;">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--color-acid-lime); color: var(--color-obsidian); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+              <div style="font-weight: 700; font-size: 1rem; color: #FFF;">Confirm Access & Notice</div>
+              <div style="font-size: 0.88rem; color: rgba(255,255,255,0.75);">We check jetty water depth, positioning fees, and notice windows.</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px;">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--color-acid-lime); color: var(--color-obsidian); font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div>
+              <div style="font-weight: 700; font-size: 1rem; color: #FFF;">Board at Agreed Point</div>
+              <div style="font-size: 0.88rem; color: rgba(255,255,255,0.75);">Step onto the boat from your hotel lawn, jetty, or shuttle vehicle.</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="{% url 'partners:hotel_hub' %}" class="nova-btn-primary">
+          See Hotel Pickup Options &rarr;
+        </a>
+      </div>
+
+      <!-- Partner Cards Showcase -->
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        {% for partner in hotel_partners %}
+        <div style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--radius-md); padding: 18px 22px; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-weight: 700; font-size: 1.05rem; color: #FFF;">{{ partner.name }}</div>
+            <div style="font-size: 0.82rem; color: rgba(255,255,255,0.7);">{{ partner.get_property_type_display }} &bull; South Lake Road</div>
+          </div>
+          {% if partner.public_page_enabled %}
+          <span class="nova-badge nova-badge-lime">Direct Jetty Active</span>
+          {% else %}
+          <span class="nova-badge nova-badge-ice">Operational Transfer</span>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 07. STAY BY THE LAKE -->
+<section class="nova-section nova-section-ice">
+  <div class="nova-shell">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 36px; gap: 16px;">
+      <div>
+        <span class="nova-kicker">Accommodation Layer</span>
+        <h2 class="nova-title-section">Stay Where Your Lake Day Starts</h2>
+        <p style="color: var(--color-text-muted); font-size: 1.05rem; margin-top: 6px;">
+          Curated lakeside properties with explicit inventory modes and boat departure proximity.
+        </p>
+      </div>
+      <a href="{% url 'stays:stay_list' %}" style="font-weight: 700; color: var(--color-ultraviolet); font-size: 0.95rem;">
+        Browse All Stays &rarr;
+      </a>
+    </div>
+
+    <!-- Stays Grid -->
+    <div class="nova-grid-3">
+      {% for stay in featured_stays %}
+      <article class="nova-card">
+        <a href="{{ stay.get_absolute_url }}" style="display: block; position: relative; aspect-ratio: 16/9; background: #23222B; overflow: hidden;">
+          <img src="{% static 'images/hero_main_v2.webp' %}" alt="{{ stay.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          <span class="nova-badge nova-badge-ice" style="position: absolute; top: 12px; right: 12px;">
+            {{ stay.get_inventory_mode_display }}
+          </span>
+        </a>
+
+        <div style="padding: 24px;">
+          <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-ultraviolet); display: block; margin-bottom: 6px;">
+            {{ stay.get_property_type_display }}
+          </span>
+          <h3 style="font-size: 1.3rem; margin-bottom: 8px;">
+            <a href="{{ stay.get_absolute_url }}">{{ stay.name }}</a>
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 16px;">
+            {{ stay.why_nova_recommends|truncatewords:16 }}
+          </p>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--color-ice-muted);">
+            <div>
+              <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-muted); display: block;">Starting Rate</span>
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; color: var(--color-obsidian);">
+                KES {{ stay.starting_price|floatformat:0 }}
+              </span>
+            </div>
+            <a href="{{ stay.get_absolute_url }}" class="nova-btn-primary" style="min-height: 38px; padding: 6px 16px; font-size: 0.85rem;">
+              View Stay
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 08. PACKAGE BUILDER TEASER -->
+<section style="background-color: var(--color-obsidian); color: #FFFFFF; padding: 80px 0;">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+      
+      <div>
+        <span class="nova-kicker nova-kicker-lime">Stay + Ride Combinations</span>
+        <h2 style="color: #FFFFFF; font-size: 2.6rem; line-height: 1.1; margin-bottom: 18px;">
+          Build the whole Naivasha plan.
+        </h2>
+        <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.6; margin-bottom: 24px;">
+          Why coordinate hotel, boat ride, and transfers separately? Nova packages your entire weekend into one clear itinerary with transparent pricing.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
+          {% for pkg in featured_packages %}
+          <a href="{{ pkg.get_absolute_url }}" style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-md); padding: 14px 18px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-weight: 700; color: #FFF;">{{ pkg.name }}</div>
+              <div style="font-size: 0.82rem; color: var(--color-acid-lime);">{{ pkg.tagline }}</div>
+            </div>
+            <div style="font-weight: 800; color: #FFF; font-size: 1.1rem;">
+              KES {{ pkg.starting_price|floatformat:0 }}
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+
+        <a href="{% url 'packages:package_list' %}" class="nova-btn-primary">
+          Explore All Packages &rarr;
+        </a>
+      </div>
+
+      <!-- Quick Package Estimator Box -->
+      <div style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-xl); padding: 32px; box-shadow: var(--shadow-lg);">
+        <span class="nova-kicker" style="color: var(--color-acid-lime);">Live Estimator</span>
+        <h3 style="color: #FFF; font-size: 1.5rem; margin-bottom: 20px;">Quick Package Quote</h3>
+        
+        <form hx-get="{% url 'packages:quote_partial' slug='stay-and-ride' %}" hx-target="#package-quote-result" style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label class="nova-label nova-label-light">Adults</label>
+            <input type="number" name="adults" value="2" min="1" max="10" class="nova-form-input">
+          </div>
+
+          <div>
+            <label class="nova-label nova-label-light">Children (under 12)</label>
+            <input type="number" name="children" value="0" min="0" max="6" class="nova-form-input">
+          </div>
+
+          <div>
+            <label class="nova-label nova-label-light">Preferred Accommodation</label>
+            <select name="stay_id" class="nova-form-select">
+              <option value="">-- Standard Curated Stay --</option>
+              {% for stay in featured_stays %}
+              <option value="{{ stay.id }}">{{ stay.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <button type="submit" class="nova-btn-primary" style="width: 100%;">
+            Calculate Package Estimate &rarr;
+          </button>
+        </form>
+
+        <div id="package-quote-result" style="margin-top: 20px;"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 09. CRESCENT ISLAND -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+      
+      <div style="border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 4/3; background: #23222B;">
+        <img src="{% static 'images/hero_crescent.webp' %}" alt="Crescent Island Game Sanctuary walking safari" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+      <div>
+        <span class="nova-kicker">Unique Island Sanctuary</span>
+        <h2 class="nova-title-section" style="margin-bottom: 18px;">
+          Cross the lake. Continue on foot.
+        </h2>
+        <p class="nova-prose" style="margin-bottom: 20px;">
+          Crescent Island is a volcanic crater rim rising out of Lake Naivasha. Because no predators inhabit the sanctuary, you can walk among wild giraffe, Burchell's zebra, wildebeest, and gazelle with complete peace of mind.
+        </p>
+        <p class="nova-prose" style="margin-bottom: 28px;">
+          Nova coordinates your private boat transit directly to the island's western jetty, pairs you with a sanctuary guide, and waits to cruise you back across hippo lagoons.
+        </p>
+
+        <a href="{% url 'tours:tour_detail' slug='crescent-island' %}" class="nova-btn-dark">
+          Plan Crescent Island &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 10. WHY NOVA -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <div style="max-width: 680px; margin-bottom: 50px;">
+      <span class="nova-kicker nova-kicker-lime">The Lake-Access Standard</span>
+      <h2 class="nova-title-section" style="color: #FFFFFF;">
+        Fewer handoffs. Better lake days.
+      </h2>
+      <p style="color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-top: 10px;">
+        Traditional lake trips involve multiple calls, unclear public jetty directions, and separate hotel coordination. Nova brings everything under one trusted operator.
+      </p>
+    </div>
+
+    <div class="nova-grid-3">
+      <div style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-lg); padding: 30px;">
+        <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--color-acid-lime); margin-bottom: 10px;">01</div>
+        <h3 style="color: #FFF; font-size: 1.25rem; margin-bottom: 10px;">Operator-Level Knowledge</h3>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.92rem; line-height: 1.6;">
+          Captains who know the changing water depths, afternoon wind patterns, and hippo pod movements. We don't guess — we operate daily.
+        </p>
+      </div>
+
+      <div style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-lg); padding: 30px;">
+        <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--color-acid-lime); margin-bottom: 10px;">02</div>
+        <h3 style="color: #FFF; font-size: 1.25rem; margin-bottom: 10px;">Hotel Departure Convenience</h3>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.92rem; line-height: 1.6;">
+          Start your ride from verified hotel jetties or private vehicle pickups. No negotiating at public beaches or navigating crowded launch ramps.
+        </p>
+      </div>
+
+      <div style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-lg); padding: 30px;">
+        <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--color-acid-lime); margin-bottom: 10px;">03</div>
+        <h3 style="color: #FFF; font-size: 1.25rem; margin-bottom: 10px;">Single WhatsApp Coordination</h3>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.92rem; line-height: 1.6;">
+          Every detail—boat timing, passenger names, hotel gate clearance, and weather check—is confirmed in one responsive WhatsApp thread.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. MEET THE CREW -->
+{% if captain %}
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+      
+      <div>
+        <span class="nova-kicker">The People Behind the Plan</span>
+        <h2 class="nova-title-section" style="margin-bottom: 16px;">
+          Meet {{ captain.name }}
+        </h2>
+        <p style="font-weight: 700; color: var(--color-ultraviolet); margin-bottom: 14px;">
+          {{ captain.role_title }} &bull; {{ captain.years_on_lake }} Years on Lake Naivasha
+        </p>
+        <blockquote style="font-style: italic; font-size: 1.15rem; color: var(--color-obsidian); border-left: 3px solid var(--color-ultraviolet); padding-left: 18px; margin-bottom: 20px;">
+          “{{ captain.quote }}”
+        </blockquote>
+        <p class="nova-prose" style="margin-bottom: 24px;">
+          {{ captain.bio }}
+        </p>
+        <div style="font-size: 0.88rem; color: var(--color-text-muted);">
+          <strong>Specialties:</strong> {{ captain.route_specialties }}
+        </div>
+      </div>
+
+      <div style="border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 1/1; background: #23222B; max-width: 440px; margin: 0 auto;">
+        <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ captain.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- 12. GUEST STORIES -->
+<section class="nova-section nova-section-ice">
+  <div class="nova-shell">
+    <div style="text-align: center; max-width: 600px; margin: 0 auto 40px auto;">
+      <span class="nova-kicker">Verified Experiences</span>
+      <h2 class="nova-title-section">From Check-in to Open Water</h2>
+    </div>
+
+    <div class="nova-grid-4">
+      {% for item in testimonials %}
+      <div class="nova-card" style="padding: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span style="color: #F59E0B; font-size: 1.1rem;">★★★★★</span>
+          <span class="nova-badge nova-badge-ice" style="font-size: 0.7rem;">{{ item.get_guest_segment_display }}</span>
+        </div>
+        <p style="font-size: 0.92rem; line-height: 1.6; color: var(--color-text-body); margin-bottom: 16px;">
+          “{{ item.text }}”
+        </p>
+        <div style="font-weight: 700; font-size: 0.9rem; color: var(--color-obsidian);">{{ item.guest_name }}</div>
+        <div style="font-size: 0.78rem; color: var(--color-text-muted);">{{ item.trip_date }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 13. PLAN NAIVASHA & 14. JOURNAL -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 36px; gap: 16px;">
+      <div>
+        <span class="nova-kicker">Local Intelligence</span>
+        <h2 class="nova-title-section">Know Before You Go</h2>
+      </div>
+      <a href="{% url 'content:journal_list' %}" style="font-weight: 700; color: var(--color-ultraviolet);">
+        Read Captain's Journal &rarr;
+      </a>
+    </div>
+
+    <div class="nova-grid-3">
+      {% for note in latest_notes %}
+      <article class="nova-card" style="padding: 24px;">
+        <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-ultraviolet); display: block; margin-bottom: 8px;">
+          {{ note.get_category_display }}
+        </span>
+        <h3 style="font-size: 1.2rem; margin-bottom: 10px;">
+          <a href="{{ note.get_absolute_url }}">{{ note.title }}</a>
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 16px;">
+          {{ note.excerpt }}
+        </p>
+        <a href="{{ note.get_absolute_url }}" style="font-weight: 700; color: var(--color-obsidian); font-size: 0.88rem;">
+          Read Guide &rarr;
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 15. DIRECTIONS / SERVICE AREA -->
+<section style="background-color: var(--color-ice); padding: 60px 0; border-top: 1px solid var(--color-ice-muted); border-bottom: 1px solid var(--color-ice-muted);">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center;">
+      <div>
+        <span class="nova-kicker">Service Coordinates</span>
+        <h2 style="font-size: 2rem; margin-bottom: 12px;">One lake. More than one way to start.</h2>
+        <p style="color: var(--color-text-body); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+          {{ site_settings.directions_summary }}
+        </p>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+          <strong>Notice:</strong> {{ site_settings.booking_notice }}
+        </p>
+      </div>
+
+      <div style="background: var(--color-white); padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--color-ice-muted);">
+        <div style="font-weight: 700; color: var(--color-obsidian); margin-bottom: 8px;">Primary Launch Base:</div>
+        <div style="font-size: 0.92rem; color: var(--color-text-body); margin-bottom: 12px;">{{ site_settings.standard_launch_name }}</div>
+        <div style="font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 18px;">GPS: {{ site_settings.standard_launch_lat }}, {{ site_settings.standard_launch_lng }}</div>
+        <a href="https://maps.google.com/?q={{ site_settings.standard_launch_lat }},{{ site_settings.standard_launch_lng }}" target="_blank" rel="noopener" class="nova-btn-dark" style="min-height: 40px; font-size: 0.85rem; width: 100%;">
+          Get Driving Directions &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 16. QUICK ANSWERS (ACCORDION) -->
+<section class="nova-section">
+  <div class="nova-shell-narrow">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <span class="nova-kicker">Direct Answers</span>
+      <h2 class="nova-title-section">Straight Answers Before You Travel</h2>
+      <p style="color: var(--color-text-muted); margin-top: 8px;">Clear facts about prices, hotel departures, safety, and booking.</p>
+    </div>
+
+    <div>
+      {% for faq in quick_faqs %}
+      <details class="nova-accordion">
+        <summary>
+          <span>{{ faq.question }}</span>
+          <span class="icon">+</span>
+        </summary>
+        <div class="nova-accordion-body">
+          {{ faq.answer|safe }}
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 17. FINAL CONVERSION CLOSE -->
+<section class="nova-section nova-section-dark" style="text-align: center;">
+  <div class="nova-shell-narrow">
+    <span class="nova-kicker nova-kicker-lime">NAIVASHA STARTS HERE</span>
+    <h2 class="nova-title-hero" style="color: #FFFFFF; margin-top: 10px; margin-bottom: 20px;">
+      Tell Nova where you are.<br>
+      We'll plan the lake from there.
+    </h2>
+    <p style="font-size: 1.15rem; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 36px;">
+      Whether staying at a partner resort or day-tripping from Nairobi, get an exact quote and verified departure plan in minutes.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+      <a href="{% url 'bookings:book' %}" class="nova-btn-primary" style="min-height: 52px; font-size: 1rem; padding: 14px 32px;">
+        Plan My Ride &rarr;
+      </a>
+      <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I'd%20like%20to%20plan%20a%20lake%20day." target="_blank" rel="noopener" class="nova-btn-secondary" style="min-height: 52px; font-size: 1rem; padding: 14px 32px;">
+        WhatsApp Nova Direct
+      </a>
+    </div>
+
+    <div style="margin-top: 30px; font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+      {{ site_settings.phone_display }} &bull; {{ site_settings.operating_hours }} &bull; No advance payment required for enquiry
+    </div>
+  </div>
+</section>
+
+{% endblock %}

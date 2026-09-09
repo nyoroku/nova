@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Plan & Book Your Lake Naivasha Experience | Nova Boat Rides{% endblock %}
+{% block meta_description %}Book your Lake Naivasha boat safari, hotel jetty pickup, or Stay + Ride package. Transparent pricing, certified captains, and instant WhatsApp confirmation.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">RESERVE YOUR LAKE DAY</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 16px;">
+      Plan Your Naivasha Experience
+    </h1>
+    <p style="font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 650px; line-height: 1.6;">
+      Select your ride, hotel departure jetty, or package. Our operations desk will coordinate your boat, safety gear, and captain.
+    </p>
+  </div>
+</section>
+
+<!-- Form Section -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px;" class="book-layout">
+      
+      <!-- Form Card Container -->
+      <div id="booking-card" class="nova-card" style="padding: 36px;" x-data="{ leadType: '{{ form.lead_type.value|default:'BOAT_ONLY' }}' }">
+        <h2 style="font-size: 1.5rem; margin-bottom: 8px;">Reservation Request</h2>
+        <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-bottom: 24px;">
+          Fill out your details below to receive an instant WhatsApp confirmation with your captain assignment.
+        </p>
+
+        <form method="post" 
+              action="{% url 'bookings:book' %}" 
+              hx-post="{% url 'bookings:book' %}" 
+              hx-target="#booking-card" 
+              hx-swap="outerHTML">
+          {% csrf_token %}
+
+          <!-- Hidden UTM tracking inputs -->
+          <input type="hidden" name="utm_source" value="{{ request.GET.utm_source }}">
+          <input type="hidden" name="utm_medium" value="{{ request.GET.utm_medium }}">
+          <input type="hidden" name="utm_campaign" value="{{ request.GET.utm_campaign }}">
+
+          <!-- Form Fields Partial -->
+          <div id="form-fields-container">
+            {% include 'bookings/partials/form_fields.html' %}
+          </div>
+
+          <div style="margin-top: 30px;">
+            <button type="submit" class="nova-btn-primary" style="width: 100%; padding: 14px 20px; font-size: 1.05rem;">
+              Submit Request & Generate WhatsApp Link &rarr;
+            </button>
+            <div style="text-align: center; margin-top: 12px; font-size: 0.8rem; color: var(--color-text-muted);">
+              No upfront payment required for enquiry submission. Pay at launch base or via official Till.
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Trust & Booking Assistance Sidebar -->
+      <aside>
+        <div style="position: sticky; top: 90px; display: flex; flex-direction: column; gap: 24px;">
+          
+          <!-- Direct WhatsApp Quick-Plan -->
+          <div class="nova-card" style="padding: 28px; background: var(--color-obsidian); color: #FFF;">
+            <span class="nova-badge nova-badge-lime" style="margin-bottom: 10px;">Immediate Response</span>
+            <h3 style="font-size: 1.3rem; margin-top: 4px; margin-bottom: 8px; color: #FFF;">Prefer to Book via Chat?</h3>
+            <p style="font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 1.5; margin-bottom: 18px;">
+              Our lake dispatchers are on standby to check live boat availability and weather conditions right now.
+            </p>
+            <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20plan%20a%20boat%20ride%20today." target="_blank" rel="noopener" class="nova-btn-primary" style="width: 100%; text-align: center;">
+              WhatsApp Dispatch Directly
+            </a>
+          </div>
+
+          <!-- The Nova Guarantee -->
+          <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 24px; border: 1px solid var(--color-ice-muted);">
+            <h4 style="font-size: 1.1rem; margin-bottom: 14px; color: var(--color-obsidian);">The Nova Booking Guarantee</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.88rem; color: var(--color-text-body);">
+              <li style="display: flex; gap: 10px;">
+                <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+                <span><strong>Weather Reschedule Guarantee:</strong> If high afternoon winds or sudden storms make boating unsafe, reschedule free of charge.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+                <span><strong>No Lake-Beach Hustle:</strong> Transparent rates fixed upon booking. No touts or haggling at the jetty.</span>
+              </li>
+              <li style="display: flex; gap: 10px;">
+                <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+                <span><strong>Safety Certified:</strong> Fitted life jackets for every passenger, adult and child.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Base Location -->
+          <div style="background: #FFFFFF; border-radius: var(--radius-lg); padding: 20px; border: 1px solid var(--color-ice-muted); font-size: 0.85rem; color: var(--color-text-muted);">
+            <strong style="color: var(--color-obsidian);">Launch Base:</strong><br>
+            {{ site_settings.standard_launch_name }}, South Lake Road, Naivasha.<br>
+            Phone / Desk: <strong>{{ site_settings.phone_display }}</strong>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@media (min-width: 992px) {
+  .book-layout {
+    grid-template-columns: 1.8fr 1fr !important;
+  }
+}
+@media (max-width: 640px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+{% endblock %}

@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#131218">
+  
+  <title>{% block meta_title %}{{ site_settings.business_name }} | {{ site_settings.tagline }}{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}{{ site_settings.supporting_proposition }}{% endblock %}">
+  
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="robots" content="{% block robots %}index, follow{% endblock %}">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% block og_title %}{{ site_settings.business_name }} | {{ site_settings.tagline }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{{ site_settings.supporting_proposition }}{% endblock %}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:site_name" content="{{ site_settings.business_name }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ site_settings.business_name }}">
+  <meta name="twitter:description" content="{{ site_settings.supporting_proposition }}">
+
+  <!-- Preconnect Fonts & CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+
+  <!-- Nova Electric Design System -->
+  <link rel="stylesheet" href="{% static 'css/nova-electric.css' %}">
+
+  <!-- Alpine.js & HTMX -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+
+  <!-- Structured Data JSON-LD Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TouristInformationCenter",
+        "@id": "{{ site_settings.SITE_URL }}/#business",
+        "name": "{{ site_settings.business_name }}",
+        "description": "{{ site_settings.supporting_proposition }}",
+        "telephone": "{{ site_settings.phone_e164 }}",
+        "email": "{{ site_settings.email }}",
+        "url": "{{ site_settings.SITE_URL }}/",
+        "priceRange": "KES 3,000 - KES 35,000",
+        "currenciesAccepted": "KES, USD",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "06:30",
+          "closes": "18:30"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "{{ site_settings.standard_launch_lat }}",
+          "longitude": "{{ site_settings.standard_launch_lng }}"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "South Lake Road",
+          "addressLocality": "Naivasha",
+          "addressRegion": "Nakuru County",
+          "addressCountry": "KE"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site_settings.SITE_URL }}/#website",
+        "url": "{{ site_settings.SITE_URL }}/",
+        "name": "{{ site_settings.business_name }}",
+        "publisher": {"@id": "{{ site_settings.SITE_URL }}/#business"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "{{ canonical_url }}#webpage",
+        "url": "{{ canonical_url }}",
+        "isPartOf": {"@id": "{{ site_settings.SITE_URL }}/#website"}
+      }
+    ]
+  }
+  </script>
+
+  {% block extra_head %}{% endblock %}
+</head>
+
+<body x-data="{ mobileMenuOpen: false }">
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" style="position: absolute; left: -9999px; z-index: 999; padding: 10px 16px; background: #C8F04A; color: #131218; font-weight: bold; border-radius: 4px;" onfocus="this.style.left='16px'; this.style.top='16px';" onblur="this.style.left='-9999px';">Skip to main content</a>
+
+  <!-- Header Navigation -->
+  <header class="nova-header">
+    <div class="nova-shell" style="display: flex; align-items: center; justify-content: space-between;">
+      
+      <!-- Brand Lockup -->
+      <a href="{% url 'core:home' %}" style="display: flex; align-items: center; gap: 10px;" aria-label="Nova Boat Rides Naivasha Home">
+        <div style="width: 38px; height: 38px; border-radius: 10px; background: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: #FFFFFF; font-size: 1.25rem;">
+          N
+        </div>
+        <div style="line-height: 1.15;">
+          <span style="display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.02em;">NOVA</span>
+          <span style="display: block; font-size: 0.65rem; font-weight: 700; color: var(--color-acid-lime); text-transform: uppercase; letter-spacing: 0.12em;">Boat Rides Naivasha</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav style="display: none;" class="desktop-nav" aria-label="Primary Navigation">
+        <a href="{% url 'tours:tour_list' %}" class="nova-nav-link">Boat Rides</a>
+        <a href="{% url 'partners:hotel_hub' %}" class="nova-nav-link" style="color: var(--color-acid-lime);">From Your Hotel</a>
+        <a href="{% url 'stays:stay_list' %}" class="nova-nav-link">Stay</a>
+        <a href="{% url 'packages:package_list' %}" class="nova-nav-link">Packages</a>
+        <a href="{% url 'core:prices' %}" class="nova-nav-link">Prices</a>
+        <a href="{% url 'core:plan_naivasha' %}" class="nova-nav-link">Plan Naivasha</a>
+        <a href="{% url 'content:journal_list' %}" class="nova-nav-link">Journal</a>
+      </nav>
+
+      <!-- Right CTAs -->
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20plan%20a%20Lake%20Naivasha%20ride." target="_blank" rel="noopener" class="nova-btn-primary" style="min-height: 42px; padding: 8px 18px; font-size: 0.88rem;">
+          Book / WhatsApp
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" @click="mobileMenuOpen = !mobileMenuOpen" style="display: flex; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #FFF; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer;" aria-label="Toggle navigation menu" class="mobile-toggle">
+          <span x-show="!mobileMenuOpen">&#9776;</span>
+          <span x-show="mobileMenuOpen" style="display: none;">&times;</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="nova-mobile-menu" x-show="mobileMenuOpen" style="display: none;" x-transition>
+    <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 10px;">
+      <a href="{% url 'tours:tour_list' %}" style="color: #FFF; font-size: 1.2rem; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">Boat Rides</a>
+      <a href="{% url 'partners:hotel_hub' %}" style="color: var(--color-acid-lime); font-size: 1.2rem; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">From Your Hotel (Pickup / Jetty)</a>
+      <a href="{% url 'stays:stay_list' %}" style="color: #FFF; font-size: 1.2rem; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">Stay by the Lake</a>
+      <a href="{% url 'packages:package_list' %}" style="color: #FFF; font-size: 1.2rem; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">Stay + Ride Packages</a>
+      <a href="{% url 'core:prices' %}" style="color: #FFF; font-size: 1.2rem; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">Price Truth & Estimator</a>
+      <a href="{% url 'core:plan_naivasha' %}" style="color: #FFF; font-size: 1.2rem; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">Plan Naivasha</a>
+      <a href="{% url 'content:journal_list' %}" style="color: #FFF; font-size: 1.2rem; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">Captain's Journal</a>
+      <a href="{% url 'core:about' %}" style="color: #FFF; font-size: 1.2rem; font-weight: 700; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">About Nova & Captains</a>
+      <a href="{% url 'core:contact' %}" style="color: #FFF; font-size: 1.2rem; font-weight: 700; padding: 10px 0;">Contact & Directions</a>
+
+      <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+        <a href="{% url 'bookings:book' %}" class="nova-btn-primary" style="width: 100%;">Plan My Ride</a>
+        <a href="{{ brand.whatsapp_url }}" target="_blank" rel="noopener" class="nova-btn-secondary" style="width: 100%;">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 72px;"></div>
+
+  <!-- Messages notifications -->
+  {% if messages %}
+  <div class="nova-shell" style="margin-top: 16px;">
+    {% for message in messages %}
+    <div style="padding: 14px 20px; border-radius: 12px; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem; background: #EEF1FF; color: #131218; border-left: 4px solid #6750E8;">
+      {{ message }}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Main Content Block -->
+  <main id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer style="background-color: var(--color-obsidian); color: rgba(255,255,255,0.7); padding-top: 70px; padding-bottom: 40px; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="nova-shell">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px;">
+        
+        <!-- Brand Summary -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+            <div style="width: 34px; height: 34px; border-radius: 8px; background: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: #FFF;">N</div>
+            <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: #FFF;">NOVA</span>
+          </div>
+          <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
+            The lake-access layer for visitors and hotels. Seamless departures from approved hotel jetties and Nova Lake Base.
+          </p>
+          <p style="font-size: 0.82rem; color: var(--color-acid-lime); font-weight: 700;">
+            “Naivasha starts here.”
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">Lake Experiences</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <li><a href="{% url 'tours:tour_detail' slug='classic-lake-safari' %}" style="hover:color: #FFF;">Classic Lake Safari</a></li>
+            <li><a href="{% url 'tours:tour_detail' slug='hippo-bird-safari' %}">Hippo & Bird Safari</a></li>
+            <li><a href="{% url 'tours:tour_detail' slug='crescent-island' %}">Crescent Island Tour</a></li>
+            <li><a href="{% url 'tours:tour_detail' slug='sunset-cruise' %}">Sunset Lake Cruise</a></li>
+            <li><a href="{% url 'tours:tour_detail' slug='private-charter' %}">Private Boat Charter</a></li>
+          </ul>
+        </div>
+
+        <!-- Stays & Partnerships -->
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">Stays & Departure</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <li><a href="{% url 'partners:hotel_hub' %}">From Your Hotel</a></li>
+            <li><a href="{% url 'stays:stay_list' %}">Curated Lakeside Stays</a></li>
+            <li><a href="{% url 'packages:package_list' %}">Stay + Ride Packages</a></li>
+            <li><a href="{% url 'core:prices' %}">Transparent Pricing</a></li>
+            <li><a href="{% url 'questions:faq_list' %}">Booking FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Location -->
+        <div>
+          <h4 style="color: #FFF; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">Launch Base</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 8px;">{{ site_settings.standard_launch_name }}</p>
+          <p style="font-size: 0.88rem; margin-bottom: 8px;">Hours: {{ site_settings.operating_hours }}</p>
+          <p style="font-size: 0.88rem; margin-bottom: 16px;">WhatsApp: {{ site_settings.phone_display }}</p>
+          <a href="{{ brand.whatsapp_url }}" target="_blank" rel="noopener" class="nova-badge nova-badge-lime">Direct WhatsApp Access</a>
+        </div>
+
+      </div>
+
+      <div style="padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 0.82rem;">
+        <div>&copy; 2026 {{ site_settings.business_name }}. All rights reserved. Registered in Kenya.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="{% url 'core:about' %}">About Nova</a>
+          <a href="{% url 'core:plan_naivasha' %}">Safety & Policies</a>
+          <a href="{% url 'core:contact' %}">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <aside aria-label="Direct WhatsApp Contact" style="position: fixed; bottom: 24px; right: 24px; z-index: 90;">
+    <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20plan%20a%20Lake%20Naivasha%20boat%20ride." target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; background: #25D366; color: #FFF; padding: 12px 20px; border-radius: 9999px; font-weight: 700; font-size: 0.92rem; box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); text-decoration: none;" aria-label="Chat with Nova on WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.072-2.064-.492-1.637-.677-2.702-2.338-2.784-2.449-.082-.111-.664-.883-.664-1.684 0-.801.42-1.196.57-1.359.15-.163.329-.204.438-.204.109 0 .219.002.314.007.101.005.237-.038.371.285.14.336.478 1.164.52 1.25.042.086.07.186.012.3-.058.114-.087.185-.173.285-.086.1-.182.223-.26.299-.087.085-.178.177-.077.351.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.274.072.376-.044.103-.116.438-.511.554-.686.117-.175.234-.145.394-.086.16.058 1.017.48 1.191.567.175.087.292.13.335.204.044.073.044.425-.1.83z"/></svg>
+      <span>WhatsApp Nova</span>
+    </a>
+  </aside>
+
+  <!-- Responsive Layout Rules -->
+  <style>
+    @media (min-width: 992px) {
+      .desktop-nav { display: flex !important; align-items: center; gap: 8px; }
+      .mobile-toggle { display: none !important; }
+    }
+  </style>
+
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

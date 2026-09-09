@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}{{ package.name }} | Lake Naivasha Stay + Ride Package | Nova{% endblock %}
+{% block meta_description %}{{ package.tagline }} Starting from KES {{ package.starting_price|floatformat:0 }}. Curated lakeside room, certified boat ride, and sanctuary walking tour.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+      <a href="{% url 'packages:package_list' %}" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem;">&larr; All Packages</a>
+      <span style="color: rgba(255,255,255,0.3);">/</span>
+      <span class="nova-badge nova-badge-lime">{{ package.duration_nights }} Night(s) / {{ package.duration_days }} Days</span>
+      {% if package.includes_hotel_origin_pickup %}
+        <span class="nova-badge nova-badge-purple">Hotel Jetty Departure</span>
+      {% endif %}
+    </div>
+
+    <h1 class="nova-title-hero" style="color: #FFF; margin-bottom: 16px;">
+      {{ package.name }}
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 700px; line-height: 1.6;">
+      {{ package.tagline }}
+    </p>
+  </div>
+</section>
+
+<!-- Content & Booking Engine -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px;" class="package-detail-layout">
+      
+      <!-- Main Content -->
+      <div>
+        <!-- Package Image -->
+        <div style="height: 380px; border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 36px; background: #131218;">
+          {% if package.featured_image %}
+            <img src="{{ package.featured_image.url }}" alt="{{ package.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% else %}
+            <img src="{% static 'images/hero_sunset.webp' %}" alt="{{ package.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% endif %}
+        </div>
+
+        <!-- Description -->
+        <div style="margin-bottom: 40px;">
+          <span class="nova-kicker">Itinerary & Experience</span>
+          <h2 class="nova-title-section" style="margin-bottom: 16px;">Package Overview</h2>
+          <div class="nova-prose" style="font-size: 1.05rem; line-height: 1.7;">
+            {{ package.description|linebreaks }}
+          </div>
+        </div>
+
+        <!-- Included Components -->
+        {% if components %}
+        <div style="margin-bottom: 40px;">
+          <span class="nova-kicker">What is Included</span>
+          <h2 class="nova-title-section" style="margin-bottom: 20px;">Package Components</h2>
+
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            {% for comp in components %}
+            <div class="nova-card" style="padding: 20px 24px; display: flex; align-items: flex-start; gap: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--color-ice); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--color-ultraviolet); flex-shrink: 0; margin-top: 2px;">
+                ✓
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+                  <h4 style="font-size: 1.1rem; margin: 0;">{{ comp.title }}</h4>
+                  <span class="nova-badge nova-badge-purple">{{ comp.get_component_type_display }}</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.4; margin: 0;">
+                  {{ comp.description }}
+                </p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Eligible Stays & Tours -->
+        {% if stays %}
+        <div style="background: var(--color-ice); border-radius: var(--radius-xl); padding: 36px; border: 1px solid var(--color-ice-muted); margin-bottom: 40px;">
+          <span class="nova-kicker">Accommodation Options</span>
+          <h3 style="font-size: 1.35rem; margin-bottom: 16px;">Available Lodges for This Package</h3>
+          <div class="nova-grid-2">
+            {% for stay in stays %}
+            <div class="nova-card" style="padding: 20px; background: #FFFFFF;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 6px;">{{ stay.name }}</h4>
+              <div style="font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 8px;">📍 {{ stay.location_area }}</div>
+              <p style="font-size: 0.85rem; color: var(--color-text-body); line-height: 1.4; margin: 0;">
+                {{ stay.summary|truncatewords:12 }}
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+
+      <!-- Sticky Package Quoter Sidebar -->
+      <aside>
+        <div style="position: sticky; top: 90px;">
+          <div class="nova-card" style="padding: 28px; margin-bottom: 20px;">
+            <span class="nova-kicker">Live Package Quoter</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 16px;">Estimate Your Package</h3>
+
+            <form hx-get="{% url 'packages:quote_partial' slug=package.slug %}"
+                  hx-target="#package-quote-result"
+                  hx-trigger="change, input delay:200ms">
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                <div>
+                  <label class="nova-form-label" for="pkg-adults">Adults</label>
+                  <input type="number" id="pkg-adults" name="adults" min="1" max="15" value="2" class="nova-form-input">
+                </div>
+                <div>
+                  <label class="nova-form-label" for="pkg-children">Children</label>
+                  <input type="number" id="pkg-children" name="children" min="0" max="10" value="0" class="nova-form-input">
+                </div>
+              </div>
+
+              {% if stays %}
+              <div style="margin-bottom: 20px;">
+                <label class="nova-form-label" for="pkg-stay">Preferred Accommodation</label>
+                <select id="pkg-stay" name="stay_id" class="nova-form-input">
+                  <option value="">-- Choose Hotel Option --</option>
+                  {% for s in stays %}
+                    <option value="{{ s.id }}" {% if forloop.first %}selected{% endif %}>{{ s.name }} ({{ s.location_area }})</option>
+                  {% endfor %}
+                </select>
+              </div>
+              {% endif %}
+
+            </form>
+
+            <!-- HTMX Partial Result Target -->
+            <div id="package-quote-result" 
+                 hx-get="{% url 'packages:quote_partial' slug=package.slug %}?adults=2&children=0{% if stays.first %}&stay_id={{ stays.first.id }}{% endif %}" 
+                 hx-trigger="load">
+              <div style="background: var(--color-obsidian); border-radius: var(--radius-lg); padding: 24px; text-align: center; color: #FFF;">
+                Calculating package estimate...
+              </div>
+            </div>
+
+          </div>
+
+          <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 20px; border: 1px solid var(--color-ice-muted); font-size: 0.85rem; color: var(--color-text-body);">
+            <strong>Have Special Group Dates?</strong><br>
+            For corporate retreats, family celebrations, or multi-day custom safari itineraries, speak directly with our lake coordinator at <strong>{{ site_settings.phone_display }}</strong>.
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@media (min-width: 992px) {
+  .package-detail-layout {
+    grid-template-columns: 1.8fr 1fr !important;
+  }
+}
+</style>
+{% endblock %}

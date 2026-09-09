@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}{{ tour.name }} | Lake Naivasha Boat Rides | Nova{% endblock %}
+{% block meta_description %}{{ tour.summary }} Starting from KES {{ tour.get_starting_price|floatformat:0 }}. Certified captains, life jackets fitted before boarding, and hotel jetty departures.{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "{{ tour.name }}",
+  "description": "{{ tour.summary }}",
+  "touristType": ["Wildlife Enthusiasts", "Eco-tourists", "Families"],
+  "provider": {
+    "@type": "TouristInformationCenter",
+    "name": "{{ site_settings.business_name }}",
+    "url": "{{ site_settings.SITE_URL }}"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "KES",
+    "lowPrice": "{{ tour.get_starting_price }}",
+    "offerCount": "{{ price_tiers.count }}"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+      <a href="{% url 'tours:tour_list' %}" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem;">&larr; All Boat Rides</a>
+      <span style="color: rgba(255,255,255,0.3);">/</span>
+      {% if tour.is_private %}
+        <span class="nova-badge nova-badge-purple">Private Charter</span>
+      {% else %}
+        <span class="nova-badge nova-badge-lime">Shared & Group Friendly</span>
+      {% endif %}
+      {% if tour.crescent_island_included %}
+        <span class="nova-badge nova-badge-purple">Crescent Island Route</span>
+      {% endif %}
+    </div>
+
+    <h1 class="nova-title-hero" style="color: #FFF; margin-bottom: 16px;">
+      {{ tour.name }}
+    </h1>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
+      <div>⏱ <strong>Duration:</strong> {{ tour.duration_display }}</div>
+      <div>👥 <strong>Capacity:</strong> Up to {{ tour.max_capacity }} passengers</div>
+      <div>⚓ <strong>Departure:</strong> Nova Lake Base or Approved Hotel Jetty</div>
+    </div>
+  </div>
+</section>
+
+<!-- Content & Booking Quoter Section -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start;" class="tour-detail-layout">
+      
+      <!-- Main Information Column -->
+      <div>
+        <!-- Tour Image -->
+        <div style="height: 380px; border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 30px; background: #131218;">
+          {% if tour.featured_image %}
+            <img src="{{ tour.featured_image.url }}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% else %}
+            <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% endif %}
+        </div>
+
+        <div style="margin-bottom: 36px;">
+          <span class="nova-kicker">Ride Overview</span>
+          <h2 class="nova-title-section" style="margin-bottom: 16px;">What You Will Experience</h2>
+          <div class="nova-prose" style="font-size: 1.05rem; line-height: 1.7;">
+            {{ tour.description|linebreaks }}
+          </div>
+        </div>
+
+        <!-- Inclusions & Safety Standards -->
+        <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 30px; margin-bottom: 36px; border: 1px solid var(--color-ice-muted);">
+          <h3 style="font-size: 1.25rem; margin-bottom: 16px;">The Nova Standards on Every Ride</h3>
+          <div class="nova-grid-2" style="gap: 16px;">
+            <div style="display: flex; gap: 10px;">
+              <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+              <span style="font-size: 0.9rem;"><strong>Mandatory Life Jackets:</strong> Certified adult & child sizes fitted before boarding.</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+              <span style="font-size: 0.9rem;"><strong>Certified Lake Captain:</strong> Licensed skipper with deep wildlife and birding expertise.</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+              <span style="font-size: 0.9rem;"><strong>Hippo Safety Buffer:</strong> Safe observation distances strictly respected.</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
+              <span style="font-size: 0.9rem;"><strong>Clean Electric-Trim Boats:</strong> Well-maintained, quiet-running outboards.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crescent Island Clarification -->
+        {% if tour.crescent_island_included %}
+        <div class="nova-card" style="padding: 28px; border-left: 4px solid var(--color-acid-lime); margin-bottom: 36px;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Crescent Island Walking Logistics</h3>
+          <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6; margin-bottom: 10px;">
+            This tour includes direct boat transit and docking at Crescent Island sanctuary. 
+            In compliance with national conservation policies, sanctuary walking gate fees are settled directly at the island entrance via M-Pesa or credit card:
+          </p>
+          <ul style="margin-left: 20px; font-size: 0.88rem; color: var(--color-text-body); display: flex; flex-direction: column; gap: 4px;">
+            <li><strong>Kenyan Citizens / East African Residents:</strong> Approx KES 1,000 per adult / KES 500 per child</li>
+            <li><strong>Non-Resident International Guests:</strong> Approx USD 33 per adult / USD 16 per child</li>
+          </ul>
+        </div>
+        {% endif %}
+
+        <!-- Available Add-Ons -->
+        {% if add_ons %}
+        <div style="margin-bottom: 36px;">
+          <span class="nova-kicker">Optional Enhancements</span>
+          <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Customize Your Experience</h3>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            {% for add in add_ons %}
+            <div class="nova-card" style="padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px;">
+              <div>
+                <h4 style="font-size: 1.05rem; margin-bottom: 4px;">{{ add.name }}</h4>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">{{ add.description }}</p>
+              </div>
+              <div style="text-align: right; flex-shrink: 0;">
+                <span style="font-weight: 800; font-size: 1.1rem; color: var(--color-ultraviolet);">+ KES {{ add.price|floatformat:0 }}</span>
+                <span style="display: block; font-size: 0.75rem; color: var(--color-text-muted);">{{ add.get_pricing_unit_display }}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Hotel Departure Information -->
+        <div class="nova-card" style="padding: 28px; background: #FFF; border: 1px solid var(--color-ice-muted);">
+          <span class="nova-kicker">Departure Options</span>
+          <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Board at Your Lakeside Hotel</h3>
+          <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 16px;">
+            Staying at a partner hotel along the South Lake shore? Nova boats can pick you up directly from approved hotel jetties or coordinate hotel road pickup.
+          </p>
+          <a href="{% url 'partners:hotel_hub' %}" class="nova-btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">
+            Check Hotel Departure Availability &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Sticky Quoter Sidebar Column -->
+      <aside>
+        <div style="position: sticky; top: 90px;">
+          <!-- Quoter Inputs Card -->
+          <div class="nova-card" style="padding: 28px; margin-bottom: 20px;">
+            <span class="nova-kicker">Live Fare Estimator</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 16px;">Estimate Your Rate</h3>
+
+            <form hx-get="{% url 'tours:quote_partial' slug=tour.slug %}" 
+                  hx-target="#quote-result" 
+                  hx-trigger="change, input delay:200ms"
+                  id="tour-quoter-form">
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                <div>
+                  <label class="nova-form-label" for="adults">Adults (12+)</label>
+                  <input type="number" id="adults" name="adults" min="1" max="15" value="2" class="nova-form-input">
+                </div>
+                <div>
+                  <label class="nova-form-label" for="children">Children (3-11)</label>
+                  <input type="number" id="children" name="children" min="0" max="10" value="0" class="nova-form-input">
+                </div>
+              </div>
+
+              <div style="margin-bottom: 14px;">
+                <label class="nova-form-label" for="resident_type">Guest Residency</label>
+                <select id="resident_type" name="resident_type" class="nova-form-input">
+                  <option value="RESIDENT" selected>Kenyan / EA Resident (KES)</option>
+                  <option value="NON_RESIDENT">International Visitor (USD/KES)</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">
+                  <input type="checkbox" name="is_private" value="true" {% if tour.is_private %}checked{% endif %} style="width: 18px; height: 18px; accent-color: var(--color-ultraviolet);">
+                  <span>Require Private Boat Only</span>
+                </label>
+              </div>
+
+            </form>
+
+            <!-- HTMX Partial Result Target (Initialized with default 2 adults) -->
+            <div id="quote-result" hx-get="{% url 'tours:quote_partial' slug=tour.slug %}?adults=2&children=0&resident_type=RESIDENT" hx-trigger="load">
+              <!-- Loading Skeleton -->
+              <div style="background: var(--color-obsidian); border-radius: var(--radius-lg); padding: 24px; text-align: center; color: #FFF;">
+                Calculating live quote...
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Direct Phone / Support Box -->
+          <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 20px; text-align: center; border: 1px solid var(--color-ice-muted);">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">Need a Custom Schedule?</div>
+            <div style="font-size: 1.05rem; font-weight: 700; color: var(--color-obsidian); margin: 6px 0;">
+              {{ site_settings.phone_display }}
+            </div>
+            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 10px;">
+              Early sunrise photographer charters or corporate groups.
+            </p>
+            <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20have%20a%20custom%20request%20for%20{{ tour.name|urlencode }}." target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--color-ultraviolet); font-weight: 700;">
+              Chat on WhatsApp &rarr;
+            </a>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Related Tours -->
+    {% if related_tours %}
+    <div style="margin-top: 80px; padding-top: 50px; border-top: 1px solid var(--color-ice-muted);">
+      <span class="nova-kicker">Explore More</span>
+      <h2 class="nova-title-section" style="margin-bottom: 30px;">Other Popular Lake Rides</h2>
+      
+      <div class="nova-grid-3">
+        {% for rtour in related_tours %}
+        <div class="nova-card" style="display: flex; flex-direction: column;">
+          <div style="height: 180px; background: #131218; overflow: hidden; position: relative;">
+            {% if rtour.featured_image %}
+              <img src="{{ rtour.featured_image.url }}" alt="{{ rtour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+            {% else %}
+              <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ rtour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+            {% endif %}
+            <span class="nova-badge nova-badge-lime" style="position: absolute; bottom: 10px; right: 10px;">⏱ {{ rtour.duration_display }}</span>
+          </div>
+          <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+            <h3 style="font-size: 1.15rem; margin-bottom: 6px;">
+              <a href="{% url 'tours:tour_detail' slug=rtour.slug %}" style="color: inherit; text-decoration: none;">
+                {{ rtour.name }}
+              </a>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-body); line-height: 1.4; margin-bottom: 14px; flex: 1;">
+              {{ rtour.summary|truncatewords:14 }}
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-ice); padding-top: 10px;">
+              <span style="font-weight: 800; color: var(--color-ultraviolet); font-size: 1.05rem;">From KES {{ rtour.get_starting_price|floatformat:0 }}</span>
+              <a href="{% url 'tours:tour_detail' slug=rtour.slug %}" style="font-size: 0.85rem; font-weight: 700; color: var(--color-obsidian);">View &rarr;</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<style>
+@media (min-width: 992px) {
+  .tour-detail-layout {
+    grid-template-columns: 1.6fr 1fr !important;
+  }
+}
+</style>
+{% endblock %}

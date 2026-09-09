@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Lake Naivasha Boat Rides from Your Hotel | Nova Hotel Departures{% endblock %}
+{% block meta_description %}Step onto a Nova boat directly from your resort. Verified jetty pickups from Enashipai, Kiboko Camp, and vetted lakeside accommodations with transparent logistics.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">HOTEL DEPARTURE HUB</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
+      Boat Rides from Your Hotel
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 700px; line-height: 1.6;">
+      No need to drive to a crowded public beach. If you are staying at an approved lakeside lodge or private camp, Nova boats pick you up directly from your hotel jetty or provide private road staging.
+    </p>
+  </div>
+</section>
+
+<!-- Interactive Hotel Serviceability Checker -->
+<section class="nova-section" style="background: var(--color-ice); border-bottom: 1px solid var(--color-ice-muted);">
+  <div class="nova-shell">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <span class="nova-kicker">Real-Time Verification</span>
+        <h2 class="nova-title-section">Check Your Hotel's Lake Access</h2>
+        <p class="nova-prose">Select your property to view exact departure logistics, water depth clearances, and advance notice requirements.</p>
+      </div>
+
+      <div class="nova-card" style="padding: 36px; background: #FFFFFF;">
+        <form hx-get="{% url 'partners:hotel_check' %}"
+              hx-target="#hotel-check-result"
+              hx-trigger="change, input delay:250ms">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;" class="hotel-checker-inputs">
+            <div>
+              <label class="nova-form-label" for="hotel_id">Select Partner Hotel</label>
+              <select id="hotel_id" name="hotel_id" class="nova-form-input">
+                <option value="">-- Choose Partner Property --</option>
+                {% for p in partners %}
+                  <option value="{{ p.id }}">{{ p.name }} ({{ p.location_area }})</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <div>
+              <label class="nova-form-label" for="custom_hotel_name">Or Enter Any Hotel / Villa</label>
+              <input type="text" id="custom_hotel_name" name="custom_hotel_name" placeholder="e.g. Fisherman's Camp, Private Villa..." class="nova-form-input">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <label class="nova-form-label" for="tour_slug">Desired Boat Experience (Optional)</label>
+            <select id="tour_slug" name="tour_slug" class="nova-form-input">
+              <option value="">-- Any Signature Ride --</option>
+              {% for t in tours %}
+                <option value="{{ t.slug }}">{{ t.name }} ({{ t.duration_display }})</option>
+              {% endfor %}
+            </select>
+          </div>
+
+        </form>
+
+        <!-- Result Target Container -->
+        <div id="hotel-check-result">
+          <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 24px; text-align: center; color: var(--color-text-muted); font-size: 0.92rem;">
+            Select a partner hotel above or enter your property name to see boarding logistics, positioning fees, and notice requirements.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partner Properties Grid -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 50px;">
+      <span class="nova-kicker">Partner Network</span>
+      <h2 class="nova-title-section">Verified Departure Points</h2>
+      <p class="nova-prose">Properties where Nova operates scheduled pick-ups, designated jetty staging, or vetted hotel transfers.</p>
+    </div>
+
+    <div class="nova-grid-2">
+      {% for partner in partners %}
+      <div class="nova-card" style="padding: 30px; display: flex; flex-direction: column;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+          <div>
+            <span class="nova-badge nova-badge-purple" style="margin-bottom: 8px;">{{ partner.location_area }}</span>
+            <h3 style="font-size: 1.35rem; margin-top: 4px;">{{ partner.name }}</h3>
+          </div>
+          {% if partner.public_page_enabled and partner.marketing_permission %}
+            <span class="nova-badge nova-badge-lime">Public Partner</span>
+          {% else %}
+            <span class="nova-badge nova-badge-dark" style="background: #23222B; color: #FFF;">Operational Partner</span>
+          {% endif %}
+        </div>
+
+        <p style="font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 20px; flex: 1;">
+          {{ partner.internal_notes|default:"Seamless guest boat access with verified jetty clearance and scheduled departure windows." }}
+        </p>
+
+        <!-- Service Points Info -->
+        <div style="background: var(--color-ice); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px; font-size: 0.85rem;">
+          {% for sp in partner.service_points.all %}
+            <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+              <span><strong>Access:</strong> {{ sp.get_point_type_display }}</span>
+              {% if sp.positioning_fee > 0 %}
+                <span style="color: var(--color-ultraviolet); font-weight: 700;">+KES {{ sp.positioning_fee|floatformat:0 }} transit</span>
+              {% else %}
+                <span style="color: #1b8543; font-weight: 700;">Free Jetty Boarding</span>
+              {% endif %}
+            </div>
+          {% empty %}
+            <div>Central Dispatch Pickup Coordination</div>
+          {% endfor %}
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          {% if partner.public_page_enabled and partner.marketing_permission %}
+            <a href="{% url 'partners:hotel_detail' slug=partner.slug %}" class="nova-btn-secondary" style="flex: 1; text-align: center; font-size: 0.85rem; padding: 10px 14px;">
+              Hotel Page & Routes
+            </a>
+          {% endif %}
+          <a href="{% url 'bookings:book' %}?hotel={{ partner.slug }}" class="nova-btn-primary" style="flex: 1; text-align: center; font-size: 0.85rem; padding: 10px 14px;">
+            Book from {{ partner.name }}
+          </a>
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- How It Works & Transparency -->
+    <div style="margin-top: 60px; background: #FFFFFF; border-radius: var(--radius-xl); padding: 40px; border: 1px solid var(--color-ice-muted);">
+      <h3 style="font-size: 1.4rem; margin-bottom: 20px;">The Three Departure Models</h3>
+      <div class="nova-grid-3">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">1️⃣</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Direct Hotel Jetty</h4>
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5;">
+            Step straight from your hotel gardens or jetty onto the Nova boat. Available at partners with certified shoreline water depth.
+          </p>
+        </div>
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">2️⃣</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Private Road Transfer</h4>
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5;">
+            For cliff-top resorts or shallow coves, our private shuttle transfers you safely from hotel reception directly to Nova Lake Base.
+          </p>
+        </div>
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 10px;">3️⃣</div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Advance Lake Dispatch</h4>
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5;">
+            Staying at a private rental or boutique cottage? Provide your property name, and our dispatch team checks water access and coordinates gate clearance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+@media (max-width: 640px) {
+  .hotel-checker-inputs {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+{% endblock %}

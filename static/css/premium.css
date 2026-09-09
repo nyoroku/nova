@@ -1,0 +1,121 @@
+/* Premium Rafiki presentation layer. Brand tokens remain in design-tokens.css. */
+html { background: var(--rafiki-surface); }
+body {
+  color: var(--rafiki-navy);
+  background: var(--rafiki-surface);
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Baloo 2", "Inter", system-ui, sans-serif;
+  letter-spacing: -.025em;
+}
+.font-display { font-family: "Baloo 2", "Inter", system-ui, sans-serif; }
+.bg-surface { background-color: #F7FAFC; }
+.bg-primary-soft { background-color: #EAF6FB; }
+.text-muted { color: #667A87; }
+.eyebrow {
+  color: #287DA4;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.btn-accent {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  border-radius: 999px;
+  background: #F6C445;
+  padding: .75rem 1.35rem;
+  color: #1E3A4C;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(246, 196, 69, .22);
+  transition: transform .2s ease, background .2s ease;
+}
+.btn-accent:hover { background: #FFD15C; transform: translateY(-1px); }
+.icon-badge {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #EAF6FB;
+  color: #287DA4;
+}
+.prose-premium { color: #345367; font-size: 1rem; line-height: 1.82; }
+.prose-premium p + p { margin-top: 1rem; }
+.prose-premium h2, .prose-premium h3 { margin-top: 2rem; color: #1E3A4C; }
+.prose-premium ul, .prose-premium ol { margin: 1rem 0; padding-left: 1.25rem; }
+.prose-premium ul { list-style: disc; }
+.prose-premium ol { list-style: decimal; }
+.prose-premium a { color: #287DA4; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+p, li { text-wrap: pretty; }
+a, button, select, input, textarea { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(246, 196, 69, .85) !important;
+  outline-offset: 3px;
+}
+
+.premium-shell { width: min(100% - 2rem, 80rem); margin-inline: auto; }
+.premium-card {
+  border: 1px solid rgba(220, 231, 237, .95);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(30, 58, 76, .075);
+}
+.premium-card-lift { transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
+.premium-card-lift:hover { transform: translateY(-5px); border-color: rgba(61, 156, 199, .45); box-shadow: 0 24px 56px rgba(30, 58, 76, .14); }
+.premium-kicker { color: var(--rafiki-success); font-size: .74rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.premium-button, .btn-primary {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  border-radius: 999px !important;
+  background: var(--rafiki-sky) !important;
+  color: white !important;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(61, 156, 199, .22);
+}
+.premium-button:hover, .btn-primary:hover { background: #287DA4 !important; transform: translateY(-1px); }
+.premium-button-yellow { background: var(--rafiki-yellow) !important; color: var(--rafiki-navy) !important; box-shadow: 0 10px 24px rgba(246, 196, 69, .22); }
+.premium-button-yellow:hover { background: #FFD15C !important; }
+.premium-button-outline { border: 1px solid var(--rafiki-border); background: white; color: var(--rafiki-navy); box-shadow: none; }
+
+.premium-prose { color: var(--rafiki-navy-soft); font-size: 1.03rem; line-height: 1.8; }
+.premium-prose p + p { margin-top: 1rem; }
+.premium-prose h2, .premium-prose h3 { margin-top: 2rem; color: var(--rafiki-navy); }
+.premium-prose a { color: #287DA4; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+.premium-image { background: #DDEDF4; object-fit: cover; }
+.premium-pill { display: inline-flex; align-items: center; gap: .45rem; border: 1px solid var(--rafiki-border); border-radius: 999px; background: rgba(255,255,255,.94); padding: .55rem .85rem; color: var(--rafiki-navy-soft); font-size: .78rem; font-weight: 700; }
+
+#mainNav.is-compact .rafiki-nav-inner { height: 56px; }
+#mainNav.is-compact .brand-mark { transform: scale(.94); }
+.rafiki-nav-inner, .brand-mark { transition: height .25s ease, transform .25s ease; }
+
+.tour-card-description p { display: inline; }
+.tour-card-description br { display: none; }
+
+@media (max-width: 767px) {
+  .premium-shell { width: min(100% - 1.25rem, 80rem); }
+  .floating-whatsapp { display: none !important; }
+  .premium-card { border-radius: 18px; }
+  .hero-action-row { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: .55rem; }
+  .hero-action-row > a { min-width: 0; min-height: 44px; padding: .7rem .72rem !important; font-size: .79rem; line-height: 1; white-space: nowrap; }
+  .hero-action-row > a i { font-size: .95rem; }
+}
+
+@media (max-width: 380px) {
+  .brand-mark { gap: .35rem !important; }
+  .brand-mark svg { width: 2rem; height: 2rem; }
+  .brand-mark > span > span:first-child { font-size: 1rem; }
+  #mobile-language { width: 3.25rem; }
+}

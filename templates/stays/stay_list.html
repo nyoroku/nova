@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Lakeside Accommodations in Naivasha | Resorts, Camps & Lodges | Nova{% endblock %}
+{% block meta_description %}Curated Lake Naivasha hotels, luxury tented camps, and lakeside lodges. Honest availability transparency, direct jetty departures, and Stay + Ride packages.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">CURATED LAKESIDE ACCOMMODATION</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
+      Where to Stay in Naivasha
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 700px; line-height: 1.6;">
+      Hand-picked lakeside lodges, luxury camps, and scenic resorts. Every stay can be paired with Nova boat safaris and private hotel jetty pickups.
+    </p>
+
+    <!-- Filter Bar -->
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
+      <a href="{% url 'stays:stay_list' %}" 
+         style="padding: 8px 18px; border-radius: 9999px; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: all 0.2s;"
+         class="{% if not current_type and not current_mode %}nova-badge-lime{% else %}nova-badge-dark{% endif %}">
+        All Properties
+      </a>
+      {% for type_val, type_label in property_types %}
+      <a href="{% url 'stays:stay_list' %}?type={{ type_val }}" 
+         style="padding: 8px 18px; border-radius: 9999px; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: all 0.2s;"
+         class="{% if current_type == type_val %}nova-badge-lime{% else %}nova-badge-dark{% endif %}">
+        {{ type_label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Properties Grid -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div class="nova-grid-2">
+      {% for prop in properties %}
+      <div class="nova-card" style="display: flex; flex-direction: column; overflow: hidden;">
+        <!-- Property Image -->
+        <div style="height: 240px; position: relative; background: #131218;">
+          {% if prop.featured_image %}
+            <img src="{{ prop.featured_image.url }}" alt="{{ prop.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% else %}
+            <img src="{% static 'images/hero_sunset.webp' %}" alt="{{ prop.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% endif %}
+
+          <div style="position: absolute; top: 14px; left: 14px; display: flex; flex-direction: column; gap: 6px;">
+            <span class="nova-badge nova-badge-lime">{{ prop.get_property_type_display }}</span>
+            {% if prop.has_jetty_access %}
+              <span class="nova-badge nova-badge-purple">Direct Jetty Access</span>
+            {% endif %}
+          </div>
+
+          <div style="position: absolute; bottom: 14px; right: 14px; background: rgba(19,18,24,0.85); backdrop-filter: blur(6px); padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; color: #FFF;">
+            {{ prop.location_area }}
+          </div>
+        </div>
+
+        <!-- Property Body -->
+        <div style="padding: 26px; display: flex; flex-direction: column; flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+            <h2 style="font-size: 1.35rem; margin: 0; line-height: 1.25;">
+              <a href="{% url 'stays:stay_detail' slug=prop.slug %}" style="color: inherit; text-decoration: none;">
+                {{ prop.name }}
+              </a>
+            </h2>
+          </div>
+
+          <!-- Inventory Mode Transparency Tag -->
+          <div style="margin-bottom: 12px;">
+            {% if prop.inventory_mode == 'ALLOTMENT' %}
+              <span style="font-size: 0.8rem; font-weight: 700; color: #1b8543; background: #eaf8ee; padding: 3px 8px; border-radius: 4px;">Contracted Allotment</span>
+            {% elif prop.inventory_mode == 'MANAGED' %}
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-ultraviolet); background: var(--color-ice); padding: 3px 8px; border-radius: 4px;">Directly Managed</span>
+            {% else %}
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); background: var(--color-ice); padding: 3px 8px; border-radius: 4px;">Reservation Enquiry</span>
+            {% endif %}
+          </div>
+
+          <p style="font-size: 0.9rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 18px; flex: 1;">
+            {{ prop.summary }}
+          </p>
+
+          <div style="border-top: 1px solid var(--color-ice); padding-top: 14px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
+            <div>
+              <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700;">Starting From</div>
+              <div style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-display); color: var(--color-ultraviolet);">
+                {% if prop.starting_price > 0 %}
+                  KES {{ prop.starting_price|floatformat:0 }} <span style="font-size: 0.8rem; font-weight: 500; color: var(--color-text-muted);">/ night</span>
+                {% else %}
+                  Rates on Enquiry
+                {% endif %}
+              </div>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--color-text-muted);">
+              {% if prop.has_jetty_access %}Boat jetty on-site{% else %}Road transfer to base{% endif %}
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <a href="{% url 'stays:stay_detail' slug=prop.slug %}" class="nova-btn-secondary" style="padding: 10px 12px; font-size: 0.85rem; text-align: center;">
+              View Property
+            </a>
+            <a href="{% url 'bookings:book' %}?stay={{ prop.slug }}" class="nova-btn-primary" style="padding: 10px 12px; font-size: 0.85rem; text-align: center;">
+              Enquire Stay
+            </a>
+          </div>
+
+        </div>
+      </div>
+      {% empty %}
+      <div style="grid-column: 1 / -1; text-align: center; padding: 60px 0;">
+        <p style="font-size: 1.2rem; color: var(--color-text-muted);">No accommodations found matching this filter.</p>
+        <a href="{% url 'stays:stay_list' %}" class="nova-btn-secondary" style="margin-top: 16px; display: inline-block;">View All Stays</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Stay + Ride Package Banner -->
+    <div style="margin-top: 60px; background: var(--color-obsidian); color: #FFF; border-radius: var(--radius-xl); padding: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+      <div style="max-width: 620px;">
+        <span class="nova-kicker nova-kicker-lime">COMPLETE COORDINATION</span>
+        <h3 style="font-size: 1.6rem; color: #FFF; margin-top: 6px; margin-bottom: 8px;">Combine Your Room with Signature Boat Rides</h3>
+        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); line-height: 1.6;">
+          Save time and avoid multiple vendor handoffs. Our Stay + Ride packages bundle verified lakeside rooms, sunrise or sunset boat safaris, and Crescent Island logistics.
+        </p>
+      </div>
+      <a href="{% url 'packages:package_list' %}" class="nova-btn-primary">
+        Explore Stay + Ride Packages
+      </a>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

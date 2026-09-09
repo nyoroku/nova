@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Language: sw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Home"
+msgstr "Mwanzo"
+
+msgid "Explore Tours"
+msgstr "Gundua safari"
+
+msgid "Book Now"
+msgstr "Weka nafasi sasa"
+
+msgid "Choose language"
+msgstr "Chagua lugha"
+
+msgid "Services"
+msgstr "Huduma"
+

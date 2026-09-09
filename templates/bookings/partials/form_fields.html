@@ -1,0 +1,141 @@
+{% if form.non_field_errors %}
+<div style="background: #ffeaec; border-left: 4px solid #e53e3e; padding: 14px 18px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9rem; color: #9b2c2c;">
+  {{ form.non_field_errors }}
+</div>
+{% endif %}
+
+<!-- Booking Category Selector -->
+<div style="margin-bottom: 24px;">
+  <label class="nova-form-label" for="{{ form.lead_type.id_for_label }}">What are you planning? *</label>
+  {{ form.lead_type }}
+  {% if form.lead_type.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.lead_type.errors }}</div>{% endif %}
+</div>
+
+<!-- Dynamic Contextual Fields based on lead_type -->
+<div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px; border: 1px solid var(--color-ice-muted);">
+  
+  <!-- Tour Choice (Shown for Boat Only or Hotel Origin) -->
+  <div x-show="leadType === 'BOAT_ONLY' || leadType === 'HOTEL_ORIGIN_RIDE'" style="margin-bottom: 16px;">
+    <label class="nova-form-label" for="{{ form.tour.id_for_label }}">Signature Boat Ride</label>
+    {{ form.tour }}
+    {% if form.tour.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.tour.errors }}</div>{% endif %}
+  </div>
+
+  <!-- Hotel Selection (Shown for Hotel Origin Ride) -->
+  <div x-show="leadType === 'HOTEL_ORIGIN_RIDE'" style="margin-bottom: 16px;">
+    <label class="nova-form-label" for="{{ form.hotel_partner.id_for_label }}">Your Partner Hotel / Jetty</label>
+    {{ form.hotel_partner }}
+    {% if form.hotel_partner.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.hotel_partner.errors }}</div>{% endif %}
+    
+    <div style="margin-top: 12px;">
+      <label class="nova-form-label" for="{{ form.custom_hotel_name.id_for_label }}">Or Other Lakeside Hotel Name</label>
+      {{ form.custom_hotel_name }}
+      <span style="display: block; font-size: 0.78rem; color: var(--color-text-muted); margin-top: 4px;">If your resort isn't in the list above, enter it here.</span>
+      {% if form.custom_hotel_name.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.custom_hotel_name.errors }}</div>{% endif %}
+    </div>
+  </div>
+
+  <!-- Package Selection (Shown for Stay and Ride) -->
+  <div x-show="leadType === 'STAY_AND_RIDE'" style="margin-bottom: 16px;">
+    <label class="nova-form-label" for="{{ form.package.id_for_label }}">Select Package</label>
+    {{ form.package }}
+    {% if form.package.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.package.errors }}</div>{% endif %}
+  </div>
+
+  <!-- Accommodation Selection (Shown for Accommodation or Stay and Ride) -->
+  <div x-show="leadType === 'ACCOMMODATION' || leadType === 'STAY_AND_RIDE'" style="margin-bottom: 16px;">
+    <label class="nova-form-label" for="{{ form.accommodation_property.id_for_label }}">Preferred Lakeside Property</label>
+    {{ form.accommodation_property }}
+    {% if form.accommodation_property.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.accommodation_property.errors }}</div>{% endif %}
+
+    <div style="margin-top: 12px;">
+      <label class="nova-form-label" for="{{ form.room_preference.id_for_label }}">Room Preference / Notes</label>
+      {{ form.room_preference }}
+      {% if form.room_preference.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.room_preference.errors }}</div>{% endif %}
+    </div>
+  </div>
+
+  <!-- Private Charter Checkbox -->
+  <div x-show="leadType === 'BOAT_ONLY' || leadType === 'HOTEL_ORIGIN_RIDE'">
+    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">
+      {{ form.is_private_requested }}
+      <span>Require Private Boat Charter Only</span>
+    </label>
+    {% if form.is_private_requested.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.is_private_requested.errors }}</div>{% endif %}
+  </div>
+
+</div>
+
+<!-- Schedule & Group Size -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;" class="form-grid-2">
+  <div>
+    <label class="nova-form-label" for="{{ form.preferred_date.id_for_label }}">Preferred Date *</label>
+    {{ form.preferred_date }}
+    {% if form.preferred_date.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.preferred_date.errors }}</div>{% endif %}
+  </div>
+  <div>
+    <label class="nova-form-label" for="{{ form.preferred_time.id_for_label }}">Preferred Time Slot *</label>
+    {{ form.preferred_time }}
+    {% if form.preferred_time.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.preferred_time.errors }}</div>{% endif %}
+  </div>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;" class="form-grid-2">
+  <div>
+    <label class="nova-form-label" for="{{ form.adults.id_for_label }}">Adults (12+) *</label>
+    {{ form.adults }}
+    {% if form.adults.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.adults.errors }}</div>{% endif %}
+  </div>
+  <div>
+    <label class="nova-form-label" for="{{ form.children.id_for_label }}">Children (3-11)</label>
+    {{ form.children }}
+    {% if form.children.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.children.errors }}</div>{% endif %}
+  </div>
+</div>
+
+<!-- Contact Information -->
+<div style="border-top: 1px solid var(--color-ice); padding-top: 20px; margin-bottom: 20px;">
+  <span class="nova-kicker">Your Contact Details</span>
+  
+  <div style="margin-bottom: 14px; margin-top: 8px;">
+    <label class="nova-form-label" for="{{ form.guest_name.id_for_label }}">Full Name *</label>
+    {{ form.guest_name }}
+    {% if form.guest_name.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.guest_name.errors }}</div>{% endif %}
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 14px;" class="form-grid-2">
+    <div>
+      <label class="nova-form-label" for="{{ form.guest_phone.id_for_label }}">WhatsApp / Mobile *</label>
+      {{ form.guest_phone }}
+      {% if form.guest_phone.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.guest_phone.errors }}</div>{% endif %}
+    </div>
+    <div>
+      <label class="nova-form-label" for="{{ form.guest_email.id_for_label }}">Email Address (Optional)</label>
+      {{ form.guest_email }}
+      {% if form.guest_email.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.guest_email.errors }}</div>{% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Logistics & Special Requests -->
+<div style="margin-bottom: 20px;">
+  <div style="margin-bottom: 14px;">
+    <label class="nova-form-label" for="{{ form.transport_required.id_for_label }}">Road Transport Option</label>
+    {{ form.transport_required }}
+    {% if form.transport_required.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.transport_required.errors }}</div>{% endif %}
+  </div>
+
+  <div style="margin-bottom: 16px;">
+    <label class="nova-form-label" for="{{ form.special_requests.id_for_label }}">Special Requests or Notes</label>
+    {{ form.special_requests }}
+    {% if form.special_requests.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.special_requests.errors }}</div>{% endif %}
+  </div>
+
+  <div>
+    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 0.85rem; color: var(--color-text-body);">
+      {{ form.consent_operational }}
+      <span>I agree to receive operational booking notifications, captain assignment, and safety updates via WhatsApp/SMS.</span>
+    </label>
+    {% if form.consent_operational.errors %}<div style="color: #e53e3e; font-size: 0.8rem; margin-top: 4px;">{{ form.consent_operational.errors }}</div>{% endif %}
+  </div>
+</div>

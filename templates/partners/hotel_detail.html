@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Boat Rides from {{ partner.name }} | Lake Naivasha Hotel Departure{% endblock %}
+{% block meta_description %}Step aboard directly from {{ partner.name }} in {{ partner.location_area }}. Licensed boat rides, Crescent Island safaris, and sunset cruises departing from the hotel jetty or private transfer.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+      <a href="{% url 'partners:hotel_hub' %}" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem;">&larr; Hotel Departure Hub</a>
+      <span style="color: rgba(255,255,255,0.3);">/</span>
+      <span class="nova-badge nova-badge-lime">{{ partner.location_area }}</span>
+    </div>
+
+    <h1 class="nova-title-hero" style="color: #FFF; margin-bottom: 16px;">
+      Boat Rides from {{ partner.name }}
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6;">
+      Nova provides dedicated lake departures for guests staying at {{ partner.name }}. Start your hippo, birdwatching, or Crescent Island cruise right from the property.
+    </p>
+  </div>
+</section>
+
+<!-- Main Details -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px;" class="hotel-detail-layout">
+      
+      <!-- Information Column -->
+      <div>
+        <!-- Service Points Card -->
+        <div class="nova-card" style="padding: 36px; margin-bottom: 36px;">
+          <span class="nova-kicker">Departure & Boarding Logistics</span>
+          <h2 style="font-size: 1.5rem; margin-bottom: 20px;">How You Board at {{ partner.name }}</h2>
+
+          {% for sp in service_points %}
+          <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 20px; border: 1px solid var(--color-ice-muted);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
+              <h3 style="font-size: 1.2rem; margin: 0; color: var(--color-obsidian);">{{ sp.name }}</h3>
+              <span class="nova-badge nova-badge-purple">{{ sp.get_point_type_display }}</span>
+            </div>
+
+            <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 14px;">
+              {{ sp.boarding_instructions|default:"Meet your Nova captain at the hotel lakeshore jetty. Life jackets are fitted before stepping onto the pontoon." }}
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.88rem; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 12px;">
+              <div>
+                <strong>Notice Required:</strong> {{ sp.advance_notice_hours }} hour(s) advance notice
+              </div>
+              <div>
+                <strong>Positioning Fee:</strong> 
+                {% if sp.positioning_fee > 0 %}
+                  KES {{ sp.positioning_fee|floatformat:0 }} (boat positioning from base)
+                {% else %}
+                  <span style="color: #1b8543; font-weight: 700;">No extra positioning fee</span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% empty %}
+          <p class="nova-prose">
+            Departures from {{ partner.name }} are scheduled with our operations desk. We coordinate security clearance and boat positioning to align with your itinerary.
+          </p>
+          {% endfor %}
+        </div>
+
+        <!-- Available Tours from this Hotel -->
+        <div>
+          <span class="nova-kicker">Available Experiences</span>
+          <h2 class="nova-title-section" style="margin-bottom: 24px;">Recommended Rides from {{ partner.name }}</h2>
+
+          <div class="nova-grid-2">
+            {% for tour in tours %}
+            <div class="nova-card" style="padding: 24px; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                <h3 style="font-size: 1.15rem; margin: 0;">{{ tour.name }}</h3>
+                <span class="nova-badge nova-badge-lime">⏱ {{ tour.duration_display }}</span>
+              </div>
+              <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 16px; flex: 1;">
+                {{ tour.summary }}
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-ice); padding-top: 12px;">
+                <span style="font-weight: 800; color: var(--color-ultraviolet);">From KES {{ tour.get_starting_price|floatformat:0 }}</span>
+                <a href="{% url 'bookings:book' %}?tour={{ tour.slug }}&hotel={{ partner.slug }}" class="nova-btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">
+                  Book from Hotel
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Booking Sidebar Column -->
+      <aside>
+        <div style="position: sticky; top: 90px;">
+          <div class="nova-card" style="padding: 30px; margin-bottom: 20px;">
+            <span class="nova-kicker">Hotel Departure Desk</span>
+            <h3 style="font-size: 1.3rem; margin-bottom: 14px;">Plan Your Ride</h3>
+            <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 20px;">
+              Ready to schedule your boat ride from {{ partner.name }}? Submit a request or chat directly with our lake operations dispatcher.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <a href="{% url 'bookings:book' %}?hotel={{ partner.slug }}" class="nova-btn-primary" style="width: 100%; text-align: center;">
+                Book Pickup at {{ partner.name }}
+              </a>
+              <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20am%20at%20{{ partner.name|urlencode }}%20and%20want%20to%20arrange%20a%20boat%20departure." target="_blank" rel="noopener" class="nova-btn-secondary" style="width: 100%; text-align: center;">
+                WhatsApp Lake Dispatch
+              </a>
+            </div>
+          </div>
+
+          <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 20px; border: 1px solid var(--color-ice-muted); font-size: 0.85rem; color: var(--color-text-body);">
+            <strong>Hotel Concierge or Front Desk?</strong><br>
+            Are you coordinating on behalf of hotel guests? Reach our operations line at <strong>{{ site_settings.phone_display }}</strong> for instant boat slot confirmation.
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@media (min-width: 992px) {
+  .hotel-detail-layout {
+    grid-template-columns: 1.8fr 1fr !important;
+  }
+}
+</style>
+{% endblock %}

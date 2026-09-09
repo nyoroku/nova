@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Frequently Asked Questions | Lake Naivasha Boat Rides | Nova{% endblock %}
+{% block meta_description %}Answers to top Lake Naivasha questions: safety standards, mandatory life jackets, hippo safety distances, hotel jetty pickups, Crescent Island fees, and weather rescheduling.{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question|escapejs }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer|striptags|escapejs }}"
+      }
+    }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">KNOWLEDGE BASE</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
+      Lake Questions & Direct Answers
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6;">
+      Everything you need to know about safety on the water, hotel departures, Crescent Island walking permits, and transparent pricing.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ Interactive Accordion Section -->
+<section class="nova-section">
+  <div class="nova-shell" style="max-width: 860px;" x-data="{ activeItem: null }">
+    
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      {% for faq in faqs %}
+      <div class="nova-card" style="padding: 0; overflow: hidden; border: 1px solid var(--color-ice-muted);">
+        <!-- Accordion Header Button -->
+        <button type="button" 
+                @click="activeItem = activeItem === {{ forloop.counter }} ? null : {{ forloop.counter }}"
+                style="width: 100%; text-align: left; padding: 22px 26px; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span class="nova-badge nova-badge-purple" style="font-size: 0.72rem;">{{ faq.get_category_display }}</span>
+            <span style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--color-obsidian);">
+              {{ faq.question }}
+            </span>
+          </div>
+          <span style="font-size: 1.4rem; font-weight: 700; color: var(--color-ultraviolet); flex-shrink: 0;" x-text="activeItem === {{ forloop.counter }} ? '−' : '+'">+</span>
+        </button>
+
+        <!-- Accordion Content -->
+        <div x-show="activeItem === {{ forloop.counter }}" style="display: none; padding: 0 26px 24px; border-top: 1px solid var(--color-ice);" x-transition>
+          <div class="nova-prose" style="font-size: 0.98rem; line-height: 1.7; color: var(--color-text-body); margin-top: 14px;">
+            {{ faq.answer|linebreaks }}
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <p style="text-align: center; color: var(--color-text-muted); padding: 40px 0;">No FAQs loaded yet.</p>
+      {% endfor %}
+    </div>
+
+    <!-- Direct WhatsApp Help Box -->
+    <div style="margin-top: 50px; background: var(--color-ice); border-radius: var(--radius-xl); padding: 36px; text-align: center; border: 1px solid var(--color-ice-muted);">
+      <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Have a Question Not Listed Here?</h3>
+      <p style="font-size: 0.95rem; color: var(--color-text-body); max-width: 520px; margin: 0 auto 20px;">
+        Our lead captain Dennis Maina is on the water daily and can answer specific questions regarding wind conditions, birding seasons, or custom charter requests.
+      </p>
+      <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20have%20a%20question%20about%20a%20Lake%20Naivasha%20boat%20ride." target="_blank" rel="noopener" class="nova-btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+        <span>Ask Captain Dennis on WhatsApp</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

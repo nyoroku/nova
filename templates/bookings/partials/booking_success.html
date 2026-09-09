@@ -1,0 +1,45 @@
+<div style="background: var(--color-ice); border-radius: var(--radius-xl); padding: 40px; border: 1px solid var(--color-ice-muted); text-align: center;">
+  <div style="width: 64px; height: 64px; border-radius: 50%; background: #25D366; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px;">
+    ✓
+  </div>
+
+  <span class="nova-badge nova-badge-purple" style="margin-bottom: 8px;">Request Received</span>
+  <h2 style="font-size: 1.8rem; margin-top: 6px; margin-bottom: 8px; color: var(--color-obsidian);">
+    You're Almost on the Water!
+  </h2>
+  
+  <p style="font-size: 1rem; color: var(--color-text-body); max-width: 540px; margin: 0 auto 24px; line-height: 1.6;">
+    Reference <strong>#{{ lead.reference_number }}</strong> has been recorded in our lake dispatch system. To guarantee your boat and captain without delay, send your pre-filled confirmation via WhatsApp:
+  </p>
+
+  <div style="max-width: 480px; margin: 0 auto 30px; text-align: left; background: #FFFFFF; border-radius: var(--radius-lg); padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+    <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; margin-bottom: 12px; border-bottom: 1px solid var(--color-ice); padding-bottom: 8px;">
+      Booking Summary
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--color-text-body);">
+      <div><strong>Guest:</strong> {{ lead.guest_name }}</div>
+      <div><strong>Experience:</strong> {{ lead.get_lead_type_display }}</div>
+      {% if lead.tour %}<div><strong>Ride:</strong> {{ lead.tour.name }}</div>{% endif %}
+      {% if lead.hotel_partner %}<div><strong>Hotel Departure:</strong> {{ lead.hotel_partner.name }}</div>{% endif %}
+      {% if lead.accommodation_property %}<div><strong>Stay:</strong> {{ lead.accommodation_property.name }}</div>{% endif %}
+      {% if lead.package %}<div><strong>Package:</strong> {{ lead.package.name }}</div>{% endif %}
+      <div><strong>Date & Time:</strong> {{ lead.preferred_date }} &bull; {{ lead.get_preferred_time_display }}</div>
+      <div><strong>Party Size:</strong> {{ lead.adults }} Adult(s){% if lead.children %}, {{ lead.children }} Child(ren){% endif %}</div>
+      {% if lead.quoted_total_amount > 0 %}
+      <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--color-ice); font-weight: 700; color: var(--color-ultraviolet); font-size: 1.05rem;">
+        Estimated Total: KES {{ lead.quoted_total_amount|floatformat:0 }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; max-width: 400px; margin: 0 auto; gap: 12px;">
+    <a href="{{ whatsapp_url }}" target="_blank" rel="noopener" class="nova-btn-primary" style="padding: 16px 24px; font-size: 1.05rem; background: #25D366; color: #FFFFFF; border: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.072-2.064-.492-1.637-.677-2.702-2.338-2.784-2.449-.082-.111-.664-.883-.664-1.684 0-.801.42-1.196.57-1.359.15-.163.329-.204.438-.204.109 0 .219.002.314.007.101.005.237-.038.371.285.14.336.478 1.164.52 1.25.042.086.07.186.012.3-.058.114-.087.185-.173.285-.086.1-.182.223-.26.299-.087.085-.178.177-.077.351.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.274.072.376-.044.103-.116.438-.511.554-.686.117-.175.234-.145.394-.086.16.058 1.017.48 1.191.567.175.087.292.13.335.204.044.073.044.425-.1.83z"/></svg>
+      <span>Send & Confirm on WhatsApp</span>
+    </a>
+    <p style="font-size: 0.8rem; color: var(--color-text-muted);">
+      Or call our desk directly at <strong>{{ settings.phone_display }}</strong>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Lake Naivasha Boat Ride Prices | Canonical Price Truth | Nova{% endblock %}
+{% block meta_description %}Official Lake Naivasha boat ride pricing truth. Transparent resident and international rates, private charters, Crescent Island transfers, and group pricing.{% endblock %}
+
+{% block content %}
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">PRICE SOURCE OF TRUTH</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 16px;">
+      Lake Naivasha Ride Prices
+    </h1>
+    <p style="font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 600px;">
+      No negotiating at public beaches. Real tiered rates for Kenyan residents and international travelers, published with verified dates.
+    </p>
+  </div>
+</section>
+
+<section class="nova-section">
+  <div class="nova-shell">
+    
+    <!-- Comparison Table -->
+    <div style="background: #FFF; border-radius: var(--radius-xl); border: 1px solid var(--color-ice-muted); overflow-x: auto; box-shadow: var(--shadow-sm); margin-bottom: 50px;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 700px;">
+        <thead>
+          <tr style="background: var(--color-ice); border-bottom: 2px solid var(--color-ice-muted);">
+            <th style="padding: 20px 24px; font-family: var(--font-display); font-size: 1rem; color: var(--color-obsidian);">Experience</th>
+            <th style="padding: 20px 24px; font-family: var(--font-display); font-size: 1rem; color: var(--color-obsidian);">Duration</th>
+            <th style="padding: 20px 24px; font-family: var(--font-display); font-size: 1rem; color: var(--color-obsidian);">Resident Rate</th>
+            <th style="padding: 20px 24px; font-family: var(--font-display); font-size: 1rem; color: var(--color-obsidian);">International Rate</th>
+            <th style="padding: 20px 24px; font-family: var(--font-display); font-size: 1rem; color: var(--color-obsidian);">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for tour in tours %}
+          <tr style="border-bottom: 1px solid var(--color-ice-muted);">
+            <td style="padding: 20px 24px;">
+              <div style="font-weight: 700; font-size: 1.05rem; color: var(--color-obsidian);">{{ tour.name }}</div>
+              <div style="font-size: 0.8rem; color: var(--color-text-muted);">{{ tour.best_for|truncatewords:4 }}</div>
+            </td>
+            <td style="padding: 20px 24px; font-weight: 600;">
+              {{ tour.duration_hours }} Hours
+            </td>
+            <td style="padding: 20px 24px;">
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--color-obsidian);">
+                KES {{ tour.starting_price_resident|floatformat:0 }}
+              </span>
+              <span style="font-size: 0.75rem; color: var(--color-text-muted);">/ person</span>
+            </td>
+            <td style="padding: 20px 24px;">
+              <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--color-ultraviolet);">
+                USD {{ tour.starting_price_non_resident|floatformat:0 }}
+              </span>
+              <span style="font-size: 0.75rem; color: var(--color-text-muted);">/ person</span>
+            </td>
+            <td style="padding: 20px 24px;">
+              <a href="{{ tour.get_absolute_url }}" class="nova-btn-primary" style="min-height: 38px; padding: 6px 16px; font-size: 0.85rem;">
+                View & Quote
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Notes on Pricing Guardrails -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+      <div class="nova-card nova-card-ice" style="padding: 24px;">
+        <h3 style="font-size: 1.15rem; margin-bottom: 8px;">What Is Included</h3>
+        <p style="font-size: 0.9rem; color: var(--color-text-body); line-height: 1.6;">
+          All boat prices include licensed local captain guide, safety life jackets for all ages, boat fuel, and bottled water.
+        </p>
+      </div>
+
+      <div class="nova-card nova-card-ice" style="padding: 24px;">
+        <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Hotel Jetty Positioning</h3>
+        <p style="font-size: 0.9rem; color: var(--color-text-body); line-height: 1.6;">
+          For approved partner hotels (such as Sopa or Kiboko), a flat logistics fee (typically KES 1,500 - 2,500) applies per party if positioning is required.
+        </p>
+      </div>
+
+      <div class="nova-card nova-card-ice" style="padding: 24px;">
+        <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Sanctuary Fees</h3>
+        <p style="font-size: 0.9rem; color: var(--color-text-body); line-height: 1.6;">
+          Crescent Island Sanctuary entry fees are set directly by the conservancy and paid at their island entry gate (currently KES 1,000 residents / $33 non-residents).
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

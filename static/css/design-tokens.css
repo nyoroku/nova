@@ -1,0 +1,20 @@
+:root {
+  --rafiki-sky: #3D9CC7;
+  --rafiki-yellow: #F6C445;
+  --rafiki-white: #FFFFFF;
+  --rafiki-navy: #1E3A4C;
+  --rafiki-sky-light: #EAF6FB;
+  --rafiki-sky-soft: #F4FAFD;
+  --rafiki-navy-soft: #345367;
+  --rafiki-border: #DCE7ED;
+  --rafiki-muted: #667A87;
+  --rafiki-surface: #F7FAFC;
+  --rafiki-success: #237A57;
+  --rafiki-error: #B42318;
+  --rafiki-radius-card: 18px;
+  --rafiki-shadow-card: 0 8px 24px rgba(30, 58, 76, .08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

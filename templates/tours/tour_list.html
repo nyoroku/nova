@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Lake Naivasha Boat Rides & Safaris | Nova Boat Rides{% endblock %}
+{% block meta_description %}Explore Lake Naivasha signature boat tours. Classic safaris, hippo and bird watching, Crescent Island walking tours, and romantic sunset cruises with verified lake captains.{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">CURATED LAKE TOURS</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
+      Signature Boat Rides on Lake Naivasha
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6;">
+      Every ride is skippered by certified local captains with life jackets fitted before boarding. Depart from Nova Lake Base or directly from your hotel jetty.
+    </p>
+
+    <!-- Category Filter Bar -->
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
+      {% for cat_val, cat_label in categories %}
+      <a href="{% url 'tours:tour_list' %}{% if cat_val %}?category={{ cat_val }}{% endif %}" 
+         style="padding: 8px 18px; border-radius: 9999px; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: all 0.2s;"
+         class="{% if current_category == cat_val %}nova-badge-lime{% else %}nova-badge-dark{% endif %}">
+        {{ cat_label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Tours Grid -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div class="nova-grid-3">
+      {% for tour in tours %}
+      <div class="nova-card" style="display: flex; flex-direction: column; overflow: hidden;">
+        <!-- Card Image & Badges -->
+        <div style="height: 220px; position: relative; background: #131218; overflow: hidden;">
+          {% if tour.featured_image %}
+            <img src="{{ tour.featured_image.url }}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% else %}
+            <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% endif %}
+          
+          <div style="position: absolute; top: 14px; left: 14px; display: flex; flex-direction: column; gap: 6px;">
+            {% if tour.is_private %}
+              <span class="nova-badge nova-badge-purple">Private Charter</span>
+            {% else %}
+              <span class="nova-badge nova-badge-lime">Shared / Flexible</span>
+            {% endif %}
+            {% if tour.crescent_island_included %}
+              <span class="nova-badge nova-badge-purple">Crescent Island Route</span>
+            {% endif %}
+          </div>
+
+          <div style="position: absolute; bottom: 14px; right: 14px; background: rgba(19,18,24,0.85); backdrop-filter: blur(6px); padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; color: #FFF;">
+            ⏱ {{ tour.duration_display }}
+          </div>
+        </div>
+
+        <!-- Card Content -->
+        <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
+          <h2 style="font-size: 1.35rem; margin-bottom: 8px; line-height: 1.25;">
+            <a href="{% url 'tours:tour_detail' slug=tour.slug %}" style="color: inherit; text-decoration: none;">
+              {{ tour.name }}
+            </a>
+          </h2>
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 18px; flex: 1;">
+            {{ tour.summary }}
+          </p>
+
+          <div style="border-top: 1px solid var(--color-ice); padding-top: 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
+            <div>
+              <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700;">Starting From</div>
+              <div style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-display); color: var(--color-ultraviolet);">
+                KES {{ tour.get_starting_price|floatformat:0 }}
+              </div>
+            </div>
+            <div style="font-size: 0.8rem; color: var(--color-text-muted);">
+              Max {{ tour.max_capacity }} Guests
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <a href="{% url 'tours:tour_detail' slug=tour.slug %}" class="nova-btn-secondary" style="padding: 10px 12px; font-size: 0.85rem; text-align: center;">
+              Details & Rates
+            </a>
+            <a href="{% url 'bookings:book' %}?tour={{ tour.slug }}" class="nova-btn-primary" style="padding: 10px 12px; font-size: 0.85rem; text-align: center;">
+              Book Ride
+            </a>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div style="grid-column: 1 / -1; text-align: center; padding: 60px 0;">
+        <p style="font-size: 1.2rem; color: var(--color-text-muted);">No tours found matching this category filter.</p>
+        <a href="{% url 'tours:tour_list' %}" class="nova-btn-secondary" style="margin-top: 16px; display: inline-block;">View All Tours</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Bottom Hotel Departures Callout -->
+    <div style="margin-top: 60px; background: var(--color-ice); border-radius: var(--radius-xl); padding: 36px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid var(--color-ice-muted);">
+      <div style="max-width: 600px;">
+        <span class="nova-kicker">Stay Along the Water?</span>
+        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Depart Directly from Your Hotel Jetty</h3>
+        <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.5;">
+          If you are booked at Enashipai, Sopa, Kiboko Camp, or other lakeside resorts, our boats can pick you up directly from your hotel or arrange road staging.
+        </p>
+      </div>
+      <a href="{% url 'partners:hotel_hub' %}" class="nova-btn-primary">
+        Check Your Hotel Pickup
+      </a>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

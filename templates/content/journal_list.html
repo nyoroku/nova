@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}Captain's Journal & Lake Naivasha Guides | Nova{% endblock %}
+{% block meta_description %}Authoritative local knowledge from certified Lake Naivasha captains. Birding migration timings, hippo behavior guides, Crescent Island logistics, and trip advice.{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="nova-section nova-section-dark">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">CAPTAIN'S JOURNAL</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
+      Lake Guides & Field Notes
+    </h1>
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6;">
+      Written by captains with over a decade on Lake Naivasha. Practical advice on weather cycles, photography techniques, bird species, and walking safaris.
+    </p>
+
+    <!-- Category Filters -->
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
+      <a href="{% url 'content:journal_list' %}" 
+         style="padding: 8px 18px; border-radius: 9999px; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: all 0.2s;"
+         class="{% if not current_cat %}nova-badge-lime{% else %}nova-badge-dark{% endif %}">
+        All Articles
+      </a>
+      {% for cat_val, cat_label in categories %}
+      <a href="{% url 'content:journal_list' %}?category={{ cat_val }}" 
+         style="padding: 8px 18px; border-radius: 9999px; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: all 0.2s;"
+         class="{% if current_cat == cat_val %}nova-badge-lime{% else %}nova-badge-dark{% endif %}">
+        {{ cat_label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Articles Grid -->
+<section class="nova-section">
+  <div class="nova-shell">
+    <div class="nova-grid-3">
+      {% for article in articles %}
+      <article class="nova-card" style="display: flex; flex-direction: column; overflow: hidden;">
+        <div style="height: 200px; position: relative; background: #131218; overflow: hidden;">
+          {% if article.featured_image %}
+            <img src="{{ article.featured_image.url }}" alt="{{ article.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% else %}
+            <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ article.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+          {% endif %}
+          <span class="nova-badge nova-badge-lime" style="position: absolute; top: 14px; left: 14px;">
+            {{ article.get_category_display }}
+          </span>
+          <span style="position: absolute; bottom: 12px; right: 12px; background: rgba(19,18,24,0.8); backdrop-filter: blur(4px); color: #FFF; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; font-weight: 600;">
+            {{ article.reading_time_minutes }} min read
+          </span>
+        </div>
+
+        <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
+          <h2 style="font-size: 1.25rem; margin-bottom: 10px; line-height: 1.35;">
+            <a href="{% url 'content:journal_detail' slug=article.slug %}" style="color: inherit; text-decoration: none;">
+              {{ article.title }}
+            </a>
+          </h2>
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 20px; flex: 1;">
+            {{ article.summary }}
+          </p>
+
+          <div style="border-top: 1px solid var(--color-ice); padding-top: 14px; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: var(--color-text-muted);">
+            <div>By {{ article.author_captain.name|default:"Nova Captains" }}</div>
+            <a href="{% url 'content:journal_detail' slug=article.slug %}" style="color: var(--color-ultraviolet); font-weight: 700; text-decoration: none;">
+              Read Field Note &rarr;
+            </a>
+          </div>
+        </div>
+      </article>
+      {% empty %}
+      <div style="grid-column: 1 / -1; text-align: center; padding: 60px 0;">
+        <p style="font-size: 1.2rem; color: var(--color-text-muted);">No guides found matching this category filter.</p>
+        <a href="{% url 'content:journal_list' %}" class="nova-btn-secondary" style="margin-top: 16px; display: inline-block;">View All Guides</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
