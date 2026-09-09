@@ -59,7 +59,7 @@
         {% for cap in captains %}
         <div class="nova-card" style="padding: 30px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
           <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; background: #23222B; flex-shrink: 0;">
-            <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ cap.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="{% if cap.featured_image %}{{ cap.featured_image.url }}{% else %}{% static 'images/hero_local.webp' %}{% endif %}" alt="{{ cap.name }}" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div style="flex: 1; min-width: 200px;">
             <h3 style="font-size: 1.3rem; margin-bottom: 4px;">{{ cap.name }}</h3>

@@ -168,7 +168,7 @@
       {% for tour in featured_tours %}
       <article class="nova-card">
         <a href="{{ tour.get_absolute_url }}" style="display: block; position: relative; aspect-ratio: 4/3; background: #23222B; overflow: hidden;">
-          <img src="{% if tour.slug == 'sunset-cruise' %}{% static 'images/hero_sunset.webp' %}{% elif tour.slug == 'crescent-island' %}{% static 'images/hero_crescent.webp' %}{% else %}{% static 'images/hero_wildlife.webp' %}{% endif %}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+          <img src="{% if tour.featured_image %}{{ tour.featured_image.url }}{% elif tour.slug == 'crescent-island' %}{% static 'images/hero_crescent.webp' %}{% elif tour.slug == 'sunset-cruise' or tour.slug == 'classic-lake-safari' %}{% static 'images/hero_sunset.webp' %}{% elif tour.slug == 'family-cruise' or tour.slug == 'private-charter' %}{% static 'images/hero_local.webp' %}{% else %}{% static 'images/hero_wildlife.webp' %}{% endif %}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
           <span class="nova-badge nova-badge-dark" style="position: absolute; top: 12px; left: 12px;">
             {{ tour.duration_hours }} Hours
           </span>
@@ -297,7 +297,7 @@
       {% for stay in featured_stays %}
       <article class="nova-card">
         <a href="{{ stay.get_absolute_url }}" style="display: block; position: relative; aspect-ratio: 16/9; background: #23222B; overflow: hidden;">
-          <img src="{% static 'images/hero_main_v2.webp' %}" alt="{{ stay.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="{% if stay.featured_image %}{{ stay.featured_image.url }}{% elif stay.slug == 'lake-naivasha-sopa-resort' %}{% static 'images/hero_wildlife.webp' %}{% else %}{% static 'images/hero_sunset.webp' %}{% endif %}" alt="{{ stay.name }}" style="width: 100%; height: 100%; object-fit: cover;">
           <span class="nova-badge nova-badge-ice" style="position: absolute; top: 12px; right: 12px;">
             {{ stay.get_inventory_mode_display }}
           </span>
@@ -500,7 +500,7 @@
       </div>
 
       <div style="border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 1/1; background: #23222B; max-width: 440px; margin: 0 auto;">
-        <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ captain.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="{% if captain.featured_image %}{{ captain.featured_image.url }}{% else %}{% static 'images/hero_local.webp' %}{% endif %}" alt="{{ captain.name }}" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
 
     </div>

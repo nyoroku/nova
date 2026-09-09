@@ -10,6 +10,11 @@ class Captain(OptimizedImageMixin, models.Model):
     photo = models.ImageField(upload_to='crew/', blank=True, null=True)
     webp_image = models.ImageField(upload_to='crew/webp/', blank=True, null=True)
     webp_mobile = models.ImageField(upload_to='crew/webp/', blank=True, null=True, help_text="480px width optimized")
+
+    @property
+    def featured_image(self):
+        return self.photo or self.webp_image
+
     bio = models.TextField()
     years_on_lake = models.PositiveIntegerField(default=10)
     route_specialties = models.CharField(
@@ -63,6 +68,10 @@ class GuideArticle(OptimizedImageMixin, models.Model):
     hero_image = models.ImageField(upload_to='journal/', blank=True, null=True)
     webp_image = models.ImageField(upload_to='journal/webp/', blank=True, null=True)
     webp_mobile = models.ImageField(upload_to='journal/webp/', blank=True, null=True)
+
+    @property
+    def featured_image(self):
+        return self.hero_image or self.webp_image
 
     published_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)

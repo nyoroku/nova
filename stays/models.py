@@ -59,6 +59,10 @@ class AccommodationProperty(OptimizedImageMixin, models.Model):
     webp_image = models.ImageField(upload_to='stays/webp/', blank=True, null=True)
     webp_mobile = models.ImageField(upload_to='stays/webp/', blank=True, null=True, help_text="480px width optimized")
 
+    @property
+    def featured_image(self):
+        return self.image or self.webp_image
+
     starting_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     currency = models.CharField(max_length=5, default="KES")
     price_basis = models.CharField(max_length=100, default="per room / night (BB)")

@@ -205,6 +205,10 @@ tours_data = [
 
 for tdata in tours_data:
     tiers = tdata.pop('tiers')
+    slug = tdata['slug']
+    tdata['image'] = f"tours/{slug}.jpg"
+    tdata['webp_image'] = f"tours/{slug}.webp"
+    tdata['webp_mobile'] = f"tours/{slug}_mobile.webp"
     tour, _ = Tour.objects.update_or_create(slug=tdata['slug'], defaults=tdata)
     tour.price_tiers.all().delete()
     for tier_data in tiers:
@@ -331,6 +335,10 @@ partners_data = [
 
 for pdata in partners_data:
     sp_data_list = pdata.pop('service_points')
+    slug = pdata['slug']
+    pdata['image'] = f"partners/{slug}.jpg"
+    pdata['webp_image'] = f"partners/{slug}.webp"
+    pdata['webp_mobile'] = f"partners/{slug}_mobile.webp"
     partner, _ = HotelPartner.objects.update_or_create(slug=pdata['slug'], defaults=pdata)
     for sp_data in sp_data_list:
         pos_fee = sp_data.pop('positioning_fee')
@@ -410,6 +418,10 @@ stays_data = [
 ]
 
 for sdata in stays_data:
+    slug = sdata['slug']
+    sdata['image'] = f"stays/{slug}.jpg"
+    sdata['webp_image'] = f"stays/{slug}.webp"
+    sdata['webp_mobile'] = f"stays/{slug}_mobile.webp"
     partner = HotelPartner.objects.filter(slug=sdata['slug']).first()
     prop, _ = AccommodationProperty.objects.update_or_create(
         slug=sdata['slug'],
@@ -522,8 +534,20 @@ packages_data = [
     }
 ]
 
+PACKAGE_IMG_MAP = {
+    'stay-and-ride': 'stay-and-ride',
+    'crescent-island-safari-walk': 'crescent-island-safari',
+    'sunset-champagne-safari': 'sunset-safari',
+    'hells-gate-and-lake': 'family-safari',
+}
+
 for pdata in packages_data:
     components = pdata.pop('components')
+    slug = pdata['slug']
+    img_base = PACKAGE_IMG_MAP.get(slug, 'stay-and-ride')
+    pdata['hero_image'] = f"packages/{img_base}.jpg"
+    pdata['webp_image'] = f"packages/{img_base}.webp"
+    pdata['webp_mobile'] = f"packages/{img_base}_mobile.webp"
     pkg, _ = Package.objects.update_or_create(slug=pdata['slug'], defaults=pdata)
     pkg.eligible_tours.set(Tour.objects.filter(is_active=True)[:2])
     pkg.accommodation_properties.set(AccommodationProperty.objects.filter(is_active=True)[:2])
@@ -544,12 +568,32 @@ Captain.objects.update_or_create(
     defaults={
         'name': 'Captain Dennis Maina',
         'role_title': 'Senior Lake Operations Lead & Captain',
+        'photo': 'crew/captain-dennis-maina.jpg',
+        'webp_image': 'crew/captain-dennis-maina.webp',
+        'webp_mobile': 'crew/captain-dennis-maina_mobile.webp',
         'years_on_lake': 12,
         'route_specialties': 'Hippo family territories, Crescent Island navigation, late afternoon wind management',
         'languages': 'English, Swahili',
         'bio': 'Dennis has navigated Lake Naivasha daily for over a decade. His intimate knowledge of changing water levels and hippo pod movements ensures guests experience the lake safely and at the most rewarding times.',
         'quote': 'The lake changes every single week. Knowing where the water is deep, where the hippos feed, and when the wind will rise is what makes a great lake day.',
         'order': 1,
+        'is_active': True,
+    }
+)
+Captain.objects.update_or_create(
+    slug='captain-peter-kariuki',
+    defaults={
+        'name': 'Captain Peter Kariuki',
+        'role_title': 'Birding & Sunset Specialist Captain',
+        'photo': 'crew/captain-peter-kariuki.jpg',
+        'webp_image': 'crew/captain-peter-kariuki.webp',
+        'webp_mobile': 'crew/captain-peter-kariuki_mobile.webp',
+        'years_on_lake': 8,
+        'route_specialties': 'Kingfisher spotting, fish eagle call response, calm morning water drift',
+        'languages': 'English, Swahili',
+        'bio': 'Specializing in birding photography voyages and calm morning departures across papyrus coves.',
+        'quote': 'Patience is everything on Lake Naivasha. When you shut the motor and drift quietly, nature opens up.',
+        'order': 2,
         'is_active': True,
     }
 )
@@ -681,7 +725,18 @@ articles_data = [
     }
 ]
 
+ARTICLE_IMG_MAP = {
+    'nairobi-to-naivasha-travel-guide': 'nairobi-to-naivasha-guide',
+    'best-time-boat-ride-naivasha': 'crescent-island-walking-guide',
+    'lake-naivasha-boat-safety': 'lake-naivasha-hippo-safety',
+}
+
 for adata in articles_data:
+    slug = adata['slug']
+    img_base = ARTICLE_IMG_MAP.get(slug, 'nairobi-to-naivasha-guide')
+    adata['hero_image'] = f"journal/{img_base}.jpg"
+    adata['webp_image'] = f"journal/{img_base}.webp"
+    adata['webp_mobile'] = f"journal/{img_base}_mobile.webp"
     GuideArticle.objects.update_or_create(slug=adata['slug'], defaults=adata)
 print(f"[OK] Seeded {len(articles_data)} Guide Articles.")
 

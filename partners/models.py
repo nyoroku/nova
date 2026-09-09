@@ -44,6 +44,10 @@ class HotelPartner(OptimizedImageMixin, models.Model):
     webp_image = models.ImageField(upload_to='partners/webp/', blank=True, null=True)
     webp_mobile = models.ImageField(upload_to='partners/webp/', blank=True, null=True, help_text="480px width optimized")
 
+    @property
+    def featured_image(self):
+        return self.image or self.webp_image
+
     order = models.PositiveIntegerField(default=0)
     is_active = models.BooleanField(default=True)
     verified_at = models.DateField(auto_now=True)

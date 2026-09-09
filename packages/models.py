@@ -14,6 +14,10 @@ class Package(OptimizedImageMixin, models.Model):
     webp_image = models.ImageField(upload_to='packages/webp/', blank=True, null=True)
     webp_mobile = models.ImageField(upload_to='packages/webp/', blank=True, null=True, help_text="480px width optimized")
 
+    @property
+    def featured_image(self):
+        return self.hero_image or self.webp_image
+
     eligible_tours = models.ManyToManyField('tours.Tour', blank=True, related_name='packages')
     accommodation_properties = models.ManyToManyField('stays.AccommodationProperty', blank=True, related_name='packages')
 

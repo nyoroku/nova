@@ -44,6 +44,10 @@ class Tour(OptimizedImageMixin, models.Model):
     webp_image = models.ImageField(upload_to='tours/webp/', blank=True, null=True)
     webp_mobile = models.ImageField(upload_to='tours/webp/', blank=True, null=True, help_text="480px width optimized")
 
+    @property
+    def featured_image(self):
+        return self.image or self.webp_image
+
     order = models.PositiveIntegerField(default=0)
     is_active = models.BooleanField(default=True)
     is_featured = models.BooleanField(default=False)
