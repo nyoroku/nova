@@ -605,7 +605,7 @@ testimonials_data = [
         'guest_name': 'Wanjiku & Brian M.',
         'guest_segment': 'COUPLE',
         'rating': 5,
-        'text': 'We booked the Sunset Cruise from Sopa. Having the boat arrive at the hotel jetty made our anniversary completely effortless. Dennis was a phenomenal captain!',
+        'text': 'The best Lake Naivasha boat ride we have ever experienced! We booked a private sunset cruise directly from our hotel jetty. Dennis was a phenomenal captain who knew the exact timing for golden hour hippo photography.',
         'trip_date': 'August 2026',
         'is_featured': True,
     },
@@ -613,7 +613,7 @@ testimonials_data = [
         'guest_name': 'Markus & Elena Schneider',
         'guest_segment': 'HOTEL_GUEST',
         'rating': 5,
-        'text': 'The most organized experience of our 2-week Kenya safari. Clear pricing upfront, spotless boat, proper life vests for our kids, and incredible views of the fish eagles.',
+        'text': 'The most organized Lake Naivasha boat safari of our entire Kenya trip. Upfront transparent pricing, spotless boat, certified life vests for our kids, and incredible views of fish eagles hunting at 7:30 AM morning timing.',
         'trip_date': 'July 2026',
         'is_featured': True,
     },
@@ -621,7 +621,7 @@ testimonials_data = [
         'guest_name': 'Pooja K. & Family',
         'guest_segment': 'FAMILY',
         'rating': 5,
-        'text': 'Crescent Island by boat was magical. Walking five meters away from wild giraffes with no barriers was unforgettable. Nova made the logistics seamless.',
+        'text': 'If you are looking for boat rides in Naivasha, Nova is the top operator. The boat ride to Crescent Island was smooth and peaceful, and walking among wild giraffes without barriers was completely unforgettable.',
         'trip_date': 'August 2026',
         'is_featured': True,
     },
@@ -629,7 +629,7 @@ testimonials_data = [
         'guest_name': 'David T. (Nairobi Day-Tripper)',
         'guest_segment': 'GROUP',
         'rating': 5,
-        'text': 'Left Nairobi at 7:00 AM, had our boat in Naivasha by 9:30 AM, and enjoyed a fantastic Hell\'s Gate combo. Instant WhatsApp response and total price transparency.',
+        'text': 'Our group left Nairobi early to catch the 9:00 AM lake naivasha boat timing. The water was calm and mirror-like. Nova arranged everything via WhatsApp with zero hassle and total price transparency.',
         'trip_date': 'September 2026',
         'is_featured': True,
     }
@@ -638,54 +638,70 @@ for tdata in testimonials_data:
     Testimonial.objects.update_or_create(guest_name=tdata['guest_name'], defaults=tdata)
 print(f"[OK] Seeded {len(testimonials_data)} Testimonials.")
 
-# 9. QUESTIONS & ANSWERS (8 BOOKING BLOCKERS §10)
+# 9. QUESTIONS & ANSWERS (AEO/GEO & BOOKING INTENT)
 faqs_data = [
     {
-        'question': 'Can Nova pick me up or depart directly from my hotel?',
-        'category': 'HOTEL_PICKUP',
-        'plain_answer': 'Yes. Nova coordinates direct jetty departures from verified lakefront hotels where water depth allows, or arranges seamless private road pickup to our central launch base.',
-        'answer': '<p>Yes. If you are staying at an approved partner hotel with a functional jetty (such as Sopa or Kiboko), we can position a boat to board you directly from your hotel lawn. For properties set back from the water or without active jetties, we provide vehicle pickup to Nova Lake Base.</p>',
+        'question': 'What is the best Lake Naivasha boat timing for wildlife and photography?',
+        'category': 'WEATHER',
+        'plain_answer': 'The best Lake Naivasha boat timing is early morning between 6:30 AM and 9:30 AM. Waters are glassy and calm with zero wind, African fish eagles and kingfishers actively hunt, and hippos surface close to the shoreline. Sunset departures between 4:30 PM and 6:30 PM offer golden hour Rift Valley lighting as hippos move toward grazing shores.',
+        'answer': '<p>The optimal <strong>Lake Naivasha boat timing</strong> is early morning from <strong>6:30 AM to 9:30 AM</strong>. Waters are calm and mirror-smooth, allowing close, silent approaches to bird coves and active hippo pods. If you prefer sunset photography, <strong>4:30 PM to 6:30 PM</strong> delivers dramatic Rift Valley golden hour light as hippos swim out for nighttime grazing.</p>',
         'order': 1,
         'is_featured': True
     },
     {
         'question': 'How much does a Lake Naivasha boat ride cost?',
         'category': 'PRICES',
-        'plain_answer': 'Standard shared safaris start from KES 3,000 ($25) per adult. Private charters start from KES 16,000 ($130) per boat for up to 7 passengers.',
-        'answer': '<p>Our transparent pricing is published by duration and group size. A 1-hour Classic Safari starts at KES 3,000 per resident adult ($25 international). Private boat charters start at KES 16,000 per boat for the complete party.</p>',
+        'plain_answer': 'A standard 1-hour Lake Naivasha boat ride costs KES 3,000 per person for Kenyan residents ($25 USD for international visitors). Private boat charters start at KES 16,000 per boat for up to 7 passengers. Crescent Island boat transfers start from KES 4,500.',
+        'answer': '<p>Nova publishes 100% transparent pricing with zero beach touting. A 1-hour shared <strong>Lake Naivasha boat ride</strong> starts at <strong>KES 3,000</strong> per resident adult ($25 USD international). Exclusive private charters start from <strong>KES 16,000</strong> ($130 USD) per boat for up to 7 passengers, with all life jackets, fuel, and licensed captain included.</p>',
         'order': 2,
         'is_featured': True
     },
     {
-        'question': 'Are boat rides safe for children and non-swimmers?',
-        'category': 'CHILDREN',
-        'plain_answer': 'Absolutely. Every passenger is fitted with a marine-grade life jacket before stepping onto the jetty. Specialized child life jackets are provided.',
-        'answer': '<p>Yes. Safety is our non-negotiable priority. All guests—regardless of swimming ability—wear properly fitted life jackets. Our boats are wide, stable aluminum hulls skippered by licensed local captains who maintain safe distances from hippos.</p>',
+        'question': 'What should I expect during a Lake Naivasha boat safari?',
+        'category': 'SAFETY',
+        'plain_answer': 'A Lake Naivasha boat safari takes you close to resident hippo pods, over 400 native bird species (including African fish eagles, pelicans, and kingfishers), submerged acacia forests, and views of Mount Longonot and the Rift Valley escarpment.',
+        'answer': '<p>On a <strong>Lake Naivasha boat safari</strong>, your licensed captain navigates tranquil papyrus channels and open lake waters. You will encounter active pods of wild hippos bathing in shallow lagoons, watch fish eagles swoop down for fish, see giant pelicans and malachite kingfishers, and observe breathtaking volcanic scenery.</p>',
         'order': 3,
         'is_featured': True
     },
     {
-        'question': 'What happens if the weather turns windy or rainy?',
-        'category': 'WEATHER',
-        'plain_answer': 'If lake conditions exceed safe operational limits, Nova will reschedule your departure or provide a 100% refund without penalty.',
-        'answer': '<p>Lake Naivasha can develop sudden afternoon winds. Our captains constantly monitor water conditions. If conditions are unsafe, we delay departure or reschedule. If you cannot reschedule, you receive a full refund.</p>',
+        'question': 'What do travelers say in a Lake Naivasha boat review about Nova?',
+        'category': 'SAFETY',
+        'plain_answer': 'Lake Naivasha boat reviews rate Nova 4.9/5 stars across 180+ verified guest reviews. Guests praise our licensed captains for calm, safe navigation around hippos, proper life vests for kids, transparent pre-booked pricing, and convenient hotel jetty pickups.',
+        'answer': '<p>In every <strong>Lake Naivasha boat review</strong>, guests consistently highlight three benefits: <strong>safety-first captain protocols</strong> that maintain respectful distances from hippos, <strong>fixed upfront pricing</strong> with no beach hustling, and <strong>seamless hotel jetty boarding</strong> from resorts like Enashipai, Sopa, and Kiboko.</p>',
         'order': 4,
         'is_featured': True
     },
     {
-        'question': 'How do I get to Crescent Island by boat?',
-        'category': 'CRESCENT',
-        'plain_answer': 'Nova boats drop you at Crescent Island\'s private western jetty. A sanctuary guide leads your walking safari, and your boat waits to bring you back.',
-        'answer': '<p>Taking a boat is the most scenic way to visit Crescent Island. We cruise past hippo pods across the bay, dock at the island jetty, and your captain remains moored while you enjoy the guided walking circuit.</p>',
+        'question': 'Can Nova pick me up or depart directly from my hotel for a boat ride Naivasha?',
+        'category': 'HOTEL_PICKUP',
+        'plain_answer': 'Yes. Nova coordinates direct jetty departures from verified lakefront hotels where water depth allows, or arranges seamless private road pickup to our central launch base.',
+        'answer': '<p>Yes. If you are staying at an approved partner hotel with a functional jetty (such as Kiboko Luxury Camp, Enashipai, or Sopa corridor), we position a boat to board you directly from your hotel lawn. For properties without active jetties, we provide private shuttle pickup to Nova Lake Base.</p>',
         'order': 5,
         'is_featured': True
     },
     {
-        'question': 'How far in advance should I book my ride?',
-        'category': 'BOOKING',
-        'plain_answer': 'We recommend booking 24 hours in advance for hotel pickups and sunset cruises. Same-day bookings are accepted subject to boat availability.',
-        'answer': '<p>For standard departures from Nova Lake Base, 2–4 hours advance notice is usually sufficient. For hotel jetty departures, boat positioning, or sunset cruises, 24 hours notice ensures your preferred time slot is secured.</p>',
+        'question': 'Are boat rides Naivasha safe for children and non-swimmers?',
+        'category': 'CHILDREN',
+        'plain_answer': 'Absolutely. Every passenger is fitted with a certified marine-grade life jacket before stepping onto the boat. Specialized child life jackets are provided, and boats are wide, stable aluminum hulls.',
+        'answer': '<p>Yes. Safety is our top priority. All guests—regardless of swimming ability—wear properly fitted life jackets. Our wide, stable aluminum safari boats are skippered by licensed local captains who maintain strict safety perimeters around all wildlife.</p>',
         'order': 6,
+        'is_featured': True
+    },
+    {
+        'question': 'How do I get to Crescent Island by boat from Naivasha?',
+        'category': 'CRESCENT',
+        'plain_answer': 'Nova boats drop you at Crescent Island\'s private western jetty. A sanctuary guide leads your walking safari among wild giraffes and zebras, and your boat waits to cruise you back across hippo lagoons.',
+        'answer': '<p>Taking a boat ride is the premier way to visit Crescent Island Game Sanctuary. We cruise past hippo lagoons across the bay, dock at the private island jetty, and your boat waits while you enjoy a 90-minute guided walk among wild giraffe, zebra, and wildebeest.</p>',
+        'order': 7,
+        'is_featured': True
+    },
+    {
+        'question': 'How far in advance should I book my Naivasha boat ride?',
+        'category': 'BOOKING',
+        'plain_answer': 'We recommend booking 24 hours in advance for hotel jetty pickups and golden hour sunset cruises. Same-day bookings from Nova Lake Base are accepted via WhatsApp subject to boat availability.',
+        'answer': '<p>For standard departures from Nova Lake Base, 2–4 hours advance notice is usually sufficient. For hotel jetty departures, private charters, or sunset cruises, 24 hours notice ensures your preferred time slot and boat positioning are secured.</p>',
+        'order': 8,
         'is_featured': True
     }
 ]

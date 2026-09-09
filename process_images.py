@@ -1,6 +1,6 @@
 import os
 import shutil
-from PIL import Image
+from PIL import Image, ImageDraw
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_IMG = os.path.join(BASE_DIR, 'static', 'images')
@@ -14,7 +14,8 @@ SOURCES = {
     'captain_family': os.path.join(NOVA_IMG, 'captain_family.jpg'),
     'crescent_ostrich': os.path.join(NOVA_IMG, 'crescent_ostrich.jpg'),
     'lake_cruise': os.path.join(NOVA_IMG, 'lake_cruise.jpg'),
-    'giraffes': os.path.join(NOVA_IMG, 'giraffes.jpg')
+    'giraffes': os.path.join(NOVA_IMG, 'giraffes.jpg'),
+    'logo_source': os.path.join(NOVA_IMG, 'nova_logo_source.jpg'),
 }
 
 def save_variants(src_path, target_base_without_ext, max_w=1024, mobile_w=480):
@@ -62,14 +63,50 @@ def run():
     for wk in wildlife_keys:
         save_variants(SOURCES['giraffes'], os.path.join(STATIC_IMG, wk))
         
-    # 2. Generate fresh Favicon from Lake Cruise
-    im_fav = Image.open(SOURCES['lake_cruise']).convert('RGBA')
-    min_dim = min(im_fav.size)
-    left = (im_fav.width - min_dim) // 2
-    top = (im_fav.height - min_dim) // 2
-    im_fav_sq = im_fav.crop((left, top, left + min_dim, top + min_dim))
-    im_fav_sq.resize((32, 32), Image.Resampling.LANCZOS).save(os.path.join(STATIC_IMG, 'favicon.ico'), format='ICO')
-    print("[OK] Re-generated favicon.ico from Lake Cruise image.")
+    # 2. Generate Brand Logo & Multi-Resolution Favicons
+    if os.path.exists(SOURCES['logo_source']):
+        im_logo = Image.open(SOURCES['logo_source']).convert('RGBA')
+        cx, cy = 509.5, 477.5
+        r = 254 + 2
+        box = (int(cx - r), int(cy - r), int(cx + r), int(cy + r))
+        cropped = im_logo.crop(box)
+        w, h = cropped.size
+
+        # Circular mask for antialiased transparency
+        scale = 4
+        mask = Image.new('L', (w * scale, h * scale), 0)
+        draw = ImageDraw.Draw(mask)
+        draw.ellipse((0, 0, w * scale, h * scale), fill=255)
+        mask = mask.resize((w, h), Image.Resampling.LANCZOS)
+
+        transparent_logo = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+        transparent_logo.paste(cropped, (0, 0), mask=mask)
+
+        # Save logo variants
+        logo_512 = transparent_logo.resize((512, 512), Image.Resampling.LANCZOS)
+        logo_512.save(os.path.join(STATIC_IMG, 'nova-logo.png'), 'PNG', optimize=True)
+        logo_512.save(os.path.join(NOVA_IMG, 'nova-logo.png'), 'PNG', optimize=True)
+        logo_512.save(os.path.join(STATIC_IMG, 'nova-logo.webp'), 'WEBP', quality=95, method=6)
+
+        logo_96 = transparent_logo.resize((96, 96), Image.Resampling.LANCZOS)
+        logo_96.save(os.path.join(STATIC_IMG, 'nova-logo-96.png'), 'PNG', optimize=True)
+        logo_96.save(os.path.join(STATIC_IMG, 'nova-logo-96.webp'), 'WEBP', quality=95)
+
+        # Apple Touch Icon (180x180) on Obsidian background
+        apple_icon = Image.new('RGBA', (180, 180), (19, 18, 24, 255))
+        logo_160 = transparent_logo.resize((160, 160), Image.Resampling.LANCZOS)
+        apple_icon.paste(logo_160, (10, 10), mask=logo_160)
+        apple_icon.convert('RGB').save(os.path.join(STATIC_IMG, 'apple-touch-icon.png'), 'PNG')
+
+        # Favicons
+        logo_32 = transparent_logo.resize((32, 32), Image.Resampling.LANCZOS)
+        logo_32.save(os.path.join(STATIC_IMG, 'favicon-32x32.png'), 'PNG')
+        logo_16 = transparent_logo.resize((16, 16), Image.Resampling.LANCZOS)
+        logo_16.save(os.path.join(STATIC_IMG, 'favicon-16x16.png'), 'PNG')
+
+        # Multi-resolution ICO
+        logo_512.save(os.path.join(STATIC_IMG, 'favicon.ico'), format='ICO', sizes=[(16, 16), (32, 32), (48, 48)])
+        print("[OK] Generated brand logo and multi-resolution favicons.")
 
     # 3. Remove Legacy unneeded folders in static/images
     for old_dir in ['rafiki-august', 'rafiki-gallery']:

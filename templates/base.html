@@ -27,7 +27,11 @@
   <!-- Preconnect Fonts & CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://unpkg.com">
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
 
   <!-- Nova Electric Design System -->
   <link rel="stylesheet" href="{% static 'css/nova-electric.css' %}">
@@ -100,10 +104,8 @@
     <div class="nova-shell" style="display: flex; align-items: center; justify-content: space-between;">
       
       <!-- Brand Lockup -->
-      <a href="{% url 'core:home' %}" style="display: flex; align-items: center; gap: 10px;" aria-label="Nova Boat Rides Naivasha Home">
-        <div style="width: 38px; height: 38px; border-radius: 10px; background: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: #FFFFFF; font-size: 1.25rem;">
-          N
-        </div>
+      <a href="{% url 'core:home' %}" style="display: flex; align-items: center; gap: 12px; text-decoration: none;" aria-label="Nova Boat Rides Naivasha Home">
+        <img src="{% static 'images/nova-logo-96.png' %}" alt="Nova Boat Rides Naivasha Logo" width="42" height="42" style="width: 42px; height: 42px; border-radius: 50%; object-fit: contain; display: block; filter: drop-shadow(0 2px 8px rgba(103, 80, 232, 0.45)); flex-shrink: 0;">
         <div style="line-height: 1.15;">
           <span style="display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; color: #FFFFFF; letter-spacing: -0.02em;">NOVA</span>
           <span style="display: block; font-size: 0.65rem; font-weight: 700; color: var(--color-acid-lime); text-transform: uppercase; letter-spacing: 0.12em;">Boat Rides Naivasha</span>
@@ -182,8 +184,8 @@
         
         <!-- Brand Summary -->
         <div>
-          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-            <div style="width: 34px; height: 34px; border-radius: 8px; background: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: #FFF;">N</div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <img src="{% static 'images/nova-logo-96.png' %}" alt="Nova Boat Rides Naivasha Logo" width="38" height="38" style="width: 38px; height: 38px; border-radius: 50%; object-fit: contain; display: block; flex-shrink: 0;">
             <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: #FFF;">NOVA</span>
           </div>
           <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
