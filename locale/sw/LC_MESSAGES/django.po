@@ -67,12 +67,15 @@ msgstr "Panga Safari Yangu"
 msgid "Chat on WhatsApp"
 msgstr "Zungumza Nasi WhatsApp"
 
+msgid "Karagita Naivasha"
+msgstr "Karagita Naivasha"
+
 msgid ""
 "The lake-access layer for visitors and hotels. Seamless departures from "
-"approved hotel jetties and Nova Lake Base."
+"approved hotel jetties and Nova Karagita Base."
 msgstr ""
 "Ufikiaji rahisi wa Ziwa Naivasha kwa wageni na hoteli. Safari zinaanzia "
-"kwenye gati zilizoidhinishwa za hoteli na Kituo Kikuu cha Nova."
+"kwenye gati zilizoidhinishwa za hoteli na Kituo Kikuu cha Nova Karagita."
 
 msgid "Naivasha starts here."
 msgstr "Naivasha inaanzia hapa."

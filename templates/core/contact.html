@@ -12,7 +12,7 @@
       Find Nova on Lake Naivasha
     </h1>
     <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6;">
-      Depart directly from Nova Lake Base on South Lake Road or arrange seamless pickup from your hotel's approved jetty.
+      Depart directly from Nova Karagita Base on Moi South Lake Road or arrange seamless pickup from your hotel's approved jetty.
     </p>
   </div>
 </section>
@@ -42,22 +42,17 @@
               {{ site_settings.email }}
             </div>
           </div>
-
+            </a>
+          </div>
           <div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">Operating Hours</div>
-            <div style="font-size: 1.05rem; font-weight: 600; color: var(--color-obsidian); margin-top: 4px;">
-              {{ site_settings.operating_hours }}
-            </div>
-            <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 2px;">Boats operate 7 days a week, weather permitting</div>
+            <strong>Advance Booking Window:</strong><br>
+            {{ site_settings.booking_notice }}
           </div>
         </div>
 
-        <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 12px;">
-          <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20inquire%20about%20a%20boat%20ride%20departure." target="_blank" rel="noopener" class="nova-btn-primary" style="width: 100%; text-align: center;">
-            Chat Directly on WhatsApp
-          </a>
-          <a href="{% url 'bookings:book' %}" class="nova-btn-secondary" style="width: 100%; text-align: center;">
-            Submit Online Booking Request
+        <div style="margin-top: 30px;">
+          <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20inquire%20about%20a%20boat%20departure." target="_blank" rel="noopener" class="nova-btn-primary" style="width: 100%; text-align: center;">
+            Chat via WhatsApp Now
           </a>
         </div>
       </div>
@@ -70,7 +65,7 @@
         <div style="display: flex; flex-direction: column; gap: 16px; font-size: 0.95rem;">
           <div>
             <strong>Physical Address:</strong><br>
-            South Lake Road (14 km from Naivasha Town junction), Naivasha, Nakuru County, Kenya.
+            Karagita Beach, Moi South Lake Road (8 km from Naivasha Town), Karagita, Naivasha, Nakuru County, Kenya.
           </div>
 
           <div>
@@ -90,7 +85,7 @@
           <div style="padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.08);">
             <span class="nova-badge nova-badge-purple">Hotel Departures Note</span>
             <p style="font-size: 0.85rem; color: var(--color-text-body); margin-top: 8px;">
-              Staying along the lake? You don't need to drive to Nova Base. Check our <a href="{% url 'partners:hotel_hub' %}" style="color: var(--color-ultraviolet); font-weight: 700;">Hotel Departure Hub</a> to confirm if our boats can pick you up directly from your hotel jetty.
+              Staying along the lake? You don't need to drive to Nova Karagita Base. Check our <a href="{% url 'partners:hotel_hub' %}" style="color: var(--color-ultraviolet); font-weight: 700;">Hotel Departure Hub</a> to confirm if our boats can pick you up directly from your hotel jetty.
             </p>
           </div>
         </div>

@@ -67,12 +67,15 @@ msgstr "Planear Mi Paseo"
 msgid "Chat on WhatsApp"
 msgstr "Chatear por WhatsApp"
 
+msgid "Karagita Naivasha"
+msgstr "Karagita Naivasha"
+
 msgid ""
 "The lake-access layer for visitors and hotels. Seamless departures from "
-"approved hotel jetties and Nova Lake Base."
+"approved hotel jetties and Nova Karagita Base."
 msgstr ""
 "El acceso confiable al lago Naivasha para visitantes y hoteles. Salidas "
-"cómodas desde embarcaderos de hoteles autorizados y la base de Nova."
+"cómodas desde embarcaderos de hoteles autorizados y la base Nova Karagita."
 
 msgid "Naivasha starts here."
 msgstr "Naivasha empieza aquí."

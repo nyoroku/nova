@@ -13,7 +13,7 @@ class Tour(OptimizedImageMixin, models.Model):
     is_private = models.BooleanField(default=False)
     is_shared = models.BooleanField(default=True)
     hotel_pickup_available = models.BooleanField(default=True)
-    standard_departure = models.CharField(max_length=200, default="Nova Lake Base or Approved Partner Jetty")
+    standard_departure = models.CharField(max_length=200, default="Nova Karagita Base or Approved Partner Jetty")
     best_for = models.CharField(max_length=200, default="Couples, Families, First-time visitors")
     
     route_narrative = models.TextField(blank=True, help_text="Detailed route and scenic narrative")

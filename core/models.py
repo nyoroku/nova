@@ -17,15 +17,15 @@ class SiteSettings(models.Model):
     whatsapp_number = models.CharField(max_length=30, default="254701215295")
     email = models.EmailField(default="hello@novaboatrider.com")
     
-    standard_launch_name = models.CharField(max_length=150, default="Nova Lake Base, South Lake Road, Naivasha")
-    standard_launch_lat = models.DecimalField(max_digits=9, decimal_places=6, default=-0.757200)
-    standard_launch_lng = models.DecimalField(max_digits=9, decimal_places=6, default=36.354200)
+    standard_launch_name = models.CharField(max_length=150, default="Nova Karagita Base, Lake Naivasha")
+    standard_launch_lat = models.DecimalField(max_digits=9, decimal_places=6, default=-0.762030)
+    standard_launch_lng = models.DecimalField(max_digits=9, decimal_places=6, default=36.425790)
     operating_hours = models.CharField(max_length=100, default="Daily 6:30 AM – 6:30 PM")
     default_currency = models.CharField(max_length=5, default="KES")
     gbp_url = models.URLField(blank=True, default="")
     directions_summary = models.TextField(
         blank=True,
-        default="Accessible via South Lake Road, Naivasha. Private parking, secure boarding jetty, and guest lounge on site."
+        default="Located at Karagita Beach off Moi South Lake Road, Naivasha (8 km from Naivasha Town). Dedicated briefing pavilion, secure perimeter parking, life jacket fitting station, and direct boat jetty access."
     )
     booking_notice = models.CharField(
         max_length=255,

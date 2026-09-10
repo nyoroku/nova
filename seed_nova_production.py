@@ -26,12 +26,12 @@ settings.phone_display = "+254 701 215 295"
 settings.phone_e164 = "+254701215295"
 settings.whatsapp_number = "254701215295"
 settings.email = "hello@novaboatrider.com"
-settings.standard_launch_name = "Nova Lake Base, South Lake Road, Naivasha"
-settings.standard_launch_lat = Decimal('-0.757200')
-settings.standard_launch_lng = Decimal('36.354200')
+settings.standard_launch_name = "Nova Karagita Base, Lake Naivasha"
+settings.standard_launch_lat = Decimal('-0.762030')
+settings.standard_launch_lng = Decimal('36.425790')
 settings.operating_hours = "Daily 6:30 AM – 6:30 PM"
 settings.default_currency = "KES"
-settings.directions_summary = "Located off South Lake Road, Naivasha. Private parking, dedicated briefing jetty, life jacket fitting station, and guest lounge on site."
+settings.directions_summary = "Located at Karagita Beach off Moi South Lake Road, Naivasha (8 km from Naivasha Town). Dedicated briefing pavilion, secure perimeter parking, life jacket fitting station, and direct boat jetty access."
 settings.booking_notice = "Advance booking recommended for hotel departures, Crescent Island walks, and sunset charters."
 settings.save()
 print("[OK] SiteSettings configured.")
@@ -47,9 +47,9 @@ tours_data = [
         'capacity': 8,
         'is_private': False,
         'is_shared': True,
-        'standard_departure': 'Nova Lake Base or Approved Hotel Jetty',
+        'standard_departure': 'Nova Karagita Base or Approved Hotel Jetty',
         'best_for': 'First-time visitors, day-trippers, couples, families',
-        'route_narrative': 'Departing Nova Lake Base heading eastward across Karagita bay toward the central papyrus lagoons and hippo pools.',
+        'route_narrative': 'Departing Nova Karagita Base heading eastward across Karagita bay toward the central papyrus lagoons and hippo pools.',
         'what_guests_may_see': 'Resident hippo pods, African fish eagles, pied kingfishers, yellow-billed storks, black cormorants, and giraffe on shorelines.',
         'order': 1,
         'is_featured': True,
@@ -68,7 +68,7 @@ tours_data = [
         'capacity': 8,
         'is_private': False,
         'is_shared': True,
-        'standard_departure': 'Nova Lake Base or Approved Hotel Jetty',
+        'standard_departure': 'Nova Karagita Base or Approved Hotel Jetty',
         'best_for': 'Wildlife enthusiasts, bird watchers, small groups',
         'route_narrative': 'Circumnavigating southern papyrus reed beds, deep water channels, and sheltered coves with optimal morning light.',
         'what_guests_may_see': 'Over 40 recorded bird species, hippo families with juveniles, waterbuck grazing near lake edges.',
@@ -89,7 +89,7 @@ tours_data = [
         'capacity': 8,
         'is_private': False,
         'is_shared': True,
-        'standard_departure': 'Nova Lake Base or Approved Hotel Jetty',
+        'standard_departure': 'Nova Karagita Base or Approved Hotel Jetty',
         'best_for': 'Families, couples, international safari travelers',
         'route_narrative': 'Open lake crossing directly to the private western jetty of Crescent Island, followed by a guided walking circuit.',
         'what_guests_may_see': 'Giraffe, Burchell zebra, blue wildebeest, Thomson gazelle, impala, dik-dik, hippos basking.',
@@ -110,7 +110,7 @@ tours_data = [
         'capacity': 8,
         'is_private': False,
         'is_shared': True,
-        'standard_departure': 'Nova Lake Base or Approved Hotel Jetty',
+        'standard_departure': 'Nova Karagita Base or Approved Hotel Jetty',
         'best_for': 'Couples, anniversaries, photographers, relaxation',
         'route_narrative': 'Departing 17:00 toward western open waters, positioning for panoramic sunset alignment across the Rift Valley crater rims.',
         'what_guests_may_see': 'Dramatic Rift Valley sunsets, active hippo herds entering shallow grasslands, night heron emergence.',
@@ -131,7 +131,7 @@ tours_data = [
         'capacity': 8,
         'is_private': True,
         'is_shared': False,
-        'standard_departure': 'Guest Choice: Hotel Jetty or Nova Lake Base',
+        'standard_departure': 'Guest Choice: Hotel Jetty or Nova Karagita Base',
         'best_for': 'Celebrations, VIP guests, private families, creator crews',
         'route_narrative': 'Custom itinerary designed with your senior captain before casting off.',
         'what_guests_may_see': 'Tailored according to selected route and time of day.',
@@ -151,7 +151,7 @@ tours_data = [
         'capacity': 8,
         'is_private': False,
         'is_shared': True,
-        'standard_departure': 'Nova Lake Base or Approved Hotel Jetty',
+        'standard_departure': 'Nova Karagita Base or Approved Hotel Jetty',
         'best_for': 'Families with children, multi-generational groups',
         'route_narrative': 'Protected shoreline bays with minimal wave action and constant wildlife visibility.',
         'what_guests_may_see': 'Baby hippos, swimming cormorants, lily pad ecosystems, water monitors.',
@@ -171,7 +171,7 @@ tours_data = [
         'capacity': 6,
         'is_private': True,
         'is_shared': False,
-        'standard_departure': 'Nova Lake Base (06:30 AM recommended)',
+        'standard_departure': 'Nova Karagita Base (06:30 AM recommended)',
         'best_for': 'Avid birders, telephoto photographers, documentary crews',
         'route_narrative': 'Eastern wetlands, flooded acacia zones, and Oloidien bay channels during sunrise golden hour.',
         'what_guests_may_see': 'Goliath heron, African skimmer, malachite kingfisher, African jacana, saddle-billed stork.',
@@ -191,7 +191,7 @@ tours_data = [
         'capacity': 30,
         'is_private': True,
         'is_shared': False,
-        'standard_departure': 'Partner Resort Jetty or Nova Lake Base',
+        'standard_departure': 'Partner Resort Jetty or Nova Karagita Base',
         'best_for': 'Corporate retreats, conference breakouts, school trips, weddings',
         'route_narrative': 'Multi-boat coordinated cruise with lake rally waypoints.',
         'what_guests_may_see': 'Expansive lake vistas, wildlife pods, collaborative flotilla.',
@@ -260,7 +260,7 @@ partners_data = [
             {
                 'name': 'Sopa Gate Shuttle Pickup',
                 'service_mode': 'PARTNER_TRANSFER',
-                'public_instructions': 'Nova transfer vehicle meets guests at Sopa main reception lobby for the 10-minute drive to Nova Lake Base.',
+                'public_instructions': 'Nova transfer vehicle meets guests at Sopa main reception lobby for the 10-minute drive to Nova Karagita Base.',
                 'private_ops_notes': 'Standard vehicle transfer via South Lake Road.',
                 'operating_window': '06:30 – 18:00',
                 'notice_hours': 4,
@@ -281,7 +281,7 @@ partners_data = [
             {
                 'name': 'Enashipai Gate Transfer',
                 'service_mode': 'PARTNER_TRANSFER',
-                'public_instructions': 'Nova transfer vehicle meets guests at Enashipai main porte-cochere for the 8-minute transfer to Nova Lake Base.',
+                'public_instructions': 'Nova transfer vehicle meets guests at Enashipai main porte-cochere for the 8-minute transfer to Nova Karagita Base.',
                 'private_ops_notes': 'Vehicle entry pass pre-cleared at security gate.',
                 'operating_window': '06:30 – 18:00',
                 'notice_hours': 3,
@@ -323,7 +323,7 @@ partners_data = [
             {
                 'name': 'Ridge to Lake Vehicle Transfer',
                 'service_mode': 'PARTNER_TRANSFER',
-                'public_instructions': 'Nova private safari van picks guests up from lodge reception for the scenic 35-minute descent to Nova Lake Base.',
+                'public_instructions': 'Nova private safari van picks guests up from lodge reception for the scenic 35-minute descent to Nova Karagita Base.',
                 'private_ops_notes': 'Allow 40 minutes road travel time due to mountain road bends.',
                 'operating_window': '07:00 – 16:30',
                 'notice_hours': 12,
@@ -528,7 +528,7 @@ packages_data = [
         'is_featured': False,
         'components': [
             ('Hell\'s Gate Cycling & Gorge', 'ACTIVITY', 'Morning bicycle safari past Fischer\'s Tower and guided gorge walk.'),
-            ('Lakeside Lunch', 'MEAL', 'Relaxed fresh lunch by the water at Nova Lake Base.'),
+            ('Lakeside Lunch', 'MEAL', 'Relaxed fresh lunch by the water at Nova Karagita Base.'),
             ('Afternoon Boat Safari', 'BOAT', '90-minute wildlife cruise to unwind after your morning hike.'),
         ]
     }
@@ -678,7 +678,7 @@ faqs_data = [
         'question': 'Can Nova pick me up or depart directly from my hotel for a boat ride Naivasha?',
         'category': 'HOTEL_PICKUP',
         'plain_answer': 'Yes. Nova coordinates direct jetty departures from verified lakefront hotels where water depth allows, or arranges seamless private road pickup to our central launch base.',
-        'answer': '<p>Yes. If you are staying at an approved partner hotel with a functional jetty (such as Kiboko Luxury Camp, Enashipai, or Sopa corridor), we position a boat to board you directly from your hotel lawn. For properties without active jetties, we provide private shuttle pickup to Nova Lake Base.</p>',
+        'answer': '<p>Yes. If you are staying at an approved partner hotel with a functional jetty (such as Kiboko Luxury Camp, Enashipai, or Sopa corridor), we position a boat to board you directly from your hotel lawn. For properties without active jetties, we provide private shuttle pickup to Nova Karagita Base.</p>',
         'order': 5,
         'is_featured': True
     },
@@ -701,8 +701,8 @@ faqs_data = [
     {
         'question': 'How far in advance should I book my Naivasha boat ride?',
         'category': 'BOOKING',
-        'plain_answer': 'We recommend booking 24 hours in advance for hotel jetty pickups and golden hour sunset cruises. Same-day bookings from Nova Lake Base are accepted via WhatsApp subject to boat availability.',
-        'answer': '<p>For standard departures from Nova Lake Base, 2–4 hours advance notice is usually sufficient. For hotel jetty departures, private charters, or sunset cruises, 24 hours notice ensures your preferred time slot and boat positioning are secured.</p>',
+        'plain_answer': 'We recommend booking 24 hours in advance for hotel jetty pickups and golden hour sunset cruises. Same-day bookings from Nova Karagita Base are accepted via WhatsApp subject to boat availability.',
+        'answer': '<p>For standard departures from Nova Karagita Base, 2–4 hours advance notice is usually sufficient. For hotel jetty departures, private charters, or sunset cruises, 24 hours notice ensures your preferred time slot and boat positioning are secured.</p>',
         'order': 8,
         'is_featured': True
     }
