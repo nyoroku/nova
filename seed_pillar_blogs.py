@@ -82,7 +82,7 @@ posts = [
 <h2>How to Book Your Lake Naivasha Boat Ride</h2>
 
 <p>Booking a <strong>naivasha boat ride</strong> has never been easier. We recommend booking at least 24 hours in advance if you are planning to visit on a weekend or public holiday.</p>
-<p>Simply send a WhatsApp message to <strong>+254 729 280 380</strong> with your preferred date, time, and group size. We accept M-Pesa, Cash, and Bank Transfers. Choose the number one rated operator on Google Reviews and ensure your Lake Naivasha experience is unforgettable.</p>
+<p>Simply send a WhatsApp message to <strong>+254 701 215 295</strong> with your preferred date, time, and group size. We accept M-Pesa, Cash, and Bank Transfers. Choose the number one rated operator on Google Reviews and ensure your Lake Naivasha experience is unforgettable.</p>
         """
     },
     {
@@ -190,7 +190,7 @@ posts = [
     <li><strong>The Boat Transfer:</strong> Paid to your boat operator (Rafiki). We offer highly competitive return-trip rates that include wait-time while you explore the island, plus the hippo-watching en route.</li>
     <li><strong>The Island Entry Fee:</strong> Paid directly to the sanctuary upon arrival (approx $30 USD for non-residents, KES 800 for Kenyan Citizens).</li></ol>
 
-<p>To arrange your complete <strong><a href="/lake-naivasha-safari-boat-ride/">Lake Naivasha safari and boat ride</a></strong> package, reach out to Rafiki Boat Rides via WhatsApp at <strong>+254 729 280 380</strong>. We recommend booking early morning (8:00 AM) or late afternoon (3:30 PM) trips to avoid the midday equatorial heat and experience the animals when they are most active.</p>
+<p>To arrange your complete <strong><a href="/lake-naivasha-safari-boat-ride/">Lake Naivasha safari and boat ride</a></strong> package, reach out to Rafiki Boat Rides via WhatsApp at <strong>+254 701 215 295</strong>. We recommend booking early morning (8:00 AM) or late afternoon (3:30 PM) trips to avoid the midday equatorial heat and experience the animals when they are most active.</p>
         """
     },
     {
@@ -236,7 +236,7 @@ posts = [
     <li><strong>Bring a Zoom Lens:</strong> While we get close, a 200mm or 300mm lens allows you to capture the intricate details of their faces, water droplets, and the birds resting on them.</li>
 </ul>
 
-<p>To book your dedicated hippo safari, contact the top-rated <strong><a href="/boat-rides-naivasha/">boat rides</a></strong> operator on the lake. WhatsApp Rafiki at +254 729 280 380 today!</p>
+<p>To book your dedicated hippo safari, contact the top-rated <strong><a href="/boat-rides-naivasha/">boat rides</a></strong> operator on the lake. WhatsApp Rafiki at +254 701 215 295 today!</p>
         """
     },
     {
@@ -284,7 +284,7 @@ posts = [
 
 <p>Because sunsets only happen once a day, and the golden hour window is strict, our sunset slots fill up incredibly fast—especially on weekends and holidays. We highly recommend booking a private sunset <strong><a href="/boat-ride-in-lake-naivasha/">boat ride naivasha</a></strong> at least 48 to 72 hours in advance.</p>
 
-<p>Send a WhatsApp to Rafiki Boat Rides at <strong>+254 729 280 380</strong> and request the "Sunset Cruise Package". It is, without a doubt, the perfect way to end a day in the Great Rift Valley.</p>
+<p>Send a WhatsApp to Rafiki Boat Rides at <strong>+254 701 215 295</strong> and request the "Sunset Cruise Package". It is, without a doubt, the perfect way to end a day in the Great Rift Valley.</p>
         """
     }
 ]

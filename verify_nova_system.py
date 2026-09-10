@@ -155,6 +155,7 @@ def run_tests():
     residue_patterns = [
         "Rafiki", "rafiki",
         "729 280 380", "729280380",
+        "700 000 000", "700000000",
         "hello@rafikiboatridesnaivasha.com",
         "rafikiboatridesnaivasha.com"
     ]

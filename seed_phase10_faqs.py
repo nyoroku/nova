@@ -135,7 +135,7 @@ faqs = [
     ),
     (
         "How do we coordinate a birthday boat ride party?",
-        "<p>Simply message us on WhatsApp at <strong>+254 729 280 380</strong> with your guest count. We will reserve the boats, set up birthday greetings, coordinate any catering or cake delivery, and set up a lakeside table for your group.</p>",
+        "<p>Simply message us on WhatsApp at <strong>+254 701 215 295</strong> with your guest count. We will reserve the boats, set up birthday greetings, coordinate any catering or cake delivery, and set up a lakeside table for your group.</p>",
         "Contact us on WhatsApp with your guest count, and we will coordinate boats, greetings, and lakeside table setups.",
         "booking",
         514

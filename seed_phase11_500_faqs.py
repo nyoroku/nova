@@ -91,7 +91,7 @@ fixed_faqs = [
 
     # High-intent pricing
     ("How much is a Lake Naivasha boat ride?",
-     "<p><strong>A shared Lake Naivasha boat ride costs KES 1,000–2,000 per person</strong> for group tours. A fully private charter is KES 4,000–8,000 per boat per hour for exclusive group use. Message WhatsApp +254 729 280 380.</p>",
+     "<p><strong>A shared Lake Naivasha boat ride costs KES 1,000–2,000 per person</strong> for group tours. A fully private charter is KES 4,000–8,000 per boat per hour for exclusive group use. Message WhatsApp +254 701 215 295.</p>",
      "Shared rides cost KES 1,000-2,000 per person; private charters cost KES 4,000-8,000 per boat per hour.", "pricing", 901),
 
     ("What is the best time of day for a Lake Naivasha boat ride?",
@@ -135,7 +135,7 @@ fixed_faqs = [
      "Uhuru Park and Paradise Lost offer small boats. Lake Naivasha, 1.5 hours away, is the true wildlife destination.", "destination", 911),
 
     ("How do I book a Crescent Island boat ride transfer?",
-     "<p>Book with Rafiki via WhatsApp (+254 729 280 380). We provide a direct flat-rate return boat transfer from Karagita Beach, wait at the dock during your walking safari, and bring you back safely.</p>",
+     "<p>Book with Rafiki via WhatsApp (+254 701 215 295). We provide a direct flat-rate return boat transfer from Karagita Beach, wait at the dock during your walking safari, and bring you back safely.</p>",
      "Book via WhatsApp. We provide return transfer and wait at the dock during your Crescent Island walk.", "booking", 912),
 
     ("Can I do a corporate team building event on a pontoon boat on Lake Naivasha?",
@@ -190,7 +190,7 @@ hotel_question_templates = [
      "<p>Yes. Rafiki can coordinate sunset cruises that <strong>return you directly to {h}'s private jetty</strong> just before dusk at 6:30 PM for a seamless end to your romantic evening.</p>",
      "Yes, we can return you to {h}'s jetty just before dusk at 6:30 PM.", "timing"),
     ("Does {h} have its own boat tours or should I book Rafiki?",
-     "<p>Most hotels arrange boats through third-party operators at commission. Booking directly with <strong>Rafiki via WhatsApp (+254 729 280 380)</strong> guarantees the lowest rates and professionally certified safety standards.</p>",
+     "<p>Most hotels arrange boats through third-party operators at commission. Booking directly with <strong>Rafiki via WhatsApp (+254 701 215 295)</strong> guarantees the lowest rates and professionally certified safety standards.</p>",
      "Book directly with Rafiki for the lowest rates and certified safety, avoiding hotel commission markups.", "booking"),
 ]
 

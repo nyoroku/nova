@@ -46,7 +46,7 @@ def seed_qna_articles():
 
 <h3>Q: What is the best time of day to plan my boat ride?</h3>
 <p><strong>A:</strong> Early morning (6:30 AM to 8:30 AM) is the best time for bird watching and photography, as the waters are calm and the light is soft. Late afternoon (4:30 PM to 6:00 PM) is the ideal time for a sunset cruise, offering dramatic views of the volcanic hills surrounding <strong>naivasha</strong>.</p>
-<p>Ready to book your private lake safari? Message Rafiki on WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Ready to book your private lake safari? Message Rafiki on WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["lake naivasha boat ride", "boatride", "hippo", "naivasha boat ride"]
         },
@@ -73,7 +73,7 @@ def seed_qna_articles():
 
 <h3>Q: Do we need to book our couple's boatride in advance?</h3>
 <p><strong>A:</strong> While walk-ins are available, we highly recommend booking in advance via WhatsApp to guarantee a private boat and customize your itinerary (such as adding a surprise setup, a bottle of wine, or a specific sunset route).</p>
-<p>Plan your romantic weekend safari with Rafiki: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Plan your romantic weekend safari with Rafiki: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["romantic places to visit in naivasha", "lake naivasha boat tour", "naivasha"]
         },
@@ -100,7 +100,7 @@ def seed_qna_articles():
 
 <h3>Q: What is the best season and time of day for fishing in naivasha?</h3>
 <p><strong>A:</strong> Early morning (6:30 AM to 9:00 AM) and late afternoon (4:00 PM to 6:00 PM) are the most active feeding times. In terms of seasons, the transition periods after the rainy seasons (June-July and December-January) often yield the highest catch rates as water levels stabilize.</p>
-<p>Book your guided fishing safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your guided fishing safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["best places to fish near me", "lake naivasha boat ride", "naivasha boat ride", "naivasha"]
         }

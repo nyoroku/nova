@@ -28,10 +28,11 @@
         
         <div style="display: flex; flex-direction: column; gap: 20px; font-size: 0.95rem;">
           <div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">WhatsApp Direct Desk</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">WhatsApp & Direct Calling Desk</div>
             <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-obsidian); margin-top: 4px;">
-              {{ site_settings.phone_display }}
+              <a href="tel:{{ site_settings.phone_e164 }}" style="color: inherit; text-decoration: none;">{{ site_settings.phone_display }}</a>
             </div>
+            <div style="font-size: 0.88rem; color: var(--color-ultraviolet); font-weight: 600; margin-top: 4px;">Direct Call: 0701215295</div>
             <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 2px;">Instant replies 06:30 to 20:00 EAT</div>
           </div>
 

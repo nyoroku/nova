@@ -137,7 +137,7 @@ class BookingLead(models.Model):
             f"Website estimate: {estimate_str}. (Ref: {self.reference})"
         )
 
-    def generate_whatsapp_url(self, whatsapp_number="254700000000"):
+    def generate_whatsapp_url(self, whatsapp_number="254701215295"):
         msg = self.generate_whatsapp_message()
         encoded = urllib.parse.quote(msg)
         return f"https://wa.me/{whatsapp_number}?text={encoded}"

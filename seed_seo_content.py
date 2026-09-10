@@ -56,7 +56,7 @@ blog_posts = [
 
 <h3>How to Book Your Hippo Safari</h3>
 
-<p>Booking is easy — WhatsApp us at <strong>+254 729 280 380</strong> or browse our tours online. We offer both private and group <strong>boat rides in Naivasha</strong>, with prices starting from KES 1,000 per person.</p>
+<p>Booking is easy — WhatsApp us at <strong>+254 701 215 295</strong> or browse our tours online. We offer both private and group <strong>boat rides in Naivasha</strong>, with prices starting from KES 1,000 per person.</p>
 
 <p>Whether you're a wildlife enthusiast, photographer, or simply looking for the <strong>best boat ride Naivasha</strong> has to offer — a hippo boat tour with Rafiki is an experience you'll never forget.</p>
 """
@@ -86,7 +86,7 @@ blog_posts = [
 
 <h3>Crescent Island Tour Pricing</h3>
 
-<p>The tour includes both the <strong>boat ride Lake Naivasha</strong> transfer and Crescent Island entry fees. Contact us on WhatsApp (+254 729 280 380) for current group and private rates.</p>
+<p>The tour includes both the <strong>boat ride Lake Naivasha</strong> transfer and Crescent Island entry fees. Contact us on WhatsApp (+254 701 215 295) for current group and private rates.</p>
 
 <h3>Best Time to Visit Crescent Island</h3>
 
@@ -132,7 +132,7 @@ blog_posts = [
 
 <h3>Book Your Golden Hour Experience</h3>
 
-<p>Whether it's a <strong>sunrise boat ride</strong> or <strong>sunset cruise</strong>, these are our most-requested experiences. Book early via WhatsApp (+254 729 280 380) to secure your spot — especially on weekends and holidays.</p>
+<p>Whether it's a <strong>sunrise boat ride</strong> or <strong>sunset cruise</strong>, these are our most-requested experiences. Book early via WhatsApp (+254 701 215 295) to secure your spot — especially on weekends and holidays.</p>
 """
     },
     {
@@ -174,7 +174,7 @@ blog_posts = [
 
 <h3>Plan Your Naivasha Group Trip</h3>
 
-<p>We can help you plan the perfect <strong>Naivasha tour package</strong> that combines boat rides with other activities. WhatsApp us at +254 729 280 380 for custom group itineraries.</p>
+<p>We can help you plan the perfect <strong>Naivasha tour package</strong> that combines boat rides with other activities. WhatsApp us at +254 701 215 295 for custom group itineraries.</p>
 """
     },
     {
@@ -235,7 +235,7 @@ blog_posts = [
 
 <h3>Book Your Package</h3>
 
-<p>All packages are customizable. Contact us on WhatsApp (+254 729 280 380) to design your perfect <strong>Naivasha tour package</strong>. We'll handle the boats — you just bring your sense of adventure.</p>
+<p>All packages are customizable. Contact us on WhatsApp (+254 701 215 295) to design your perfect <strong>Naivasha tour package</strong>. We'll handle the boats — you just bring your sense of adventure.</p>
 """
     },
 ]
@@ -262,7 +262,7 @@ for data in blog_posts:
 faqs = [
     {
         'question': 'How much does a boat ride in Naivasha cost?',
-        'answer': '<p>Boat ride prices in Naivasha vary depending on the type and duration. At Rafiki Boat Rides Naivasha, our rates start from <strong>KES 1,000 per person per hour</strong> for group rides. Private boat charters, sunset cruises, and Crescent Island transfers are priced separately. We accept cash (KES/USD), M-Pesa, and bank transfers. Contact us on WhatsApp (+254 729 280 380) for exact pricing and group discounts.</p>',
+        'answer': '<p>Boat ride prices in Naivasha vary depending on the type and duration. At Rafiki Boat Rides Naivasha, our rates start from <strong>KES 1,000 per person per hour</strong> for group rides. Private boat charters, sunset cruises, and Crescent Island transfers are priced separately. We accept cash (KES/USD), M-Pesa, and bank transfers. Contact us on WhatsApp (+254 701 215 295) for exact pricing and group discounts.</p>',
         'plain_answer': 'Boat ride prices at Rafiki start from KES 1,000 per person per hour. Private charters and special packages vary. We accept cash, M-Pesa, and bank transfers.',
         'search_intent': 'pricing',
         'order': 1,
@@ -276,7 +276,7 @@ faqs = [
     },
     {
         'question': 'How do I get to Lake Naivasha from Nairobi?',
-        'answer': '<p>Lake Naivasha is approximately <strong>90 km from Nairobi</strong>, about a 1.5-hour drive via the Nairobi-Nakuru Highway (A104). You can drive yourself, take a matatu (public bus) from Nairobi\'s Mololine terminus, or hire a private taxi. Once in Naivasha town, head to <strong>Public Beach, Karagita</strong> where Rafiki Boat Rides operates. We can provide directions — just WhatsApp us at +254 729 280 380.</p>',
+        'answer': '<p>Lake Naivasha is approximately <strong>90 km from Nairobi</strong>, about a 1.5-hour drive via the Nairobi-Nakuru Highway (A104). You can drive yourself, take a matatu (public bus) from Nairobi\'s Mololine terminus, or hire a private taxi. Once in Naivasha town, head to <strong>Public Beach, Karagita</strong> where Rafiki Boat Rides operates. We can provide directions — just WhatsApp us at +254 701 215 295.</p>',
         'plain_answer': 'Lake Naivasha is 1.5 hours from Nairobi via the Nairobi-Nakuru Highway. Drive, take a matatu, or hire a taxi. Our launch point is at Public Beach, Karagita.',
         'search_intent': 'location',
         'order': 3,
@@ -304,7 +304,7 @@ faqs = [
     },
     {
         'question': 'Do you offer boat rides near me in Naivasha?',
-        'answer': '<p>If you\'re in or near Naivasha, Rafiki Boat Rides is located at <strong>Public Beach, Lake, Karagita</strong> — the main boat launch point on Lake Naivasha. We\'re easily accessible from Naivasha town (10-minute drive), nearby hotels, and lodges. Our <strong>boat rides</strong> depart daily from 6:30 AM to 6:30 PM. You can walk in or book ahead via WhatsApp (+254 729 280 380) to guarantee your spot.</p>',
+        'answer': '<p>If you\'re in or near Naivasha, Rafiki Boat Rides is located at <strong>Public Beach, Lake, Karagita</strong> — the main boat launch point on Lake Naivasha. We\'re easily accessible from Naivasha town (10-minute drive), nearby hotels, and lodges. Our <strong>boat rides</strong> depart daily from 6:30 AM to 6:30 PM. You can walk in or book ahead via WhatsApp (+254 701 215 295) to guarantee your spot.</p>',
         'plain_answer': 'We operate from Public Beach, Karagita, Naivasha — the main boat launch point. Open daily 6:30AM-6:30PM. Book via WhatsApp or walk in.',
         'search_intent': 'location',
         'order': 7,
@@ -318,7 +318,7 @@ faqs = [
     },
     {
         'question': 'Can I book a boat ride for a birthday or special event?',
-        'answer': '<p>Yes! We offer <strong>private boat charters</strong> for birthdays, anniversaries, proposals, corporate events, and other celebrations. Our private charters include a dedicated boat, experienced guide, and can be customized with extras like champagne, music, and photography. We\'ve hosted memorable celebrations on Lake Naivasha — just tell us what you need! Book via WhatsApp (+254 729 280 380) at least 24 hours in advance for special events.</p>',
+        'answer': '<p>Yes! We offer <strong>private boat charters</strong> for birthdays, anniversaries, proposals, corporate events, and other celebrations. Our private charters include a dedicated boat, experienced guide, and can be customized with extras like champagne, music, and photography. We\'ve hosted memorable celebrations on Lake Naivasha — just tell us what you need! Book via WhatsApp (+254 701 215 295) at least 24 hours in advance for special events.</p>',
         'plain_answer': 'Yes, we offer private charters for birthdays, anniversaries, proposals, and corporate events. Customize with champagne, music, and photography. Book 24 hours in advance.',
         'search_intent': 'booking',
         'order': 9,
@@ -400,7 +400,7 @@ local_pages = [
 
 <p>All Rafiki <strong>boat rides in Naivasha</strong> depart from here. Choose from hippo safaris, sunset cruises, Crescent Island transfers, and photography tours. We operate daily from 6:30 AM to 6:30 PM.</p>
 
-<p>WhatsApp us at +254 729 280 380 to book your <strong>boat ride at Lake Naivasha</strong> from Public Beach.</p>
+<p>WhatsApp us at +254 701 215 295 to book your <strong>boat ride at Lake Naivasha</strong> from Public Beach.</p>
 """
     },
     {
@@ -437,7 +437,7 @@ local_pages = [
 
 <p>Early morning (6:30 AM – 9:00 AM) is peak birding time. Migratory species are present November through March, adding to the resident population. The rainy seasons (March-May, October-November) bring the greatest diversity.</p>
 
-<p>Book your bird watching <strong>boat tour Naivasha</strong> with Rafiki — WhatsApp +254 729 280 380.</p>
+<p>Book your bird watching <strong>boat tour Naivasha</strong> with Rafiki — WhatsApp +254 701 215 295.</p>
 """
     },
     {
@@ -481,7 +481,7 @@ local_pages = [
 
 <h3>Book Your Safari</h3>
 
-<p>Ready for your <strong>Lake Naivasha tour</strong>? WhatsApp us at +254 729 280 380 or browse our tours online. We operate daily from 6:30 AM to 6:30 PM at Public Beach, Karagita.</p>
+<p>Ready for your <strong>Lake Naivasha tour</strong>? WhatsApp us at +254 701 215 295 or browse our tours online. We operate daily from 6:30 AM to 6:30 PM at Public Beach, Karagita.</p>
 """
     },
 ]

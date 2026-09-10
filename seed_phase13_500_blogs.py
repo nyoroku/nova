@@ -93,7 +93,7 @@ blog_templates = [
 <p>Our captains are trained local naturalists who interpret hippo behavior, fish eagle diving physics, and papyrus ecology in engaging plain language. This educational layer transforms a simple boat ride into a genuine wilderness experience — something generic speedboat operators cannot offer.</p>
 
 <h3>Pricing Transparency</h3>
-<p>Rafiki publishes direct flat-rate charter prices online and on WhatsApp (<strong>+254 729 280 380</strong>). This eliminates shoreline broker commissions that inflate prices at the beach. When visiting from <strong>{item}</strong>, booking directly online ensures you pay exactly what you budgeted.</p>
+<p>Rafiki publishes direct flat-rate charter prices online and on WhatsApp (<strong>+254 701 215 295</strong>). This eliminates shoreline broker commissions that inflate prices at the beach. When visiting from <strong>{item}</strong>, booking directly online ensures you pay exactly what you budgeted.</p>
 
 <h3>Verdict for {item} Travelers</h3>
 <p>Whether you are a budget backpacker or planning a premium honeymoon experience, Rafiki's transparent pricing and guest-first reputation make us the safest, most reliable choice on Lake Naivasha.</p>
@@ -126,7 +126,7 @@ blog_templates = [
 <h3>Best Time of Day for a Boat Ride?</h3>
 <p><strong>The best time for a Lake Naivasha boat ride is early morning (7:00 AM – 10:00 AM)</strong> when hippos are most active near the surface and bird species are feeding. Late afternoons (4:00 PM – 6:00 PM) are perfect for romantic sunset cruises.</p>
 
-<p>Book directly from <strong>{item}</strong> via WhatsApp: <strong>+254 729 280 380</strong></p>
+<p>Book directly from <strong>{item}</strong> via WhatsApp: <strong>+254 701 215 295</strong></p>
 """,
         'tags': ['lake naivasha boat ride price', 'boat rides naivasha prices', 'lake naivasha boat ride price per person'],
         'item_source': 'origins'
@@ -152,7 +152,7 @@ blog_templates = [
 </ol>
 
 <h3>Recommended Hotels Near the Lake</h3>
-<p>From budget campsites to premium resorts — Lake Naivasha has a full range of accommodation. Rafiki can recommend the best hotel options based on your group size and budget when you contact us via WhatsApp at <strong>+254 729 280 380</strong>.</p>
+<p>From budget campsites to premium resorts — Lake Naivasha has a full range of accommodation. Rafiki can recommend the best hotel options based on your group size and budget when you contact us via WhatsApp at <strong>+254 701 215 295</strong>.</p>
 """,
         'tags': ['lake naivasha boat ride price from nairobi', 'nairobi to lake naivasha', 'best boat rides naivasha'],
         'item_source': 'origins'
@@ -177,7 +177,7 @@ blog_templates = [
 </ul>
 
 <h3>Direct Booking for {item} Guests</h3>
-<p>Simply message Rafiki on WhatsApp at <strong>+254 729 280 380</strong> before your check-in date to pre-arrange your boat safari schedule. We handle everything including life jacket pre-sizing, captain briefings, and route customization based on your group's interests.</p>
+<p>Simply message Rafiki on WhatsApp at <strong>+254 701 215 295</strong> before your check-in date to pre-arrange your boat safari schedule. We handle everything including life jacket pre-sizing, captain briefings, and route customization based on your group's interests.</p>
 """,
         'tags': ['lake naivasha boat ride review', 'best boat rides naivasha', 'sunset cruises naivasha'],
         'item_source': 'hotels'
@@ -198,7 +198,7 @@ blog_templates = [
 <p>The dense papyrus sedge fringing the lake acts as a biological filtration system — trapping silt from inflowing rivers like the Malewa and Gilgil, and absorbing chemical runoff from the vast flower farms of <strong>{item}</strong> and its surroundings. Clearing of papyrus for agriculture and informal settlement reduces this natural filtration, accelerating eutrophication.</p>
 
 <h3>How Rafiki Supports Conservation</h3>
-<p>Rafiki operates low-emission, four-stroke outboard engines that reduce water-born hydrocarbon pollution. Our captains enforce strict <strong>50-meter hippo buffer zones</strong> and refuse to operate at speeds that create damaging bow waves near papyrus beds. A portion of every charter booked via WhatsApp (<strong>+254 729 280 380</strong>) contributes to local papyrus restoration and hyacinth harvesting cooperatives.</p>
+<p>Rafiki operates low-emission, four-stroke outboard engines that reduce water-born hydrocarbon pollution. Our captains enforce strict <strong>50-meter hippo buffer zones</strong> and refuse to operate at speeds that create damaging bow waves near papyrus beds. A portion of every charter booked via WhatsApp (<strong>+254 701 215 295</strong>) contributes to local papyrus restoration and hyacinth harvesting cooperatives.</p>
 """,
         'tags': ['lake naivasha boat ride review', 'bird watching lake naivasha', 'boat safari lake naivasha'],
         'item_source': 'landmarks'
@@ -224,7 +224,7 @@ blog_templates = [
     <li>Depart early at <strong>7:00 AM</strong> to catch peak hippo and bird activity before the mid-morning winds build.</li>
     <li>Carry light layers — the lake breeze can feel cool even during Kenya's warm seasons.</li>
 </ul>
-<p>Message Rafiki directly on WhatsApp: <strong>+254 729 280 380</strong> to secure your preferred time slot during <strong>{item}</strong>.</p>
+<p>Message Rafiki directly on WhatsApp: <strong>+254 701 215 295</strong> to secure your preferred time slot during <strong>{item}</strong>.</p>
 """,
         'tags': ['lake naivasha boat ride price', 'best boat rides naivasha', 'lake naivasha boat ride review'],
         'item_source': 'seasons'
@@ -245,7 +245,7 @@ blog_templates = [
 <p>Rafiki's experienced captains customize every <strong>{item}</strong> to match your group's interests and energy levels. Whether you prefer a slow, meditative drift through papyrus channels listening to kingfisher calls, or an action-packed hippo encounter in the main open water channels, we tailor the route to maximize your experience.</p>
 
 <h3>Safety and Equipment</h3>
-<p>All Rafiki safaris include certified, properly-fitted life jackets for every passenger. Our low-emission four-stroke engines are environmentally sound and run quietly to avoid disturbing wildlife. Infants and young children are accommodated with specialized safety equipment — just notify us when booking via WhatsApp at <strong>+254 729 280 380</strong>.</p>
+<p>All Rafiki safaris include certified, properly-fitted life jackets for every passenger. Our low-emission four-stroke engines are environmentally sound and run quietly to avoid disturbing wildlife. Infants and young children are accommodated with specialized safety equipment — just notify us when booking via WhatsApp at <strong>+254 701 215 295</strong>.</p>
 
 <h3>Pricing and Booking</h3>
 <p>Rafiki offers transparent, flat-rate charter pricing for <strong>{item}</strong> with no hidden shoreline broker fees. Contact our friendly team directly to get an instant quote and availability for your preferred date and group size.</p>
@@ -272,7 +272,7 @@ blog_templates = [
 <p>Lake Naivasha boat charters with Rafiki start at highly competitive flat rates, offering full exclusive use of the vessel and a professional naturalist guide. Compared to equivalent marine charter services, our freshwater safaris deliver dramatically higher wildlife encounter rates per hour spent on the water.</p>
 
 <h3>Book Your Lake Naivasha Experience</h3>
-<p>Message Rafiki on WhatsApp at <strong>+254 729 280 380</strong> to get an instant quote and plan your perfect Lake Naivasha safari — far superior to boat riding in <strong>{item}</strong> for pure wildlife encounters.</p>
+<p>Message Rafiki on WhatsApp at <strong>+254 701 215 295</strong> to get an instant quote and plan your perfect Lake Naivasha safari — far superior to boat riding in <strong>{item}</strong> for pure wildlife encounters.</p>
 """,
         'tags': ['boat riding in nairobi', 'lake naivasha boat ride review', 'best boat rides naivasha'],
         'item_source': 'origins'
@@ -302,7 +302,7 @@ blog_templates = [
     <li>Arrive early (before 9:00 AM) when animals are most active near the water's edge.</li>
     <li>Carry a camera with a zoom lens for bird photography.</li>
 </ul>
-<p>Book your complete Crescent Island combo directly on WhatsApp at <strong>+254 729 280 380</strong>.</p>
+<p>Book your complete Crescent Island combo directly on WhatsApp at <strong>+254 701 215 295</strong>.</p>
 """,
         'tags': ['crescent island boat ride price', 'lake naivasha boat ride and crescent island', 'best boat rides naivasha'],
         'item_source': 'origins'
@@ -330,7 +330,7 @@ blog_templates = [
 
 <h3>Birthday & Special Event Pontoon Charters</h3>
 <p>Celebrate birthdays, anniversaries, and special occasions on a private floating venue surrounded by wildlife. Our team helps arrange decorations, customized route preferences, and coordination with catering services.</p>
-<p>Secure your pontoon charter from <strong>{item}</strong> by messaging WhatsApp: <strong>+254 729 280 380</strong> — availability is limited, especially on weekends.</p>
+<p>Secure your pontoon charter from <strong>{item}</strong> by messaging WhatsApp: <strong>+254 701 215 295</strong> — availability is limited, especially on weekends.</p>
 """,
         'tags': ['pontoon boat rides naivasha', 'boat rides naivasha prices', 'lake naivasha corporate team building'],
         'item_source': 'origins'
@@ -356,7 +356,7 @@ blog_templates = [
     <li>Coordinated post-cruise dinner reservations at lakeside restaurants.</li>
     <li>Private photography sessions at Hippo Point during the golden hour.</li>
 </ul>
-<p>Book your romantic sunset charter via WhatsApp: <strong>+254 729 280 380</strong> — ideally 72 hours in advance to guarantee your preferred slot.</p>
+<p>Book your romantic sunset charter via WhatsApp: <strong>+254 701 215 295</strong> — ideally 72 hours in advance to guarantee your preferred slot.</p>
 """,
         'tags': ['lake naivasha boat ride review', 'sunset cruises naivasha', 'romantic boat ride lake naivasha'],
         'item_source': 'hotels'
@@ -382,7 +382,7 @@ blog_templates = [
     <li>Carry sunscreen, hats, and light snacks for toddlers.</li>
     <li>Allow extra time for Karagita Beach — children love watching the fishermen and tilapia grilling.</li>
 </ul>
-<p>Book your family safari safely via WhatsApp: <strong>+254 729 280 380</strong>.</p>
+<p>Book your family safari safely via WhatsApp: <strong>+254 701 215 295</strong>.</p>
 """,
         'tags': ['lake naivasha boat ride with kids', 'best boat rides naivasha', 'lake naivasha boat ride price per person'],
         'item_source': 'origins'
@@ -411,7 +411,7 @@ blog_templates = [
 
 <h3>Photography-Optimized Routes</h3>
 <p>Rafiki's captains know the precise locations of active nesting colonies, regular fish eagle perch trees, and shallow channels where kingfishers hunt. Our slow-drift approach minimizes disturbance and maximizes photography opportunity at close range.</p>
-<p>Book your birding safari from <strong>{item}</strong> via WhatsApp: <strong>+254 729 280 380</strong>.</p>
+<p>Book your birding safari from <strong>{item}</strong> via WhatsApp: <strong>+254 701 215 295</strong>.</p>
 """,
         'tags': ['bird watching lake naivasha', 'boat safari lake naivasha', 'best boat rides naivasha'],
         'item_source': 'origins'
@@ -433,7 +433,7 @@ blog_templates = [
 <p><strong>5:00 PM — Begin return to {item}.</strong></p>
 
 <h3>Booking Your Boat Safari in Advance</h3>
-<p>Weekend boat safaris book up fast during peak season. Message Rafiki on WhatsApp at <strong>+254 729 280 380</strong> at least 48 hours before to secure your afternoon slot after your Hell's Gate cycling session.</p>
+<p>Weekend boat safaris book up fast during peak season. Message Rafiki on WhatsApp at <strong>+254 701 215 295</strong> at least 48 hours before to secure your afternoon slot after your Hell's Gate cycling session.</p>
 """,
         'tags': ['hells gate lake naivasha', 'best boat rides naivasha', 'lake naivasha boat ride price'],
         'item_source': 'origins'
@@ -457,7 +457,7 @@ blog_templates = [
 <p>"Booked directly on WhatsApp and paid exactly the quoted price — no hidden fees, no broker commissions. For what we experienced, it was tremendous value compared to other boat operators we'd used on Mombasa Creek." — Family from {item}, 2025</p>
 
 <h3>Book Your Rafiki Experience</h3>
-<p>Join thousands of satisfied guests from <strong>{item}</strong> who have experienced Lake Naivasha with Rafiki. Message us directly on WhatsApp at <strong>+254 729 280 380</strong> to check availability and book your preferred date.</p>
+<p>Join thousands of satisfied guests from <strong>{item}</strong> who have experienced Lake Naivasha with Rafiki. Message us directly on WhatsApp at <strong>+254 701 215 295</strong> to check availability and book your preferred date.</p>
 """,
         'tags': ['lake naivasha boat ride review', 'gitoh b boat rides naivasha reviews', 'best boat rides naivasha'],
         'item_source': 'origins'
@@ -483,7 +483,7 @@ blog_templates = [
 
 <h3>Licensing & Catch Regulations</h3>
 <p>Commercial fishing requires a license from Kenya Fisheries. Sport catch-and-release fishing for visiting anglers is practiced and encouraged. Rafiki provides all necessary fishing equipment including rods, bait, and tackle on request.</p>
-<p>Book your dedicated fishing charter from <strong>{item}</strong> via WhatsApp: <strong>+254 729 280 380</strong>.</p>
+<p>Book your dedicated fishing charter from <strong>{item}</strong> via WhatsApp: <strong>+254 701 215 295</strong>.</p>
 """,
         'tags': ['lake naivasha fishing tour', 'boat safari lake naivasha', 'best boat rides naivasha'],
         'item_source': 'origins'
@@ -504,7 +504,7 @@ blog_templates = [
 <p>The surrounding ecosystem supports an extraordinary range of mammals and birds. From grazing herds of zebra and impala to endemic Rift Valley bird species, the biodiversity around <strong>{item}</strong> reflects the lake's influence as a freshwater anchor for the region's food web.</p>
 
 <h3>Combining {item} with a Lake Naivasha Boat Safari</h3>
-<p>The perfect itinerary pairs your <strong>{item}</strong> exploration with an afternoon Rafiki boat safari — departing Karagita Beach at 3:30 PM for the magical golden-hour hippo and sunset cruise. Book both experiences through Rafiki's WhatsApp line at <strong>+254 729 280 380</strong> for a fully coordinated, seamless day.</p>
+<p>The perfect itinerary pairs your <strong>{item}</strong> exploration with an afternoon Rafiki boat safari — departing Karagita Beach at 3:30 PM for the magical golden-hour hippo and sunset cruise. Book both experiences through Rafiki's WhatsApp line at <strong>+254 701 215 295</strong> for a fully coordinated, seamless day.</p>
 """,
         'tags': ['best boat rides naivasha', 'lake naivasha boat ride review', 'boat safari lake naivasha'],
         'item_source': 'landmarks'
@@ -530,7 +530,7 @@ blog_templates = [
     <li><strong>2–3 hours:</strong> Full Crescent Island combo — boat transfer + walking safari among giraffes.</li>
     <li><strong>Half-day (4–5 hours):</strong> Ultimate wildlife marathon covering all key zones of the lake.</li>
 </ul>
-<p>Book your first Naivasha boat ride from <strong>{item}</strong> via WhatsApp: <strong>+254 729 280 380</strong>.</p>
+<p>Book your first Naivasha boat ride from <strong>{item}</strong> via WhatsApp: <strong>+254 701 215 295</strong>.</p>
 """,
         'tags': ['lake naivasha boat ride price in kenya', 'lake naivasha boat ride review', 'best boat rides naivasha'],
         'item_source': 'origins'
@@ -555,7 +555,7 @@ blog_templates = [
 </ul>
 
 <h3>Logistics from {item}</h3>
-<p>Rafiki coordinates all logistics including transport guidance from <strong>{item}</strong>, accommodation recommendations at lakeside hotels, and catering coordination for post-safari team lunches. Our event coordination team is reachable directly on WhatsApp at <strong>+254 729 280 380</strong> for custom group quotations.</p>
+<p>Rafiki coordinates all logistics including transport guidance from <strong>{item}</strong>, accommodation recommendations at lakeside hotels, and catering coordination for post-safari team lunches. Our event coordination team is reachable directly on WhatsApp at <strong>+254 701 215 295</strong> for custom group quotations.</p>
 """,
         'tags': ['lake naivasha corporate team building', 'pontoon boat rides naivasha', 'best boat rides naivasha'],
         'item_source': 'origins'
@@ -581,7 +581,7 @@ blog_templates = [
 
 <h3>Rafiki's Photography-Optimized Safari</h3>
 <p>Our photography charter for visitors from <strong>{item}</strong> uses a <strong>slow-drift approach</strong> — engine off, paddling gently — to minimize vibration and noise within critical photography zones. Captains position the boat to place subjects against clean backgrounds and optimal light angles.</p>
-<p>Book your dedicated photography safari via WhatsApp: <strong>+254 729 280 380</strong>.</p>
+<p>Book your dedicated photography safari via WhatsApp: <strong>+254 701 215 295</strong>.</p>
 """,
         'tags': ['lake naivasha photography tour', 'bird watching lake naivasha', 'best boat rides naivasha'],
         'item_source': 'origins'

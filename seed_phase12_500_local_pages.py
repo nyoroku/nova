@@ -115,7 +115,7 @@ topics = [
 </ul>
 
 <h3>No Hidden Fees from {item}</h3>
-<p>Rafiki operates exclusively on direct, broker-free bookings. When you contact us from <strong>{item}</strong> via WhatsApp (<strong>+254 729 280 380</strong>), you receive the direct operator price with no shoreline broker commissions or hidden handling fees.</p>
+<p>Rafiki operates exclusively on direct, broker-free bookings. When you contact us from <strong>{item}</strong> via WhatsApp (<strong>+254 701 215 295</strong>), you receive the direct operator price with no shoreline broker commissions or hidden handling fees.</p>
 
 <h3>Is There a Lake Naivasha Entry Fee?</h3>
 <p><strong>No.</strong> Lake Naivasha does not have a mandatory public entry fee. You pay only for your boat charter. Crescent Island has a separate sanctuary entry fee paid on arrival.</p>
@@ -139,7 +139,7 @@ topics = [
     <li><strong>Crescent Island Walking Safari Combo (2-3 hours):</strong> Boat transfer + walking among giraffes and zebras.</li>
     <li><strong>Golden Hour Sunset Cruise (1.5-2 hours):</strong> Mau Escarpment silhouettes and dramatic hippo activity at dusk.</li>
 </ul>
-<p>Book directly from <strong>{item}</strong> via WhatsApp: <strong>+254 729 280 380</strong></p>
+<p>Book directly from <strong>{item}</strong> via WhatsApp: <strong>+254 701 215 295</strong></p>
 """
     },
     {
@@ -161,7 +161,7 @@ topics = [
 
 <h3>Events We Cater For from {item}</h3>
 <p>Pontoon safaris are our most popular option for: corporate team building retreats, birthday party celebrations, family reunion outings, anniversary cruises, and school educational trips. All events can be fully customized with our events coordination team.</p>
-<p>Contact us from <strong>{item}</strong> at WhatsApp: <strong>+254 729 280 380</strong> to get a group quote.</p>
+<p>Contact us from <strong>{item}</strong> at WhatsApp: <strong>+254 701 215 295</strong> to get a group quote.</p>
 """
     },
     {
@@ -183,7 +183,7 @@ topics = [
 
 <h3>How to Access Crescent Island from {item}</h3>
 <p>Crescent Island is accessible only by boat from Karagita Beach or your hotel's private jetty. Rafiki provides direct, flat-rate boat transfers specifically for Crescent Island visits, with the captain waiting at the dock while you complete your walking safari at your own pace.</p>
-<p>Book your Crescent Island combo from <strong>{item}</strong>: WhatsApp <strong>+254 729 280 380</strong></p>
+<p>Book your Crescent Island combo from <strong>{item}</strong>: WhatsApp <strong>+254 701 215 295</strong></p>
 """
     },
     {
@@ -208,7 +208,7 @@ topics = [
 <p>We recommend departing from <strong>{item}</strong> early enough to reach the lake by 7:00–8:00 AM for the optimal morning safari window. Late afternoon (4:00–5:30 PM) is ideal for sunset cruises and active hippo return from daytime wallowing grounds.</p>
 
 <h3>Direct Booking from {item}</h3>
-<p>Avoid shoreline brokers at Karagita Beach who inflate prices with commissions. Book directly with Rafiki at WhatsApp: <strong>+254 729 280 380</strong> before departing {item} to guarantee your preferred time slot.</p>
+<p>Avoid shoreline brokers at Karagita Beach who inflate prices with commissions. Book directly with Rafiki at WhatsApp: <strong>+254 701 215 295</strong> before departing {item} to guarantee your preferred time slot.</p>
 """
     },
     {
@@ -232,7 +232,7 @@ topics = [
 <p>Rafiki operates with a zero-incident safety record across deep local experience. Our captains are trained in first aid and emergency procedures. We enforce strict wildlife approach protocols — maintaining minimum 50-meter buffers from hippo pods and refusing to operate in deteriorating weather conditions.</p>
 
 <h3>How to Book from {item}</h3>
-<p>WhatsApp: <strong>+254 729 280 380</strong> — message us with your preferred date, group size, and duration. We respond within 1 hour during business hours and confirm your booking instantly.</p>
+<p>WhatsApp: <strong>+254 701 215 295</strong> — message us with your preferred date, group size, and duration. We respond within 1 hour during business hours and confirm your booking instantly.</p>
 """
     },
     {
@@ -252,7 +252,7 @@ topics = [
 <p>We maintain a strict <strong>50-meter minimum buffer</strong> from all hippo pods. Our low-emission four-stroke engines operate quietly to minimize disturbance. Captains cut engine and drift silently when approaching pods for the most intimate, undisturbed viewing experience.</p>
 
 <h3>Book Your Hippo Safari from {item}</h3>
-<p>WhatsApp: <strong>+254 729 280 380</strong> — mention your group size and preferred date. Morning slots (7:00 AM – 10:00 AM) offer the best hippo surface activity. We confirm bookings within 1 hour.</p>
+<p>WhatsApp: <strong>+254 701 215 295</strong> — mention your group size and preferred date. Morning slots (7:00 AM – 10:00 AM) offer the best hippo surface activity. We confirm bookings within 1 hour.</p>
 """
     },
     {
@@ -272,7 +272,7 @@ topics = [
 
 <h3>Group Sunset Safaris</h3>
 <p>For corporate groups, family reunions, and birthday celebrations from <strong>{item}</strong>, our pontoon sunset charter provides a spacious, convivial floating venue as the lake turns golden. Book well in advance — weekend sunset slots sell out quickly.</p>
-<p>WhatsApp: <strong>+254 729 280 380</strong></p>
+<p>WhatsApp: <strong>+254 701 215 295</strong></p>
 """
     },
 ]

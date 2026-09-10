@@ -270,7 +270,7 @@
           <h4 style="color: #FFF; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">{% trans "Launch Base" %}</h4>
           <p style="font-size: 0.88rem; margin-bottom: 8px;">{{ site_settings.standard_launch_name }}</p>
           <p style="font-size: 0.88rem; margin-bottom: 8px;">{% trans "Hours:" %} {{ site_settings.operating_hours }}</p>
-          <p style="font-size: 0.88rem; margin-bottom: 16px;">WhatsApp: {{ site_settings.phone_display }}</p>
+          <p style="font-size: 0.88rem; margin-bottom: 16px;">WhatsApp / Call: <a href="tel:{{ site_settings.phone_e164 }}" style="color: inherit; font-weight: 700;">{{ site_settings.phone_display }}</a></p>
           <a href="{{ brand.whatsapp_url }}" target="_blank" rel="noopener" class="nova-badge nova-badge-lime">{% trans "Direct WhatsApp Access" %}</a>
         </div>
 

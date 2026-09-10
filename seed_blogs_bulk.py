@@ -34,7 +34,7 @@ P("Boat Rides in Naivasha - The Complete 2026 Visitor Guide",
 <h3>Best Time for a Boat Ride</h3>
 <p>Early morning (6:30-9AM) for wildlife activity, late afternoon (3-6:30PM) for sunset views. We operate daily 6:30 AM to 6:30 PM.</p>
 <h3>How to Book</h3>
-<p>WhatsApp us at +254 729 280 380 or visit our tours page. Walk-ins welcome at Public Beach, Karagita.</p>""")
+<p>WhatsApp us at +254 701 215 295 or visit our tours page. Walk-ins welcome at Public Beach, Karagita.</p>""")
 
 P("Lake Naivasha Boat Ride - What First-Timers Should Know",
   "lake-naivasha-boat-ride-first-timers",
@@ -48,7 +48,7 @@ P("Lake Naivasha Boat Ride - What First-Timers Should Know",
 <h3>Safety First</h3>
 <p>Every passenger wears a life jacket. Our captains maintain safe distances from hippos and wildlife. We've had zero serious incidents in deep local experience of operation.</p>
 <h3>Duration and Pricing</h3>
-<p>Standard rides are 1 hour starting from KES 1,000/person. Longer packages available. Book via WhatsApp: +254 729 280 380.</p>""")
+<p>Standard rides are 1 hour starting from KES 1,000/person. Longer packages available. Book via WhatsApp: +254 701 215 295.</p>""")
 
 P("Lake Nakuru vs Lake Naivasha - Which Lake Safari Is Better?",
   "lake-nakuru-vs-lake-naivasha",
@@ -85,7 +85,7 @@ P("10 Best Things to Do on Lake Naivasha",
 <h3>8. Olkaria Geothermal Spa</h3><p>Natural hot springs perfect for relaxing after an active day.</p>
 <h3>9. Photography Tour</h3><p>Dedicated photo safaris with guides who know the best angles and lighting.</p>
 <h3>10. Fresh Fish at the Beach</h3><p>Enjoy freshly caught and grilled tilapia at Public Beach, Karagita.</p>
-<p>Start with a <strong>boat ride Naivasha</strong> - WhatsApp Rafiki: +254 729 280 380.</p>""")
+<p>Start with a <strong>boat ride Naivasha</strong> - WhatsApp Rafiki: +254 701 215 295.</p>""")
 
 P("Boat Rides Near Me in Naivasha - Where to Find Them",
   "boat-rides-near-me-naivasha",
@@ -95,7 +95,7 @@ P("Boat Rides Near Me in Naivasha - Where to Find Them",
 <h3>How to Find Us</h3>
 <p>From Naivasha town, head south on Moi South Lake Road for about 5 km. Turn left at the Karagita junction and follow signs to Public Beach. We're right at the waterfront - look for the Rafiki sign.</p>
 <h3>Opening Hours</h3><p>Daily: 6:30 AM to 6:30 PM, 7 days a week including holidays.</p>
-<h3>Walk-ins vs Booking Ahead</h3><p>Walk-ins are welcome! However, weekends and holidays get busy, so we recommend booking ahead via WhatsApp (+254 729 280 380) to guarantee your spot.</p>
+<h3>Walk-ins vs Booking Ahead</h3><p>Walk-ins are welcome! However, weekends and holidays get busy, so we recommend booking ahead via WhatsApp (+254 701 215 295) to guarantee your spot.</p>
 <h3>What We Offer</h3><ul><li>Hippo and bird watching boat rides (1 hour)</li><li>Crescent Island boat transfer + walking safari</li><li>Sunset cruises</li><li>Private charters for groups and events</li><li>Photography safaris</li></ul>""")
 
 P("Naivasha Day Trip from Nairobi - Complete Itinerary",
@@ -112,7 +112,7 @@ P("Naivasha Day Trip from Nairobi - Complete Itinerary",
 <strong>4:00 PM</strong> - Return to the lake for a sunset cruise.<br>
 <strong>6:30 PM</strong> - Head back to Nairobi.</p>
 <h3>Budget Estimate</h3><p>Fuel: ~KES 3,000 | Boat rides: ~KES 3,000 | Food: ~KES 1,500 | Hell's Gate: ~KES 1,500. Total for two: ~KES 9,000.</p>
-<p>Book your boat rides in advance: WhatsApp +254 729 280 380.</p>""")
+<p>Book your boat rides in advance: WhatsApp +254 701 215 295.</p>""")
 
 P("Boat Ride Safety on Lake Naivasha - What You Need to Know",
   "boat-ride-safety-lake-naivasha",
@@ -149,7 +149,7 @@ P("Weekend Getaway to Lake Naivasha - 2 Day Itinerary",
 <strong>Mid-morning:</strong> Drive to Hell's Gate for cycling and gorge hike.<br>
 <strong>Afternoon:</strong> Relax at Olkaria hot springs. Head back to Nairobi refreshed.</p>
 <h3>Where to Stay</h3><p>Budget: KES 3,000-5,000/night | Mid-range: KES 8,000-15,000/night | Luxury: KES 20,000+/night. Many lakeside lodges and camps available.</p>
-<p>Book your weekend boat rides: WhatsApp +254 729 280 380.</p>""")
+<p>Book your weekend boat rides: WhatsApp +254 701 215 295.</p>""")
 
 P("Family Boat Rides on Lake Naivasha - Kids Guide",
   "family-boat-rides-lake-naivasha-kids",
@@ -171,7 +171,7 @@ P("Romantic Boat Rides on Lake Naivasha for Couples",
 <h3>Proposal on the Lake</h3><p>We've helped dozens of proposals happen on the water. We can coordinate timing, photography, and even flowers and champagne. Tell us your plan - we'll make it perfect.</p>
 <h3>Anniversary & Honeymoon</h3><p>Combine a private boat ride with a stay at a lakeside lodge for the ultimate romantic package. We partner with several luxury accommodations.</p>
 <h3>What Makes It Special</h3><ul><li>Private boat - just the two of you (plus your guide)</li><li>Quiet western channels away from other boats</li><li>Golden hour light that photographers dream of</li><li>Hippo encounters add excitement to romance</li></ul>
-<p>Book your romantic experience: WhatsApp +254 729 280 380.</p>""")
+<p>Book your romantic experience: WhatsApp +254 701 215 295.</p>""")
 
 P("Budget Boat Rides in Naivasha - Affordable Lake Experience",
   "budget-boat-rides-naivasha-affordable",
@@ -202,7 +202,7 @@ P("Lake Naivasha Tours - Best Safari Experiences",
 <h3>Sunset Tour</h3><p>The most Instagram-worthy experience on the lake. Golden hour views from the water: 1.5-2 hours.</p>
 <h3>Full-Day Tour</h3><p>Combine boat ride + Crescent Island + lunch + sunset cruise for the ultimate day. 6-7 hours of lakeside bliss.</p>
 <h3>Multi-Day Tours</h3><p>Add Hell's Gate, Mt. Longonot, Elsamere, and accommodation for a complete Naivasha experience.</p>
-<p>All <strong>Lake Naivasha tours</strong> depart from Public Beach, Karagita. Book: +254 729 280 380.</p>""")
+<p>All <strong>Lake Naivasha tours</strong> depart from Public Beach, Karagita. Book: +254 701 215 295.</p>""")
 
 P("Private Boat Charter Lake Naivasha - Events & Celebrations",
   "private-boat-charter-lake-naivasha",
@@ -212,7 +212,7 @@ P("Private Boat Charter Lake Naivasha - Events & Celebrations",
 <h3>Perfect For</h3><ul><li><strong>Birthdays</strong> - Celebrate on the water with cake, music, and hippos</li><li><strong>Corporate events</strong> - Team building with a difference</li><li><strong>Proposals</strong> - Pop the question on a sunset cruise</li><li><strong>Photography shoots</strong> - Fashion, engagement, or wildlife photography</li><li><strong>Family reunions</strong> - Multiple boats for large groups</li></ul>
 <h3>What's Included</h3><p>Dedicated boat and experienced guide, life jackets, flexible itinerary, and custom route. Add-ons: champagne, decorations, photography, catering.</p>
 <h3>Capacity</h3><p>Our boats accommodate 2-12 passengers. For larger groups, we coordinate multiple boats.</p>
-<p>Book your private charter: WhatsApp +254 729 280 380. Minimum 24-hour advance booking for special setups.</p>""")
+<p>Book your private charter: WhatsApp +254 701 215 295. Minimum 24-hour advance booking for special setups.</p>""")
 
 P("Wave Remover Boat Tours Naivasha - What They Are",
   "wave-remover-boat-tours-naivasha",
@@ -222,7 +222,7 @@ P("Wave Remover Boat Tours Naivasha - What They Are",
 <h3>Lake Naivasha Water Conditions</h3><p>Lake Naivasha is generally calm, especially in the morning and evening. The lake doesn't have waves like the ocean - it's a freshwater lake with gentle ripples. This makes <strong>boat rides</strong> comfortable even for those prone to motion sickness.</p>
 <h3>Our Boats</h3><p>Rafiki Boat Rides uses stable, flat-bottomed boats designed for lake conditions. They provide a smooth, stable ride even when there's a light breeze. All boats are well-maintained and inspected regularly.</p>
 <h3>Best Conditions for Smooth Rides</h3><ul><li>Morning (6:30-10 AM) - Calmest water</li><li>Late afternoon (4-6 PM) - Usually calm, beautiful light</li><li>Avoid midday on windy days</li></ul>
-<p>Experience smooth, comfortable <strong>boat tours in Naivasha</strong> with Rafiki. WhatsApp: +254 729 280 380.</p>""")
+<p>Experience smooth, comfortable <strong>boat tours in Naivasha</strong> with Rafiki. WhatsApp: +254 701 215 295.</p>""")
 
 P("Corporate Team Building at Lake Naivasha - Boat Activities",
   "corporate-team-building-lake-naivasha",
@@ -232,7 +232,7 @@ P("Corporate Team Building at Lake Naivasha - Boat Activities",
 <h3>Why Lake Naivasha for Team Building?</h3><ul><li>Just 1.5 hours from Nairobi - easy logistics</li><li>Unique, memorable experience that builds bonds</li><li>Combination of adventure and relaxation</li><li>Accommodates groups of any size</li></ul>
 <h3>Team Building Activities</h3><ul><li>Group boat rides with inter-team challenges</li><li>Crescent Island scavenger hunts</li><li>Photography competitions</li><li>Sunset cruise with team awards</li><li>Combined with Hell's Gate cycling relay</li></ul>
 <h3>Packages</h3><p>We create custom packages for corporate groups including transport coordination, catering, activities, and accommodation (if overnight). Groups of 10+ get special rates.</p>
-<p>Plan your team building: WhatsApp +254 729 280 380.</p>""")
+<p>Plan your team building: WhatsApp +254 701 215 295.</p>""")
 
 P("Fishing on Lake Naivasha - Boat Fishing Expeditions",
   "fishing-lake-naivasha-boat-expeditions",
@@ -243,7 +243,7 @@ P("Fishing on Lake Naivasha - Boat Fishing Expeditions",
 <h3>Fishing Boat Trips</h3><p>Our fishing expeditions take you to the best spots that local fishermen have used for generations. Your guide provides basic equipment and local knowledge. Bring your own gear for a more serious angling experience.</p>
 <h3>Best Fishing Times</h3><p>Early morning (6:30-9 AM) and late afternoon (4-6 PM) are the most productive. The rainy season (March-May) often brings better catches.</p>
 <h3>Catch & Cook</h3><p>Catch your own tilapia and have it grilled fresh at Public Beach. It doesn't get fresher than that!</p>
-<p>Book a fishing expedition: WhatsApp +254 729 280 380.</p>""")
+<p>Book a fishing expedition: WhatsApp +254 701 215 295.</p>""")
 
 P("Naivasha Animals - Wildlife You Will See on a Boat Ride",
   "naivasha-animals-wildlife-boat-ride",
@@ -252,7 +252,7 @@ P("Naivasha Animals - Wildlife You Will See on a Boat Ride",
 <p>Lake Naivasha and its surroundings are home to an incredible diversity of <strong>Naivasha animals</strong>. Here's what you can see on a boat ride and at Crescent Island.</p>
 <h3>On the Water</h3><ul><li><strong>Hippos</strong> - Lake Naivasha's most famous residents. Pods of 10-30 common.</li><li><strong>African Fish Eagle</strong> - Kenya's iconic raptor. Dramatic hunting dives.</li><li><strong>Pelicans</strong> - Great White and Pink-backed pelicans fish in groups.</li><li><strong>Cormorants</strong> - Lines of dozens drying wings on dead trees.</li><li><strong>Monitor Lizards</strong> - Large reptiles sunning on shores.</li><li><strong>Kingfishers</strong> - Malachite and Pied kingfishers dart over the water.</li></ul>
 <h3>At Crescent Island</h3><ul><li><strong>Giraffes</strong> - Walk right next to these gentle giants</li><li><strong>Zebras</strong> - Herds grazing across the grasslands</li><li><strong>Wildebeest</strong> - Often seen grazing in groups</li><li><strong>Waterbuck</strong> - Distinctive ringed rumps, found near water</li><li><strong>Elands</strong> - Africa's largest antelope</li></ul>
-<p>See these incredible <strong>Naivasha animals</strong> on a boat ride with Rafiki: +254 729 280 380.</p>""")
+<p>See these incredible <strong>Naivasha animals</strong> on a boat ride with Rafiki: +254 701 215 295.</p>""")
 
 P("Boat Trip on Lake Naivasha - Hour by Hour Guide",
   "boat-trip-lake-naivasha-hour-by-hour",
@@ -264,7 +264,7 @@ P("Boat Trip on Lake Naivasha - Hour by Hour Guide",
 <h3>15-30 Minutes</h3><p>Enter the hippo zone. Your guide knows exactly where the pods gather. Watch as hippos surface, yawn, and snort. Perfect photo opportunity.</p>
 <h3>30-45 Minutes</h3><p>Continue along the scenic route. Pass pelican colonies, cormorant drying trees, and the papyrus beds where rare birds hide. Crescent Island comes into view with giraffes visible on the shore.</p>
 <h3>45-60 Minutes</h3><p>The return journey. Often the guide takes a different route back, showing you new sections of the lake. Arrive back at Public Beach with incredible photos and memories.</p>
-<p>Ready for your <strong>boat trip</strong>? Book now: +254 729 280 380.</p>""")
+<p>Ready for your <strong>boat trip</strong>? Book now: +254 701 215 295.</p>""")
 
 P("Tour Companies in Naivasha - How to Choose the Best",
   "tour-companies-naivasha-how-to-choose",
@@ -273,7 +273,7 @@ P("Tour Companies in Naivasha - How to Choose the Best",
 <p>With many <strong>tour companies in Naivasha</strong> offering boat rides, how do you choose? Here's what to look for.</p>
 <h3>Key Factors</h3><ul><li><strong>Google Reviews</strong> - Check the rating AND number of reviews. Look for 4.5+ stars.</li><li><strong>Safety standards</strong> - Life jackets mandatory? Well-maintained boats? Licensed operators?</li><li><strong>Guide experience</strong> - How long have they been operating on the lake?</li><li><strong>Pricing transparency</strong> - Clear prices with no hidden costs?</li><li><strong>Responsiveness</strong> - Do they reply quickly on WhatsApp?</li></ul>
 <h3>Why Choose Rafiki</h3><ul><li>guest-first reputation with verified guest feedback</li><li>deep local experience on Lake Naivasha</li><li>many guests safely guided</li><li>Licensed, inspected boats with life jackets</li><li>Locally owned and woman-led business</li><li>Responsive booking via WhatsApp</li></ul>
-<p>Join thousands of happy guests. WhatsApp: +254 729 280 380.</p>""")
+<p>Join thousands of happy guests. WhatsApp: +254 701 215 295.</p>""")
 
 P("Boat Rides in Naivasha During Rainy Season - Is It Worth It?",
   "boat-rides-naivasha-rainy-season",
@@ -293,7 +293,7 @@ P("Lake Naivasha Boat Tour for International Tourists",
 <h3>Getting Here from Nairobi</h3><p>Lake Naivasha is 90 km from Nairobi (1.5 hours by car). Options: hire a private driver, join a group tour, or rent a car. Many Nairobi tour operators include Lake Naivasha in their packages.</p>
 <h3>Language</h3><p>Our guides speak English and Swahili. Basic French available on request.</p>
 <h3>What to Know</h3><ul><li>No visa issues - lake is within Naivasha town, no park entry required</li><li>Weather: warm days (25-28C), cooler mornings and evenings</li><li>Altitude: ~1,884m above sea level - pleasant climate year-round</li><li>Safe area with friendly locals</li></ul>
-<p>Book from anywhere: WhatsApp +254 729 280 380 (include "International Tourist" in your message).</p>""")
+<p>Book from anywhere: WhatsApp +254 701 215 295 (include "International Tourist" in your message).</p>""")
 
 P("Group Boat Rides Naivasha - Friends, Schools & Churches",
   "group-boat-rides-naivasha",
@@ -302,7 +302,7 @@ P("Group Boat Rides Naivasha - Friends, Schools & Churches",
 <p>Planning a group outing? <strong>Boat rides in Naivasha</strong> are perfect for groups of all sizes and types.</p>
 <h3>Types of Groups We Welcome</h3><ul><li><strong>Friend groups</strong> - Birthday celebrations, reunions, weekend getaways</li><li><strong>School trips</strong> - Educational ecology tours for students</li><li><strong>Church groups</strong> - Fellowship and nature combined</li><li><strong>Corporate teams</strong> - Team building and retreats</li><li><strong>Tour groups</strong> - We coordinate with tour operators</li></ul>
 <h3>Group Benefits</h3><ul><li>Special rates for groups of 10+</li><li>Multiple boats for large groups</li><li>Custom itineraries to match your schedule</li><li>Group coordinator assigned for logistics</li></ul>
-<h3>How to Book for Groups</h3><p>WhatsApp us at +254 729 280 380 with: group size, preferred date/time, type of activity wanted, any special requirements. We'll send you a custom quote within hours.</p>""")
+<h3>How to Book for Groups</h3><p>WhatsApp us at +254 701 215 295 with: group size, preferred date/time, type of activity wanted, any special requirements. We'll send you a custom quote within hours.</p>""")
 
 P("Hippo Point Naivasha - Exclusive Boat Rides & Wildlife",
   "hippo-point-naivasha-boat-rides",
@@ -312,7 +312,7 @@ P("Hippo Point Naivasha - Exclusive Boat Rides & Wildlife",
 <h3>Where Is Hippo Point?</h3><p>Located on the southern shore of Lake Naivasha, Hippo Point is a well-known landmark among both tourists and locals. The area is accessible by boat from Public Beach, Karagita.</p>
 <h3>What to See</h3><p>As the name suggests, hippo sightings here are virtually guaranteed. The shallow waters and lush papyrus create the perfect habitat. You'll also see numerous bird species and the occasional monitor lizard.</p>
 <h3>Visiting by Boat</h3><p>Rafiki Boat Rides includes Hippo Point in many of our routes. Our guides know the best approach angles for viewing and photography. We maintain safe distances while giving you the best possible experience.</p>
-<p>Visit Hippo Point on your next <strong>boat ride Naivasha</strong>: +254 729 280 380.</p>""")
+<p>Visit Hippo Point on your next <strong>boat ride Naivasha</strong>: +254 701 215 295.</p>""")
 
 P("Elsamere Conservation Centre - Visit from Lake Naivasha",
   "elsamere-conservation-centre-lake-naivasha",
@@ -348,7 +348,7 @@ P("Boat Ride Naivasha Prices 2026 - Complete Cost Guide",
 <h3>What's Included</h3><p>All prices include: professional guide, life jacket, and the boat ride itself. Crescent Island entry fees are separate.</p>
 <h3>Payment Methods</h3><ul><li>M-Pesa (Safaricom)</li><li>Cash (KES or USD)</li><li>Bank transfer</li></ul>
 <h3>Discounts</h3><p>Group discounts for 10+ people. Student rates available. Contact us for corporate packages.</p>
-<p>Get exact pricing: WhatsApp +254 729 280 380.</p>""")
+<p>Get exact pricing: WhatsApp +254 701 215 295.</p>""")
 
 P("Safari Naivasha - Complete Wildlife Guide",
   "safari-naivasha-wildlife-guide",
@@ -360,7 +360,7 @@ P("Safari Naivasha - Complete Wildlife Guide",
 <h3>Cycling Safari (Hell's Gate)</h3><p>Rent bikes and ride alongside zebras, buffaloes, and occasionally giraffes in one of Kenya's most dramatic landscapes.</p>
 <h3>Night Safari Potential</h3><p>Some lodges near the lake offer night drives where you can spot nocturnal animals like aardvark and hippos on land.</p>
 <h3>Combine Them All</h3><p>Our full-day packages combine boat safari + walking safari + sunset cruise for the ultimate <strong>Naivasha safari</strong> experience.</p>
-<p>Book your safari: +254 729 280 380.</p>""")
+<p>Book your safari: +254 701 215 295.</p>""")
 
 # Remaining posts to reach ~50
 for i, (title, slug, meta, excerpt) in enumerate([
@@ -435,7 +435,7 @@ for i, (title, slug, meta, excerpt) in enumerate([
       f"""<h2>{title}</h2><p>{excerpt}</p>
 <h3>Why This Matters</h3><p>At Rafiki Boat Rides Naivasha, we've been sharing the magic of Lake Naivasha for many seasons. Whether you're looking for <strong>boat rides in Naivasha</strong>, a <strong>Lake Naivasha boat tour</strong>, or a complete <strong>Naivasha safari</strong> experience, we have you covered.</p>
 <h3>Our Experience</h3><p>With a guest-first reputation and verified guest feedback, Rafiki is the most trusted boat ride operator on Lake Naivasha. Our guides are local experts who know every hippo pod, eagle nest, and sunset viewpoint.</p>
-<h3>Book Your Experience</h3><p>Ready to explore Lake Naivasha? Contact us on WhatsApp at +254 729 280 380 or visit us at Public Beach, Karagita, Naivasha. We operate daily from 6:30 AM to 6:30 PM.</p>""")
+<h3>Book Your Experience</h3><p>Ready to explore Lake Naivasha? Contact us on WhatsApp at +254 701 215 295 or visit us at Public Beach, Karagita, Naivasha. We operate daily from 6:30 AM to 6:30 PM.</p>""")
 
 total = Post.objects.filter(status='published').count()
 print(f"\nDone! Total published posts: {total}")

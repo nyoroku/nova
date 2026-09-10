@@ -27,7 +27,7 @@ print("--- Creating 50 FAQs ---")
 
 faqs = [
     ("How much does a boat ride in Naivasha cost?",
-     "<p>Boat ride prices start from <strong>KES 1,000 per person per hour</strong> for group rides. Private charters, sunset cruises, and Crescent Island transfers are priced separately. We accept cash (KES/USD), M-Pesa, and bank transfers. WhatsApp +254 729 280 380 for exact pricing.</p>",
+     "<p>Boat ride prices start from <strong>KES 1,000 per person per hour</strong> for group rides. Private charters, sunset cruises, and Crescent Island transfers are priced separately. We accept cash (KES/USD), M-Pesa, and bank transfers. WhatsApp +254 701 215 295 for exact pricing.</p>",
      "Prices start from KES 1,000 per person per hour. Private charters vary. We accept cash, M-Pesa, and bank transfers.", "pricing", 1),
     ("What is the best time for a boat ride at Lake Naivasha?",
      "<p>Early morning (6:30-9:00 AM) for calm waters and active wildlife. Late afternoon (3:00-6:30 PM) for stunning sunset views. We operate daily <strong>6:30 AM to 6:30 PM</strong>.</p>",
@@ -45,7 +45,7 @@ faqs = [
      "<p>Absolutely! We provide <strong>life jackets in all sizes</strong> including children's. Our boats are well-maintained and captains prioritize safety. Private charters recommended for families with kids under 5.</p>",
      "Yes, very safe. Life jackets in all sizes, experienced captains, well-maintained boats.", "safety", 6),
     ("Do you offer boat rides near me in Naivasha?",
-     "<p>We operate from <strong>Public Beach, Lake, Karagita</strong> - the main boat launch. Open daily 6:30 AM-6:30 PM. WhatsApp +254 729 280 380 or walk in.</p>",
+     "<p>We operate from <strong>Public Beach, Lake, Karagita</strong> - the main boat launch. Open daily 6:30 AM-6:30 PM. WhatsApp +254 701 215 295 or walk in.</p>",
      "We're at Public Beach, Karagita. Open daily 6:30AM-6:30PM. Walk-ins welcome.", "location", 7),
     ("What is the difference between a boat ride and boat safari?",
      "<p>A <strong>boat ride</strong> is a scenic cruise; a <strong>boat safari</strong> focuses on wildlife. At Rafiki, every ride includes wildlife spotting. We also offer dedicated hippo and bird safaris.</p>",
@@ -78,8 +78,8 @@ faqs = [
      "<p>Camera, sunscreen, hat, sunglasses, insect repellent, light jacket, water bottle, binoculars (optional). We provide life jackets and guides.</p>",
      "Camera, sunscreen, hat, sunglasses, insect repellent, water. We provide life jackets.", "preparation", 17),
     ("How do I book a boat ride with Rafiki?",
-     "<p>WhatsApp us at <strong>+254 729 280 380</strong> with your preferred date, time, group size, and activity. We'll confirm availability instantly. Walk-ins also welcome at Public Beach.</p>",
-     "WhatsApp +254 729 280 380. Share date, time, group size, activity. Walk-ins welcome too.", "booking", 18),
+     "<p>WhatsApp us at <strong>+254 701 215 295</strong> with your preferred date, time, group size, and activity. We'll confirm availability instantly. Walk-ins also welcome at Public Beach.</p>",
+     "WhatsApp +254 701 215 295. Share date, time, group size, activity. Walk-ins welcome too.", "booking", 18),
     ("What types of boat rides do you offer on Lake Naivasha?",
      "<p>Standard hippo safari, Crescent Island transfer + walking safari, sunset cruise, photography safari, bird watching tour, fishing expedition, and private charters.</p>",
      "Hippo safari, Crescent Island, sunset cruise, photography, bird watching, fishing, private charters.", "booking", 19),
@@ -201,7 +201,7 @@ LP("Boat Rides Naivasha",
 <h3>Why Choose Rafiki?</h3><p>guest-first reputation, verified guest feedback, deep local lake knowledge, locally owned and woman-led.</p>
 <h3>Pricing</h3><p>From KES 1,000/person/hour. Group discounts for 10+.</p>
 <h3>Hours & Location</h3><p>Daily 6:30 AM - 6:30 PM at Public Beach, Karagita, Naivasha.</p>
-<p>Book: WhatsApp +254 729 280 380</p>""")
+<p>Book: WhatsApp +254 701 215 295</p>""")
 
 LP("Lake Naivasha Beach - Public Beach Karagita",
    "lake-naivasha-beach",
@@ -212,7 +212,7 @@ LP("Lake Naivasha Beach - Public Beach Karagita",
 <p><strong>Lake Naivasha Beach</strong> at Karagita is where all the action happens. This is the main launch point for boat rides and the heart of lakeside tourism.</p>
 <h3>Getting Here</h3><p>From Naivasha town, take Moi South Lake Road for 5 km. Turn at the Karagita junction and follow signs to Public Beach.</p>
 <h3>What You'll Find</h3><ul><li>Boat operators (look for Rafiki!)</li><li>Fresh grilled tilapia restaurants</li><li>Souvenir shops</li><li>Hippo watching from shore</li><li>Mt. Longonot views</li></ul>
-<h3>Book a Boat Ride</h3><p>WhatsApp +254 729 280 380. Daily 6:30 AM - 6:30 PM.</p>""")
+<h3>Book a Boat Ride</h3><p>WhatsApp +254 701 215 295. Daily 6:30 AM - 6:30 PM.</p>""")
 
 LP("Sunset Cruises Naivasha",
    "sunset-cruises-naivasha",
@@ -224,7 +224,7 @@ LP("Sunset Cruises Naivasha",
 <h3>The Experience</h3><p>Depart at 4:00 PM and cruise the western channels where the sunset light is most spectacular. Your guide navigates to the perfect viewpoint as colors change from gold to amber to deep crimson.</p>
 <h3>Perfect For</h3><ul><li>Couples and date nights</li><li>Proposals (we help coordinate!)</li><li>Anniversaries and honeymoons</li><li>Birthdays and celebrations</li><li>Photography enthusiasts</li></ul>
 <h3>Add-ons</h3><p>Champagne, decorations, and photography available on request.</p>
-<p>Book your sunset cruise: WhatsApp +254 729 280 380.</p>""")
+<p>Book your sunset cruise: WhatsApp +254 701 215 295.</p>""")
 
 LP("Crescent Island Tours",
    "crescent-island-tours",
@@ -236,7 +236,7 @@ LP("Crescent Island Tours",
 <h3>The Tour</h3><ol><li>Scenic boat ride from Public Beach (15 min)</li><li>Walking safari on the island (1-2 hours)</li><li>Return boat ride with different route</li></ol>
 <h3>Wildlife You'll See</h3><ul><li>Giraffes - walk right next to them</li><li>Zebras - herds grazing freely</li><li>Wildebeest, waterbuck, elands</li><li>100+ bird species</li></ul>
 <h3>Fun Facts</h3><p>Crescent Island was a filming location for "Out of Africa." The name comes from its crescent shape when water levels are high.</p>
-<p>Book your tour: WhatsApp +254 729 280 380.</p>""")
+<p>Book your tour: WhatsApp +254 701 215 295.</p>""")
 
 LP("Bird Watching Lake Naivasha",
    "bird-watching-lake-naivasha",
@@ -247,7 +247,7 @@ LP("Bird Watching Lake Naivasha",
 <p>Lake Naivasha is a designated <strong>Important Bird Area (IBA)</strong> with 400+ recorded species. A boat ride here is a floating bird hide.</p>
 <h3>Top Species</h3><ul><li>African Fish Eagle - iconic hunting dives</li><li>Great White Pelicans - group fishing</li><li>Malachite Kingfisher - jewel-colored</li><li>African Jacana - walks on lily pads</li><li>Goliath Heron - Africa's largest heron</li><li>Grey Crowned Crane - Kenya's symbol</li></ul>
 <h3>Best Birding Times</h3><p>Early morning (6:30-9 AM). November-March for migratory species. Rainy seasons for peak diversity.</p>
-<p>Book a birding tour: WhatsApp +254 729 280 380.</p>""")
+<p>Book a birding tour: WhatsApp +254 701 215 295.</p>""")
 
 LP("Boat Safari Lake Naivasha",
    "boat-safari-lake-naivasha",
@@ -258,7 +258,7 @@ LP("Boat Safari Lake Naivasha",
 <p>A <strong>boat safari</strong> on Lake Naivasha combines the thrill of a wildlife safari with the serenity of being on water.</p>
 <h3>Safari Routes</h3><ul><li>Hippo Channel Route - main hippo pods</li><li>Crescent Island Circuit - giraffes and zebras from water</li><li>Fisherman's Route - pelican colonies</li><li>Sunset Route - golden hour views</li></ul>
 <h3>What Sets Us Apart</h3><p>deep local lake knowledge, local guides who know every channel, small groups (max 8), flexible routes based on wildlife activity.</p>
-<p>Book your safari: WhatsApp +254 729 280 380.</p>""")
+<p>Book your safari: WhatsApp +254 701 215 295.</p>""")
 
 LP("Hippo Point Naivasha",
    "hippo-point-naivasha",
@@ -269,7 +269,7 @@ LP("Hippo Point Naivasha",
 <p><strong>Hippo Point</strong> is one of Lake Naivasha's most iconic locations, named for the large pods that gather in this area.</p>
 <h3>Why Visit</h3><p>Hippo sightings here are virtually guaranteed. Shallow waters and lush papyrus create perfect habitat. Morning visits offer the most activity.</p>
 <h3>Getting There</h3><p>Accessible by boat from Public Beach with Rafiki. Our guides know the best viewing spots and approach angles.</p>
-<p>Visit Hippo Point: WhatsApp +254 729 280 380.</p>""")
+<p>Visit Hippo Point: WhatsApp +254 701 215 295.</p>""")
 
 LP("Elsamere Conservation Centre",
    "elsamere-conservation-centre",
@@ -280,7 +280,7 @@ LP("Elsamere Conservation Centre",
 <p><strong>Elsamere</strong> was the home of Joy Adamson, author of "Born Free." Now a conservation centre on Lake Naivasha's shores.</p>
 <h3>What to Do</h3><ul><li>Afternoon tea on the lawn (3 PM daily)</li><li>Watch colobus monkeys swing through trees</li><li>Tour the museum about Joy's life</li><li>Enjoy the lakeside gardens</li></ul>
 <h3>Combine with a Boat Ride</h3><p>We can arrange boat drop-off at Elsamere's jetty during your Lake Naivasha trip.</p>
-<p>Plan your visit: WhatsApp +254 729 280 380.</p>""")
+<p>Plan your visit: WhatsApp +254 701 215 295.</p>""")
 
 LP("Lake Naivasha Safari and Boat Ride",
    "lake-naivasha-safari-boat-ride",
@@ -291,7 +291,7 @@ LP("Lake Naivasha Safari and Boat Ride",
 <p>The ultimate Naivasha experience combines a <strong>safari and boat ride</strong> - see hippos from the water and walk among giraffes on land.</p>
 <h3>The Combo Experience</h3><ol><li>Morning boat safari - hippos, birds, scenic channels</li><li>Crescent Island walking safari - giraffes, zebras up close</li><li>Optional: Sunset cruise to cap the day</li></ol>
 <h3>Why Combine?</h3><p>You get both water and land wildlife in one trip. Our packages are designed to maximize your time and minimize waiting.</p>
-<p>Book the combo: WhatsApp +254 729 280 380.</p>""")
+<p>Book the combo: WhatsApp +254 701 215 295.</p>""")
 
 LP("Naivasha Tour Packages",
    "naivasha-tour-packages",
@@ -304,7 +304,7 @@ LP("Naivasha Tour Packages",
 <h3>Full-Day (6-7 hours)</h3><p>Morning safari + Crescent Island + lunch + sunset cruise.</p>
 <h3>Weekend Package</h3><p>Day 1: Boat safari + sunset cruise. Day 2: Hell's Gate + Elsamere. Accommodation recommendations included.</p>
 <h3>Custom Packages</h3><p>We create packages for groups, families, couples, schools, and corporate teams.</p>
-<p>Design your package: WhatsApp +254 729 280 380.</p>""")
+<p>Design your package: WhatsApp +254 701 215 295.</p>""")
 
 LP("Tour Lake Naivasha",
    "tour-lake-naivasha",
@@ -315,7 +315,7 @@ LP("Tour Lake Naivasha",
 <p>Ready to <strong>tour Lake Naivasha</strong>? We offer the most comprehensive and trusted touring experience on the lake.</p>
 <h3>Tour Options</h3><ul><li>Guided boat tour (1-3 hours)</li><li>Crescent Island walking tour</li><li>Sunset photography tour</li><li>Bird watching specialist tour</li><li>Full-day exploration tour</li></ul>
 <h3>Our Guides</h3><p>Local experts who grew up on these waters. deep local guiding experience. Fluent in English and Swahili.</p>
-<p>Start your tour: WhatsApp +254 729 280 380.</p>""")
+<p>Start your tour: WhatsApp +254 701 215 295.</p>""")
 
 LP("Boat Ride at Lake Naivasha",
    "boat-ride-at-lake-naivasha",
@@ -326,7 +326,7 @@ LP("Boat Ride at Lake Naivasha",
 <p>A <strong>boat ride at Lake Naivasha</strong> is the definitive Kenya lake experience. Hippos, Fish Eagles, and breathtaking scenery await.</p>
 <h3>What You'll Experience</h3><p>Board at Public Beach, Karagita, and glide through papyrus channels into the open lake. Encounter hippo pods, watch Fish Eagles hunt, and cruise past Crescent Island.</p>
 <h3>Options</h3><ul><li>Standard ride: 1 hour from KES 1,000</li><li>Extended safari: 2 hours</li><li>Crescent Island combo: 2-3 hours</li><li>Sunset cruise: 1.5-2 hours</li></ul>
-<p>Book now: WhatsApp +254 729 280 380. Daily 6:30 AM - 6:30 PM.</p>""")
+<p>Book now: WhatsApp +254 701 215 295. Daily 6:30 AM - 6:30 PM.</p>""")
 
 LP("Boat Ride in Lake Naivasha",
    "boat-ride-in-lake-naivasha",
@@ -337,7 +337,7 @@ LP("Boat Ride in Lake Naivasha",
 <p>There's nothing quite like a <strong>boat ride in Lake Naivasha</strong>. The freshwater lake is home to hippos, 400+ bird species, and some of the most beautiful scenery in Kenya's Rift Valley.</p>
 <h3>Your Guide</h3><p>Rafiki Boat Rides has been providing boat rides in Lake Naivasha for many seasons. Our guides are local experts born and raised on these shores.</p>
 <h3>Experiences</h3><ul><li>Hippo safari - see pods up close</li><li>Bird watching - Fish Eagles, pelicans, kingfishers</li><li>Crescent Island - walk among giraffes</li><li>Sunset cruise - golden hour magic</li></ul>
-<p>Book: WhatsApp +254 729 280 380. Open daily 6:30 AM - 6:30 PM.</p>""")
+<p>Book: WhatsApp +254 701 215 295. Open daily 6:30 AM - 6:30 PM.</p>""")
 
 LP("Boat Ride on Lake Naivasha",
    "boat-ride-on-lake-naivasha",
@@ -348,7 +348,7 @@ LP("Boat Ride on Lake Naivasha",
 <p>A <strong>boat ride on Lake Naivasha</strong> puts you at the heart of one of East Africa's most important freshwater ecosystems.</p>
 <h3>The Experience</h3><p>From the moment you leave shore, you enter a world of hippos surfacing with dramatic snorts, Fish Eagles swooping overhead, and pelicans fishing in formation.</p>
 <h3>Why Rafiki?</h3><p>guest-first reputation. verified guest feedback. deep local experience guiding on the lake. Woman-owned. Locally operated.</p>
-<h3>Book Your Ride</h3><p>WhatsApp +254 729 280 380. Public Beach, Karagita. Daily 6:30 AM - 6:30 PM. Group discounts available.</p>""")
+<h3>Book Your Ride</h3><p>WhatsApp +254 701 215 295. Public Beach, Karagita. Daily 6:30 AM - 6:30 PM. Group discounts available.</p>""")
 
 # Add new internal links
 new_links = [

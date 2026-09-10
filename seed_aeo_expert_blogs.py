@@ -44,7 +44,7 @@ def seed_expert_blogs():
     <li><strong>Local Boda Bodas & Tuk-Tuks:</strong> For short trips within Naivasha town, local motorcycle taxis (boda bodas) and three-wheelers (tuk-tuks) are cheap and readily available.</li>
     <li><strong>Pre-arranged Taxis:</strong> If you are staying at a lodge along the lake and want to visit <strong>Karagita Public Beach</strong> for a boat ride, it is highly recommended to book a local private taxi or have Rafiki arrange your transfer.</li>
 </ul>
-<p>Need a reliable transfer from your hotel to the boat launch? Contact Rafiki Boat Rides on WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Need a reliable transfer from your hotel to the boat launch? Contact Rafiki Boat Rides on WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["Bolt Naivasha", "Naivasha transport", "Uber Nairobi to Naivasha"]
         },
@@ -69,7 +69,7 @@ def seed_expert_blogs():
     <li><strong>Scenery & Wildlife:</strong> A boat ride allows you to see the famous Naivasha hippo pods and nesting African Fish Eagles up close before you set foot on the island.</li>
     <li><strong>Cost & Convenience:</strong> Crescent Island boat ride prices typically include the lake safari experience itself, making it much better value than hiring a private 4x4 taxi for the day.</li>
 </ul>
-<p>Book your Crescent Island boat transfer today: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Crescent Island boat transfer today: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["drive to crescent island", "crescent island boat transfer", "lake naivasha boat safari"]
         },
@@ -93,7 +93,7 @@ def seed_expert_blogs():
     <li><strong>Sunset Cruise (1.5 Hours):</strong> KES 4,000 for residents / $65 USD for international guests. Highly recommended for couples and photography.</li>
     <li><strong>Private Pontoon Charter (2 Hours):</strong> KES 15,000 for residents / $250 USD for international guests. Ideal for large groups (up to 12 people) wanting luxury seating.</li>
 </ul>
-<p>Ready to book your private safari? Message Rafiki on WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Ready to book your private safari? Message Rafiki on WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["lake naivasha boat ride price", "boat rides naivasha prices", "crescent island boat ride price"]
         },
@@ -118,7 +118,7 @@ def seed_expert_blogs():
 
 <h3>Why book with Rafiki?</h3>
 <p>If you want a rushed, basic trip, walk-ins at Gitoh B or Boffar are fine. But if you want a premium, safe, and informative experience—especially for birders, photographers, and families—Rafiki offers private charters, direct WhatsApp bookings, and pristine safety records.</p>
-<p>Book your premium pontoon boat ride with Rafiki: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your premium pontoon boat ride with Rafiki: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["best boat rides naivasha", "gitoh b boat rides naivasha", "pontoon boat rides naivasha"]
         },
@@ -143,7 +143,7 @@ def seed_expert_blogs():
     <li><strong>Wildlife Density:</strong> Despite its compact 150-acre size, the island hosts a high concentration of plains game, including Masai giraffes, common zebras, impalas, waterbucks, wildebeests, and ostriches.</li>
     <li><strong>Safety:</strong> Because there are no lions, leopards, or hyenas on the island, you can walk freely without a vehicle, accompanied by an expert guide.</li>
 </ul>
-<p>Plan your Crescent Island walking safari with Rafiki: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Plan your Crescent Island walking safari with Rafiki: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["how big is crescent island", "crescent island walking safari", "lake naivasha wildlife"]
         },
@@ -169,7 +169,7 @@ def seed_expert_blogs():
     <li><strong>World-Class Birding:</strong> Over 400 species of birds, including the spectacular diving African Fish Eagle.</li>
     <li><strong>Affordable Prices:</strong> With a standard <strong>Lake Naivasha boat ride price</strong> starting at just KES 3,000 ($45 USD) per boat, it is one of the most budget-friendly safaris in East Africa.</li>
 </ul>
-<p>Plan your trip with Rafiki Boat Rides today: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Plan your trip with Rafiki Boat Rides today: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["is it worth going to lake naivasha", "lake naivasha boat ride review", "boat riding in nairobi"]
         },
@@ -193,7 +193,7 @@ def seed_expert_blogs():
 
 <h3>3. Guided Information & Knowledge</h3>
 <p>Gitoh B captains focus on standard boat operations. Rafiki captains are trained guides and naturalists who can explain the lake's geological history, bird species (like the African Fish Eagle and Malachite Kingfisher), and hippo behavior in detail.</p>
-<p>Book a safe, premium ride with Rafiki: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a safe, premium ride with Rafiki: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["gitoh b boat rides naivasha", "lake naivasha boat safari", "pontoon boat rides naivasha"]
         },
@@ -217,7 +217,7 @@ def seed_expert_blogs():
 
 <h3>3. Transparent Pricing</h3>
 <p>Local walk-in operators like Boffar sometimes use flexible pricing depending on bargaining. Rafiki offers transparent, fixed pricing with no hidden charges. Our <strong>Crescent Island boat ride price</strong> and standard lake safari prices are clearly communicated before you board.</p>
-<p>Pre-book your private boat ride today: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Pre-book your private boat ride today: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["boffar boat rides naivasha", "lake naivasha boat ride review", "crescent island boat ride price"]
         },
@@ -244,7 +244,7 @@ def seed_expert_blogs():
     <li><strong>Close Wildlife Views:</strong> You will get within safe viewing distance of massive hippo pods and nesting African Fish Eagles.</li>
     <li><strong>Speed & Comfort:</strong> Motorized boats allow you to cross the lake quickly and reach locations like Crescent Island and Hippo Point.</li>
     </ul>
-<p>Experience the best of Lake Naivasha: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Experience the best of Lake Naivasha: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["coconut boat ride", "lake naivasha boat ride price", "best boat rides naivasha"]
         },
@@ -268,7 +268,7 @@ def seed_expert_blogs():
 
 <h3>3. Customization</h3>
 <p>Unlike the rigid schedule of Niagara Falls, your Naivasha boat ride is highly customizable. You can request your captain to stop for photos, cruise slowly along the shores of Crescent Island, or pause to watch the sunset over the Rift Valley hills.</p>
-<p>Book your custom private safari today: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your custom private safari today: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["maid of the mist boat ride", "lake naivasha boat ride price", "boat rides naivasha prices"]
         },
@@ -297,7 +297,7 @@ def seed_expert_blogs():
     <li><strong>Crescent Island:</strong> Step off your boat and walk right next to wild giraffes, zebras, and wildebeests.</li>
     <li><strong>Pricing:</strong> A private boat safari for up to 7 people starts at KES 3,000 ($45 USD), offering incredible wildlife value compared to city park rentals.</li>
 </ul>
-<p>Escape Nairobi for a true lake safari: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Escape Nairobi for a true lake safari: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
             """,
             "tags": ["boat riding in nairobi", "lake naivasha boat ride price", "best boat rides naivasha"]
         }

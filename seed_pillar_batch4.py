@@ -90,7 +90,7 @@ posts = [
 
 <p>Naivasha offers immediate gratification. You can finish work at 3 PM on Friday and be clinking glasses next to a hippo pod by 5 PM. Furthermore, the high-altitude climate of Naivasha provides cool, crisp evenings perfect for sitting by a roaring fire—a stark, cozy contrast to the relentless humidity of the coast.</p>
 
-<p>To arrange your private, romantic <strong><a href="/boat-rides-naivasha/">boat ride naivasha</a></strong>, contact Rafiki on WhatsApp (+254 729 280 380). We guarantee privacy, professionalism, and unforgettable sunset views.</p>
+<p>To arrange your private, romantic <strong><a href="/boat-rides-naivasha/">boat ride naivasha</a></strong>, contact Rafiki on WhatsApp (+254 701 215 295). We guarantee privacy, professionalism, and unforgettable sunset views.</p>
         """
     },
     {

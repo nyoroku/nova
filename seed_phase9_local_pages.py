@@ -61,7 +61,7 @@ pages = [
 <p>After the boat safari, many families visit the <strong>Karagita Beach fish market</strong> where children can watch local fishermen bring in fresh tilapia and observe pelicans swooping for scraps — a completely free, authentic wildlife experience.</p>
 
 <h3>Book Your Family Safari</h3>
-<p>Booking a family boat ride with Rafiki is simple. Send a WhatsApp message to <strong>+254 729 280 380</strong> with your preferred date, time, and the ages of your children. Rafiki will pre-arrange the right-sized life jackets, confirm your slot, and ensure your captain is briefed on the educational commentary your children will love.</p>
+<p>Booking a family boat ride with Rafiki is simple. Send a WhatsApp message to <strong>+254 701 215 295</strong> with your preferred date, time, and the ages of your children. Rafiki will pre-arrange the right-sized life jackets, confirm your slot, and ensure your captain is briefed on the educational commentary your children will love.</p>
 """,
     },
 
@@ -108,7 +108,7 @@ pages = [
 </ul>
 
 <h3>Book Your Romantic Charter</h3>
-<p>To plan your perfect honeymoon or anniversary boat ride, contact Rafiki directly on WhatsApp at <strong>+254 729 280 380</strong>. The team will customize every detail — from departure time to special decorations — to ensure your experience on the water is as magical as the occasion itself.</p>
+<p>To plan your perfect honeymoon or anniversary boat ride, contact Rafiki directly on WhatsApp at <strong>+254 701 215 295</strong>. The team will customize every detail — from departure time to special decorations — to ensure your experience on the water is as magical as the occasion itself.</p>
 """,
     },
 
@@ -156,7 +156,7 @@ pages = [
 </ul>
 
 <h3>Request a Corporate Group Quote</h3>
-<p>To receive a detailed, itemized quote for your company's team-building event, contact Rafiki's corporate team on WhatsApp at <strong>+254 729 280 380</strong>. Please include your team size, preferred date, and any special requirements. Rafiki typically responds to corporate inquiries within 2 hours during business hours.</p>
+<p>To receive a detailed, itemized quote for your company's team-building event, contact Rafiki's corporate team on WhatsApp at <strong>+254 701 215 295</strong>. Please include your team size, preferred date, and any special requirements. Rafiki typically responds to corporate inquiries within 2 hours during business hours.</p>
 """,
     },
 
@@ -211,7 +211,7 @@ pages = [
 </ul>
 
 <h3>Book Your Photography Charter</h3>
-<p>Contact Rafiki on WhatsApp at <strong>+254 729 280 380</strong> to book a dedicated photography charter. Mention you are a photographer and the captain will be briefed specifically to maximize your photographic access — moving slowly, holding positions, and orienting the boat for optimal light direction throughout your session.</p>
+<p>Contact Rafiki on WhatsApp at <strong>+254 701 215 295</strong> to book a dedicated photography charter. Mention you are a photographer and the captain will be briefed specifically to maximize your photographic access — moving slowly, holding positions, and orienting the boat for optimal light direction throughout your session.</p>
 """,
     },
 
@@ -252,7 +252,7 @@ pages = [
 <p>Rafiki allows Bluetooth speakers on private birthday charters. Bring your curated birthday playlist. At low volume, music enhances the experience without disturbing the wildlife observation. (Note: heavy subwoofer speakers are not permitted as vibrations disturb the lake ecosystem.)</p>
 
 <h3>Book Your Birthday Safari</h3>
-<p>Contact Rafiki on WhatsApp at <strong>+254 729 280 380</strong> at least 3 days before your preferred date. Mention it is a birthday celebration so the team can brief the captain and coordinate any special arrangements. Rafiki issues personalized booking confirmations that can be shared as birthday invitations on WhatsApp groups.</p>
+<p>Contact Rafiki on WhatsApp at <strong>+254 701 215 295</strong> at least 3 days before your preferred date. Mention it is a birthday celebration so the team can brief the captain and coordinate any special arrangements. Rafiki issues personalized booking confirmations that can be shared as birthday invitations on WhatsApp groups.</p>
 """,
     },
 
@@ -276,7 +276,7 @@ pages = [
 <p>Rafiki operates on a <strong>100% transparent flat-rate per-boat pricing model</strong>. There are no per-person charges, no hidden commission fees, no "peak season surcharges," and no negotiating with shoreline brokers. You pay one fixed rate per boat per hour, regardless of how many passengers you carry (up to the safety maximum).</p>
 
 <ul>
-    <li><strong>Standard 5-Person Open Fiberglass Safari Boat:</strong> Custom flat-rate quote provided directly — contact +254 729 280 380 for current rates.</li>
+    <li><strong>Standard 5-Person Open Fiberglass Safari Boat:</strong> Custom flat-rate quote provided directly — contact +254 701 215 295 for current rates.</li>
     <li><strong>Large 7-Person Capacity Boat:</strong> Ideal for families and small groups. Flat-rate pricing available on request.</li>
     <li><strong>Multi-Boat Fleet Hire:</strong> For groups exceeding 7 passengers, Rafiki deploys multiple boats simultaneously at a consolidated group rate.</li>
 </ul>
@@ -305,7 +305,7 @@ pages = [
 </ul>
 
 <h3>How to Book Your Private Charter</h3>
-<p>Booking is instant via WhatsApp at <strong>+254 729 280 380</strong>. Send your preferred date, departure time, group size, and any special requests (photography focus, birthday celebration, etc.). Rafiki will confirm availability, provide a flat-rate quote, and send you a GPS pin for the meeting point at Karagita Beach. No deposit is required for groups under 10 people — pay on arrival.</p>
+<p>Booking is instant via WhatsApp at <strong>+254 701 215 295</strong>. Send your preferred date, departure time, group size, and any special requests (photography focus, birthday celebration, etc.). Rafiki will confirm availability, provide a flat-rate quote, and send you a GPS pin for the meeting point at Karagita Beach. No deposit is required for groups under 10 people — pay on arrival.</p>
 """,
     },
 
@@ -350,7 +350,7 @@ pages = [
 <h3>Logistics and Booking</h3>
 <ul>
     <li><strong>Hell's Gate Entry Fees (2026):</strong> Non-resident adults: USD 26. Kenyan citizens: KES 215. Bicycle hire: KES 600/hour from the gate.</li>
-    <li><strong>Boat Ride Booking:</strong> Pre-book your Rafiki boat charter to guarantee your afternoon slot. Walk-up bookings on busy weekends risk lengthy waits. Contact <strong>+254 729 280 380</strong> on WhatsApp.</li>
+    <li><strong>Boat Ride Booking:</strong> Pre-book your Rafiki boat charter to guarantee your afternoon slot. Walk-up bookings on busy weekends risk lengthy waits. Contact <strong>+254 701 215 295</strong> on WhatsApp.</li>
     <li><strong>Total Budget Estimate:</strong> Park entry + cycling + boat safari + tilapia lunch = approximately KES 8,000–12,000 per person for a fully private, premium experience.</li>
 </ul>
 
@@ -401,7 +401,7 @@ pages = [
 </ul>
 
 <h3>Book Your Fishing Charter</h3>
-<p>Contact Rafiki on WhatsApp at <strong>+254 729 280 380</strong> to book a dedicated fishing charter. Specify whether you want a pure fishing session, a combined safari-fishing experience, or a group fishing competition for a team-building event. Rafiki will advise on optimal timing and required tackle.</p>
+<p>Contact Rafiki on WhatsApp at <strong>+254 701 215 295</strong> to book a dedicated fishing charter. Specify whether you want a pure fishing session, a combined safari-fishing experience, or a group fishing competition for a team-building event. Rafiki will advise on optimal timing and required tackle.</p>
 """,
     },
 
@@ -441,7 +441,7 @@ pages = [
 </ul>
 
 <h3>Add Oloidien to Your Rafiki Charter</h3>
-<p>The Oloidien Bay extension adds approximately 45 minutes to a standard Rafiki boat safari and is included in the "Full Lake Circuit" charter option. Contact Rafiki on WhatsApp at <strong>+254 729 280 380</strong> to specifically request the Oloidien route and ask about current flamingo conditions before your visit.</p>
+<p>The Oloidien Bay extension adds approximately 45 minutes to a standard Rafiki boat safari and is included in the "Full Lake Circuit" charter option. Contact Rafiki on WhatsApp at <strong>+254 701 215 295</strong> to specifically request the Oloidien route and ask about current flamingo conditions before your visit.</p>
 """,
     },
 
@@ -477,7 +477,7 @@ pages = [
 <p>The privately owned Hippo Point Lodge sits directly at the Hippo Point promontory. The lodge's iconic "Hippo Point Tower" — a converted Victorian water tower rising 17 meters above the lake surface — offers the highest, most dramatic panoramic views of the hippo pods, the lake, and the Mau and Aberdare escarpments in any direction. Day visitors can access the tower viewpoint for a fee. Lodge guests have exclusive dawn access to the tower — one of the most spectacular wildlife viewing experiences in Kenya.</p>
 
 <h3>Book Your Hippo Safari</h3>
-<p>Contact Rafiki Boat Rides on WhatsApp at <strong>+254 729 280 380</strong> to book a dedicated hippo-focused safari. Request the "Hippo Point Circuit" route, which maximizes time at the main pod locations while covering the western channel hippo nurseries for a comprehensive 2-hour hippopotamus experience.</p>
+<p>Contact Rafiki Boat Rides on WhatsApp at <strong>+254 701 215 295</strong> to book a dedicated hippo-focused safari. Request the "Hippo Point Circuit" route, which maximizes time at the main pod locations while covering the western channel hippo nurseries for a comprehensive 2-hour hippopotamus experience.</p>
 """,
     },
 ]

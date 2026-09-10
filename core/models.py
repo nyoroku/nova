@@ -12,9 +12,9 @@ class SiteSettings(models.Model):
         max_length=300,
         default="Boat rides, hotel departures and curated stays around Lake Naivasha — planned through one local team."
     )
-    phone_display = models.CharField(max_length=50, default="+254 700 000 000")
-    phone_e164 = models.CharField(max_length=30, default="+254700000000")
-    whatsapp_number = models.CharField(max_length=30, default="254700000000")
+    phone_display = models.CharField(max_length=50, default="+254 701 215 295")
+    phone_e164 = models.CharField(max_length=30, default="+254701215295")
+    whatsapp_number = models.CharField(max_length=30, default="254701215295")
     email = models.EmailField(default="hello@novaboatrider.com")
     
     standard_launch_name = models.CharField(max_length=150, default="Nova Lake Base, South Lake Road, Naivasha")

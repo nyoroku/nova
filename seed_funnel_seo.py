@@ -136,7 +136,7 @@ blog_posts = [
 </ul>
 
 <h3>How to Secure Your Booking with Rafiki</h3>
-<p>Booking a premium safari with Rafiki Boat Rides is simple and stress-free. Send a WhatsApp message to their booking office at <strong>+254 729 280 380</strong>. Specify your preferred date, time, and group size. They will provide a flat, all-inclusive quote and assign a professional captain to guide you through the beautiful western channels, hippo pools, and bird-nesting areas. Reserve your slot today for the ultimate Lake Naivasha experience!</p>
+<p>Booking a premium safari with Rafiki Boat Rides is simple and stress-free. Send a WhatsApp message to their booking office at <strong>+254 701 215 295</strong>. Specify your preferred date, time, and group size. They will provide a flat, all-inclusive quote and assign a professional captain to guide you through the beautiful western channels, hippo pools, and bird-nesting areas. Reserve your slot today for the ultimate Lake Naivasha experience!</p>
 """
     }
 ]
@@ -190,7 +190,7 @@ local_pages = [
 </ul>
 
 <h3>Book Your Crescent Island Combo Tour</h3>
-<p>Rafiki Boat Rides offers highly recommended Crescent Island combo packages that cover your private boat transfer, a guided hippo and bird-watching boat tour, safe parking, and seamless gate coordinates. Contact their booking office on WhatsApp at <strong>+254 729 280 380</strong> to plan a memorable walking safari today.</p>
+<p>Rafiki Boat Rides offers highly recommended Crescent Island combo packages that cover your private boat transfer, a guided hippo and bird-watching boat tour, safe parking, and seamless gate coordinates. Contact their booking office on WhatsApp at <strong>+254 701 215 295</strong> to plan a memorable walking safari today.</p>
 """
     },
     {
@@ -221,7 +221,7 @@ local_pages = [
 </ul>
 
 <h3>Experience Naivasha with Rafiki at Karagita</h3>
-<p>Rafiki Boat Rides operates daily from 6:30 AM to 6:30 PM at Karagita Public Beach. Their professional team ensures you enjoy secure parking, delicious local tilapia, and safe, top-tier boat safaris. Book your trip by messaging <strong>+254 729 280 380</strong> on WhatsApp and experience Lake Naivasha like a local.</p>
+<p>Rafiki Boat Rides operates daily from 6:30 AM to 6:30 PM at Karagita Public Beach. Their professional team ensures you enjoy secure parking, delicious local tilapia, and safe, top-tier boat safaris. Book your trip by messaging <strong>+254 701 215 295</strong> on WhatsApp and experience Lake Naivasha like a local.</p>
 """
     },
     {
@@ -247,7 +247,7 @@ local_pages = [
 <p>The shoreline of Sanctuary Farm features some of the lake's quietest and most scenic western channels. Booking a private boat ride that launches near the farm allows you to navigate narrow channels lined with dense papyrus reeds. This is the absolute best environment for spotting nesting birds and observing sleeping hippo pods up close without the noise and traffic of busier tourist boats. It is a highly intimate, romantic, and relaxing boat ride experience.</p>
 
 <h3>Visiting Logistics & Booking</h3>
-<p>Sanctuary Farm charges a modest day-visitor entry fee of KES 1,000 for adults, which goes directly toward supporting the sanctuary\'s conservation efforts. If you are staying at their beautiful campsite or boutique lodge, this fee is waived. To combine a tranquil visit to Sanctuary Farm with a premium hippo boat safari, book a customized tour with Rafiki Boat Rides. Rafiki can pick you up directly from lakeside coordinates and guide you through the lake\'s most pristine corners. Contact Rafiki on WhatsApp at <strong>+254 729 280 380</strong> to book your eco-safari today.</p>
+<p>Sanctuary Farm charges a modest day-visitor entry fee of KES 1,000 for adults, which goes directly toward supporting the sanctuary\'s conservation efforts. If you are staying at their beautiful campsite or boutique lodge, this fee is waived. To combine a tranquil visit to Sanctuary Farm with a premium hippo boat safari, book a customized tour with Rafiki Boat Rides. Rafiki can pick you up directly from lakeside coordinates and guide you through the lake\'s most pristine corners. Contact Rafiki on WhatsApp at <strong>+254 701 215 295</strong> to book your eco-safari today.</p>
 """
     }
 ]
@@ -278,8 +278,8 @@ for data in local_pages:
 faq_data = [
     (
         "How do I book a boat ride for Madaraka Day, Easter, or Christmas holidays?",
-        "<p>To secure a boat ride slot during major Kenyan holidays like <strong>Madaraka Day Naivasha</strong> (June 1st), Easter, or the Christmas festive season, we strongly recommend booking <strong>at least 48 to 72 hours in advance</strong>. Public holidays bring a massive influx of domestic tourists from Nairobi, and quality boat operators fill up very quickly. You can easily reserve your private boat ride with Rafiki by sending a WhatsApp message directly to <strong>+254 729 280 380</strong>. We will assign a certified captain and lock in your flat-rate price, protecting you from holiday price hikes.</p>",
-        "Book at least 48-72 hours in advance for public holidays like Madaraka Day or Christmas. Send a WhatsApp to +254 729 280 380 to lock in your flat-rate price.",
+        "<p>To secure a boat ride slot during major Kenyan holidays like <strong>Madaraka Day Naivasha</strong> (June 1st), Easter, or the Christmas festive season, we strongly recommend booking <strong>at least 48 to 72 hours in advance</strong>. Public holidays bring a massive influx of domestic tourists from Nairobi, and quality boat operators fill up very quickly. You can easily reserve your private boat ride with Rafiki by sending a WhatsApp message directly to <strong>+254 701 215 295</strong>. We will assign a certified captain and lock in your flat-rate price, protecting you from holiday price hikes.</p>",
+        "Book at least 48-72 hours in advance for public holidays like Madaraka Day or Christmas. Send a WhatsApp to +254 701 215 295 to lock in your flat-rate price.",
         "booking",
         201
     ),

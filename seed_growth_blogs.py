@@ -44,7 +44,7 @@ blogs_data = [
 
 <h3>Hippo Safety is the Real Focus</h3>
 <p>While crocodiles are not a concern, the lake's <strong>1,500+ hippos</strong> are. Hippos are territorial and protective of their pods. A safe boat ride requires maintaining a strict 50-meter buffer zone, using low-noise motors, and avoiding shallow channels where hippos feed. Rafiki captains are trained naturalists who adhere strictly to these safety margins.</p>
-<p>Planning a safe, family-friendly safari? Message Rafiki on WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Planning a safe, family-friendly safari? Message Rafiki on WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lake naivasha safety', 'crocodiles naivasha', 'lake naivasha boat safari']
     },
@@ -65,7 +65,7 @@ blogs_data = [
     <li>Apply insect repellent (DEET-based) before evening sunset cruises.</li>
     <li>Use mosquito nets provided in your lakeside hotel or resort.</li>
 </ul>
-<p>Book a safe, professional boat ride: Contact Rafiki via WhatsApp at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a safe, professional boat ride: Contact Rafiki via WhatsApp at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['naivasha malaria', 'travel health kenya', 'lake naivasha tips']
     },
@@ -81,7 +81,7 @@ blogs_data = [
 
 <h3>Stable Pontoon Hulls</h3>
 <p>Our pontoon boats feature wide, flat-bottom designs. Unlike narrow speedboats that rock and sway, our pontoons offer a stable, flat deck. This makes boarding, sitting, and moving around safe for parents holding infants or managing toddlers.</p>
-<p>Plan your family outing today: WhatsApp us at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a> to reserve child-sized safety gear.</p>
+<p>Plan your family outing today: WhatsApp us at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a> to reserve child-sized safety gear.</p>
 """,
         'tags': ['lake naivasha with kids', 'family safety naivasha', 'infant safety safari']
     },
@@ -97,7 +97,7 @@ blogs_data = [
 
 <h3>Wind and Wave Safety Protocols</h3>
 <p>Our captains monitor local wind patterns constantly. If heavy rain or strong waves develop, we immediately navigate to sheltered bays or return to the dock. Safety is our priority, and we will happily reschedule your tour for free if the weather becomes unfavorable.</p>
-<p>Check the weather and book your trip: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Check the weather and book your trip: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['weather naivasha', 'rain safety boat ride', 'rafiki boat ride']
     },
@@ -113,7 +113,7 @@ blogs_data = [
 
 <h3>No Engine Revving</h3>
 <p>Captains cut the engines and drift silently when approaching pods. Sudden loud noises can startle hippos. Low-emission, quiet four-stroke engines keep the environment quiet and peaceful.</p>
-<p>Enjoy a respectful, safe wildlife safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Enjoy a respectful, safe wildlife safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['hippo safety', 'lake naivasha wildlife', 'rafiki safari']
     },
@@ -129,7 +129,7 @@ blogs_data = [
 
 <h3>Waterborne Parasites</h3>
 <p>Freshwater lakes in East Africa carry a risk of Bilharzia (Schistosomiasis). Swimming or wading near the shoreline reeds increases exposure to waterborne parasites. It is best to enjoy the water from the safety of a boat deck.</p>
-<p>Explore the lake safely: Book a boat charter via WhatsApp at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Explore the lake safely: Book a boat charter via WhatsApp at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['swimming lake naivasha', 'health warning naivasha', 'safety tips']
     },
@@ -145,7 +145,7 @@ blogs_data = [
 
 <h3>Shaded Comfort</h3>
 <p>Long exposure to the sun can be exhausting. Our boats feature full canvas canopies to protect guests from the heat, along with cushioned, supportive seating for a relaxing ride.</p>
-<p>Book a comfortable tour for your elderly parents: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a comfortable tour for your elderly parents: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['senior travel kenya', 'safe boat ride', 'family boat ride']
     },
@@ -163,7 +163,7 @@ blogs_data = [
     <li><strong>Fire Extinguisher:</strong> Mounted and inspected near the engine console.</li>
     <li><strong>Buoyancy Ring:</strong> Toss-able floatation device for emergency use.</li>
 </ul>
-<p>Rafiki vessels are fully inspected, licensed, and registered by KMA. Book with confidence: WhatsApp us at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Rafiki vessels are fully inspected, licensed, and registered by KMA. Book with confidence: WhatsApp us at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['boat safety gear', 'kenya maritime authority', 'rafiki safety']
     },
@@ -179,7 +179,7 @@ blogs_data = [
 
 <h3>Secure Transit and Parking</h3>
 <p>If driving, use the secure parking area at Karagita Beach. If using public transport, taking a registered taxi or Uber from Naivasha town is recommended for solo travelers, especially in the evening.</p>
-<p>Traveling solo? Join a group or book a private charter: WhatsApp us at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Traveling solo? Join a group or book a private charter: WhatsApp us at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['solo travel kenya', 'naivasha day trip', 'safety guide']
     },
@@ -195,7 +195,7 @@ blogs_data = [
 
 <h3>Eco-Tourism Efforts</h3>
 <p>Agricultural runoff from surrounding flower farms is monitored by the Lake Naivasha Riparian Association (LNRA). Rafiki supports local riparian conservation by operating low-emission motors that prevent oil spills.</p>
-<p>Learn more and book your eco-friendly tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Learn more and book your eco-friendly tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lake naivasha ecology', 'water quality', 'riparian conservation']
     },
@@ -211,7 +211,7 @@ blogs_data = [
 
 <h3>Emergency Shoreline Contact</h3>
 <p>Our boats maintain constant mobile communication with our shoreline office at Karagita Beach. In the event of an emergency, we can coordinate with local clinics for immediate assistance upon return to the dock.</p>
-<p>Book a safe, professional tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a safe, professional tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['emergency response', 'boat safety', 'rafiki protocol']
     },
@@ -227,7 +227,7 @@ blogs_data = [
 
 <h3>Active Night Feeding</h3>
 <p>Hippos leave the water at night to graze on the shores. Because they move actively in the dark, the risk of a collision is high. Visibility is extremely low, making navigation unsafe.</p>
-<p>Book a beautiful golden hour sunset cruise instead: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a beautiful golden hour sunset cruise instead: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lake naivasha rules', 'sunset cruise', 'hippo behavior']
     },
@@ -243,7 +243,7 @@ blogs_data = [
 
 <h3>Sit Near the Center of the Pontoon</h3>
 <p>Our pontoon boats offer a very stable ride. Sitting in the middle of the boat minimizes any slight movement. Focus on the horizon or the distant Mau Escarpment to stabilize your balance.</p>
-<p>Book a smooth morning cruise: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a smooth morning cruise: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['motion sickness tips', 'calm morning boat ride', 'travel advice']
     },
@@ -259,7 +259,7 @@ blogs_data = [
 
 <h3>Bring a Waterproof Dry Bag</h3>
 <p>Equatorial weather can bring sudden showers. A waterproof dry bag allows you to quickly stow your gear if a light rain begins during the safari.</p>
-<p>Book a dedicated, slow-drift photography charter: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a dedicated, slow-drift photography charter: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['bird photography', 'camera safety', 'photography safari']
     },
@@ -275,7 +275,7 @@ blogs_data = [
 
 <h3>Adjustable Safety Straps</h3>
 <p>Vests feature adjustable crotch straps that prevent the child from slipping out of the jacket. Our captain will assist you with fitting before boarding.</p>
-<p>Pre-reserve your infant life jacket: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Pre-reserve your infant life jacket: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['infant safety', 'life jackets', 'child safety gear']
     },
@@ -299,7 +299,7 @@ blogs_data = [
     <li><strong>Rafiki Boat Tour:</strong> Paid per boat charter (transparent flat-rates).</li>
     <li><strong>Crescent Island Sanctuary:</strong> A conservation fee paid directly to the sanctuary landing.</li>
 </ul>
-<p>Need a clear budget breakdown? Message Rafiki on WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Need a clear budget breakdown? Message Rafiki on WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lake naivasha entrance fee', 'naivasha trip budget', 'travel cost kenya']
     },
@@ -317,7 +317,7 @@ blogs_data = [
     <li><strong>International Tourists:</strong> USD 33 per adult / USD 16 per child.</li>
 </ul>
 <p>Note: These fees are paid directly to the sanctuary at the island dock (M-Pesa, card, or cash). Boat transit is booked separately.</p>
-<p>Book your boat transfer directly with Rafiki: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your boat transfer directly with Rafiki: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['crescent island entry fee', 'walking safari prices', 'naivasha trip cost']
     },
@@ -333,7 +333,7 @@ blogs_data = [
 
 <h3>Arriving in Naivasha</h3>
 <p>The journey takes approximately **1.5 to 2 hours**. You will arrive at the main Naivasha town stage. From there, you can take a local matatu (Route 1) directly to Karagita Beach for **KES 50**, or hire a local taxi.</p>
-<p>Pre-book your boat ride to avoid beach brokers on arrival: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Pre-book your boat ride to avoid beach brokers on arrival: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['nairobi to naivasha matatu', 'public transport kenya', 'naivasha travel guide']
     },
@@ -349,7 +349,7 @@ blogs_data = [
 
 <h3>Rafiki Meeting Point</h3>
 <p>Once parked, you can walk directly to the Rafiki booking office near the main gate. Our captains will meet you there to guide you to the boarding dock.</p>
-<p>Reserve your parking assistance and boat tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Reserve your parking assistance and boat tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['karagita beach parking', 'lake naivasha parking', 'driving to naivasha']
     },
@@ -365,7 +365,7 @@ blogs_data = [
 
 <h3>The Evening Window (4:30 PM – 6:00 PM)</h3>
 <p><strong>Perfect for romantic sunset cruises.</strong> The sunset over the Mau Escarpment is spectacular. Hippos begin swimming actively as they prepare to feed on land after dusk.</p>
-<p>Book your preferred time slot: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your preferred time slot: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['best time for boat ride', 'lake naivasha safari', 'sunset cruise naivasha']
     },
@@ -381,7 +381,7 @@ blogs_data = [
 
 <h3>Cash and Card at the Beach</h3>
 <p>We accept Kenyan Shillings (KES) and US Dollars (USD) cash at the dock. Card payments (Visa/Mastercard) are also accepted through our booking office console.</p>
-<p>Book your tour and get payment details: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your tour and get payment details: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['m-pesa paybill', 'rafiki pricing', 'lake naivasha payments']
     },
@@ -397,7 +397,7 @@ blogs_data = [
 
 <h3>Recommended Tipping Rates</h3>
 <p>A standard tip of **KES 500 – 1,000 (USD 5 – 10)** per boat group is highly appreciated by local captains. Your tip goes directly to their families, supporting the local fishing and tourism community.</p>
-<p>Book a tour with a certified naturalist: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a tour with a certified naturalist: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['tipping in kenya', 'boat captain tips', 'local community impact']
     },
@@ -413,7 +413,7 @@ blogs_data = [
 
 <h3>Footwear and Sun Protection</h3>
 <p>Wear flat, non-slip shoes (sneakers or sandals) for stable boarding. Bring a wide-brimmed hat, sunglasses, and reef-safe sunscreen to protect yourself from the equatorial sun.</p>
-<p>Ready to board? Book your safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Ready to board? Book your safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['what to wear safari', 'packing guide kenya', 'lake naivasha travel']
     },
@@ -429,7 +429,7 @@ blogs_data = [
 
 <h3>Book Direct Online</h3>
 <p>The safest way to avoid brokers is to pre-book your ride directly with a registered operator like Rafiki. We will meet you directly at the secure parking lot, ensuring you pay the correct flat-rate fee.</p>
-<p>Get a direct, broker-free quote: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Get a direct, broker-free quote: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['avoid beach brokers', 'direct boat booking', 'karagita beach tips']
     },
@@ -448,7 +448,7 @@ blogs_data = [
 
 <h3>3-Hour Tour: Full Lake Circuit</h3>
 <p>For birding and photography enthusiasts. Covers Oloidien Bay, the papyrus channels, hippo nurseries, and open-water zones.</p>
-<p>Book your preferred duration: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your preferred duration: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['boat ride duration', 'crescent island tour', 'bird watching naivasha']
     },
@@ -464,7 +464,7 @@ blogs_data = [
 
 <h3>Keep Valuables with You</h3>
 <p>While we secure large bags, we recommend keeping cameras, passports, and cash in a small daypack on board the boat with you.</p>
-<p>Book your day trip storage: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your day trip storage: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['luggage storage', 'day trip naivasha', 'rafiki services']
     },
@@ -480,7 +480,7 @@ blogs_data = [
 
 <h3>Weather Cancellations</h3>
 <p>If local authorities close the lake due to heavy wind or storm safety warnings, you will receive a full refund or a free reschedule option instantly.</p>
-<p>Book your tour risk-free: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your tour risk-free: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['cancellation policy', 'flexible booking', 'refund terms']
     },
@@ -496,7 +496,7 @@ blogs_data = [
 
 <h3>Restrooms on the Boat?</h3>
 <p>Please note that standard safari boats and pontoons **do not have restrooms on board**. We advise using the facilities at the beach before boarding.</p>
-<p>Plan your arrival: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Plan your arrival: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['restrooms naivasha', 'karagita beach facilities', 'travel tips']
     },
@@ -512,7 +512,7 @@ blogs_data = [
 
 <h3>Hire a Local Guide</h3>
 <p>For a richer experience, local sanctuary guides are available at the island entrance for a small tip. They can help locate nesting birds and share interesting facts about the wildlife.</p>
-<p>Book your Crescent Island boat transfer: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Crescent Island boat transfer: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['crescent island guide', 'walking safari tips', 'naivasha guide']
     },
@@ -528,7 +528,7 @@ blogs_data = [
 
 <h3>Leave the Tripod on Shore</h3>
 <p>Due to the gentle movement of the boat, tripods are difficult to use. A monopod or shooting handheld with image stabilization turned on will yield much sharper images.</p>
-<p>Book a dedicated photography charter: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a dedicated photography charter: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['camera gear naivasha', 'wildlife photography tips', 'lake safari']
     },
@@ -544,7 +544,7 @@ blogs_data = [
 
 <h3>Hotel Restaurants Nearby</h3>
 <p>If you prefer a formal dining setting, several lakeside hotels along South Lake Road are just a 5-minute drive from the beach, offering international menus.</p>
-<p>Plan your lunch and boat ride: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Plan your lunch and boat ride: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lakeside dining', 'fresh tilapia naivasha', 'karagita beach food']
     },
@@ -560,7 +560,7 @@ blogs_data = [
 
 <h3>By Private Car</h3>
 <p>Take the A104 highway south. The road is fully paved and passes through the scenic Gilgil area, with views of Lake Elmenteaita along the way.</p>
-<p>Pre-book your boat ride to secure your arrival time: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Pre-book your boat ride to secure your arrival time: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['nakuru to naivasha', 'driving rift valley', 'matatu travel']
     },
@@ -578,7 +578,7 @@ blogs_data = [
     <li><strong>2:30 PM:</strong> Board your Rafiki boat for a relaxing 1.5-hour hippo safari.</li>
     <li><strong>4:30 PM:</strong> Head back to Nairobi or check into your hotel.</li>
 </ul>
-<p>Book your coordinated day trip safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your coordinated day trip safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['hells gate naivasha combo', 'day trip itinerary', 'lake naivasha boat ride']
     },
@@ -594,7 +594,7 @@ blogs_data = [
 
 <h3>Large Groups and Corporate Retrears</h3>
 <p>For corporate retreats or multi-boat bookings of 10+ people, we request a **50% commitment deposit** to reserve the vessels and coordinate safety gear.</p>
-<p>Book your tour today: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your tour today: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['booking deposit terms', 'corporate group booking', 'payment options']
     },
@@ -610,7 +610,7 @@ blogs_data = [
 
 <h3>KMA Regulated Vests</h3>
 <p>Our life jackets are inspected and approved by the Kenya Maritime Authority, ensuring they meet national marine safety standards.</p>
-<p>Reserve your tour and safety gear: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Reserve your tour and safety gear: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['free life jackets', 'certified safety vests', 'rafiki boat ride']
     },
@@ -635,7 +635,7 @@ blogs_data = [
 
 <h3>Convenient for Day Trips</h3>
 <p>You can leave Nairobi at 7:00 AM, enjoy a 2-hour boat safari, eat fresh charcoal-grilled tilapia for lunch, and be back in Nairobi for dinner.</p>
-<p>Book your Nairobi-alternative day trip: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Nairobi-alternative day trip: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['boat riding in nairobi', 'nairobi day trip', 'weekend getaway kenya']
     },
@@ -651,7 +651,7 @@ blogs_data = [
 
 <h3>Experience a Real Freshwater Safari</h3>
 <p>A boat ride with Rafiki is a complete wildlife experience. You will navigate through papyrus channels, spot kingfishers, and watch massive hippos resting in the shallows.</p>
-<p>Plan your weekend getaway from Thika: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Plan your weekend getaway from Thika: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['boatrides around thika', 'weekend trips from thika', 'naivasha day trip']
     },
@@ -667,7 +667,7 @@ blogs_data = [
 
 <h3>Travel Distance and Convenience</h3>
 <p>Lake Victoria requires a long drive or flight from Nairobi, while Lake Naivasha is just a 1.5-hour drive away, making it much more convenient for weekend trips.</p>
-<p>Book your Rift Valley safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Rift Valley safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['rusinga to takawiri boat hire', 'lake victoria vs naivasha', 'kenya boat tours']
     },
@@ -683,7 +683,7 @@ blogs_data = [
 
 <h3>What to Do in Naivasha</h3>
 <p>Spend your morning on a private Rafiki boat ride, walk among giraffes on Crescent Island, and enjoy a picnic at the sanctuary before heading back.</p>
-<p>Book your Ruiru-to-Naivasha getaway: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Ruiru-to-Naivasha getaway: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['ruiru weekend getaways', 'kiambu day trips', 'lake naivasha boat safari']
     },
@@ -701,7 +701,7 @@ blogs_data = [
     <li><strong>1:30 PM:</strong> Enjoy a fish lunch at Karagita Beach.</li>
     <li><strong>2:30 PM:</strong> Board your Rafiki boat ride for a close-up hippo safari.</li>
 </ul>
-<p>Book your combined twin-lake day trip: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your combined twin-lake day trip: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lake elementaita day trip', 'elementaita to naivasha', 'twin lake safari']
     },
@@ -717,7 +717,7 @@ blogs_data = [
 
 <h3>The Lakeside Experience</h3>
 <p>Once at the lake, board a private Rafiki pontoon boat for a relaxing wildlife tour. It is a great way to unwind after a busy work week.</p>
-<p>Book your Kiambu getaway: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Kiambu getaway: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['kiambu weekend getaways', 'limuru day trips', 'lake naivasha boat ride']
     },
@@ -733,7 +733,7 @@ blogs_data = [
 
 <h3>Why Choose Lake Naivasha?</h3>
 <p>You can enjoy a private boat ride to see the lake's famous hippo pods and experience a walking safari on Crescent Island, offering a completely different climate and landscape.</p>
-<p>Book your Machakos-to-Naivasha road trip: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Machakos-to-Naivasha road trip: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['machakos weekend escapes', 'road trip kenya', 'naivasha boat ride']
     },
@@ -749,7 +749,7 @@ blogs_data = [
 
 <h3>Quick Wildlife Break</h3>
 <p>A 1-hour Rafiki boat ride is the perfect way to break up your drive, offering close-up views of hippos and fresh air before continuing your journey.</p>
-<p>Book your Eldoret stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Eldoret stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['eldoret to naivasha', 'road trip stopover', 'lake naivasha boat safari']
     },
@@ -765,7 +765,7 @@ blogs_data = [
 
 <h3>Relax on the Water</h3>
 <p>Once you arrive in Naivasha, celebrate the end of your drive with a private sunset cruise with Rafiki, watching the sun set over the Mau Escarpment.</p>
-<p>Book your Nyeri-to-Naivasha safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Nyeri-to-Naivasha safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['nyeri to naivasha', 'aberdare road trip', 'scenic drive kenya']
     },
@@ -778,7 +778,7 @@ blogs_data = [
 
 <h3>The Adventure Schedule</h3>
 <p>Explore Suswa's caves in the morning, then drive north to Lake Naivasha (a 45-minute drive). Relax on a private Rafiki pontoon boat and enjoy the lake breeze.</p>
-<p>Book your Suswa-Naivasha adventure: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Suswa-Naivasha adventure: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['suswa day trip', 'mount suswa caves', 'lake naivasha boat ride']
     },
@@ -791,7 +791,7 @@ blogs_data = [
 
 <h3>A Short 1-Hour Drive</h3>
 <p>Limuru is located right at the edge of the Rift Valley escarpment. A quick 1-hour drive down the highway brings you directly to Karagita Beach, making it perfect for a spontaneous day trip.</p>
-<p>Book your Limuru-alternative boat ride: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Limuru-alternative boat ride: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['limuru day trips', 'weekend escapes limuru', 'naivasha boat ride']
     },
@@ -804,7 +804,7 @@ blogs_data = [
 
 <h3>Driving Route via Nyahururu</h3>
 <p>Drive via Nyeri and Nyahururu town, descending into the valley. The road is fully paved and offers beautiful highlands scenery along the way.</p>
-<p>Book your weekend safari slot: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your weekend safari slot: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['karatina to naivasha', 'weekend travel kenya', 'lake naivasha boat ride']
     },
@@ -817,7 +817,7 @@ blogs_data = [
 
 <h3>Driving Routes & Travel Times</h3>
 <p>Drive via Nakuru on the main highway. The journey takes approximately **2.5 hours**. Park securely at Karagita Beach and stretch your legs on a private boat safari.</p>
-<p>Book your Kericho-Naivasha road trip: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Kericho-Naivasha road trip: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['kericho to naivasha', 'road trip stops', 'naivasha boat ride']
     },
@@ -830,7 +830,7 @@ blogs_data = [
 
 <h3>Fast Access via the Thika Bypass</h3>
 <p>Drive via the Garissa-Thika highway and take the bypasses to join the Nakuru highway. The travel time is approximately **5 hours**, making it suitable for a long weekend trip.</p>
-<p>Book your cooling sunset cruise: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your cooling sunset cruise: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['garissa to naivasha', 'weekend retreat kenya', 'naivasha boat ride']
     },
@@ -843,7 +843,7 @@ blogs_data = [
 
 <h3>The Nyahururu Highway Route</h3>
 <p>Drive via Nanyuki and Nyahururu, descending into the valley. The drive takes around **4 hours** and offers beautiful highlands scenery and forest views along the way.</p>
-<p>Book your Meru-to-Naivasha boat safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Meru-to-Naivasha boat safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['meru to naivasha', 'mount kenya road trip', 'naivasha boat ride']
     },
@@ -856,7 +856,7 @@ blogs_data = [
 
 <h3>Driving Route via Sagana and Flyover</h3>
 <p>Drive via Sagana and join the main Nakuru highway. The road is fully paved and offers beautiful scenery along the way, taking approximately **3 hours**.</p>
-<p>Book your weekend safari slot: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your weekend safari slot: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['embu to naivasha', 'weekend travel kenya', 'lake naivasha boat ride']
     },
@@ -869,7 +869,7 @@ blogs_data = [
 
 <h3>Fast Access via the Kibwezi-Kitui Highway</h3>
 <p>Drive via Machakos and take the bypasses to join the Nakuru highway. The travel time is approximately **4.5 hours**, making it suitable for a long weekend trip.</p>
-<p>Book your cooling sunset cruise: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your cooling sunset cruise: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['kitui to naivasha', 'weekend retreat kenya', 'naivasha boat ride']
     },
@@ -882,7 +882,7 @@ blogs_data = [
 
 <h3>The Driving Route</h3>
 <p>Take the main highway through Kisumu and Nakuru. The drive from Kakamega to Naivasha takes approximately **4.5 hours**. Park securely at Karagita Beach and stretch your legs on a relaxing boat ride.</p>
-<p>Book your Kakamega stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Kakamega stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['kakamega to naivasha', 'road trip stopover', 'lake naivasha boat safari']
     },
@@ -895,7 +895,7 @@ blogs_data = [
 
 <h3>Driving Routes & Travel Times</h3>
 <p>Drive via Narok on the main highway. The journey takes approximately **3 hours**. Park securely at Karagita Beach and stretch your legs on a private boat safari.</p>
-<p>Book your Bomet-Naivasha road trip: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Bomet-Naivasha road trip: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['bomet to naivasha', 'road trip stops', 'naivasha boat ride']
     },
@@ -908,7 +908,7 @@ blogs_data = [
 
 <h3>The Driving Route</h3>
 <p>Take the main highway through Narok. The drive from Kisii to Naivasha takes approximately **3.5 hours**. Park securely at Karagita Beach and stretch your legs on a relaxing boat ride.</p>
-<p>Book your Kisii stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Kisii stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['kisii to naivasha', 'road trip stopover', 'lake naivasha boat safari']
     },
@@ -921,7 +921,7 @@ blogs_data = [
 
 <h3>The Driving Route</h3>
 <p>Take the main highway through Narok. The drive from Homa Bay to Naivasha takes approximately **4 hours**. Park securely at Karagita Beach and stretch your legs on a relaxing boat ride.</p>
-<p>Book your Homa Bay stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Homa Bay stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['homa bay to naivasha', 'road trip stopover', 'lake naivasha boat safari']
     },
@@ -934,7 +934,7 @@ blogs_data = [
 
 <h3>The Driving Route</h3>
 <p>Take the main highway through Narok. The drive from Migori to Naivasha takes approximately **4.5 hours**. Park securely at Karagita Beach and stretch your legs on a relaxing boat ride.</p>
-<p>Book your Migori stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Migori stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['migori to naivasha', 'road trip stopover', 'lake naivasha boat safari']
     },
@@ -947,7 +947,7 @@ blogs_data = [
 
 <h3>The Driving Route</h3>
 <p>Take the main highway through Eldoret and Nakuru. The drive from Bungoma to Naivasha takes approximately **4.5 hours**. Park securely at Karagita Beach and stretch your legs on a relaxing boat ride.</p>
-<p>Book your Bungoma stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Bungoma stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['bungoma to naivasha', 'road trip stopover', 'lake naivasha boat safari']
     },
@@ -960,7 +960,7 @@ blogs_data = [
 
 <h3>The Driving Route</h3>
 <p>Take the main highway through Kisumu and Nakuru. The drive from Busia to Naivasha takes approximately **5 hours**. Park securely at Karagita Beach and stretch your legs on a relaxing boat ride.</p>
-<p>Book your Busia stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Busia stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['busia to naivasha', 'road trip stopover', 'lake naivasha boat safari']
     },
@@ -973,7 +973,7 @@ blogs_data = [
 
 <h3>The Driving Route</h3>
 <p>Take the main highway through Eldoret and Nakuru. The drive from Kitale to Naivasha takes approximately **4 hours**. Park securely at Karagita Beach and stretch your legs on a relaxing boat ride.</p>
-<p>Book your Kitale stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your Kitale stopover tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['kitale to naivasha', 'road trip stopover', 'lake naivasha boat safari']
     },
@@ -995,7 +995,7 @@ blogs_data = [
 <p>Rafiki operates a modern fleet of spacious pontoon boats with wide, flat decks, cushioned seating, and full canvas canopies. Gitoh B primarily operates standard open fiberglass speedboats, which can feel less stable and offer less shade during midday sun.</p>
 
 <h3>3. Transparent Direct Pricing</h3>
-<p>Rafiki offers upfront, flat-rate pricing via WhatsApp (<a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>). This protects you from shoreline brokers who negotiate prices dynamically at the beach.</p>
+<p>Rafiki offers upfront, flat-rate pricing via WhatsApp (<a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>). This protects you from shoreline brokers who negotiate prices dynamically at the beach.</p>
 """,
         'tags': ['gitoh b boat rides', 'best boat rides naivasha', 'rafiki reviews']
     },
@@ -1010,7 +1010,7 @@ blogs_data = [
 <p>At Rafiki, we believe a safari should be educational. Our captains are certified local naturalists who explain the physics of fish eagle dives, the biology of papyrus filtration, and hippo behaviors. Boffar primarily offers standard transport without detailed naturalist commentary.</p>
 
 <h3>Crescent Island Transfer Packages</h3>
-<p>Rafiki offers seamless combo packages that include direct hotel pickups, boat transfers, and pre-coordinated entry to Crescent Island. WhatsApp us at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a> to get an instant quote.</p>
+<p>Rafiki offers seamless combo packages that include direct hotel pickups, boat transfers, and pre-coordinated entry to Crescent Island. WhatsApp us at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a> to get an instant quote.</p>
 """,
         'tags': ['boffar boat safaris', 'lake naivasha operators', 'crescent island tour']
     },
@@ -1026,7 +1026,7 @@ blogs_data = [
 
 <h3>Life Vest Hygiene</h3>
 <p>We clean and sanitize our life jackets daily. If you are concerned about sharing damp or dirty safety gear, Rafiki ensures clean, dry vests for all passengers.</p>
-<p>Book your clean, eco-friendly tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your clean, eco-friendly tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['marina boat safaris', 'eco tourism kenya', 'safe boat ride']
     },
@@ -1041,7 +1041,7 @@ blogs_data = [
 <p>Beach brokers do not own boats. They negotiate a price with you, take a heavy commission (often 50%), and pay a local captain the remainder. This means you pay more for a lower-quality service.</p>
 
 <h3>Book Direct for Safety and Support</h3>
-<p>Booking directly with Rafiki via WhatsApp (<a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>) ensures your money goes directly to the captain and local community, while guaranteeing KMA-certified safety standards.</p>
+<p>Booking directly with Rafiki via WhatsApp (<a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>) ensures your money goes directly to the captain and local community, while guaranteeing KMA-certified safety standards.</p>
 """,
         'tags': ['beach brokers', 'booking direct', 'lake naivasha tips']
     },
@@ -1057,7 +1057,7 @@ blogs_data = [
 
 <h3>2. Captain License</h3>
 <p>Ask if the captain is licensed by KMA. Registered captains carry a coxswain license confirming their navigation and safety training.</p>
-<p>Rafiki is fully certified and compliant. WhatsApp us at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a> to book a registered tour.</p>
+<p>Rafiki is fully certified and compliant. WhatsApp us at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a> to book a registered tour.</p>
 """,
         'tags': ['certified operator', 'kma license', 'boat safety checks']
     },
@@ -1074,7 +1074,7 @@ blogs_data = [
     <li><strong>Shade:</strong> Ensure the boat has a canopy to protect you from the sun.</li>
     <li><strong>Guides:</strong> Choose operators with naturalist captains for a richer experience.</li>
 </ul>
-<p>Rafiki meets all these standards. Book directly on WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Rafiki meets all these standards. Book directly on WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['best boat rides naivasha', 'operator checklist', 'tour guide']
     },
@@ -1089,7 +1089,7 @@ blogs_data = [
 <p>Rafiki's custom-built pontoon boats offer padded seating, wrap-around railings, and flat decks, making them very safe for toddlers and seniors. Njovic primarily operates open speedboats with bench seating, which can feel less stable.</p>
 
 <h3>Direct Pricing</h3>
-<p>Rafiki publishes clear, upfront rates. Get a direct quote via WhatsApp at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Rafiki publishes clear, upfront rates. Get a direct quote via WhatsApp at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['njovic boat rides', 'lake naivasha pricing', 'rafiki safety']
     },
@@ -1105,7 +1105,7 @@ blogs_data = [
 
 <h3>Training and Education</h3>
 <p>We sponsor regular safety and naturalist training courses for our crew, raising the overall standards of eco-tourism on the lake.</p>
-<p>Book a community-supported tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a community-supported tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['community support', 'fair trade tourism', 'rafiki captains']
     },
@@ -1121,7 +1121,7 @@ blogs_data = [
 
 <h3>Spotting Fake Reviews</h3>
 <p>Always check if reviews are detailed and mention specific captain names and experiences. Genuine operators are proud to share their guest feedback.</p>
-<p>Read our reviews and book: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Read our reviews and book: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['google reviews', 'tourist feedback', 'best operator naivasha']
     },
@@ -1137,7 +1137,7 @@ blogs_data = [
 
 <h3>Poor Safety Gear</h3>
 <p>Illegal boats often lack life jackets, or provide old, damaged vests. Always insist on seeing clean, KMA-approved safety gear before boarding.</p>
-<p>Book a fully registered, licensed tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a fully registered, licensed tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['unregistered boats', 'lake naivasha safety', 'registered operators']
     },
@@ -1153,7 +1153,7 @@ blogs_data = [
 
 <h3>Ask Before You Board</h3>
 <p>Always confirm that your operator has active insurance. Registered providers are happy to confirm their safety credentials.</p>
-<p>Book a fully insured, safe safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a fully insured, safe safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['boat insurance', 'passenger liability', 'safety compliance']
     },
@@ -1168,7 +1168,7 @@ blogs_data = [
 <p>Negotiating at the beach can feel stressful, especially on busy weekends. Pre-booking online with Rafiki ensures a calm arrival, with your boat and captain reserved and waiting for you.</p>
 
 <h3>Guaranteed Rates</h3>
-<p>Pre-booking guarantees your rate. Beach brokers dynamically adjust prices based on how busy the beach is. WhatsApp us at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a> to secure your booking.</p>
+<p>Pre-booking guarantees your rate. Beach brokers dynamically adjust prices based on how busy the beach is. WhatsApp us at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a> to secure your booking.</p>
 """,
         'tags': ['beach brokers vs direct', 'booking online', 'lake naivasha tips']
     },
@@ -1184,7 +1184,7 @@ blogs_data = [
 
 <h3>Speedboats (Best for Small Groups and Quick Transfers)</h3>
 <p>Fiberglass speedboats are faster and highly maneuverable. They are ideal for quick transfers to Crescent Island or small groups of 2-4 travelers.</p>
-<p>Book your preferred boat type: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your preferred boat type: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['pontoon vs speedboat', 'safari boat types', 'group boat ride']
     },
@@ -1200,7 +1200,7 @@ blogs_data = [
 
 <h3>Safety and Customer Care</h3>
 <p>Captains are trained in defensive boat handling, first aid, and customer care, ensuring a professional and engaging experience for all guests.</p>
-<p>Book a tour with an expert guide: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a tour with an expert guide: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['naturalist captain', 'wildlife guides', 'rafiki crew']
     },
@@ -1216,7 +1216,7 @@ blogs_data = [
 
 <h3>Drifting Near Bird Colonies</h3>
 <p>We cut the engines and drift silently when approaching nesting bird colonies. This prevents nesting mothers from leaving their eggs, protecting the lake's bird populations.</p>
-<p>Book an ethical photography safari: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book an ethical photography safari: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['ethical photography', 'wildlife viewing rules', 'bird conservation']
     },
@@ -1236,7 +1236,7 @@ blogs_data = [
 
 <h3>Le Safari Combo Crescent Island</h3>
 <p>Combinez votre promenade en bateau avec un safari à pied sur Crescent Island. Marchez au milieu des girafes, des zèbres et des gnous en toute sécurité.</p>
-<p>Contactez-nous sur WhatsApp pour réserver en français: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Contactez-nous sur WhatsApp pour réserver en français: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lac naivasha kenya croisiere', 'excursion bateau naivasha', 'guide voyage kenya']
     },
@@ -1248,7 +1248,7 @@ blogs_data = [
 <p>Eine <strong>Bootsfahrt auf dem Naivashasee</strong> ist ein absolutes Highlight jeder Kenia-Reise. Erleben Sie Nilpferde aus nächster Nähe und beobachten Sie die majestätischen Afrikanischen Seeadler bei der Jagd.</p>
 
 <h3>Preise und Buchung</h3>
-<p>Rafiki bietet transparente Festpreise ohne versteckte Gebühren. Buchen Sie direkt über WhatsApp (<a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>), um Strandvermittler zu umgehen und sich die besten Tarife zu sichern.</p>
+<p>Rafiki bietet transparente Festpreise ohne versteckte Gebühren. Buchen Sie direkt über WhatsApp (<a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>), um Strandvermittler zu umgehen und sich die besten Tarife zu sichern.</p>
 
 <h3>Sicherheit an Bord</h3>
 <p>Unsere Boote sind lizenziert und mit geprüften Rettungswesten für Erwachsene und Kinder ausgestattet. Unsere erfahrenen Kapitäne garantieren eine sichere Fahrt.</p>
@@ -1266,7 +1266,7 @@ blogs_data = [
 <p>Nuestro tour estrella combina el paseo en bote con una caminata en la isla Crescent, donde podrás caminar junto a jirafas y cebras sin peligro.</p>
 
 <h3>Reserva Directa sin Intermediarios</h3>
-<p>Evita los sobreprecios de la playa. Reserva directamente con nosotros por WhatsApp al <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a> y asegura tu horario.</p>
+<p>Evita los sobreprecios de la playa. Reserva directamente con nosotros por WhatsApp al <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a> y asegura tu horario.</p>
 """,
         'tags': ['paseo en bote lago naivasha', 'lago naivasha excursión', 'viajar a kenia']
     },
@@ -1278,7 +1278,7 @@ blogs_data = [
 <p>Preparati per un'indimenticabile <strong>escursione in barca sul Lago Naivasha</strong>. Ammira gli ippopotami da vicino e osserva le aquile pescatrici africane in azione.</p>
 
 <h3>Sicurezza e Comfort</h3>
-<p>Le nostre barche sono sicure e dotate di giubbotti di salvataggio per tutte le età. Prenota direttamente su WhatsApp al <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a> per ricevere assistenza in italiano.</p>
+<p>Le nostre barche sono sicure e dotate di giubbotti di salvataggio per tutte le età. Prenota direttamente su WhatsApp al <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a> per ricevere assistenza in italiano.</p>
 """,
         'tags': ['giro in barca lago naivasha', 'escursione naivasha', 'safari ippopotami']
     },
@@ -1294,7 +1294,7 @@ blogs_data = [
 
 <h3>Language and Guiding</h3>
 <p>All our captains are fluent in English and Swahili, and they provide professional ecological commentary throughout your ride.</p>
-<p>Book your international visitor tour: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your international visitor tour: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['international tourist guide', 'kenya safari tips', 'naivasha tour']
     },
@@ -1306,7 +1306,7 @@ blogs_data = [
 <p>Pour éviter les pièges tarifaires à l'arrivée au lac, voici un guide clair des prix pour nos visiteurs francophones.</p>
 
 <h3>Tarifs Directs sans Commission</h3>
-<p>En réservant directement avec Rafiki via WhatsApp (<a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>), vous payez le prix juste sans les commissions des rabatteurs de la plage.</p>
+<p>En réservant directement avec Rafiki via WhatsApp (<a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>), vous payez le prix juste sans les commissions des rabatteurs de la plage.</p>
 <p>Nos gilets de sauvetage sont gratuits et nettoyés tous les jours pour votre confort.</p>
 """,
         'tags': ['lac naivasha tarifs', 'excursion bateau kenya', 'voyage naivasha']
@@ -1320,7 +1320,7 @@ blogs_data = [
 
 <h3>Transparente Gruppen- und Privatpreise</h3>
 <p>Eine private Bootsfahrt kostet je nach Dauer und Bootstyp einen festen Charterpreis. Es gibt keine versteckten Kosten für Schwimmwesten oder Sicherheitsausrüstung.</p>
-<p>Sichern Sie sich Ihren Wunschtermin direkt per WhatsApp auf Deutsch: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Sichern Sie sich Ihren Wunschtermin direkt per WhatsApp auf Deutsch: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['naivashasee preise', 'bootsfahrt kosten', 'kenia urlaub']
     },
@@ -1332,7 +1332,7 @@ blogs_data = [
 <p>Al llegar a la playa pública de Karagita, muchos intermediarios intentarán venderte tours a precios inflados. Sigue estos consejos para evitar estafas.</p>
 
 <h3>Precios Oficiales y Transparentes</h3>
-<p>Rafiki ofrece tarifas fijas publicadas directamente en nuestra web y WhatsApp (<a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>). Al pre-reserva online, te garantizamos el precio correcto y un capitán certificado.</p>
+<p>Rafiki ofrece tarifas fijas publicadas directamente en nuestra web y WhatsApp (<a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>). Al pre-reserva online, te garantizamos el precio correcto y un capitán certificado.</p>
 """,
         'tags': ['lago naivasha precios', 'evitar estafas kenia', 'paseo en bote']
     },
@@ -1345,7 +1345,7 @@ blogs_data = [
 
 <h3>Nessun Costo Nascosto</h3>
 <p>Le tariffe di Rafiki includono sempre l'attrezzatura di sicurezza e la guida naturalistica. Non ci sono costi aggiuntivi per i gilet di salvataggio.</p>
-<p>Prenota ora il tuo tour in barca: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Prenota ora il tuo tour in barca: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lago naivasha prezzi', 'escursione barca kenya', 'tours naivasha']
     },
@@ -1358,7 +1358,7 @@ blogs_data = [
 
 <h3>Gilets de Sauvetage pour Bébés</h3>
 <p>Nous disposons de gilets de sauvetage homologués adaptés aux bébés et aux jeunes enfants. Informez-nous de leur âge lors de votre réservation.</p>
-<p>Réservez votre excursion en famille: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Réservez votre excursion en famille: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lac naivasha en famille', 'securite enfants bateau', 'voyage kenia']
     },
@@ -1371,7 +1371,7 @@ blogs_data = [
 
 <h3>Die beste Tageszeit</h3>
 <p>Am frühen Morgen sind die Nilpferde besonders aktiv und schwimmen oft an der Wasseroberfläche. Unsere Kapitäne halten einen Sicherheitsabstand von mindestens 50 Metern ein, um die Tiere nicht zu stören.</p>
-<p>Buchen Sie Ihre Naturführung per WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Buchen Sie Ihre Naturführung per WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['naivashasee nilpferde', 'flusspferd safari', 'naturfotografie kenia']
     },
@@ -1384,7 +1384,7 @@ blogs_data = [
 
 <h3>Chalecos Especiales para Bebés</h3>
 <p>Contamos con chalecos salvavidas diseñados específicamente para bebés y niños pequeños, garantizando su flotabilidad y comodidad.</p>
-<p>Pre-reserva tu tour familiar en español por WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Pre-reserva tu tour familiar en español por WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['lago naivasha con niños', 'seguridad infantil', 'safari familiar']
     },
@@ -1397,7 +1397,7 @@ blogs_data = [
 
 <h3>Cosa Vedere in Barca</h3>
 <p>Ammira la maestosa Aquila pescatrice africana, il Martin pescatore malachite e le colonie di pellicani bianchi che nidificano tra i canneti di papiro.</p>
-<p>Prenota il tuo tour fotografico su WhatsApp: <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Prenota il tuo tour fotografico su WhatsApp: <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['birdwatching lago naivasha', 'fotografia naturalistica', 'escursioni kenia']
     },
@@ -1410,7 +1410,7 @@ blogs_data = [
 
 <h3>Idéal pour les Lunes de Miel</h3>
 <p>Naviguez en toute intimité alors que le soleil se couche derrière l'escarpement de Mau, teintant l'eau de reflets dorés et orangés. Nous pouvons organiser du champagne à bord sur demande.</p>
-<p>Réservez votre croisière romantique: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Réservez votre croisière romantique: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['croisiere coucher de soleil', 'lune de miel kenya', 'lac naivasha couple']
     },
@@ -1423,7 +1423,7 @@ blogs_data = [
 
 <h3>Flitterwochen-Special</h3>
 <p>Gleiten Sie lautlos durch das ruhige Wasser, während die Sonne hinter den Bergen versinkt und die Nilpferde aktiv werden. Auf Wunsch stellen wir gekühlten Sekt an Bord bereit.</p>
-<p>Buchen Sie Ihre romantische Bootsfahrt: WhatsApp <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Buchen Sie Ihre romantische Bootsfahrt: WhatsApp <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['sonnenuntergang bootsfahrt', 'flitterwochen kenia', 'naivashasee paare']
     },
@@ -1443,7 +1443,7 @@ blogs_data = [
 
 <h3>2. The Western Papyrus Channels</h3>
 <p>A quiet network of channels home to the malachite kingfisher, the purple swamphen, and the rare papyrus gonolek.</p>
-<p>Book a dedicated birding tour with a naturalist captain: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a dedicated birding tour with a naturalist captain: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['bird watching spots', 'lake naivasha birding', 'rare birds kenya']
     },
@@ -1459,7 +1459,7 @@ blogs_data = [
 
 <h3>Captain Coordination</h3>
 <p>Our captains know the eagles' favorite perches and how to position the boat relative to the sun, ensuring you shoot with back-lighting or side-lighting as preferred.</p>
-<p>Book an action photography cruise: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book an action photography cruise: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['fish eagle dive', 'action photography tips', 'lake naivasha birds']
     },
@@ -1475,7 +1475,7 @@ blogs_data = [
 
 <h3>Custom Catering & Day Plans</h3>
 <p>We work with lakeside hotels to arrange group breakfasts, lunches, and cycling excursions, creating a seamless itinerary for your company.</p>
-<p>Get a custom corporate quote: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Get a custom corporate quote: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['corporate retreats', 'team building naivasha', 'group boat tour']
     },
@@ -1491,7 +1491,7 @@ blogs_data = [
 
 <h3>Champagne and Fruit Upgrades</h3>
 <p>We can coordinate with your lodge to provide a bottle of chilled champagne and a fresh fruit platter on board to celebrate your special occasion.</p>
-<p>Reserve your romantic honeymoon cruise: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Reserve your romantic honeymoon cruise: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['naivasha honeymoon', 'romantic sunset cruise', 'couples travel']
     },
@@ -1507,7 +1507,7 @@ blogs_data = [
 
 <h3>2. Sanctuary Farm</h3>
 <p>A private riparian sanctuary charging a small entry fee, offering beautiful green lawns where you can relax alongside zebras and giraffes.</p>
-<p>Book your boat transfer and picnic day trip: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book your boat transfer and picnic day trip: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['picnic spots naivasha', 'outdoor relaxation', 'crescent island picnic']
     },
@@ -1523,7 +1523,7 @@ blogs_data = [
 
 <h3>2. Great White Pelican</h3>
 <p>Huge, white birds with large yellow pouches under their bills. They often swim together in groups, scooping up fish in unison.</p>
-<p>Book a beginner-friendly nature cruise: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a beginner-friendly nature cruise: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['beginner birding', 'bird identification tips', 'naivasha nature']
     },
@@ -1539,7 +1539,7 @@ blogs_data = [
 
 <h3>Optimal Fishing Hours</h3>
 <p>Bass feed actively during the low-light hours of dawn (**6:30 AM – 8:30 AM**) and dusk (**5:00 PM – 6:30 PM**). Early morning offers the best surface action.</p>
-<p>Book a private fishing charter: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a private fishing charter: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['bass fishing naivasha', 'sport fishing kenya', 'fishing lures']
     },
@@ -1555,7 +1555,7 @@ blogs_data = [
 
 <h3>Nesting Pelican Colonies</h3>
 <p>Oloidien's quiet shorelines are major nesting grounds for great white pelicans. A boat ride through the connecting channel offers beautiful views of nesting colonies.</p>
-<p>Book a tour covering both lakes: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a tour covering both lakes: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['oloidien bay flamingos', 'lake naivasha pelicans', 'rift valley ecology']
     },
@@ -1571,7 +1571,7 @@ blogs_data = [
 
 <h3>2. Capture Behavior</h3>
 <p>Wait for active moments: ear flicking, yawning (threat display), or sparring. Keep your camera set to burst mode to capture the action.</p>
-<p>Book a photography-focused boat charter: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Book a photography-focused boat charter: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['hippo photography', 'wildlife exposure tips', 'safari photos']
     },
@@ -1589,7 +1589,7 @@ blogs_data = [
     <li><strong>Lakeside Tilapia Lunch:</strong> KES 2,500 – 3,500 for the group.</li>
     <li><strong>Total Group Cost:</strong> Approximately KES 12,000 (KES 3,000 per person).</li>
 </ul>
-<p>Get a direct, transparent quote for your group size: WhatsApp Rafiki at <a href="https://wa.me/254729280380"><strong>+254 729 280 380</strong></a>.</p>
+<p>Get a direct, transparent quote for your group size: WhatsApp Rafiki at <a href="https://wa.me/254701215295"><strong>+254 701 215 295</strong></a>.</p>
 """,
         'tags': ['naivasha day trip budget', 'travel cost breakdown', 'direct boat rates']
     }
