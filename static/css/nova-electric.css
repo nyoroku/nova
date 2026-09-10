@@ -34,6 +34,14 @@
   --shadow-lg: 0 16px 40px rgba(19, 18, 24, 0.12);
   --shadow-electric: 0 10px 30px rgba(103, 80, 232, 0.25);
   --shadow-lime: 0 8px 25px rgba(200, 240, 74, 0.35);
+
+  --header-height: 72px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
 }
 
 /* Global Reset & Base */
@@ -95,6 +103,14 @@ img {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+@media (max-width: 480px) {
+  .nova-shell,
+  .nova-shell-narrow {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }
 
 /* Typography Extensions */
@@ -408,23 +424,122 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  background-color: rgba(19, 18, 24, 0.95);
-  backdrop-filter: blur(12px);
+  z-index: 1000;
+  background-color: rgba(19, 18, 24, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  height: 72px;
+  height: var(--header-height, 72px);
   display: flex;
   align-items: center;
+  padding-top: env(safe-area-inset-top, 0px);
+  box-sizing: border-box;
+}
+
+.nova-header-shell {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .nova-header-shell {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Brand Lockup */
+.nova-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.nova-brand-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(103, 80, 232, 0.45));
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.nova-brand:hover .nova-brand-logo {
+  transform: scale(1.05);
+}
+
+.nova-brand-text {
+  line-height: 1.15;
+  display: flex;
+  flex-direction: column;
+}
+
+.nova-brand-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+}
+
+.nova-brand-subtitle {
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--color-acid-lime);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+@media (max-width: 380px) {
+  .nova-brand-title {
+    font-size: 1.1rem;
+  }
+  .nova-brand-subtitle {
+    font-size: 0.58rem;
+    letter-spacing: 0.05em;
+  }
+  .nova-brand-logo {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* Desktop Navigation Menu */
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex;
+  }
 }
 
 .nova-nav-link {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.85);
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: var(--radius-pill);
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .nova-nav-link:hover {
@@ -434,19 +549,233 @@ img {
 
 .nova-nav-link.active {
   color: var(--color-acid-lime);
+  background-color: rgba(200, 240, 74, 0.12);
 }
 
-/* Mobile Drawer */
+/* Header Right Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .header-actions {
+    gap: 12px;
+  }
+}
+
+/* Language Switcher Pill */
+.lang-switcher-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-pill);
+  color: #FFFFFF;
+  padding: 6px 11px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 38px;
+  box-sizing: border-box;
+}
+
+.lang-switcher-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Header WhatsApp Mobile Quick Touch Button (< 768px) */
+.header-wa-mobile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.header-wa-mobile:active {
+  transform: scale(0.92);
+}
+
+@media (min-width: 768px) {
+  .header-wa-mobile {
+    display: none !important;
+  }
+}
+
+/* Header Desktop / Tablet CTA Button (>= 768px) */
+.header-cta-desktop {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .header-cta-desktop {
+    display: inline-flex !important;
+    min-height: 40px;
+    padding: 8px 18px;
+    font-size: 0.88rem;
+  }
+}
+
+/* Mobile Menu Toggle Button (< 1024px) */
+.mobile-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mobile-toggle:active {
+  transform: scale(0.94);
+}
+
+@media (min-width: 1024px) {
+  .mobile-toggle {
+    display: none !important;
+  }
+}
+
+/* Header Spacer */
+.nova-header-spacer {
+  height: var(--header-height, 72px);
+  width: 100%;
+}
+
+/* Fullscreen / Drawer Mobile Menu */
 .nova-mobile-menu {
   position: fixed;
-  top: 72px;
+  top: var(--header-height, 72px);
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-obsidian);
-  z-index: 99;
-  padding: 24px;
+  background: rgba(17, 16, 22, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 999;
+  padding: 16px 20px 32px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 1024px) {
+  .nova-mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Mobile Nav Drawer Links */
+.mobile-nav-group-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-acid-lime);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.mobile-nav-group-title:first-child {
+  margin-top: 0;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 6px;
+  transition: all 0.18s ease;
+  min-height: 46px;
+}
+
+.mobile-nav-link:active,
+.mobile-nav-link:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--color-acid-lime);
+  border-color: rgba(200, 240, 74, 0.25);
+  transform: translateX(2px);
+}
+
+.mobile-nav-link-highlight {
+  color: var(--color-acid-lime);
+  background: rgba(200, 240, 74, 0.08);
+  border-color: rgba(200, 240, 74, 0.2);
+}
+
+/* Floating WhatsApp Action */
+.nova-floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 90;
+}
+
+.nova-floating-whatsapp a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #FFF;
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.92rem;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nova-floating-whatsapp a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 640px) {
+  .nova-floating-whatsapp {
+    bottom: max(16px, env(safe-area-inset-bottom, 16px));
+    right: max(16px, env(safe-area-inset-right, 16px));
+  }
+  .nova-floating-whatsapp a {
+    padding: 10px 16px;
+    font-size: 0.86rem;
+    gap: 8px;
+  }
 }
 
 /* Section Spacing */
@@ -472,20 +801,29 @@ img {
 /* Responsive Grid helpers */
 .nova-grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 24px;
 }
 
 .nova-grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 24px;
 }
 
 .nova-grid-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .nova-grid-2,
+  .nova-grid-3,
+  .nova-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 768px) {
