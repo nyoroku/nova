@@ -284,3 +284,63 @@ msgstr "Privé Bootcharter"
 
 msgid "All rights reserved. Registered in Kenya."
 msgstr "Alle rechten voorbehouden. Geregistreerd in Kenia."
+
+msgid "Meet Our Certified Lake Naivasha Captains"
+msgstr "Ontmoet Onze Gecertificeerde Schippers op Lake Naivasha"
+
+msgid "Certified Lake Naivasha Captains"
+msgstr "Gecertificeerde Schippers Lake Naivasha"
+
+msgid "Lead Operations Captain & Crescent Island Specialist"
+msgstr "Hoofd Operaties Schipper & Crescent Island Specialist"
+
+msgid "Senior Wildlife & Birding Safari Captain"
+msgstr "Senior Schipper Wildlife- & Vogelsafari"
+
+msgid "14 Years on Lake Naivasha"
+msgstr "14 Jaar op Lake Naivasha"
+
+msgid "11 Years on Lake Naivasha"
+msgstr "11 Jaar op Lake Naivasha"
+
+msgid "100% Safety Compliance"
+msgstr "100% Veiligheidsnaleving"
+
+msgid "Crescent Island Specialist"
+msgstr "Crescent Island Specialist"
+
+msgid "Request Captain Aizo on WhatsApp"
+msgstr "Vraag Schipper Aizo aan via WhatsApp"
+
+msgid "Request Captain Josphat on WhatsApp"
+msgstr "Vraag Schipper Josphat aan via WhatsApp"
+
+msgid "Active on Lake"
+msgstr "Actief op het Meer"
+
+msgid "Overall Rating"
+msgstr "Totale Beoordeling"
+
+msgid "Based on 186+ verified reviews"
+msgstr "Gebaseerd op 186+ geverifieerde beoordelingen"
+
+msgid "Beach Haggling"
+msgstr "Geen Strand-Onderhandelingen"
+
+msgid "Captain Experience"
+msgstr "Schipperservaring"
+
+msgid "Fitted child & adult life vests"
+msgstr "Passende reddingsvesten voor kinderen en volwassenen"
+
+msgid "Transparent pre-booked rates"
+msgstr "Transparante vooraf geboekte tarieven"
+
+msgid "Licensed local lake captains"
+msgstr "Gelicentieerde lokale schippers"
+
+msgid "Verified Trip"
+msgstr "Geverifieerde Reis"
+
+msgid "View Ride"
+msgstr "Bekijk Tocht"

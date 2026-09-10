@@ -280,3 +280,63 @@ msgstr "私人专属包船"
 
 msgid "All rights reserved. Registered in Kenya."
 msgstr "版权所有。肯尼亚合法注册。"
+
+msgid "Meet Our Certified Lake Naivasha Captains"
+msgstr "结识我们经验丰富的奈瓦沙湖认证船长"
+
+msgid "Certified Lake Naivasha Captains"
+msgstr "奈瓦沙湖持证船长"
+
+msgid "Lead Operations Captain & Crescent Island Specialist"
+msgstr "首席运营船长兼新月岛专家"
+
+msgid "Senior Wildlife & Birding Safari Captain"
+msgstr "资深野生动物与观鸟巡游船长"
+
+msgid "14 Years on Lake Naivasha"
+msgstr "奈瓦沙湖14年航行经验"
+
+msgid "11 Years on Lake Naivasha"
+msgstr "奈瓦沙湖11年航行经验"
+
+msgid "100% Safety Compliance"
+msgstr "100%安全合规"
+
+msgid "Crescent Island Specialist"
+msgstr "新月岛专属专家"
+
+msgid "Request Captain Aizo on WhatsApp"
+msgstr "在 WhatsApp 上预约 Aizo 船长"
+
+msgid "Request Captain Josphat on WhatsApp"
+msgstr "在 WhatsApp 上预约 Josphat 船长"
+
+msgid "Active on Lake"
+msgstr "现正当值"
+
+msgid "Overall Rating"
+msgstr "综合评分"
+
+msgid "Based on 186+ verified reviews"
+msgstr "基于186+条真实游客评价"
+
+msgid "Beach Haggling"
+msgstr "无沙滩拉客与漫天要价"
+
+msgid "Captain Experience"
+msgstr "资深船长领航"
+
+msgid "Fitted child & adult life vests"
+msgstr "儿童与成人专用合身救生衣"
+
+msgid "Transparent pre-booked rates"
+msgstr "透明预订一口价，无隐形费用"
+
+msgid "Licensed local lake captains"
+msgstr "当地持证专业湖泊船长"
+
+msgid "Verified Trip"
+msgstr "真实出游"
+
+msgid "View Ride"
+msgstr "查看游船详情"

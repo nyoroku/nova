@@ -563,41 +563,43 @@ for pdata in packages_data:
 print(f"[OK] Seeded {len(packages_data)} Packages.")
 
 # 7. CAPTAINS & CREW
+Captain.objects.exclude(slug__in=['captain-aizo-gateru', 'captain-josphat-muriuki']).delete()
+
 Captain.objects.update_or_create(
-    slug='captain-dennis-maina',
+    slug='captain-aizo-gateru',
     defaults={
-        'name': 'Captain Dennis Maina',
-        'role_title': 'Senior Lake Operations Lead & Captain',
-        'photo': 'crew/captain-dennis-maina.jpg',
-        'webp_image': 'crew/captain-dennis-maina.webp',
-        'webp_mobile': 'crew/captain-dennis-maina_mobile.webp',
-        'years_on_lake': 12,
-        'route_specialties': 'Hippo family territories, Crescent Island navigation, late afternoon wind management',
+        'name': 'Captain Aizo Gateru',
+        'role_title': 'Lead Operations Captain & Crescent Island Specialist',
+        'photo': 'crew/captain-aizo-gateru.jpg',
+        'webp_image': 'crew/captain-aizo-gateru.webp',
+        'webp_mobile': 'crew/captain-aizo-gateru_mobile.webp',
+        'years_on_lake': 14,
+        'route_specialties': 'Crescent Island navigation, Lake Naivasha boat timing coordination, hippo buffer zones & deep channel navigation',
         'languages': 'English, Swahili',
-        'bio': 'Dennis has navigated Lake Naivasha daily for over a decade. His intimate knowledge of changing water levels and hippo pod movements ensures guests experience the lake safely and at the most rewarding times.',
-        'quote': 'The lake changes every single week. Knowing where the water is deep, where the hippos feed, and when the wind will rise is what makes a great lake day.',
+        'bio': "Captain Aizo Gateru leads Nova's on-water operations along South Lake Road. With over 14 years steering Lake Naivasha boat rides and private boat safari tours, Aizo specializes in direct hotel jetty departures and smooth Crescent Island crossings. Ranked with top guest review scores, he is renowned for navigating tranquil hippo channels and sharing deep geographical knowledge of the Great Rift Valley.",
+        'quote': 'On Lake Naivasha, water timing and safety come first. When you depart at the optimal boat timing with certified gear, every boat ride Naivasha experience is unforgettable.',
         'order': 1,
         'is_active': True,
     }
 )
 Captain.objects.update_or_create(
-    slug='captain-peter-kariuki',
+    slug='captain-josphat-muriuki',
     defaults={
-        'name': 'Captain Peter Kariuki',
-        'role_title': 'Birding & Sunset Specialist Captain',
-        'photo': 'crew/captain-peter-kariuki.jpg',
-        'webp_image': 'crew/captain-peter-kariuki.webp',
-        'webp_mobile': 'crew/captain-peter-kariuki_mobile.webp',
-        'years_on_lake': 8,
-        'route_specialties': 'Kingfisher spotting, fish eagle call response, calm morning water drift',
+        'name': 'Captain Josphat Muriuki',
+        'role_title': 'Senior Wildlife & Birding Safari Captain',
+        'photo': 'crew/captain-josphat-muriuki.jpg',
+        'webp_image': 'crew/captain-josphat-muriuki.webp',
+        'webp_mobile': 'crew/captain-josphat-muriuki_mobile.webp',
+        'years_on_lake': 11,
+        'route_specialties': 'African fish eagle calling, kingfisher coves, Oloidien flamingo lagoons, sunrise photography',
         'languages': 'English, Swahili',
-        'bio': 'Specializing in birding photography voyages and calm morning departures across papyrus coves.',
-        'quote': 'Patience is everything on Lake Naivasha. When you shut the motor and drift quietly, nature opens up.',
+        'bio': "Captain Josphat Muriuki is Nova's wildlife and photography specialist for every Lake Naivasha boat safari. With 11 years on the water, Josphat knows each hippo family territory and birding inlet from Crescent Island to the eastern wetlands. Frequent travelers praise his calm navigation in verified boat reviews, highlighting his uncanny ability to spot malachite kingfishers and call African fish eagles for breathtaking photo opportunities.",
+        'quote': 'Lake Naivasha is home to over 400 bird species and resident hippo pods. When we drift quietly during early morning boat timing, wildlife comes right to you.',
         'order': 2,
         'is_active': True,
     }
 )
-print("[OK] Seeded Captain profiles.")
+print("[OK] Seeded Captain Aizo Gateru and Captain Josphat Muriuki.")
 
 # 8. TESTIMONIALS
 testimonials_data = [
@@ -605,7 +607,7 @@ testimonials_data = [
         'guest_name': 'Wanjiku & Brian M.',
         'guest_segment': 'COUPLE',
         'rating': 5,
-        'text': 'The best Lake Naivasha boat ride we have ever experienced! We booked a private sunset cruise directly from our hotel jetty. Dennis was a phenomenal captain who knew the exact timing for golden hour hippo photography.',
+        'text': 'The best Lake Naivasha boat ride we have ever experienced! We booked a private sunset cruise directly from our hotel jetty. Captain Aizo Gateru was phenomenal and knew the exact boat timing for golden hour hippo photography.',
         'trip_date': 'August 2026',
         'is_featured': True,
     },

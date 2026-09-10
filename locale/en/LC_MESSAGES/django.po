@@ -284,3 +284,63 @@ msgstr "Private Boat Charter"
 
 msgid "All rights reserved. Registered in Kenya."
 msgstr "All rights reserved. Registered in Kenya."
+
+msgid "Meet Our Certified Lake Naivasha Captains"
+msgstr "Meet Our Certified Lake Naivasha Captains"
+
+msgid "Certified Lake Naivasha Captains"
+msgstr "Certified Lake Naivasha Captains"
+
+msgid "Lead Operations Captain & Crescent Island Specialist"
+msgstr "Lead Operations Captain & Crescent Island Specialist"
+
+msgid "Senior Wildlife & Birding Safari Captain"
+msgstr "Senior Wildlife & Birding Safari Captain"
+
+msgid "14 Years on Lake Naivasha"
+msgstr "14 Years on Lake Naivasha"
+
+msgid "11 Years on Lake Naivasha"
+msgstr "11 Years on Lake Naivasha"
+
+msgid "100% Safety Compliance"
+msgstr "100% Safety Compliance"
+
+msgid "Crescent Island Specialist"
+msgstr "Crescent Island Specialist"
+
+msgid "Request Captain Aizo on WhatsApp"
+msgstr "Request Captain Aizo on WhatsApp"
+
+msgid "Request Captain Josphat on WhatsApp"
+msgstr "Request Captain Josphat on WhatsApp"
+
+msgid "Active on Lake"
+msgstr "Active on Lake"
+
+msgid "Overall Rating"
+msgstr "Overall Rating"
+
+msgid "Based on 186+ verified reviews"
+msgstr "Based on 186+ verified reviews"
+
+msgid "Beach Haggling"
+msgstr "Beach Haggling"
+
+msgid "Captain Experience"
+msgstr "Captain Experience"
+
+msgid "Fitted child & adult life vests"
+msgstr "Fitted child & adult life vests"
+
+msgid "Transparent pre-booked rates"
+msgstr "Transparent pre-booked rates"
+
+msgid "Licensed local lake captains"
+msgstr "Licensed local lake captains"
+
+msgid "Verified Trip"
+msgstr "Verified Trip"
+
+msgid "View Ride"
+msgstr "View Ride"

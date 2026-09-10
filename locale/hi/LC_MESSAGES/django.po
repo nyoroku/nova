@@ -284,3 +284,63 @@ msgstr "निजी नाव चार्टर"
 
 msgid "All rights reserved. Registered in Kenya."
 msgstr "सर्वाधिकार सुरक्षित। केन्या में पंजीकृत।"
+
+msgid "Meet Our Certified Lake Naivasha Captains"
+msgstr "हमारे प्रमाणित लेक नैवाशा कप्तानों से मिलें"
+
+msgid "Certified Lake Naivasha Captains"
+msgstr "प्रमाणित लेक नैवाशा कप्तान"
+
+msgid "Lead Operations Captain & Crescent Island Specialist"
+msgstr "प्रमुख संचालन कप्तान और क्रिसेंट द्वीप विशेषज्ञ"
+
+msgid "Senior Wildlife & Birding Safari Captain"
+msgstr "वरिष्ठ वन्यजीव और पक्षी सफारी कप्तान"
+
+msgid "14 Years on Lake Naivasha"
+msgstr "लेक नैवाशा पर 14 वर्षों का अनुभव"
+
+msgid "11 Years on Lake Naivasha"
+msgstr "लेक नैवाशा पर 11 वर्षों का अनुभव"
+
+msgid "100% Safety Compliance"
+msgstr "100% सुरक्षा अनुपालन"
+
+msgid "Crescent Island Specialist"
+msgstr "क्रिसेंट द्वीप विशेषज्ञ"
+
+msgid "Request Captain Aizo on WhatsApp"
+msgstr "व्हाट्सएप पर कप्तान आइज़ो का अनुरोध करें"
+
+msgid "Request Captain Josphat on WhatsApp"
+msgstr "व्हाट्सएप पर कप्तान जोस्फेट का अनुरोध करें"
+
+msgid "Active on Lake"
+msgstr "झील पर सक्रिय"
+
+msgid "Overall Rating"
+msgstr "समग्र रेटिंग"
+
+msgid "Based on 186+ verified reviews"
+msgstr "186+ सत्यापित समीक्षाओं के आधार पर"
+
+msgid "Beach Haggling"
+msgstr "समुद्र तट पर मोलभाव नहीं"
+
+msgid "Captain Experience"
+msgstr "कप्तान का अनुभव"
+
+msgid "Fitted child & adult life vests"
+msgstr "बच्चों और वयस्कों के लिए फिट लाइफ जैकेट"
+
+msgid "Transparent pre-booked rates"
+msgstr "पारदर्शी पूर्व-बुक की गई दरें"
+
+msgid "Licensed local lake captains"
+msgstr "लाइसेंस प्राप्त स्थानीय झील कप्तान"
+
+msgid "Verified Trip"
+msgstr "सत्यापित यात्रा"
+
+msgid "View Ride"
+msgstr "सवारी देखें"

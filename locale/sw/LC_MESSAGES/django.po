@@ -289,3 +289,63 @@ msgstr "Mashua Binafsi ya Kukodi"
 
 msgid "All rights reserved. Registered in Kenya."
 msgstr "Haki zote zimehifadhiwa. Imesajiliwa Kenya."
+
+msgid "Meet Our Certified Lake Naivasha Captains"
+msgstr "Kutana na Manahodha Wetu Walioidhinishwa wa Ziwa Naivasha"
+
+msgid "Certified Lake Naivasha Captains"
+msgstr "Manahodha Walioidhinishwa wa Ziwa Naivasha"
+
+msgid "Lead Operations Captain & Crescent Island Specialist"
+msgstr "Nahodha Mkuu wa Uendeshaji na Mtaalamu wa Kisiwa cha Crescent"
+
+msgid "Senior Wildlife & Birding Safari Captain"
+msgstr "Nahodha Mwandamizi wa Safari za Wanyamapori na Ndege"
+
+msgid "14 Years on Lake Naivasha"
+msgstr "Miaka 14 kwenye Ziwa Naivasha"
+
+msgid "11 Years on Lake Naivasha"
+msgstr "Miaka 11 kwenye Ziwa Naivasha"
+
+msgid "100% Safety Compliance"
+msgstr "Uzingatiaji wa Usalama kwa 100%"
+
+msgid "Crescent Island Specialist"
+msgstr "Mtaalamu wa Kisiwa cha Crescent"
+
+msgid "Request Captain Aizo on WhatsApp"
+msgstr "Omba Nahodha Aizo kupitia WhatsApp"
+
+msgid "Request Captain Josphat on WhatsApp"
+msgstr "Omba Nahodha Josphat kupitia WhatsApp"
+
+msgid "Active on Lake"
+msgstr "Yuko Ziwani"
+
+msgid "Overall Rating"
+msgstr "Ukadiriaji wa Jumla"
+
+msgid "Based on 186+ verified reviews"
+msgstr "Kulingana na maoni 186+ yaliyothibitishwa"
+
+msgid "Beach Haggling"
+msgstr "Kupatana Bei Ufukweni"
+
+msgid "Captain Experience"
+msgstr "Uzoefu wa Nahodha"
+
+msgid "Fitted child & adult life vests"
+msgstr "Mavazi ya kujiokoa yaliyopimwa kwa watoto na watu wazima"
+
+msgid "Transparent pre-booked rates"
+msgstr "Bei wazi zilizowekwa kabla ya safari"
+
+msgid "Licensed local lake captains"
+msgstr "Manahodha wa kienyeji walioidhinishwa wa ziwa"
+
+msgid "Verified Trip"
+msgstr "Safari Iliyothibitishwa"
+
+msgid "View Ride"
+msgstr "Tazama Safari"

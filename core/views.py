@@ -19,7 +19,8 @@ class HomeView(TemplateView):
         context['featured_stays'] = AccommodationProperty.objects.filter(is_active=True).order_by('order')[:3]
         context['featured_packages'] = Package.objects.filter(is_active=True).order_by('order')[:3]
         context['captain'] = Captain.objects.filter(is_active=True).first()
-        context['testimonials'] = Testimonial.objects.filter(is_active=True)[:4]
+        context['captains'] = Captain.objects.filter(is_active=True).order_by('order')
+        context['testimonials'] = Testimonial.objects.filter(is_active=True)[:6]
         context['quick_faqs'] = QuestionAnswer.objects.filter(is_active=True).order_by('order')[:8]
         context['latest_notes'] = GuideArticle.objects.filter(is_active=True).order_by('-published_at')[:4]
         return context

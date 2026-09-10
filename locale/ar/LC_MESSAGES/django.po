@@ -284,3 +284,63 @@ msgstr "قارب خاص للإيجار"
 
 msgid "All rights reserved. Registered in Kenya."
 msgstr "جميع الحقوق محفوظة. مسجل رسمياً في كينيا."
+
+msgid "Meet Our Certified Lake Naivasha Captains"
+msgstr "تعرف على قادة القوارب المعتمدين في بحيرة نايفاشا"
+
+msgid "Certified Lake Naivasha Captains"
+msgstr "قادة القوارب المعتمدون في بحيرة نايفاشا"
+
+msgid "Lead Operations Captain & Crescent Island Specialist"
+msgstr "كبير قادة العمليات وخبير جزيرة كريسنت"
+
+msgid "Senior Wildlife & Birding Safari Captain"
+msgstr "كبير قادة سفاري الحياة البرية والطيور"
+
+msgid "14 Years on Lake Naivasha"
+msgstr "14 عاماً في بحيرة نايفاشا"
+
+msgid "11 Years on Lake Naivasha"
+msgstr "11 عاماً في بحيرة نايفاشا"
+
+msgid "100% Safety Compliance"
+msgstr "امتثال كامل لمعايير السلامة بنسبة 100%"
+
+msgid "Crescent Island Specialist"
+msgstr "خبير جزيرة كريسنت"
+
+msgid "Request Captain Aizo on WhatsApp"
+msgstr "احجز مع القبطان آيزو عبر واتساب"
+
+msgid "Request Captain Josphat on WhatsApp"
+msgstr "احجز مع القبطان يوسفات عبر واتساب"
+
+msgid "Active on Lake"
+msgstr "نشط في البحيرة"
+
+msgid "Overall Rating"
+msgstr "التقييم العام"
+
+msgid "Based on 186+ verified reviews"
+msgstr "بناءً على أكثر من 186 تقييم حقيقي"
+
+msgid "Beach Haggling"
+msgstr "بدون مساومات عشوائية على الشاطئ"
+
+msgid "Captain Experience"
+msgstr "خبرة القبطان"
+
+msgid "Fitted child & adult life vests"
+msgstr "سترات نجاة مجهزة للأطفال والبالغين"
+
+msgid "Transparent pre-booked rates"
+msgstr "أسعار مسبقة الحجز وشفافة بالكامل"
+
+msgid "Licensed local lake captains"
+msgstr "قادة محليون مرخصون للبحيرة"
+
+msgid "Verified Trip"
+msgstr "رحلة مؤكدة"
+
+msgid "View Ride"
+msgstr "عرض تفاصيل الرحلة"

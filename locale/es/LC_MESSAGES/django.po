@@ -285,3 +285,63 @@ msgstr "Alquiler de Barco Privado"
 
 msgid "All rights reserved. Registered in Kenya."
 msgstr "Todos los derechos reservados. Registrado en Kenia."
+
+msgid "Meet Our Certified Lake Naivasha Captains"
+msgstr "Conozca a Nuestros Capitanes Certificados de Lake Naivasha"
+
+msgid "Certified Lake Naivasha Captains"
+msgstr "Capitanes Certificados del Lago Naivasha"
+
+msgid "Lead Operations Captain & Crescent Island Specialist"
+msgstr "Capitán Principal de Operaciones y Especialista en Crescent Island"
+
+msgid "Senior Wildlife & Birding Safari Captain"
+msgstr "Capitán Senior de Safaris de Vida Silvestre y Aves"
+
+msgid "14 Years on Lake Naivasha"
+msgstr "14 Años en el Lago Naivasha"
+
+msgid "11 Years on Lake Naivasha"
+msgstr "11 Años en el Lago Naivasha"
+
+msgid "100% Safety Compliance"
+msgstr "100% Cumplimiento de Seguridad"
+
+msgid "Crescent Island Specialist"
+msgstr "Especialista en Crescent Island"
+
+msgid "Request Captain Aizo on WhatsApp"
+msgstr "Solicitar al Capitán Aizo por WhatsApp"
+
+msgid "Request Captain Josphat on WhatsApp"
+msgstr "Solicitar al Capitán Josphat por WhatsApp"
+
+msgid "Active on Lake"
+msgstr "Activo en el Lago"
+
+msgid "Overall Rating"
+msgstr "Puntuación General"
+
+msgid "Based on 186+ verified reviews"
+msgstr "Basado en más de 186 opiniones verificadas"
+
+msgid "Beach Haggling"
+msgstr "Regateo en la Playa"
+
+msgid "Captain Experience"
+msgstr "Experiencia del Capitán"
+
+msgid "Fitted child & adult life vests"
+msgstr "Chalecos salvavidas ajustados para niños y adultos"
+
+msgid "Transparent pre-booked rates"
+msgstr "Tarifas transparentes reservadas con antelación"
+
+msgid "Licensed local lake captains"
+msgstr "Capitanes locales del lago autorizados"
+
+msgid "Verified Trip"
+msgstr "Viaje Verificado"
+
+msgid "View Ride"
+msgstr "Ver Paseo"
