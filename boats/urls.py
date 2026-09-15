@@ -39,8 +39,8 @@ urlpatterns = [
     path("tinymce/", include("tinymce.urls")),
     path('', include('seo.urls')),
 
-    # Sitemaps
-    path('sitemap.xml', sitemap_index, {'sitemaps': sitemaps, 'sitemap_url_name': 'sitemap_section'}, name='sitemap'),
+    # Sitemaps (XML for Google Search Console & Search Engines)
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     path('sitemap_index.xml', sitemap_index, {'sitemaps': sitemaps, 'sitemap_url_name': 'sitemap_section'}, name='sitemap_index'),
     path('sitemap-<section>.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap_section'),
     path('favicon.ico', RedirectView.as_view(url='/static/images/favicon.ico')),

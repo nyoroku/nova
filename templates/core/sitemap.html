@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}Sitemap | Nova Boat Rides Naivasha{% endblock %}
+{% block meta_description %}Complete sitemap for Nova Boat Rides Naivasha — browse all boat rides, hotel departures, accommodation, packages, guides, and planning resources for Lake Naivasha.{% endblock %}
+
+{% block content %}
+<section class="nova-section-dark" style="padding: 60px 0 40px;">
+  <div class="nova-shell">
+    <span class="nova-kicker nova-kicker-lime">{% trans "SITE NAVIGATION" %}</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 12px;">
+      {% trans "Sitemap" %}
+    </h1>
+    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px;">
+      {% trans "Browse every page on Nova Boat Rides Naivasha. Find boat rides, hotel departures, accommodation, packages, and planning guides." %}
+    </p>
+  </div>
+</section>
+
+<section class="nova-section" style="padding-top: 50px; padding-bottom: 60px;">
+  <div class="nova-shell">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 40px;">
+
+      <!-- Core Pages -->
+      <div>
+        <h2 style="font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ultraviolet); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--color-ultraviolet);">
+          {% trans "Main Pages" %}
+        </h2>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+          <li><a href="{% url 'core:home' %}" style="color: var(--color-text-body); font-weight: 600; text-decoration: none; font-size: 0.95rem;">{% trans "Home" %} — Nova Boat Rides Naivasha</a></li>
+          <li><a href="{% url 'core:about' %}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{% trans "About Nova & Our Captains" %}</a></li>
+          <li><a href="{% url 'core:prices' %}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{% trans "Prices" %} — {% trans "Boat Ride Pricing" %}</a></li>
+          <li><a href="{% url 'core:plan_naivasha' %}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{% trans "Plan Naivasha" %} — {% trans "Visitor Guide" %}</a></li>
+          <li><a href="{% url 'core:contact' %}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{% trans "Contact" %} & {% trans "Launch Base" %}</a></li>
+          <li><a href="{% url 'bookings:book' %}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{% trans "Book a Boat Ride" %}</a></li>
+        </ul>
+      </div>
+
+      <!-- Boat Rides -->
+      <div>
+        <h2 style="font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ultraviolet); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--color-ultraviolet);">
+          {% trans "Boat Rides" %}
+        </h2>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+          <li><a href="{% url 'tours:tour_list' %}" style="color: var(--color-text-body); font-weight: 600; text-decoration: none; font-size: 0.95rem;">{% trans "All Boat Rides" %}</a></li>
+          {% for tour in tours %}
+          <li><a href="{{ tour.get_absolute_url }}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{{ tour.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Hotel Departures -->
+      <div>
+        <h2 style="font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ultraviolet); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--color-ultraviolet);">
+          {% trans "Hotel Departures" %}
+        </h2>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+          <li><a href="{% url 'partners:hotel_hub' %}" style="color: var(--color-text-body); font-weight: 600; text-decoration: none; font-size: 0.95rem;">{% trans "From Your Hotel" %} — {% trans "Hotel Hub" %}</a></li>
+          {% for hotel in hotels %}
+          <li><a href="{{ hotel.get_absolute_url }}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{{ hotel.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Accommodation -->
+      <div>
+        <h2 style="font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ultraviolet); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--color-ultraviolet);">
+          {% trans "Stay" %}
+        </h2>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+          <li><a href="{% url 'stays:stay_list' %}" style="color: var(--color-text-body); font-weight: 600; text-decoration: none; font-size: 0.95rem;">{% trans "All Accommodation" %}</a></li>
+          {% for stay in stays %}
+          <li><a href="{{ stay.get_absolute_url }}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{{ stay.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Packages -->
+      <div>
+        <h2 style="font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ultraviolet); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--color-ultraviolet);">
+          {% trans "Packages" %}
+        </h2>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+          <li><a href="{% url 'packages:package_list' %}" style="color: var(--color-text-body); font-weight: 600; text-decoration: none; font-size: 0.95rem;">{% trans "All Packages" %}</a></li>
+          {% for pkg in packages %}
+          <li><a href="{{ pkg.get_absolute_url }}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{{ pkg.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Journal & Guides -->
+      <div>
+        <h2 style="font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ultraviolet); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--color-ultraviolet);">
+          {% trans "Journal" %} & {% trans "Guides" %}
+        </h2>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px;">
+          <li><a href="{% url 'content:journal_list' %}" style="color: var(--color-text-body); font-weight: 600; text-decoration: none; font-size: 0.95rem;">{% trans "All Journal Articles" %}</a></li>
+          {% for guide in guides %}
+          <li><a href="{{ guide.get_absolute_url }}" style="color: var(--color-text-body); text-decoration: none; font-size: 0.95rem;">{{ guide.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- XML Sitemap Reference -->
+    <div style="margin-top: 50px; padding: 24px 28px; background: var(--color-ice); border-radius: var(--radius-lg); border: 1px solid var(--color-ice-muted);">
+      <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; color: var(--color-obsidian);">{% trans "For Search Engines" %}</h3>
+      <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 10px;">
+        {% trans "XML sitemaps for Google Search Console and other search engine crawlers:" %}
+      </p>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem;">
+        <li>📄 <a href="/sitemap.xml" style="color: var(--color-ultraviolet); font-weight: 600; text-decoration: none;">sitemap.xml</a> — {% trans "Complete URL list" %}</li>
+        <li>📄 <a href="/sitemap_index.xml" style="color: var(--color-ultraviolet); font-weight: 600; text-decoration: none;">sitemap_index.xml</a> — {% trans "Sectioned sitemap index" %}</li>
+        <li>📄 <a href="/robots.txt" style="color: var(--color-ultraviolet); font-weight: 600; text-decoration: none;">robots.txt</a> — {% trans "Crawler directives" %}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -6,7 +6,11 @@ from stays.models import AccommodationProperty
 from packages.models import Package
 from content.models import GuideArticle
 
-class StaticViewSitemap(Sitemap):
+class BaseSitemap(Sitemap):
+    protocol = 'https'
+
+
+class StaticViewSitemap(BaseSitemap):
     priority = 0.9
     changefreq = "weekly"
 
@@ -17,6 +21,7 @@ class StaticViewSitemap(Sitemap):
             'core:prices',
             'core:plan_naivasha',
             'core:contact',
+            'core:sitemap',
             'tours:tour_list',
             'partners:hotel_hub',
             'stays:stay_list',
@@ -30,7 +35,7 @@ class StaticViewSitemap(Sitemap):
         return reverse(item)
 
 
-class TourSitemap(Sitemap):
+class TourSitemap(BaseSitemap):
     priority = 1.0
     changefreq = "weekly"
 
@@ -41,7 +46,7 @@ class TourSitemap(Sitemap):
         return obj.verified_at
 
 
-class HotelSitemap(Sitemap):
+class HotelSitemap(BaseSitemap):
     priority = 0.8
     changefreq = "weekly"
 
@@ -57,7 +62,7 @@ class HotelSitemap(Sitemap):
         return obj.verified_at
 
 
-class StaySitemap(Sitemap):
+class StaySitemap(BaseSitemap):
     priority = 0.8
     changefreq = "weekly"
 
@@ -68,7 +73,7 @@ class StaySitemap(Sitemap):
         return obj.verified_at
 
 
-class PackageSitemap(Sitemap):
+class PackageSitemap(BaseSitemap):
     priority = 0.9
     changefreq = "weekly"
 
@@ -79,7 +84,7 @@ class PackageSitemap(Sitemap):
         return obj.verified_at
 
 
-class GuideSitemap(Sitemap):
+class GuideSitemap(BaseSitemap):
     priority = 0.7
     changefreq = "monthly"
 
@@ -88,3 +93,4 @@ class GuideSitemap(Sitemap):
 
     def lastmod(self, obj):
         return obj.updated_at
+

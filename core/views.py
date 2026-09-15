@@ -53,11 +53,26 @@ class PlanNaivashaView(TemplateView):
         context['planning_articles'] = GuideArticle.objects.filter(is_active=True).order_by('-published_at')
         return context
 
-
 class ContactView(TemplateView):
     template_name = 'core/contact.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['settings'] = SiteSettings.get_solo()
+        return context
+
+
+class SitemapView(TemplateView):
+    template_name = 'core/sitemap.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tours'] = Tour.objects.filter(is_active=True).order_by('order')
+        context['hotels'] = HotelPartner.objects.filter(
+            is_active=True, marketing_permission=True, public_page_enabled=True
+        )
+        context['stays'] = AccommodationProperty.objects.filter(is_active=True).order_by('order')
+        context['packages'] = Package.objects.filter(is_active=True).order_by('order')
+        context['guides'] = GuideArticle.objects.filter(is_active=True).order_by('-published_at')
+        context['faqs'] = QuestionAnswer.objects.filter(is_active=True).order_by('order')[:10]
         return context

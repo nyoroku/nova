@@ -13,6 +13,8 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
+    'https://www.novaboatridesnaivasha.co.ke',
+    'https://novaboatridesnaivasha.co.ke',
     'https://novaboats.pythonanywhere.com',
     'https://novaboatrider.com',
     'https://www.novaboatrider.com',
@@ -167,8 +169,8 @@ LOGOUT_REDIRECT_URL = '/'
 # Nova Brand Constants (Single source of truth)
 SITE_NAME = "Nova Boat Rides Naivasha"
 SITE_SHORT_NAME = "Nova"
-SITE_DOMAIN = "novaboatrider.com"
-SITE_URL = f"https://www.{SITE_DOMAIN}"
+SITE_DOMAIN = config('SITE_DOMAIN', default="www.novaboatridesnaivasha.co.ke")
+SITE_URL = f"https://{SITE_DOMAIN}"
 SITE_PHONE_DISPLAY = "+254 701 215 295"
 SITE_PHONE_E164 = "+254701215295"
 SITE_WHATSAPP_NUMBER = "254701215295"

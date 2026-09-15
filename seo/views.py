@@ -6,6 +6,9 @@ from .models import FAQ, LocalPage
 
 def robots_txt(request):
     """Publish crawler directives from the same canonical origin as the site."""
+    scheme = 'https' if request.is_secure() else 'http'
+    host = request.get_host()
+    base_url = f"{scheme}://{host}" if host else settings.SITE_URL
     body = "\n".join([
         "User-agent: *",
         "Allow: /",
@@ -13,10 +16,12 @@ def robots_txt(request):
         "Disallow: /dashboard/",
         "Disallow: /accounts/",
         "Disallow: /tinymce/",
-        f"Sitemap: {settings.SITE_URL}/sitemap_index.xml",
+        f"Sitemap: {base_url}/sitemap.xml",
+        f"Sitemap: {base_url}/sitemap_index.xml",
         "",
     ])
     return HttpResponse(body, content_type='text/plain; charset=utf-8')
+
 
 
 class FAQView(ListView):

@@ -5,4 +5,5 @@ Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /tinymce/
 
-Sitemap: https://www.novaboatrider.com/sitemap.xml
+Sitemap: https://www.novaboatridesnaivasha.co.ke/sitemap.xml
+Sitemap: https://www.novaboatridesnaivasha.co.ke/sitemap_index.xml
