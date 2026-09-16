@@ -6,6 +6,7 @@ class JournalListView(ListView):
     model = GuideArticle
     template_name = 'content/journal_list.html'
     context_object_name = 'articles'
+    paginate_by = 12
 
     def get_queryset(self):
         qs = GuideArticle.objects.filter(is_active=True).order_by('-is_featured', '-published_at')

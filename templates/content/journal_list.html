@@ -79,6 +79,27 @@
       </div>
       {% endfor %}
     </div>
+
+    <!-- Pagination Controls -->
+    {% if is_paginated %}
+    <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 50px;">
+      {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}{% if current_cat %}&category={{ current_cat }}{% endif %}" class="nova-btn-secondary" style="padding: 8px 16px; font-size: 0.88rem;">&larr; Previous</a>
+      {% endif %}
+      
+      {% for num in paginator.page_range %}
+        {% if page_obj.number == num %}
+          <span style="padding: 8px 16px; border-radius: 6px; background: var(--color-acid-lime); color: var(--color-obsidian); font-weight: 800; font-size: 0.9rem;">{{ num }}</span>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+          <a href="?page={{ num }}{% if current_cat %}&category={{ current_cat }}{% endif %}" style="padding: 8px 16px; border-radius: 6px; background: var(--color-ice); color: var(--color-obsidian); font-weight: 600; text-decoration: none; font-size: 0.9rem;">{{ num }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}{% if current_cat %}&category={{ current_cat }}{% endif %}" class="nova-btn-secondary" style="padding: 8px 16px; font-size: 0.88rem;">Next &rarr;</a>
+      {% endif %}
+    </div>
+    {% endif %}
   </div>
 </section>
 {% endblock %}

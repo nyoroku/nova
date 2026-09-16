@@ -112,6 +112,11 @@ class GuideArticle(OptimizedImageMixin, models.Model):
     def author_captain(self):
         return Captain.objects.filter(is_active=True).first()
 
+    @property
+    def reading_time_minutes(self):
+        words = len(self.body.split())
+        return max(3, round(words / 220))
+
 
 class QuestionAnswer(models.Model):
     CATEGORY_CHOICES = [
