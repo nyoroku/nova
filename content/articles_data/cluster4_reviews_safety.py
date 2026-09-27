@@ -82,16 +82,16 @@ ARTICLES = [
         "reviewer": "Senior Captain Team",
         "is_featured": True,
         "seo_title": "Best Boat Rides in Naivasha 2026 | Operator & Jetty Comparison",
-        "meta_description": "Discover the best boat rides in Naivasha. Side-by-side comparison of Karagita Beach bases, Katrue, resort jetty pick-ups, and private marina charters.",
+        "meta_description": "Discover the best boat rides in Naivasha. Objective comparison of Karagita Beach bases, resort jetty pick-ups, and private marina charters.",
         "excerpt": "Searching for the best boat rides in Naivasha? We compare launch points, pricing, vessel quality, and captain expertise across the lake's top operators.",
         "direct_quick_answer": "The best boat rides in Naivasha combine certified marine safety, four-stroke engines, transparent pricing, and flexible departure options. Nova's Karagita Base offers the best value and fastest access to Crescent Island, while our hotel jetty pickup service (serving Enashipai, Sopa, Kiboko, and Sawela) provides maximum convenience for resort guests.",
         "body": """
-<p class="lead">Choosing the <strong>Best boat rides naivasha</strong> operator can be challenging for visitors faced with dozens of boat signage boards along South Lake Road. From casual beach operators like Katrue Boat Rides at Karagita Public Beach to luxury hotel concierge desks and private marina clubs, here is a transparent, objective comparison to guide your decision.</p>
+<p class="lead">Choosing the <strong>Best boat rides naivasha</strong> operator can be challenging for visitors faced with dozens of boat signage boards along South Lake Road. From informal public beach operators at Karagita to luxury hotel concierge desks and private marina clubs, here is a transparent, objective comparison to guide your decision.</p>
 
 <h2>Evaluating the 3 Main Operator Categories</h2>
 
-<h3>Category 1: Public Beach Operators (e.g. Karagita Public Beach / Katrue)</h3>
-<p>Public beaches serve as the traditional launch hubs for independent boat captains and local community associations:</p>
+<h3>Category 1: Independent Public Beach Operators</h3>
+<p>Public beach landings serve as traditional launch hubs for independent boat captains and community boat associations:</p>
 <ul>
   <li><strong>Pros:</strong> Plentiful walk-in boat availability; low entry prices for budget shared rides (KES 1,500–2,000 per person); local fish vendors nearby.</li>
   <li><strong>Cons:</strong> Aggressive roadside commission touts; inconsistent life vest condition; variable engine maintenance; crowded weekend queues.</li>

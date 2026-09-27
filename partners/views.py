@@ -41,20 +41,30 @@ class HotelCheckerPartialView(View):
     """
     HTMX Hotel Serviceability Checker Partial.
     Evaluates whether Nova can board at a hotel jetty, arrange road pickup,
-    or position a boat with fee and notice disclosure.
+    or position a boat with fee and notice disclosure based on HotelAccess.
     """
     def get(self, request):
-        hotel_id = request.GET.get('hotel_id')
-        custom_name = request.GET.get('custom_hotel_name', '').strip()
-        tour_slug = request.GET.get('tour_slug', '')
+        return self._handle(request, request.GET)
+
+    def post(self, request):
+        return self._handle(request, request.POST)
+
+    def _handle(self, request, data):
+        from core.models import SiteSettings
+
+        hotel_id = data.get('hotel_id')
+        custom_name = data.get('custom_hotel_name', '').strip()
+        tour_slug = data.get('tour_slug', '')
 
         selected_hotel = None
         service_point = None
         tour_service = None
+        access_info = None
 
-        if hotel_id and hotel_id.isdigit():
+        if hotel_id and str(hotel_id).isdigit():
             selected_hotel = HotelPartner.objects.filter(pk=int(hotel_id), is_active=True).first()
             if selected_hotel:
+                access_info = getattr(selected_hotel, 'access_info', None)
                 service_point = selected_hotel.service_points.filter(is_active=True).first()
                 if service_point and tour_slug:
                     tour_service = service_point.tour_services.filter(
@@ -62,9 +72,14 @@ class HotelCheckerPartialView(View):
                         is_active=True
                     ).first()
 
+        settings_obj = SiteSettings.get_solo()
+        whatsapp_number = settings_obj.whatsapp_number if settings_obj else "254701215295"
+
         return render(request, 'partners/partials/serviceability_result.html', {
             'hotel': selected_hotel,
+            'access_info': access_info,
             'custom_name': custom_name,
             'service_point': service_point,
             'tour_service': tour_service,
+            'whatsapp_number': whatsapp_number,
         })

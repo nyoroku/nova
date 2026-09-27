@@ -12,7 +12,7 @@
 
   <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.5; margin-bottom: 16px;">
     {% if tier %}
-      <strong>Matched Tier:</strong> {{ tier.name }} ({{ tier.get_pricing_unit_display }})<br>
+      <strong>Matched Tier:</strong> {{ tier.label }} ({{ tier.get_pricing_unit_display }})<br>
       For {{ total_guests }} guest(s) &bull; {{ resident_type|title }} rate
     {% else %}
       Standard estimate for {{ total_guests }} guest(s)

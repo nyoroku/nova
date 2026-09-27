@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.core.exceptions import ValidationError
-from .models import HotelPartner, HotelServicePoint, HotelTourService
+from .models import HotelPartner, HotelServicePoint, HotelTourService, HotelAccess
 
 class HotelTourServiceInline(admin.TabularInline):
     model = HotelTourService
@@ -9,6 +9,11 @@ class HotelTourServiceInline(admin.TabularInline):
 class HotelServicePointInline(admin.StackedInline):
     model = HotelServicePoint
     extra = 1
+
+class HotelAccessInline(admin.StackedInline):
+    model = HotelAccess
+    extra = 0
+    can_delete = False
 
 @admin.register(HotelPartner)
 class HotelPartnerAdmin(admin.ModelAdmin):
@@ -19,7 +24,7 @@ class HotelPartnerAdmin(admin.ModelAdmin):
     list_filter = ('partnership_status', 'marketing_permission', 'public_page_enabled', 'is_active')
     search_fields = ('name', 'public_summary', 'contact_name_private')
     prepopulated_fields = {'slug': ('name',)}
-    inlines = [HotelServicePointInline]
+    inlines = [HotelAccessInline, HotelServicePointInline]
 
     fieldsets = (
         ("Public Presentation", {

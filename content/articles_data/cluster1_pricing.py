@@ -113,7 +113,7 @@ ARTICLES = [
         "seo_title": "Crescent Island Boat Ride Price 2026 | Transfers & Sanctuary Fees",
         "meta_description": "Detailed breakdown of Crescent Island boat ride price. Separate boat transfer costs from sanctuary entry fees, understand round-trip logistics and timing.",
         "excerpt": "Demystifying the costs of visiting Crescent Island Game Sanctuary by boat. Discover exact boat transit fares, captain wait fees, and official sanctuary entry tickets.",
-        "direct_quick_answer": "A boat trip to Crescent Island consists of two separate costs: (1) The return boat transfer and captain waiting time, which costs KES 5,000 to KES 7,500 ($50–$75 USD) per private boat for up to 7 passengers; and (2) The Crescent Island Game Sanctuary entry fee, payable directly at the island gate via cashless card/M-Pesa: KES 1,000 for Kenyan citizens, KES 1,500 for East African residents, and $33 USD for non-resident adults.",
+        "direct_quick_answer": "A boat trip to Crescent Island consists of two separate costs: (1) The return boat transfer and captain waiting time, which costs KES 6,500 ($65 USD) per private boat for up to 7 passengers; and (2) The Crescent Island Game Sanctuary entry fee, payable directly at the island gate via cashless card/M-Pesa: KES 800 for Kenyan citizens, KES 1,100 for East African residents, and $33 USD for non-resident adults.",
         "body": """
 <p class="lead">Visiting Crescent Island Game Sanctuary is widely regarded as the crowning highlight of any trip to Lake Naivasha. Because the island is an elevated volcanic rim surrounded by water and shallow papyrus flats, arriving by boat is by far the most picturesque, serene, and wildlife-rich approach. However, travelers frequently get confused by the <strong>Crescent Island boat ride price</strong> structure because two separate entities are involved: the boat transport operator and the sanctuary conservation authority.</p>
 
@@ -128,8 +128,8 @@ ARTICLES = [
 <div class="nova-card" style="padding: 24px; background: var(--color-ice); border-left: 4px solid var(--color-ultraviolet); margin: 24px 0;">
   <h3 style="margin-top: 0; color: var(--color-obsidian);">Standard Return Boat Charter Rates to Crescent Island</h3>
   <ul style="margin-bottom: 0;">
-    <li><strong>Private Boat Charter (Up to 7 Guests):</strong> KES 6,000 – KES 7,500 ($60 – $75 USD) total per boat.</li>
-    <li><strong>Per-Person Shared Group Rate:</strong> KES 2,000 – KES 2,500 ($20 – $25 USD) per seat (subject to shared group availability).</li>
+    <li><strong>Private Boat Charter (Up to 7 Guests):</strong> KES 6,500 ($65 USD) total per boat.</li>
+    <li><strong>Per-Person Shared Group Rate:</strong> KES 2,000 ($20 USD) per seat (subject to shared group availability).</li>
     <li><strong>Extended 3-Hour Package (Island + Oloidien lagoons):</strong> KES 9,000 ($90 USD) total boat charter.</li>
   </ul>
 </div>
@@ -150,14 +150,14 @@ ARTICLES = [
   <tbody>
     <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);">
       <td style="padding: 12px;"><strong>Kenyan Citizens</strong></td>
-      <td style="padding: 12px;">KES 1,000</td>
-      <td style="padding: 12px;">KES 500</td>
+      <td style="padding: 12px;">KES 800</td>
+      <td style="padding: 12px;">KES 400</td>
       <td style="padding: 12px;">M-Pesa / Card (National ID required)</td>
     </tr>
     <tr style="border-bottom: 1px solid rgba(0,0,0,0.08); background: rgba(0,0,0,0.02);">
       <td style="padding: 12px;"><strong>East African Residents</strong></td>
-      <td style="padding: 12px;">KES 1,500</td>
-      <td style="padding: 12px;">KES 800</td>
+      <td style="padding: 12px;">KES 1,100</td>
+      <td style="padding: 12px;">KES 550</td>
       <td style="padding: 12px;">Card / M-Pesa (Valid Alien Card/Work Permit)</td>
     </tr>
     <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);">
@@ -175,9 +175,9 @@ ARTICLES = [
 
 <h3>Scenario A: Kenyan Citizen Couple</h3>
 <ul>
-  <li>Private Return Boat Charter (Karagita -> Crescent -> Karagita): KES 6,000</li>
-  <li>Sanctuary Entrance (2 Adults @ KES 1,000): KES 2,000</li>
-  <li><strong>Total Combined Outlay:</strong> KES 8,000 (KES 4,000 per person)</li>
+  <li>Private Return Boat Charter (Karagita -> Crescent -> Karagita): KES 6,500</li>
+  <li>Sanctuary Entrance (2 Adults @ KES 800): KES 1,600</li>
+  <li><strong>Total Combined Outlay:</strong> KES 8,100 (KES 4,050 per person)</li>
 </ul>
 
 <h3>Scenario B: International Family of 4 (2 Adults, 2 Children)</h3>

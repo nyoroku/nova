@@ -3,7 +3,7 @@ from tours.models import Tour
 from partners.models import HotelPartner
 from stays.models import AccommodationProperty
 from packages.models import Package
-from content.models import Captain, QuestionAnswer, Testimonial, GuideArticle
+from content.models import Captain, QuestionAnswer, Testimonial, GuideArticle, ReviewSnapshot
 from .models import SiteSettings
 
 class HomeView(TemplateView):
@@ -23,6 +23,7 @@ class HomeView(TemplateView):
         context['testimonials'] = Testimonial.objects.filter(is_active=True)[:6]
         context['quick_faqs'] = QuestionAnswer.objects.filter(is_active=True).order_by('order')[:8]
         context['latest_notes'] = GuideArticle.objects.filter(is_active=True).order_by('-published_at')[:4]
+        context['review_snapshot'] = ReviewSnapshot.objects.filter(is_current=True).first()
         return context
 
 
@@ -40,8 +41,18 @@ class PricesView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['tours'] = Tour.objects.filter(is_active=True).prefetch_related('price_tiers').order_by('order')
+        context['settings'] = SiteSettings.get_solo()
+        context['tours'] = Tour.objects.filter(is_active=True).prefetch_related('rates', 'price_tiers').order_by('order')
         context['packages'] = Package.objects.filter(is_active=True).order_by('order')
+        from .models import ExternalFee
+        from partners.models import HotelAccess
+        context['crescent_fees'] = ExternalFee.objects.filter(
+            is_active=True,
+            provider_name__icontains='Crescent'
+        ).order_by('id')
+        context['all_external_fees'] = ExternalFee.objects.filter(is_active=True).order_by('provider_name', 'visitor_type')
+        context['hotel_accesses'] = HotelAccess.objects.filter(is_published=True).select_related('property').order_by('property__order', 'property__name')
+        context['review_snapshot'] = ReviewSnapshot.objects.filter(is_current=True).first()
         return context
 
 

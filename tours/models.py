@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
+from django.utils import timezone
 from utils import OptimizedImageMixin
 
 class Tour(OptimizedImageMixin, models.Model):
@@ -90,6 +91,10 @@ class Tour(OptimizedImageMixin, models.Model):
         return self.capacity
 
     @property
+    def crescent_island_included(self):
+        return 'crescent' in self.slug
+
+    @property
     def description(self):
         return self.body
 
@@ -100,12 +105,92 @@ class Tour(OptimizedImageMixin, models.Model):
         return tier.amount if tier else 0
 
     @property
-    def starting_price_resident(self):
+    def current_rates(self):
+        from django.utils import timezone
+        today = timezone.now().date()
+        rates = self.rates.filter(
+            is_active=True,
+            is_public=True,
+            effective_from__lte=today
+        ).filter(
+            models.Q(effective_until__isnull=True) | models.Q(effective_until__gte=today)
+        ).order_by('amount')
+        return rates
+
+    @property
+    def canonical_starting_rate_resident(self):
+        r = self.current_rates.filter(
+            currency='KES',
+            audience_type__in=['KENYAN_CITIZEN', 'KENYA_RESIDENT', 'ALL']
+        ).first()
+        if r:
+            return r.amount
         return self.get_starting_price('RESIDENT')
 
     @property
-    def starting_price_non_resident(self):
+    def canonical_starting_rate_non_resident(self):
+        r = self.current_rates.filter(
+            currency='USD',
+            audience_type__in=['NON_RESIDENT', 'ALL']
+        ).first()
+        if r:
+            return r.amount
         return self.get_starting_price('NON_RESIDENT')
+
+    @property
+    def starting_price_resident(self):
+        return self.canonical_starting_rate_resident
+
+    @property
+    def starting_price_non_resident(self):
+        return self.canonical_starting_rate_non_resident
+
+
+class ExperienceRate(models.Model):
+    """
+    Canonical versioned pricing model for Nova boat experiences.
+    Central source of truth across homepage, tour detail, /prices/, and quote builders.
+    """
+    PRICING_MODEL_CHOICES = [
+        ('PER_PERSON', 'Per Person'),
+        ('PER_BOAT', 'Per Boat'),
+        ('PER_GROUP', 'Per Group'),
+        ('FROM_PRICE', 'From Price'),
+        ('CUSTOM_QUOTE', 'Custom Quote'),
+    ]
+    AUDIENCE_CHOICES = [
+        ('ALL', 'All Visitors'),
+        ('KENYAN_CITIZEN', 'Kenyan Citizen'),
+        ('KENYA_RESIDENT', 'Kenya Resident'),
+        ('NON_RESIDENT', 'Non-Resident / International'),
+        ('CHILD', 'Child'),
+        ('GROUP', 'Corporate / Group'),
+    ]
+
+    experience = models.ForeignKey(Tour, on_delete=models.CASCADE, related_name='rates')
+    name = models.CharField(max_length=150, help_text="e.g. 1-Hour Private Charter, Shared Seat")
+    pricing_model = models.CharField(max_length=30, choices=PRICING_MODEL_CHOICES, default='PER_BOAT')
+    currency = models.CharField(max_length=10, default='KES')
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    audience_type = models.CharField(max_length=30, choices=AUDIENCE_CHOICES, default='ALL')
+    min_guests = models.PositiveIntegerField(default=1)
+    max_guests = models.PositiveIntegerField(default=7)
+    duration_minutes = models.PositiveIntegerField(default=60)
+    effective_from = models.DateField(default=timezone.now)
+    effective_until = models.DateField(null=True, blank=True)
+    is_active = models.BooleanField(default=True)
+    is_public = models.BooleanField(default=True)
+    notes = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['experience', 'amount']
+        verbose_name = "Experience Rate"
+        verbose_name_plural = "Experience Rates"
+
+    def __str__(self):
+        return f"{self.experience.name} - {self.name} ({self.currency} {self.amount:,.0f} {self.get_pricing_model_display()})"
 
 
 class TourPriceTier(models.Model):

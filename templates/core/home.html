@@ -14,12 +14,12 @@
       "@type": "TouristInformationCenter",
       "@id": "{{ site_settings.SITE_URL }}/#business",
       "name": "Nova Boat Rides Naivasha",
-      "alternateName": ["Nova Naivasha Boat Safaris", "Nova Lake Access Layer", "Lake Naivasha Boat Ride"],
-      "description": "The trusted lake-access operator in Naivasha providing curated Lake Naivasha boat rides, private wildlife safaris, Crescent Island transfers, and verified hotel jetty pickups.",
+      "alternateName": ["Nova Naivasha Boat Safaris", "Lake Naivasha Boat Rides"],
+      "description": "Verified boat tours, Crescent Island transfers, and private charters on Lake Naivasha. Depart from Nova Karagita Base or selected partner hotel jetties.",
       "url": "{{ site_settings.SITE_URL }}/",
       "telephone": "{{ site_settings.phone_e164 }}",
       "email": "{{ site_settings.email }}",
-      "priceRange": "KES 3,000 - KES 35,000",
+      "priceRange": "KES 1,500 - KES 20,000",
       "currenciesAccepted": "KES, USD",
       "paymentAccepted": "M-Pesa, Cash, Bank Transfer, Card",
       "openingHoursSpecification": {
@@ -39,14 +39,6 @@
         "addressLocality": "Karagita, Naivasha",
         "addressRegion": "Nakuru County",
         "addressCountry": "KE"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "186",
-        "reviewCount": "186"
       }
     },
     {
@@ -66,7 +58,7 @@
           "name": "How much does a Lake Naivasha boat ride cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A standard 1-hour Lake Naivasha boat ride costs KES 3,000 per person for Kenyan residents (USD 25 for international visitors). Private boat charters start at KES 16,000 per boat (up to 7 passengers). Crescent Island return boat transfers start from KES 4,500."
+            "text": "A standard 1-hour private boat charter costs KES 4,500 (USD 45) for the entire boat for up to 7 passengers. Shared seats are available on select departures at KES 1,500 (USD 20) per person. Crescent Island return boat transfers with captain standby start from KES 6,500 (USD 65) per boat."
           }
         },
         {
@@ -74,7 +66,7 @@
           "name": "What should I expect during a Lake Naivasha boat safari?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On a Lake Naivasha boat safari, you will cruise past resident pods of wild hippos, see 400+ native bird species including African fish eagles, pelicans, and kingfishers, view dead acacia tree silhouettes, and admire the Rift Valley escarpment with certified local captains."
+            "text": "On a Lake Naivasha boat safari, you will cruise past resident pods of wild hippos, observe native waterbirds including African fish eagles, pelicans, and kingfishers, view submerged acacia tree silhouettes, and admire the Rift Valley escarpment with certified local captains."
           }
         },
         {
@@ -82,7 +74,7 @@
           "name": "What do travelers say in a Lake Naivasha boat review about Nova?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Lake Naivasha boat reviews rate Nova 4.9/5 stars across 180+ verified guest reviews. Guests praise our licensed captains for calm, safe navigation around hippos, proper life vests for kids, transparent pre-booked pricing, and convenient hotel jetty pickups."
+            "text": "Lake Naivasha boat reviews rate Nova 4.9/5 stars across 48 verified guest reviews on Google Business Profile. Guests highlight professional captain navigation around hippos, proper life jackets fitted for children and adults, transparent pre-booked pricing, and convenient hotel jetty pickups."
           }
         },
         {
@@ -90,7 +82,7 @@
           "name": "Can a boat ride in Naivasha depart directly from my hotel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Nova coordinates direct boat jetty departures from partner hotels along South Lake Road where water depth permits (such as Kiboko Luxury Camp, Enashipai, and Sopa corridor). Where private jetties are restricted, Nova provides seamless private shuttle pickup to our primary launch base."
+            "text": "Yes. Nova coordinates direct boat jetty departures from partner hotels along South Lake Road where water depth permits (such as Lake Naivasha Sopa Resort, Enashipai, Kiboko Luxury Camp, Sawela Lodge, and Country Club). A standard positioning fee of KES 1,500 applies. Guests at Great Rift Valley Lodge travel via road transfer to Karagita Base."
           }
         },
         {
@@ -333,9 +325,9 @@
             <div>
               <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-muted); display: block;">{% trans "From" %}</span>
               <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--color-obsidian);">
-                KES {{ tour.get_starting_price|floatformat:0 }}
+                KES {{ tour.canonical_starting_rate_resident|floatformat:0 }}
               </span>
-              <span style="font-size: 0.75rem; color: var(--color-text-muted);">/ {% trans "person" %}</span>
+              <span style="font-size: 0.75rem; color: var(--color-text-muted);">{% if tour.slug == 'groups-events' %}/ {% trans "person" %}{% else %}/ {% trans "boat" %}{% endif %}</span>
             </div>
             <a href="{{ tour.get_absolute_url }}" class="nova-btn-primary" style="min-height: 38px; padding: 6px 16px; font-size: 0.85rem;">
               {% trans "View Ride" %} &rarr;

@@ -172,3 +172,54 @@ class HotelTourService(models.Model):
 
     def __str__(self):
         return f"{self.service_point.hotel.name} -> {self.tour.name} (+KES {self.positioning_fee:.0f})"
+
+
+class HotelAccess(models.Model):
+    """
+    Structured operational source of truth for hotel water access,
+    jetty feasibility, relationship type, and positioning fees.
+    """
+    RELATIONSHIP_CHOICES = [
+        ('NO_FORMAL_PARTNERSHIP', 'No Formal Partnership'),
+        ('REFERRAL', 'Referral / Information Only'),
+        ('OPERATIONAL', 'Operational Coordination'),
+        ('CONTRACTED', 'Formally Contracted Partner'),
+        ('DIRECTLY_MANAGED', 'Directly Managed Facility'),
+    ]
+    ACCESS_MODE_CHOICES = [
+        ('DIRECT_JETTY', 'Direct Hotel Jetty Mooring'),
+        ('ROAD_TRANSFER', 'Road Transfer to Nova Karagita Base'),
+        ('NEARBY_JETTY', 'Boarding via Adjacent/Nearby Jetty'),
+        ('BOAT_POSITIONING', 'Boat Positioning to Approved Shoreline'),
+        ('SUBJECT_TO_CONFIRMATION', 'Subject to Operations Confirmation'),
+        ('UNAVAILABLE', 'Water Access Currently Unavailable'),
+    ]
+    ACCESS_STATUS_CHOICES = [
+        ('VERIFIED_ACTIVE', 'Verified Active'),
+        ('VERIFIED_ON_REQUEST', 'Verified on Prior Request'),
+        ('TEMPORARILY_UNAVAILABLE', 'Temporarily Unavailable'),
+        ('UNVERIFIED', 'Unverified / Pending Audit'),
+    ]
+
+    property = models.OneToOneField(HotelPartner, on_delete=models.CASCADE, related_name='access_info')
+    relationship_type = models.CharField(max_length=30, choices=RELATIONSHIP_CHOICES, default='OPERATIONAL')
+    access_mode = models.CharField(max_length=30, choices=ACCESS_MODE_CHOICES, default='DIRECT_JETTY')
+    access_status = models.CharField(max_length=30, choices=ACCESS_STATUS_CHOICES, default='VERIFIED_ACTIVE')
+    positioning_fee = models.DecimalField(max_digits=10, decimal_places=2, default=1500.00)
+    currency = models.CharField(max_length=10, default='KES')
+    advance_notice_hours = models.PositiveIntegerField(default=2)
+    water_level_dependent = models.BooleanField(default=False)
+    property_approval_required = models.BooleanField(default=False)
+    last_verified_at = models.DateField(auto_now=True)
+    verified_by = models.CharField(max_length=100, default='Nova Operations Team')
+    public_notes = models.TextField(blank=True)
+    internal_notes = models.TextField(blank=True)
+    is_published = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name = "Hotel Access Specification"
+        verbose_name_plural = "Hotel Access Specifications"
+
+    def __str__(self):
+        return f"{self.property.name}: {self.get_access_mode_display()} ({self.get_access_status_display()})"
+

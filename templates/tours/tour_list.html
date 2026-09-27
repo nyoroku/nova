@@ -1,23 +1,53 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block meta_title %}Lake Naivasha Boat Rides & Safaris | Nova Boat Rides{% endblock %}
-{% block meta_description %}Explore Lake Naivasha signature boat tours. Classic safaris, hippo and bird watching, Crescent Island walking tours, and romantic sunset cruises with verified lake captains.{% endblock %}
+{% block meta_title %}Lake Naivasha Boat Rides 2026 | Compare Tours, Prices & Routes | Nova{% endblock %}
+{% block meta_description %}Compare all verified Lake Naivasha boat rides. 1-hour safaris, Crescent Island transfers, hippo & birding tours, and sunset cruises. Fixed transparent rates from KES 4,500.{% endblock %}
 
 {% block content %}
-<!-- Hero -->
-<section class="nova-section nova-section-dark">
+<!-- Section 1 & 2 & 3: Hero, Title & Trust Bar -->
+<section class="nova-section nova-section-dark" style="padding-top: 50px; padding-bottom: 50px;">
   <div class="nova-shell">
-    <span class="nova-kicker nova-kicker-lime">CURATED LAKE TOURS</span>
-    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
-      Signature Boat Rides on Lake Naivasha
+    <div style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 12px;">
+      <a href="{% url 'core:home' %}" style="color: rgba(255,255,255,0.6); text-decoration: none;">Home</a>
+      <span style="margin: 0 6px;">/</span>
+      <span style="color: var(--color-lime);">Boat Rides</span>
+    </div>
+
+    <span class="nova-kicker nova-kicker-lime">NAIVASHA LAKE EXPERIENCES</span>
+    <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 18px;">
+      Boat Rides on Lake Naivasha: Choose Your Experience
     </h1>
-    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6;">
-      Every ride is skippered by certified local captains with life jackets fitted before boarding. Depart from Nova Karagita Base or directly from your hotel jetty.
+    <p style="font-size: 1.18rem; color: rgba(255,255,255,0.88); max-width: 700px; line-height: 1.6; margin-bottom: 28px;">
+      Every voyage is skippered by certified local coxswains with fitted life jackets before launch. Depart from Nova Karagita Base or directly from your partner hotel jetty.
     </p>
 
-    <!-- Category Filter Bar -->
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
+    <!-- Trust Bar -->
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-lg); padding: 14px 20px; font-size: 0.88rem; color: #FFF;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="color: #FBBF24; font-size: 1.1rem;">★</span>
+        <strong>4.9 / 5.0 Rating</strong>
+        <span style="color: rgba(255,255,255,0.6);">(48 Google Reviews)</span>
+      </div>
+      <span style="color: rgba(255,255,255,0.2);">|</span>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="color: var(--color-lime);">✓</span>
+        <span>Kenya Maritime Authority (KMA) Licensed Coxswains</span>
+      </div>
+      <span style="color: rgba(255,255,255,0.2);">|</span>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="color: var(--color-lime);">✓</span>
+        <span>100% Life Jackets Fitted (Adult &amp; Child Sizes)</span>
+      </div>
+      <span style="color: rgba(255,255,255,0.2);">|</span>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="color: var(--color-lime);">✓</span>
+        <span>Fixed Transparent Rates</span>
+      </div>
+    </div>
+
+    <!-- Section 4: Category Filter Bar -->
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;">
       {% for cat_val, cat_label in categories %}
       <a href="{% url 'tours:tour_list' %}{% if cat_val %}?category={{ cat_val }}{% endif %}" 
          style="padding: 8px 18px; border-radius: 9999px; font-size: 0.88rem; font-weight: 700; text-decoration: none; transition: all 0.2s;"
@@ -29,12 +59,12 @@
   </div>
 </section>
 
-<!-- Tours Grid -->
+<!-- Section 5: Tours Cards Grid -->
 <section class="nova-section">
   <div class="nova-shell">
     <div class="nova-grid-3">
       {% for tour in tours %}
-      <div class="nova-card" style="display: flex; flex-direction: column; overflow: hidden;">
+      <div class="nova-card" style="display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--color-ice-muted); background: #FFF;">
         <!-- Card Image & Badges -->
         <div style="height: 220px; position: relative; background: #131218; overflow: hidden;">
           {% if tour.featured_image %}
@@ -47,7 +77,7 @@
             {% if tour.is_private %}
               <span class="nova-badge nova-badge-purple">Private Charter</span>
             {% else %}
-              <span class="nova-badge nova-badge-lime">Shared / Flexible</span>
+              <span class="nova-badge nova-badge-lime">Shared &amp; Private</span>
             {% endif %}
             {% if tour.crescent_island_included %}
               <span class="nova-badge nova-badge-purple">Crescent Island Route</span>
@@ -61,33 +91,42 @@
 
         <!-- Card Content -->
         <div style="padding: 24px; display: flex; flex-direction: column; flex: 1;">
-          <h2 style="font-size: 1.35rem; margin-bottom: 8px; line-height: 1.25;">
+          <h2 style="font-size: 1.3rem; margin-bottom: 8px; line-height: 1.3; font-family: var(--font-display);">
             <a href="{% url 'tours:tour_detail' slug=tour.slug %}" style="color: inherit; text-decoration: none;">
               {{ tour.name }}
             </a>
           </h2>
-          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 18px; flex: 1;">
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 16px; flex: 1;">
             {{ tour.summary }}
           </p>
 
-          <div style="border-top: 1px solid var(--color-ice); padding-top: 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
+          <div style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 14px;">
+            <strong>Best for:</strong> {{ tour.best_for }}
+          </div>
+
+          <div style="border-top: 1px solid var(--color-ice); padding-top: 14px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
             <div>
-              <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700;">Starting From</div>
-              <div style="font-size: 1.3rem; font-weight: 800; font-family: var(--font-display); color: var(--color-ultraviolet);">
-                KES {{ tour.get_starting_price|floatformat:0 }}
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700;">Starting Rate</div>
+              <div style="font-size: 1.35rem; font-weight: 800; font-family: var(--font-display); color: var(--color-ultraviolet);">
+                KES {{ tour.canonical_starting_rate_resident|floatformat:0 }}
+              </div>
+              <div style="font-size: 0.75rem; color: var(--color-text-muted);">
+                {% if tour.slug == 'groups-events' %}per person{% else %}per boat (1–{{ tour.capacity }} pax){% endif %} &bull; USD {{ tour.canonical_starting_rate_non_resident|floatformat:0 }}
               </div>
             </div>
-            <div style="font-size: 0.8rem; color: var(--color-text-muted);">
-              Max {{ tour.max_capacity }} Guests
+            <div style="font-size: 0.8rem; color: var(--color-text-muted); text-align: right;">
+              Max {{ tour.capacity }} Guests
             </div>
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-            <a href="{% url 'tours:tour_detail' slug=tour.slug %}" class="nova-btn-secondary" style="padding: 10px 12px; font-size: 0.85rem; text-align: center;">
-              Details & Rates
+            <a href="{% url 'tours:tour_detail' slug=tour.slug %}" class="nova-btn-secondary" style="padding: 10px 10px; font-size: 0.82rem; text-align: center;">
+              Details &amp; Rates
             </a>
-            <a href="{% url 'bookings:book' %}?tour={{ tour.slug }}" class="nova-btn-primary" style="padding: 10px 12px; font-size: 0.85rem; text-align: center;">
-              Book Ride
+            <a href="https://wa.me/{{ settings.whatsapp_number }}?text=Hi%20Nova%2C%20I%20would%20like%20to%20book%20the%20{{ tour.name|urlencode }}%20ride.%20Please%20confirm%20availability."
+               target="_blank" rel="noopener"
+               class="nova-btn-primary" style="padding: 10px 10px; font-size: 0.82rem; text-align: center;">
+              Book WhatsApp
             </a>
           </div>
         </div>
@@ -100,17 +139,189 @@
       {% endfor %}
     </div>
 
-    <!-- Bottom Hotel Departures Callout -->
-    <div style="margin-top: 60px; background: var(--color-ice); border-radius: var(--radius-xl); padding: 36px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; border: 1px solid var(--color-ice-muted);">
-      <div style="max-width: 600px;">
-        <span class="nova-kicker">Stay Along the Water?</span>
-        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Depart Directly from Your Hotel Jetty</h3>
-        <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.5;">
-          If you are booked at Enashipai, Sopa, Kiboko Camp, or other lakeside resorts, our boats can pick you up directly from your hotel or arrange road staging.
+    <!-- Section 6: Decision Matrix / Comparison Table -->
+    <div style="margin-top: 70px; margin-bottom: 50px;">
+      <span class="nova-kicker" style="color: var(--color-ultraviolet);">SIDE-BY-SIDE COMPARISON</span>
+      <h2 style="font-size: 1.6rem; font-family: var(--font-display); color: var(--color-obsidian); margin-top: 6px; margin-bottom: 12px;">
+        Compare All Lake Naivasha Experiences
+      </h2>
+      <p style="color: var(--color-text-body); max-width: 720px; font-size: 0.95rem; margin-bottom: 24px;">
+        Use this quick reference table to find the ideal route and party size for your schedule.
+      </p>
+
+      <div style="background: #FFF; border-radius: var(--radius-xl); border: 1px solid var(--color-ice-muted); overflow-x: auto; box-shadow: var(--shadow-sm);">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 750px;">
+          <thead>
+            <tr style="background: var(--color-ice); border-bottom: 2px solid var(--color-ice-muted);">
+              <th style="padding: 16px 20px; font-family: var(--font-display); font-size: 0.9rem; color: var(--color-obsidian);">Tour Name</th>
+              <th style="padding: 16px 16px; font-family: var(--font-display); font-size: 0.9rem; color: var(--color-obsidian);">Duration</th>
+              <th style="padding: 16px 16px; font-family: var(--font-display); font-size: 0.9rem; color: var(--color-obsidian);">Best For</th>
+              <th style="padding: 16px 16px; font-family: var(--font-display); font-size: 0.9rem; color: var(--color-obsidian);">Resident Rate</th>
+              <th style="padding: 16px 16px; font-family: var(--font-display); font-size: 0.9rem; color: var(--color-obsidian);">Non-Resident</th>
+              <th style="padding: 16px 20px; font-family: var(--font-display); font-size: 0.9rem; color: var(--color-obsidian);">Hotel Jetty</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for t in all_tours %}
+            <tr style="border-bottom: 1px solid var(--color-ice-muted);">
+              <td style="padding: 16px 20px;">
+                <a href="{% url 'tours:tour_detail' slug=t.slug %}" style="font-weight: 700; color: var(--color-obsidian); text-decoration: none;">
+                  {{ t.name }}
+                </a>
+              </td>
+              <td style="padding: 16px 16px; font-weight: 600;">{{ t.duration_hours }} hr{% if t.duration_hours > 1 %}s{% endif %}</td>
+              <td style="padding: 16px 16px; font-size: 0.85rem; color: var(--color-text-body);">{{ t.best_for }}</td>
+              <td style="padding: 16px 16px; font-weight: 800; color: var(--color-obsidian);">KES {{ t.canonical_starting_rate_resident|floatformat:0 }}</td>
+              <td style="padding: 16px 16px; font-weight: 800; color: var(--color-ultraviolet);">USD {{ t.canonical_starting_rate_non_resident|floatformat:0 }}</td>
+              <td style="padding: 16px 20px;">
+                {% if t.hotel_pickup_available %}
+                  <span style="color: #16A34A; font-weight: 700; font-size: 0.85rem;">✓ Available</span>
+                {% else %}
+                  <span style="color: var(--color-text-muted); font-size: 0.85rem;">Karagita Base</span>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 7: Hotel Departures Integration Block -->
+    <div style="background: var(--color-ice); border-radius: var(--radius-xl); padding: 36px; margin-bottom: 50px; border: 1px solid var(--color-ice-muted); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+      <div style="max-width: 620px;">
+        <span class="nova-kicker">Stay Along the Shoreline?</span>
+        <h3 style="font-size: 1.45rem; font-family: var(--font-display); margin-top: 6px; margin-bottom: 10px;">
+          Depart Directly from Your Hotel Jetty
+        </h3>
+        <p style="font-size: 0.95rem; color: var(--color-text-body); line-height: 1.6;">
+          Guests staying at Lake Naivasha Sopa Resort, Enashipai, Kiboko Luxury Camp, Sawela Lodge, or Country Club can board directly from the hotel lawn. A nominal boat positioning fee of KES 1,500 applies. Guests at Great Rift Valley Lodge travel via road transfer to Karagita Base.
         </p>
       </div>
-      <a href="{% url 'partners:hotel_hub' %}" class="nova-btn-primary">
-        Check Your Hotel Pickup
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="{% url 'partners:hotel_hub' %}" class="nova-btn-primary" style="text-align: center;">
+          Check Your Hotel Water Access
+        </a>
+        <a href="{% url 'core:prices' %}" class="nova-btn-secondary" style="text-align: center;">
+          View Full Price Truth Page &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 8: Crescent Island Explanation Block -->
+    <div style="background: #FFF; border: 1px solid var(--color-ice-muted); border-radius: var(--radius-xl); padding: 32px; margin-bottom: 50px;">
+      <span class="nova-kicker" style="color: var(--color-ultraviolet);">CRESCENT ISLAND CLARITY</span>
+      <h3 style="font-size: 1.4rem; font-family: var(--font-display); margin-top: 6px; margin-bottom: 10px;">
+        Understanding Crescent Island Sanctuary Fees
+      </h3>
+      <p style="font-size: 0.95rem; color: var(--color-text-body); line-height: 1.6; max-width: 760px; margin-bottom: 18px;">
+        Crescent Island is a private wildlife sanctuary where you walk among giraffes, zebras, and wildebeests without predators. Nova provides the boat transfer across Lake Naivasha (KES 6,500 / $65 USD per boat for up to 7 guests) and captain standby. Sanctuary walking entry fees are payable directly at the island entrance gate (Citizen Adult KES 800, Resident Adult KES 1,100, Non-Resident $33 USD).
+      </p>
+      <a href="{% url 'tours:tour_detail' slug='crescent-island' %}" class="nova-btn-secondary" style="font-size: 0.88rem;">
+        See Crescent Island Full Route &amp; Rates &rarr;
+      </a>
+    </div>
+
+    <!-- Section 9: How Booking Works (3 Steps) -->
+    <div style="margin-bottom: 60px;">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <span class="nova-kicker">SIMPLE &amp; DIRECT</span>
+        <h2 style="font-size: 1.6rem; font-family: var(--font-display); margin-top: 6px;">How to Book Your Boat Ride</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+        <div class="nova-card" style="padding: 28px; text-align: center; background: #FFF; border: 1px solid var(--color-ice-muted);">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-ice); color: var(--color-ultraviolet); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">1</div>
+          <h3 style="font-size: 1.15rem; font-family: var(--font-display); margin-bottom: 8px;">Choose Your Tour</h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5;">
+            Select your preferred experience, duration, and departure point (Karagita Base or hotel jetty).
+          </p>
+        </div>
+
+        <div class="nova-card" style="padding: 28px; text-align: center; background: #FFF; border: 1px solid var(--color-ice-muted);">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-ice); color: var(--color-ultraviolet); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">2</div>
+          <h3 style="font-size: 1.15rem; font-family: var(--font-display); margin-bottom: 8px;">WhatsApp Confirmation</h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5;">
+            Send your party size and preferred departure time on WhatsApp for instant confirmation and weather check.
+          </p>
+        </div>
+
+        <div class="nova-card" style="padding: 28px; text-align: center; background: #FFF; border: 1px solid var(--color-ice-muted);">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-ice); color: var(--color-ultraviolet); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">3</div>
+          <h3 style="font-size: 1.15rem; font-family: var(--font-display); margin-bottom: 8px;">Fit Life Jackets &amp; Launch</h3>
+          <p style="font-size: 0.88rem; color: var(--color-text-body); line-height: 1.5;">
+            Meet your certified captain, complete life jacket fitting at the pavilion, and board your private vessel.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 10: Captains Introduction / Trust Block -->
+    <div style="background: var(--color-obsidian); color: #FFF; border-radius: var(--radius-xl); padding: 40px; margin-bottom: 60px;">
+      <span class="nova-kicker nova-kicker-lime">LOCAL LAKE LEADERSHIP</span>
+      <h2 style="font-size: 1.6rem; font-family: var(--font-display); margin-top: 6px; margin-bottom: 12px; color: #FFF;">
+        Meet Your Certified Lake Captains
+      </h2>
+      <p style="font-size: 0.95rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6; margin-bottom: 28px;">
+        Our captains have grown up on Lake Naivasha. Every skipper holds a valid Kenya Maritime Authority (KMA) Coxswain license and lake safety certification.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        {% for cap in captains %}
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-lg); padding: 20px; display: flex; gap: 16px; align-items: center;">
+          <div style="width: 72px; height: 72px; border-radius: 50%; overflow: hidden; background: #333; flex-shrink: 0;">
+            {% if cap.photo %}
+              <img src="{{ cap.photo.url }}" alt="{{ cap.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+            {% else %}
+              <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--color-ultraviolet); font-weight: 800; font-size: 1.4rem;">{{ cap.name|slice:":1" }}</div>
+            {% endif %}
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; color: #FFF; margin-bottom: 4px;">{{ cap.name }}</h4>
+            <div style="font-size: 0.8rem; color: var(--color-lime); font-weight: 700; margin-bottom: 4px;">{{ cap.role_title }}</div>
+            <div style="font-size: 0.78rem; color: rgba(255,255,255,0.7);">{{ cap.certification_text }} &bull; {{ cap.years_on_lake }}+ years on lake</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Section 11: FAQ Accordion / List -->
+    {% if faqs %}
+    <div style="margin-bottom: 60px;">
+      <div style="margin-bottom: 24px;">
+        <span class="nova-kicker">QUESTIONS ANSWERED</span>
+        <h2 style="font-size: 1.6rem; font-family: var(--font-display);">Frequently Asked Questions About Boat Rides</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        {% for faq in faqs %}
+        <details class="nova-card" style="padding: 20px 24px; border: 1px solid var(--color-ice-muted); background: #FFF; cursor: pointer;">
+          <summary style="font-weight: 700; font-size: 1.05rem; color: var(--color-obsidian); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            <span>{{ faq.question }}</span>
+            <span style="color: var(--color-ultraviolet); font-size: 1.2rem; font-weight: 800;">+</span>
+          </summary>
+          <div style="margin-top: 14px; font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6; border-top: 1px solid var(--color-ice-muted); padding-top: 12px;">
+            {{ faq.answer|linebreaks }}
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Section 12: Sticky / Bottom Conversion CTA -->
+    <div style="background: linear-gradient(135deg, #131218 0%, #201D2C 100%); border-radius: var(--radius-xl); padding: 40px; text-align: center; color: #FFF; border: 1px solid rgba(255,255,255,0.12);">
+      <h2 style="font-size: 1.8rem; font-family: var(--font-display); margin-bottom: 12px; color: #FFF;">
+        Ready for Lake Naivasha?
+      </h2>
+      <p style="font-size: 1.05rem; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 24px; line-height: 1.6;">
+        Check morning or sunset slot availability with our operations desk on WhatsApp. We respond in minutes.
+      </p>
+      <a href="https://wa.me/{{ settings.whatsapp_number }}?text=Hi%20Nova%2C%20I%20would%20like%20to%20check%20boat%20ride%20availability%20for%20today%2Fthis%20weekend."
+         target="_blank" rel="noopener"
+         class="nova-btn-primary" style="padding: 14px 32px; font-size: 1rem;">
+        Chat with Operations on WhatsApp
       </a>
     </div>
 

@@ -58,14 +58,14 @@ ARTICLES = [
   <tbody>
     <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);">
       <td style="padding: 12px;"><strong>Kenyan Citizens</strong></td>
-      <td style="padding: 12px;">KES 1,000</td>
-      <td style="padding: 12px;">KES 500</td>
+      <td style="padding: 12px;">KES 800</td>
+      <td style="padding: 12px;">KES 400</td>
       <td style="padding: 12px;">M-Pesa / Card (National ID)</td>
     </tr>
     <tr style="border-bottom: 1px solid rgba(0,0,0,0.08); background: rgba(0,0,0,0.02);">
       <td style="padding: 12px;"><strong>East African Residents</strong></td>
-      <td style="padding: 12px;">KES 1,500</td>
-      <td style="padding: 12px;">KES 800</td>
+      <td style="padding: 12px;">KES 1,100</td>
+      <td style="padding: 12px;">KES 550</td>
       <td style="padding: 12px;">Credit Card / M-Pesa (Alien Card)</td>
     </tr>
     <tr style="border-bottom: 1px solid rgba(0,0,0,0.08);">
@@ -312,7 +312,7 @@ ARTICLES = [
         "seo_title": "Crescent Island Timings, Entry Fees & Rules 2026 | Visitor Guide",
         "meta_description": "Everything you must know before visiting Crescent Island Naivasha: opening hours, gate closing times, entrance fees, walking trail regulations, and safety rules.",
         "excerpt": "Essential visitor regulations for Crescent Island Game Sanctuary: daily operating hours, entry fee rates, camera rules, guide protocols, and walking safety.",
-        "direct_quick_answer": "Crescent Island Game Sanctuary opens daily from 8:30 AM to 5:30 PM (last entry at 4:30 PM). Gate fees are KES 1,000 for Kenyan citizens, KES 1,500 for East African residents, and $33 USD for non-residents. Key rules include walking only with an authorized guide, maintaining a 15-meter buffer from wildlife, no drones without permits, and zero littering.",
+        "direct_quick_answer": "Crescent Island Game Sanctuary opens daily from 8:30 AM to 5:30 PM (last entry at 4:30 PM). Gate fees are KES 800 for Kenyan citizens, KES 1,100 for East African residents, and $33 USD for non-residents. Key rules include walking only with an authorized guide, maintaining a 15-meter buffer from wildlife, no drones without permits, and zero littering.",
         "body": """
 <p class="lead">Crescent Island Game Sanctuary is an ecologically delicate private conservation reserve. To preserve its wild character and guarantee visitor safety, sanctuary management enforces clear operational hours, admission policies, and code of conduct rules. Review this captain’s guide before your departure from Karagita Base to ensure a seamless visit.</p>
 

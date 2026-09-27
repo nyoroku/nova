@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
+from django.utils import timezone
 from utils import OptimizedImageMixin
 
 class Captain(OptimizedImageMixin, models.Model):
@@ -26,6 +27,18 @@ class Captain(OptimizedImageMixin, models.Model):
         max_length=255,
         default="The lake has its own rhythm. When you start early and respect the wind, every ride is smooth."
     )
+    certification_text = models.CharField(
+        max_length=255,
+        default="KMA Licensed Coxswain & Lake Safety Certified",
+        blank=True
+    )
+    certification_issuer = models.CharField(
+        max_length=120,
+        default="Kenya Maritime Authority",
+        blank=True
+    )
+    certification_reference = models.CharField(max_length=100, blank=True)
+    verified_at = models.DateField(null=True, blank=True)
     order = models.PositiveIntegerField(default=0)
     is_active = models.BooleanField(default=True)
 
@@ -172,4 +185,67 @@ class Testimonial(models.Model):
         verbose_name_plural = "Testimonials"
 
     def __str__(self):
-        return f"{self.guest_name} ({self.get_guest_segment_display()}) - {self.rating}★"
+        return f"{self.guest_name} ({self.get_guest_segment_display()}) - {self.rating} stars"
+
+
+class ReviewSnapshot(models.Model):
+    """
+    Dated snapshot of external review platforms (Google Business Profile, TripAdvisor, etc.).
+    Avoids self-serving LocalBusiness aggregateRating schema while providing
+    honest, verified third-party review stats to visitors.
+    """
+    SOURCE_CHOICES = [
+        ('GOOGLE_MAPS', 'Google Business Profile'),
+        ('TRIPADVISOR', 'TripAdvisor'),
+        ('DIRECT', 'Direct Guest Survey'),
+    ]
+
+    source = models.CharField(max_length=30, choices=SOURCE_CHOICES, default='GOOGLE_MAPS')
+    rating = models.DecimalField(max_digits=3, decimal_places=2, default=4.90)
+    review_count = models.PositiveIntegerField(default=48)
+    source_url = models.URLField(
+        default="https://maps.google.com/?cid=12648759322304975239",
+        blank=True
+    )
+    captured_at = models.DateField(default=timezone.now)
+    is_current = models.BooleanField(default=True)
+    summary_quote = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ['-captured_at']
+        verbose_name = "Review Snapshot"
+        verbose_name_plural = "Review Snapshots"
+
+    def __str__(self):
+        return f"{self.get_source_display()}: {self.rating} stars ({self.review_count} reviews) as of {self.captured_at.strftime('%B %Y')}"
+
+
+class ArticleSource(models.Model):
+    """
+    Citations and verifiable evidence for facts stated in guide articles
+    (tariffs, government gazettes, GPS observations, hotel communications).
+    """
+    SOURCE_TYPE_CHOICES = [
+        ('OFFICIAL_TARIFF', 'Official Tariff Notice'),
+        ('GOVERNMENT', 'Government Agency (KWS / KMA)'),
+        ('FIELD_OBSERVATION', 'Captain Log / Field Observation'),
+        ('HOTEL_CONFIRMATION', 'Hotel Management Written Confirmation'),
+        ('RESEARCH_PAPER', 'Research Publication'),
+    ]
+
+    article = models.ForeignKey(GuideArticle, on_delete=models.CASCADE, related_name='sources')
+    source_name = models.CharField(max_length=200, help_text="e.g. Crescent Island Game Sanctuary Tariff Schedule 2026")
+    source_url = models.URLField(blank=True)
+    source_type = models.CharField(max_length=30, choices=SOURCE_TYPE_CHOICES, default='OFFICIAL_TARIFF')
+    claim_supported = models.CharField(max_length=255, blank=True, help_text="e.g. Adult resident entrance fee is KES 1,100")
+    verified_at = models.DateField(default=timezone.now)
+    display_publicly = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['article', 'id']
+        verbose_name = "Article Source Citation"
+        verbose_name_plural = "Article Source Citations"
+
+    def __str__(self):
+        return f"{self.article.title[:30]}... -> {self.source_name}"
+

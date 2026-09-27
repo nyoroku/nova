@@ -24,6 +24,10 @@ class TourListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        from content.models import Captain, QuestionAnswer, ReviewSnapshot
+        from core.models import SiteSettings, ExternalFee
+        from partners.models import HotelAccess
+
         context['categories'] = [
             ('', 'All Rides'),
             ('wildlife', 'Hippo & Wildlife'),
@@ -32,6 +36,12 @@ class TourListView(ListView):
             ('private', 'Private Charters'),
         ]
         context['current_category'] = self.request.GET.get('category', '')
+        context['all_tours'] = Tour.objects.filter(is_active=True).prefetch_related('rates').order_by('order')
+        context['captains'] = Captain.objects.filter(is_active=True).order_by('order')
+        context['faqs'] = QuestionAnswer.objects.filter(is_active=True).order_by('order')[:6]
+        context['hotel_accesses'] = HotelAccess.objects.filter(is_published=True).select_related('property')[:6]
+        context['review_snapshot'] = ReviewSnapshot.objects.filter(is_current=True).first()
+        context['settings'] = SiteSettings.get_solo()
         return context
 
 
