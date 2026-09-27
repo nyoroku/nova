@@ -21,3 +21,4 @@ quarantine_legacy_templates/
 outputs/
 qa_original/
 qa_word/
+sync_production.py
