@@ -6,7 +6,7 @@ Date: 9 October 2026 (Africa/Nairobi). Branch: `codex/nova-activities`.
 
 The existing Django application now has a structured ten-activity plan, a single pricing/quote path, richer reusable product pages, a responsive gallery, improved availability enquiries, service-intent mappings, lead outcome reporting, and internal Google distribution readiness exports.
 
-The local catalogue contains eight existing public activities and two new drafts. No existing activity slug changed. Sunrise and Full Lake Explorer remain unpublished pending business verification. Production deployment and Google publication have not been performed.
+The local and production catalogues contain eight existing public activities and two new drafts. No existing activity slug changed. Sunrise and Full Lake Explorer remain unpublished pending business verification. The application was pushed to GitHub and deployed to PythonAnywhere on 9 October 2026; see `NOVA_ACTIVITY_DEPLOYMENT_REPORT.md`. Google publication has not been performed.
 
 ## Catalogue and pricing
 
