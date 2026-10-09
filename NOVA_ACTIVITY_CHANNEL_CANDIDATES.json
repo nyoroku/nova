@@ -1,0 +1,334 @@
+[
+  {
+    "id": "nova-activity-1",
+    "name": "1-Hour Boat Ride on Lake Naivasha",
+    "description": "A guided introduction to Lake Naivasha, with time for scenery and opportunities to observe hippos and birds.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "https://www.novaboatridesnaivasha.co.ke/media/activities/optimized/e4f0c567f099d237ed83-1280_ayxFam7.webp",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/classic-lake-safari/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/classic-lake-safari/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=classic-lake-safari",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Confirm image rights/guest consent and descriptive alt text.",
+      "Confirm duration and capacity for 60-minute private boat.",
+      "Confirm current prices for 60-minute private boat.",
+      "Confirm duration and capacity for 60-minute shared seats.",
+      "Confirm current prices for 60-minute shared seats.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Check primary Google image eligibility and dimensions.",
+      "Use a unique primary image for this activity.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "PUBLISHED",
+    "options": [
+      {
+        "id": 1,
+        "name": "60-minute private boat",
+        "duration_minutes": 60,
+        "min_guests": 1,
+        "max_guests": 7,
+        "mode": "PRIVATE"
+      },
+      {
+        "id": 2,
+        "name": "60-minute shared seats",
+        "duration_minutes": 60,
+        "min_guests": 1,
+        "max_guests": 7,
+        "mode": "SHARED"
+      }
+    ]
+  },
+  {
+    "id": "nova-activity-2",
+    "name": "Lake Naivasha Hippo & Bird Safari",
+    "description": "A wildlife-focused boat safari with time to observe lake habitats and birdlife. Sightings depend on the day and conditions.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "https://www.novaboatridesnaivasha.co.ke/media/activities/optimized/d465c4701daf1e4f6ca9-1280_LHDM3s4.webp",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/hippo-bird-safari/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/hippo-bird-safari/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=hippo-bird-safari",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Confirm image rights/guest consent and descriptive alt text.",
+      "Confirm duration and capacity for 120-minute private boat.",
+      "Confirm current prices for 120-minute private boat.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Check primary Google image eligibility and dimensions.",
+      "Use a unique primary image for this activity.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "PUBLISHED",
+    "options": [
+      {
+        "id": 3,
+        "name": "120-minute private boat",
+        "duration_minutes": 120,
+        "min_guests": 1,
+        "max_guests": 7,
+        "mode": "PRIVATE"
+      }
+    ]
+  },
+  {
+    "id": "nova-activity-3",
+    "name": "Crescent Island Boat Ride & Walking Safari",
+    "description": "Combine a return boat crossing with a visit to Crescent Island. Nova boat charges and sanctuary admission are shown separately.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "https://www.novaboatridesnaivasha.co.ke/media/activities/optimized/702b0afb94888633c636-1280_m9IYx8u.webp",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/crescent-island/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/crescent-island/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=crescent-island",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Confirm image rights/guest consent and descriptive alt text.",
+      "Confirm duration and capacity for 150-minute private boat.",
+      "Confirm current prices for 150-minute private boat.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Check primary Google image eligibility and dimensions.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "PUBLISHED",
+    "options": [
+      {
+        "id": 4,
+        "name": "150-minute private boat",
+        "duration_minutes": 150,
+        "min_guests": 1,
+        "max_guests": 7,
+        "mode": "PRIVATE"
+      }
+    ]
+  },
+  {
+    "id": "nova-activity-4",
+    "name": "Lake Naivasha Sunset Boat Cruise",
+    "description": "An evening lake cruise for golden-hour scenery and photography, subject to weather and safe departure conditions.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "https://www.novaboatridesnaivasha.co.ke/media/activities/optimized/e4f0c567f099d237ed83-1280_lrDxuGs.webp",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/sunset-cruise/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/sunset-cruise/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=sunset-cruise",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Confirm image rights/guest consent and descriptive alt text.",
+      "Confirm duration and capacity for 90-minute private boat.",
+      "Confirm current prices for 90-minute private boat.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Check primary Google image eligibility and dimensions.",
+      "Use a unique primary image for this activity.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "PUBLISHED",
+    "options": [
+      {
+        "id": 5,
+        "name": "90-minute private boat",
+        "duration_minutes": 90,
+        "min_guests": 1,
+        "max_guests": 7,
+        "mode": "PRIVATE"
+      }
+    ]
+  },
+  {
+    "id": "nova-activity-5",
+    "name": "Private Lake Naivasha Boat Ride",
+    "description": "Reserve a boat for your party. Choose an available charter duration and discuss the route with the Nova team.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "https://www.novaboatridesnaivasha.co.ke/media/activities/optimized/024790e87f3dd9ce93a8-1280_W3bGldl.webp",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/private-charter/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/private-charter/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=private-charter",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Confirm image rights/guest consent and descriptive alt text.",
+      "Confirm duration and capacity for 360-minute private boat.",
+      "Confirm current prices for 360-minute private boat.",
+      "Confirm duration and capacity for 60-minute private boat.",
+      "Confirm current prices for 60-minute private boat.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Check primary Google image eligibility and dimensions.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "PUBLISHED",
+    "options": [
+      {
+        "id": 6,
+        "name": "360-minute private boat",
+        "duration_minutes": 360,
+        "min_guests": 1,
+        "max_guests": 7,
+        "mode": "PRIVATE"
+      },
+      {
+        "id": 7,
+        "name": "60-minute private boat",
+        "duration_minutes": 60,
+        "min_guests": 1,
+        "max_guests": 7,
+        "mode": "PRIVATE"
+      }
+    ]
+  },
+  {
+    "id": "nova-activity-6",
+    "name": "Family Boat Ride on Lake Naivasha",
+    "description": "A lake outing for families. Confirm suitable life jackets, boarding needs and the selected option before departure.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/family-ride/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/family-ride/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=family-ride",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Choose exactly one published primary image.",
+      "Confirm duration and capacity for 120-minute private boat.",
+      "Confirm current prices for 120-minute private boat.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "PUBLISHED",
+    "options": [
+      {
+        "id": 8,
+        "name": "120-minute private boat",
+        "duration_minutes": 120,
+        "min_guests": 1,
+        "max_guests": 7,
+        "mode": "PRIVATE"
+      }
+    ]
+  },
+  {
+    "id": "nova-activity-7",
+    "name": "Lake Naivasha Bird Watching & Photography Boat Tour",
+    "description": "A focused lake session for birders and photographers, with time for observation and positioning when conditions allow.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "https://www.novaboatridesnaivasha.co.ke/media/activities/optimized/d465c4701daf1e4f6ca9-1280_Dg5K56A.webp",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/photography-birding/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/photography-birding/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=photography-birding",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Confirm image rights/guest consent and descriptive alt text.",
+      "Confirm duration and capacity for 180-minute private boat.",
+      "Confirm current prices for 180-minute private boat.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Check primary Google image eligibility and dimensions.",
+      "Use a unique primary image for this activity.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "PUBLISHED",
+    "options": [
+      {
+        "id": 9,
+        "name": "180-minute private boat",
+        "duration_minutes": 180,
+        "min_guests": 1,
+        "max_guests": 4,
+        "mode": "PRIVATE"
+      }
+    ]
+  },
+  {
+    "id": "nova-activity-8",
+    "name": "Private Group & Corporate Boat Tour on Lake Naivasha",
+    "description": "Plan a lake outing for your group. Boat allocation, passenger limits, departure logistics and final price require confirmation.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "https://www.novaboatridesnaivasha.co.ke/media/activities/optimized/e4f0c567f099d237ed83-1280_1t8hYZb.webp",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/groups-events/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/groups-events/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=groups-events",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Confirm image rights/guest consent and descriptive alt text.",
+      "Confirm duration and capacity for 90-minute group experience.",
+      "Confirm current prices for 90-minute group experience.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Check primary Google image eligibility and dimensions.",
+      "Use a unique primary image for this activity.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "PUBLISHED",
+    "options": [
+      {
+        "id": 10,
+        "name": "90-minute group experience",
+        "duration_minutes": 90,
+        "min_guests": 10,
+        "max_guests": 50,
+        "mode": "GROUP"
+      }
+    ]
+  },
+  {
+    "id": "nova-activity-9",
+    "name": "Lake Naivasha Sunrise Wildlife Boat Ride",
+    "description": "A proposed early-morning lake experience for wildlife observation and soft-light photography.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/sunrise-wildlife/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/sunrise-wildlife/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=sunrise-wildlife",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Choose exactly one published primary image.",
+      "Add a real booking option.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "DRAFT",
+    "options": []
+  },
+  {
+    "id": "nova-activity-10",
+    "name": "Lake Naivasha Full Lake Explorer",
+    "description": "A proposed extended lake experience with a defined route through several habitats, subject to operational verification.",
+    "booking_mode": "ENQUIRY",
+    "booking_url": "",
+    "image_url": "",
+    "url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/full-lake-explorer/",
+    "gbp_url": "https://www.novaboatridesnaivasha.co.ke/boat-rides/full-lake-explorer/?utm_source=google&utm_medium=organic&utm_campaign=gbp_activities&utm_content=full-lake-explorer",
+    "google_ready": false,
+    "issues": [
+      "Confirm operational facts, evidence and responsible owner.",
+      "Use 6\u201315 relevant gallery images (Nova editorial requirement).",
+      "Choose exactly one published primary image.",
+      "Add a real booking option.",
+      "Enable Google activity distribution for a published activity.",
+      "Confirm a channel-compatible booking path; an enquiry page alone is not assumed eligible.",
+      "Configure a verified standard adult rate for channel submission."
+    ],
+    "status": "DRAFT",
+    "options": []
+  }
+]

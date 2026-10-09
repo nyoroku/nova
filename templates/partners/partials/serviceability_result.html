@@ -5,7 +5,7 @@
       <div>
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
           <span style="font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; {% if access_info and access_info.access_mode == 'DIRECT_JETTY' or service_point and service_point.service_mode == 'PARTNER_JETTY' %}background: #DCFCE7; color: #166534;{% else %}background: #FEF3C7; color: #92400E;{% endif %}">
-            {% if access_info %}{{ access_info.get_access_mode_display }}{% elif service_point %}{{ service_point.get_service_mode_display }}{% else %}Verified Property{% endif %}
+            {% if access_info %}{{ access_info.public_access_label }}{% elif service_point %}Configured {{ service_point.get_service_mode_display }} · subject to confirmation{% else %}Departure check required{% endif %}
           </span>
           <span style="font-size: 0.75rem; color: var(--color-text-muted);">&bull; {{ hotel.get_property_type_display }}</span>
         </div>
@@ -20,11 +20,11 @@
         <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700;">Boarding Mode</div>
         <div style="font-weight: 700; color: var(--color-ultraviolet);">
           {% if access_info %}
-            {{ access_info.get_access_mode_display }}
+            {{ access_info.public_access_label }}
           {% elif service_point %}
             {{ service_point.get_service_mode_display }}
           {% else %}
-            Direct Hotel Jetty Boarding
+            Departure arrangements require confirmation
           {% endif %}
         </div>
       </div>
@@ -32,12 +32,12 @@
       <div>
         <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700;">Positioning Fee</div>
         <div style="font-weight: 700; color: var(--color-obsidian);">
-          {% if access_info and access_info.positioning_fee > 0 %}
+          {% if access_info and access_info.is_operationally_verified and access_info.positioning_fee > 0 %}
             {{ access_info.currency }} {{ access_info.positioning_fee|floatformat:0 }} per boat
           {% elif access_info and access_info.access_mode == 'ROAD_TRANSFER' %}
-            None (Road Transfer to Base)
+            Boat positioning not applicable; road transport quoted separately
           {% else %}
-            KES 1,500 per boat
+            Quote requires confirmation
           {% endif %}
         </div>
       </div>
@@ -48,7 +48,7 @@
           {% if access_info %}
             {{ access_info.advance_notice_hours }} hour(s) recommended
           {% else %}
-            2 hours
+            Confirm advance notice with Nova
           {% endif %}
         </div>
       </div>
@@ -88,7 +88,7 @@
     </div>
     <h4 style="font-size: 1.25rem; font-family: var(--font-display); margin-top: 4px; margin-bottom: 10px; color: var(--color-obsidian);">{{ custom_name }}</h4>
     <p style="font-size: 0.9rem; color: var(--color-text-body); line-height: 1.6; margin-bottom: 16px;">
-      We routinely coordinate boat pickups and road transfers across all hotels, camps, and Airbnbs along South Lake Road. Our dispatch team verifies water depth, jetty access, and property gate permissions in minutes.
+      Ask Nova to check the departure options for your accommodation, including water access, gate permissions and any transfer charges.
     </p>
     <a href="https://wa.me/{{ whatsapp_number }}?text=Hi%20Nova%2C%20I%20am%20staying%20at%20{{ custom_name|urlencode }}%20on%20Lake%20Naivasha.%20Can%20you%20arrange%20a%20boat%20departure%3F" 
        target="_blank" rel="noopener" 

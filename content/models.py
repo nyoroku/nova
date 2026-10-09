@@ -5,6 +5,7 @@ from django.utils import timezone
 from utils import OptimizedImageMixin
 
 class Captain(OptimizedImageMixin, models.Model):
+    verification_evidence = models.TextField(blank=True, help_text='Internal evidence supporting public credentials and profile facts')
     name = models.CharField(max_length=120)
     slug = models.SlugField(max_length=120, unique=True)
     role_title = models.CharField(max_length=120, default="Senior Lake Captain")
@@ -71,6 +72,7 @@ class GuideArticle(OptimizedImageMixin, models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     excerpt = models.CharField(max_length=300)
     body = models.TextField()
+    previous_price_copy = models.TextField(blank=True, editable=False)
     author = models.CharField(max_length=100, default="Nova Lake Operations")
     reviewer = models.CharField(max_length=100, default="Senior Captain Team")
     category = models.CharField(max_length=30, choices=CATEGORY_CHOICES, default='PLANNING')
@@ -144,6 +146,7 @@ class QuestionAnswer(models.Model):
 
     question = models.CharField(max_length=255)
     answer = models.TextField()
+    previous_price_copy = models.TextField(blank=True, editable=False)
     plain_answer = models.TextField(blank=True, help_text="Plain text concise answer for AI / Rich Snippet extractability")
     category = models.CharField(max_length=30, choices=CATEGORY_CHOICES, default='HOTEL_PICKUP')
     order = models.PositiveIntegerField(default=0)
@@ -161,6 +164,7 @@ class QuestionAnswer(models.Model):
 
 
 class Testimonial(models.Model):
+    verification_evidence = models.TextField(blank=True, help_text='Internal source and permission supporting this guest quote')
     SEGMENT_CHOICES = [
         ('HOTEL_GUEST', 'Hotel Guest'),
         ('COUPLE', 'Couple / Celebration'),
@@ -189,6 +193,7 @@ class Testimonial(models.Model):
 
 
 class ReviewSnapshot(models.Model):
+    verification_evidence = models.TextField(blank=True, help_text='Internal evidence supporting this dated rating and count')
     """
     Dated snapshot of external review platforms (Google Business Profile, TripAdvisor, etc.).
     Avoids self-serving LocalBusiness aggregateRating schema while providing

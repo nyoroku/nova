@@ -4,101 +4,7 @@
 {% block meta_title %}Boat Rides Naivasha | Lake Naivasha Boat Ride & Safari — Nova{% endblock %}
 {% block meta_description %}Book the premier boat rides Naivasha has to offer with Nova. Experience Lake Naivasha boat ride & safari tours, Crescent Island transfers, optimal lake naivasha boat timing, verified boat reviews, and direct hotel jetty departures.{% endblock %}
 
-{% block extra_head %}
-<!-- Structured Data Graph for SEO / AEO / GEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "TouristInformationCenter",
-      "@id": "{{ site_settings.SITE_URL }}/#business",
-      "name": "Nova Boat Rides Naivasha",
-      "alternateName": ["Nova Naivasha Boat Safaris", "Lake Naivasha Boat Rides"],
-      "description": "Verified boat tours, Crescent Island transfers, and private charters on Lake Naivasha. Depart from Nova Karagita Base or selected partner hotel jetties.",
-      "url": "{{ site_settings.SITE_URL }}/",
-      "telephone": "{{ site_settings.phone_e164 }}",
-      "email": "{{ site_settings.email }}",
-      "priceRange": "KES 1,500 - KES 20,000",
-      "currenciesAccepted": "KES, USD",
-      "paymentAccepted": "M-Pesa, Cash, Bank Transfer, Card",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "06:30",
-        "closes": "18:30"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "{{ site_settings.standard_launch_lat }}",
-        "longitude": "{{ site_settings.standard_launch_lng }}"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Karagita Beach, Moi South Lake Road",
-        "addressLocality": "Karagita, Naivasha",
-        "addressRegion": "Nakuru County",
-        "addressCountry": "KE"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "{{ site_settings.SITE_URL }}/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the best Lake Naivasha boat timing for wildlife and photography?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The best Lake Naivasha boat timing is early morning between 6:30 AM and 9:30 AM. Waters are glassy and calm with zero wind, African fish eagles and kingfishers actively hunt, and hippos surface close to the shoreline. Sunset departures between 4:30 PM and 6:30 PM offer golden hour Rift Valley lighting as hippos move toward grazing shores."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a Lake Naivasha boat ride cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A standard 1-hour private boat charter costs KES 4,500 (USD 45) for the entire boat for up to 7 passengers. Shared seats are available on select departures at KES 1,500 (USD 20) per person. Crescent Island return boat transfers with captain standby start from KES 6,500 (USD 65) per boat."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What should I expect during a Lake Naivasha boat safari?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "On a Lake Naivasha boat safari, you will cruise past resident pods of wild hippos, observe native waterbirds including African fish eagles, pelicans, and kingfishers, view submerged acacia tree silhouettes, and admire the Rift Valley escarpment with certified local captains."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What do travelers say in a Lake Naivasha boat review about Nova?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Lake Naivasha boat reviews rate Nova 4.9/5 stars across 48 verified guest reviews on Google Business Profile. Guests highlight professional captain navigation around hippos, proper life jackets fitted for children and adults, transparent pre-booked pricing, and convenient hotel jetty pickups."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can a boat ride in Naivasha depart directly from my hotel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Nova coordinates direct boat jetty departures from partner hotels along South Lake Road where water depth permits (such as Lake Naivasha Sopa Resort, Enashipai, Kiboko Luxury Camp, Sawela Lodge, and Country Club). A standard positioning fee of KES 1,500 applies. Guests at Great Rift Valley Lodge travel via road transfer to Karagita Base."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are boat rides Naivasha safe for kids and non-swimmers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, completely safe. Nova maintains a 100% life jacket compliance rule. Marine-grade certified life vests are provided for all adults and specialized snug life jackets are fitted for children before stepping onto the boat. Captains keep respectful, safe distances from all hippo pods."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
-{% endblock %}
+
 
 {% block content %}
 
@@ -109,7 +15,7 @@
       
       <!-- Text & Value Propositions -->
       <div>
-        <span class="nova-kicker nova-kicker-lime">{% trans "CERTIFIED BOAT RIDES NAIVASHA • KARAGITA • MOI SOUTH LAKE ROAD" %}</span>
+        <span class="nova-kicker nova-kicker-lime">{% trans "GUIDED BOAT RIDES NAIVASHA • KARAGITA • MOI SOUTH LAKE ROAD" %}</span>
         <h1 class="nova-title-hero" style="color: #FFFFFF; margin-top: 12px; margin-bottom: 22px; font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.08;">
           {% trans "Lake Naivasha Boat Ride & Safari:" %} <span style="color: var(--color-acid-lime);">{% trans "Naivasha Starts Here." %}</span>
         </h1>
@@ -133,7 +39,7 @@
         <!-- Pillar Indicators for AEO/GEO Signals -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 16px; font-size: 0.84rem; font-weight: 600; color: rgba(255,255,255,0.8); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
           <div>
-            <div style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem;">{% trans "8 Boat Rides" %}</div>
+            <div style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem;">{{ all_tours|length }} {% trans "Boat Rides" %}</div>
             <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">{% trans "Shared & Private Charters" %}</div>
           </div>
           <div>
@@ -141,8 +47,8 @@
             <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">{% trans "Optimal Boat Timing" %}</div>
           </div>
           <div>
-            <a href="#boat-reviews" style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem; text-decoration: none; display: block;">4.9 ★ {% trans "Review Score" %}</a>
-            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">{% trans "Verified Reviews" %}</div>
+            <a href="#boat-reviews" style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem; text-decoration: none; display: block;">{% trans "Guest Reviews" %}</a>
+            <div style="color: rgba(255,255,255,0.65); font-size: 0.78rem;">{% trans "Read on Google" %}</div>
           </div>
           <div>
             <div style="color: var(--color-acid-lime); font-weight: 800; font-size: 1.1rem;">{% trans "Hotel Jetties" %}</div>
@@ -217,7 +123,7 @@
       <div style="display: flex; align-items: center; gap: 14px;">
         <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-ice); color: var(--color-ultraviolet); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem;">&#9875;</div>
         <div>
-          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">{% trans "Certified Captains" %}</div>
+          <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-obsidian);">{% trans "Local Captains" %}</div>
           <div style="font-size: 0.82rem; color: var(--color-text-muted);">{% trans "Licensed for every boat ride Naivasha" %}</div>
         </div>
       </div>
@@ -275,7 +181,7 @@
         <span class="nova-kicker">{% trans "CURATED LAKE NAIVASHA BOAT SAFARI ROUTES" %}</span>
         <h2 class="nova-title-section">{% trans "Signature Boat Rides Naivasha Visitors Rely On" %}</h2>
         <p style="color: var(--color-text-muted); font-size: 1.05rem; margin-top: 6px; max-width: 680px;">
-          {% trans "Every" %} <strong>Lake Naivasha boat ride</strong> {% trans "with Nova is skippered by certified local captains who know the seasonal water levels, hippo pods, and birding coves. Choose from 8 tailored" %} <strong>boat rides</strong> {% trans "with clear tiered starting prices. Book an exclusive" %} <strong>boat ride Naivasha</strong> {% trans "safari or join a scheduled wildlife tour with hotel pickup." %}
+          {% trans "Every" %} <strong>Lake Naivasha boat ride</strong> {% trans "with Nova is skippered by local captains. Choose from available" %} <strong>boat rides</strong> {% trans "with clear tiered starting prices. Book an exclusive" %} <strong>boat ride Naivasha</strong> {% trans "safari or join a scheduled wildlife tour with hotel pickup." %}
         </p>
       </div>
 
@@ -296,13 +202,13 @@
       <article class="nova-card nova-carousel-slide" style="display: flex; flex-direction: column; justify-content: space-between;">
         <div>
           <a href="{{ tour.get_absolute_url }}" style="display: block; position: relative; aspect-ratio: 4/3; background: #23222B; overflow: hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
-            <img src="{% if tour.featured_image %}{{ tour.featured_image.url }}{% elif tour.slug == 'crescent-island' %}{% static 'images/hero_crescent.webp' %}{% elif tour.slug == 'sunset-cruise' or tour.slug == 'classic-lake-safari' %}{% static 'images/hero_sunset.webp' %}{% elif tour.slug == 'family-cruise' or tour.slug == 'private-charter' %}{% static 'images/hero_local.webp' %}{% else %}{% static 'images/hero_wildlife.webp' %}{% endif %}" alt="{{ tour.name }} - Lake Naivasha Boat Ride" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" loading="lazy">
+            {% if tour.featured_image %}<img src="{{ tour.featured_image.url }}" alt="{{ tour.name }}" width="1280" height="853" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">{% else %}<span class="activity-image-placeholder">Photos for this activity are being prepared.</span>{% endif %}
             <span class="nova-badge nova-badge-dark" style="position: absolute; top: 12px; left: 12px; font-weight: 700;">
-              {{ tour.duration_hours }} {% trans "Hours" %}
+              {{ tour.public_duration_display }}
             </span>
             {% if tour.hotel_pickup_available %}
             <span class="nova-badge nova-badge-lime" style="position: absolute; bottom: 12px; left: 12px; font-weight: 700;">
-              {% trans "Hotel Pickup" %}
+              {% trans "Hotel departures by request" %}
             </span>
             {% endif %}
           </a>
@@ -322,13 +228,7 @@
 
         <div style="padding: 0 20px 20px 20px;">
           <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-top: 14px; border-top: 1px solid var(--color-ice-muted);">
-            <div>
-              <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-muted); display: block;">{% trans "From" %}</span>
-              <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--color-obsidian);">
-                KES {{ tour.canonical_starting_rate_resident|floatformat:0 }}
-              </span>
-              <span style="font-size: 0.75rem; color: var(--color-text-muted);">{% if tour.slug == 'groups-events' %}/ {% trans "person" %}{% else %}/ {% trans "boat" %}{% endif %}</span>
-            </div>
+            {% include 'tours/partials/rate_summary.html' %}
             <a href="{{ tour.get_absolute_url }}" class="nova-btn-primary" style="min-height: 38px; padding: 6px 16px; font-size: 0.85rem;">
               {% trans "View Ride" %} &rarr;
             </a>
@@ -341,10 +241,10 @@
     <!-- Quick Link to Full Catalog -->
     <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding-top: 16px;">
       <span style="font-size: 0.85rem; color: var(--color-text-muted);">
-        {% trans "Swipe or use arrows to view all 8 Lake Naivasha boat rides & safari itineraries" %}
+        {% trans "Explore available Lake Naivasha boat rides and safari itineraries" %}
       </span>
       <a href="{% url 'tours:tour_list' %}" style="font-weight: 700; color: var(--color-ultraviolet); font-size: 0.95rem;">
-        {% trans "View All 8 Experiences" %} &rarr;
+        {% trans "View All Experiences" %} &rarr;
       </a>
     </div>
 
@@ -364,7 +264,7 @@
       <div style="background: #FFFFFF; border-left: 4px solid var(--color-ultraviolet); border-radius: var(--radius-md); padding: 20px 24px; text-align: left; box-shadow: var(--shadow-sm); margin-top: 20px;">
         <strong style="display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ultraviolet); margin-bottom: 6px;">Direct Answer for Travelers:</strong>
         <p style="font-size: 1.02rem; line-height: 1.65; color: var(--color-obsidian); margin: 0;">
-          The optimal <strong>lake naivasha boat timing</strong> is <strong>early morning between 6:30 AM and 9:30 AM</strong>. For an unforgettable <strong>boat ride Naivasha</strong> experience, early morning departures offer mirror-glass calm water with zero wind, African fish eagles and kingfishers hunting actively, and resident hippos feeding near shallow coves. Midday (10:00 AM – 3:00 PM) is the best timing for <strong>Crescent Island</strong> walking safaris, while late afternoon (4:30 PM – 6:30 PM) offers a stunning <strong>Lake Naivasha boat safari</strong> at sunset with golden Rift Valley light as hippos surface for nighttime grazing.
+          The optimal <strong>lake naivasha boat timing</strong> is <strong>early morning between 6:30 AM and 9:30 AM</strong>. For an unforgettable <strong>boat ride Naivasha</strong> experience, early morning departures offer a different perspective on the lake, depending on weather, African fish eagles and kingfishers hunting actively, and resident hippos feeding near shallow coves. Midday (10:00 AM – 3:00 PM) is the best timing for <strong>Crescent Island</strong> walking safaris, while late afternoon (4:30 PM – 6:30 PM) offers a stunning <strong>Lake Naivasha boat safari</strong> at sunset with golden Rift Valley light as hippos surface for nighttime grazing.
         </p>
       </div>
     </div>
@@ -384,7 +284,7 @@
             06:30 AM – 09:30 AM
           </div>
           <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--color-text-body);">
-            <li style="display: flex; gap: 8px;"><strong>Water:</strong> Mirror-smooth, glassy, zero wind chop</li>
+            <li style="display: flex; gap: 8px;"><strong>Water:</strong> Conditions checked before departure</li>
             <li style="display: flex; gap: 8px;"><strong>Wildlife:</strong> Peak fish eagle hunting, pelicans, active hippos</li>
             <li style="display: flex; gap: 8px;"><strong>Best For:</strong> Birders, photographers, families & non-swimmers</li>
           </ul>
@@ -655,7 +555,7 @@
           Crescent Island is a volcanic crater rim rising out of Lake Naivasha. Because no predators inhabit the sanctuary, you can walk among wild giraffe, Burchell's zebra, wildebeest, and gazelle with complete peace of mind.
         </p>
         <p class="nova-prose" style="margin-bottom: 28px;">
-          Nova coordinates your private <strong>Naivasha boat ride</strong> directly to the island's western jetty, pairs you with a certified sanctuary guide, and waits to cruise you back across active hippo lagoons.
+          Nova coordinates your private <strong>Naivasha boat ride</strong> directly to the island's western jetty, arranges your return crossing; sanctuary admission and any walking guide are confirmed separately.
         </p>
 
         <a href="{% url 'tours:tour_detail' slug='crescent-island' %}" class="nova-btn-dark">
@@ -708,257 +608,8 @@
   </div>
 </section>
 
-<!-- 11. MEET THE CREW (CAPTAINS SHOWCASE CAROUSEL) -->
-<section id="lake-captains" class="nova-section">
-  <div class="nova-shell" x-data="{ activeIndex: 0 }">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; gap: 16px;">
-      <div>
-        <span class="nova-kicker">{% trans "CERTIFIED LAKE PROFESSIONALS • THE PEOPLE AT THE HELM" %}</span>
-        <h2 class="nova-title-section">{% trans "Meet Our Certified Lake Naivasha Captains" %}</h2>
-        <p style="color: var(--color-text-muted); font-size: 1.05rem; margin-top: 6px; max-width: 680px;">
-          {% trans "On Lake Naivasha, experience is safety. Every Nova boat safari is skippered by our veteran captains with over a decade of continuous water experience, respectful wildlife navigation protocols, and certified marine safety training." %}
-        </p>
-      </div>
-
-      <!-- Captain Switcher Tab Buttons / Carousel Nav -->
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <button type="button" @click="activeIndex = activeIndex === 0 ? 1 : 0" class="nova-carousel-btn" aria-label="Previous Captain" title="Previous Captain">
-          &#8592;
-        </button>
-        <div style="display: flex; gap: 8px;">
-          <button type="button" @click="activeIndex = 0" :class="activeIndex === 0 ? 'active' : ''" class="captain-tab-btn">
-            <img src="{% static 'images/captain-aizo-gateru-sq.webp' %}" alt="Captain Aizo Gateru" class="captain-tab-avatar">
-            <span>Capt. Aizo Gateru</span>
-          </button>
-          <button type="button" @click="activeIndex = 1" :class="activeIndex === 1 ? 'active' : ''" class="captain-tab-btn">
-            <img src="{% static 'images/captain-josphat-muriuki-sq.webp' %}" alt="Captain Josphat Muriuki" class="captain-tab-avatar">
-            <span>Capt. Josphat Muriuki</span>
-          </button>
-        </div>
-        <button type="button" @click="activeIndex = activeIndex === 1 ? 0 : 1" class="nova-carousel-btn" aria-label="Next Captain" title="Next Captain">
-          &#8594;
-        </button>
-      </div>
-    </div>
-
-    <!-- Captain 0: Captain Aizo Gateru -->
-    <div x-show="activeIndex === 0" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" class="captain-showcase-container">
-      <div class="captain-card-body">
-        <div>
-          <div class="captain-badge-list">
-            <span class="captain-pill">⚓ {% trans "14 Years on Lake Naivasha" %}</span>
-            <span class="captain-pill">🛡️ {% trans "100% Safety Compliance" %}</span>
-            <span class="captain-pill">🏝️ {% trans "Crescent Island Specialist" %}</span>
-            <span class="captain-pill">🏨 {% trans "Hotel Jetty Lead" %}</span>
-          </div>
-
-          <h3 style="font-size: 2.2rem; color: #FFFFFF; margin-bottom: 6px; letter-spacing: -0.02em;">
-            Captain Aizo Gateru
-          </h3>
-          <div style="font-size: 1.05rem; font-weight: 700; color: var(--color-acid-lime); margin-bottom: 20px;">
-            {% trans "Lead Operations Captain & Crescent Island Specialist" %} &bull; {% trans "English, Swahili" %}
-          </div>
-
-          <blockquote style="font-style: italic; font-size: 1.12rem; color: #FFFFFF; border-left: 3px solid var(--color-acid-lime); padding-left: 18px; margin-bottom: 22px; line-height: 1.6; background: rgba(200, 240, 74, 0.05); padding-top: 12px; padding-bottom: 12px; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-            “{% trans "On Lake Naivasha, water timing and safety come first. When you depart at the optimal boat timing with certified gear, every boat ride Naivasha experience is unforgettable." %}”
-          </blockquote>
-
-          <p style="font-size: 0.98rem; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: 22px;">
-            {% trans "Captain Aizo Gateru leads Nova's on-water operations along South Lake Road. With over 14 years steering Lake Naivasha boat rides and private boat safari tours, Aizo specializes in direct hotel jetty departures and smooth Crescent Island crossings. Ranked with top guest review scores, he is renowned for navigating tranquil hippo channels and sharing deep geographical knowledge of the Great Rift Valley." %}
-          </p>
-
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md); padding: 14px 18px; margin-bottom: 26px;">
-            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-acid-lime); font-weight: 700; margin-bottom: 4px;">
-              {% trans "Route Specialties & Knowledge" %}
-            </div>
-            <div style="font-size: 0.92rem; color: #FFFFFF;">
-              {% trans "Crescent Island navigation, Lake Naivasha boat timing coordination, hippo buffer zones & deep channel navigation" %}
-            </div>
-          </div>
-
-          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
-            <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20request%20Captain%20Aizo%20Gateru%20for%20our%20Lake%20Naivasha%20Boat%20Ride." target="_blank" rel="noopener" class="nova-btn-lime" style="font-size: 0.95rem; padding: 12px 24px;">
-              {% trans "Request Captain Aizo on WhatsApp" %} &rarr;
-            </a>
-            <a href="{% url 'tours:tour_detail' slug='crescent-island' %}" class="nova-btn-ghost" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3); font-size: 0.92rem;">
-              {% trans "View Crescent Island Tour" %}
-            </a>
-          </div>
-        </div>
-
-        <div class="captain-portrait-frame">
-          <picture>
-            <source srcset="{% static 'images/captain-aizo-gateru.webp' %}" type="image/webp">
-            <img src="{% static 'images/captain-aizo-gateru.webp' %}" alt="Captain Aizo Gateru - Lead Lake Naivasha Boat Captain" loading="lazy">
-          </picture>
-          <div class="captain-portrait-badge">
-            <div>
-              <div style="color: #FFFFFF; font-weight: 700; font-size: 0.95rem;">Capt. Aizo Gateru</div>
-              <div style="color: var(--color-acid-lime); font-size: 0.76rem; font-weight: 600;">{% trans "Lead Pilot • Crescent Island Specialist" %}</div>
-            </div>
-            <span class="nova-badge nova-badge-lime">{% trans "Active on Lake" %}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Captain 1: Captain Josphat Muriuki -->
-    <div x-show="activeIndex === 1" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" class="captain-showcase-container">
-      <div class="captain-card-body">
-        <div>
-          <div class="captain-badge-list">
-            <span class="captain-pill">🦅 {% trans "11 Years on Lake Naivasha" %}</span>
-            <span class="captain-pill">📷 {% trans "Birding & Safari Guide" %}</span>
-            <span class="captain-pill">🦛 {% trans "Hippo Territory Specialist" %}</span>
-            <span class="captain-pill">🌅 {% trans "Sunrise Timing Master" %}</span>
-          </div>
-
-          <h3 style="font-size: 2.2rem; color: #FFFFFF; margin-bottom: 6px; letter-spacing: -0.02em;">
-            Captain Josphat Muriuki
-          </h3>
-          <div style="font-size: 1.05rem; font-weight: 700; color: var(--color-acid-lime); margin-bottom: 20px;">
-            {% trans "Senior Wildlife & Birding Safari Captain" %} &bull; {% trans "English, Swahili" %}
-          </div>
-
-          <blockquote style="font-style: italic; font-size: 1.12rem; color: #FFFFFF; border-left: 3px solid var(--color-acid-lime); padding-left: 18px; margin-bottom: 22px; line-height: 1.6; background: rgba(200, 240, 74, 0.05); padding-top: 12px; padding-bottom: 12px; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
-            “{% trans "Lake Naivasha is home to over 400 bird species and resident hippo pods. When we drift quietly during early morning boat timing, wildlife comes right to you." %}”
-          </blockquote>
-
-          <p style="font-size: 0.98rem; line-height: 1.7; color: rgba(255,255,255,0.85); margin-bottom: 22px;">
-            {% trans "Captain Josphat Muriuki is Nova's wildlife and photography specialist for every Lake Naivasha boat safari. With 11 years on the water, Josphat knows each hippo family territory and birding inlet from Crescent Island to the eastern wetlands. Frequent travelers praise his calm navigation in verified boat reviews, highlighting his uncanny ability to spot malachite kingfishers and call African fish eagles for breathtaking photo opportunities." %}
-          </p>
-
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md); padding: 14px 18px; margin-bottom: 26px;">
-            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-acid-lime); font-weight: 700; margin-bottom: 4px;">
-              {% trans "Route Specialties & Knowledge" %}
-            </div>
-            <div style="font-size: 0.92rem; color: #FFFFFF;">
-              {% trans "African fish eagle calling, kingfisher coves, Oloidien flamingo lagoons, sunrise photography" %}
-            </div>
-          </div>
-
-          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
-            <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20request%20Captain%20Josphat%20Muriuki%20for%20our%20Lake%20Naivasha%20Boat%20Safari." target="_blank" rel="noopener" class="nova-btn-lime" style="font-size: 0.95rem; padding: 12px 24px;">
-              {% trans "Request Captain Josphat on WhatsApp" %} &rarr;
-            </a>
-            <a href="{% url 'tours:tour_detail' slug='classic-lake-safari' %}" class="nova-btn-ghost" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3); font-size: 0.92rem;">
-              {% trans "View Wildlife Safari Tour" %}
-            </a>
-          </div>
-        </div>
-
-        <div class="captain-portrait-frame">
-          <picture>
-            <source srcset="{% static 'images/captain-josphat-muriuki.webp' %}" type="image/webp">
-            <img src="{% static 'images/captain-josphat-muriuki.webp' %}" alt="Captain Josphat Muriuki - Senior Wildlife & Birding Safari Captain" loading="lazy">
-          </picture>
-          <div class="captain-portrait-badge">
-            <div>
-              <div style="color: #FFFFFF; font-weight: 700; font-size: 0.95rem;">Capt. Josphat Muriuki</div>
-              <div style="color: var(--color-acid-lime); font-size: 0.76rem; font-weight: 600;">{% trans "Senior Safari Pilot • Wildlife Specialist" %}</div>
-            </div>
-            <span class="nova-badge nova-badge-lime">{% trans "Active on Lake" %}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- 11B. LAKE NAIVASHA BOAT REVIEW & REPUTATION (AEO/GEO SOCIAL PROOF) -->
-<section id="boat-reviews" class="nova-section nova-section-dark" x-data="{
-  scrollReviews(direction) {
-    const track = this.$refs.reviewTrack;
-    if (!track) return;
-    const card = track.querySelector('.nova-carousel-slide');
-    const cardWidth = card ? card.offsetWidth + 24 : 300;
-    track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-  },
-  canScrollLeft: false,
-  canScrollRight: true,
-  updateReviewScroll() {
-    const t = this.$refs.reviewTrack;
-    if (!t) return;
-    this.canScrollLeft = t.scrollLeft > 10;
-    this.canScrollRight = t.scrollLeft < (t.scrollWidth - t.clientWidth - 15);
-  }
-}" x-init="$nextTick(() => updateReviewScroll())">
-  <div class="nova-shell">
-    
-    <div class="nova-carousel-header">
-      <div>
-        <span class="nova-kicker nova-kicker-lime">{% trans "VERIFIED REPUTATION • 180+ GUEST RATINGS" %}</span>
-        <h2 class="nova-title-section" style="color: #FFFFFF; margin-top: 8px; margin-bottom: 12px;">
-          {% trans "Lake Naivasha Boat Review: What Travelers Say About Nova" %}
-        </h2>
-        <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.6; max-width: 680px;">
-          {% trans "Planning your trip and looking for an honest" %} <strong>Lake Naivasha boat review</strong>? {% trans "Travelers consistently rate Nova" %} <strong>4.9 out of 5 stars</strong> {% trans "for licensed captain safety, transparent fixed pricing without aggressive beach touts, and seamless hotel jetty departures." %}
-        </p>
-      </div>
-
-      <!-- Review Nav Controls -->
-      <div class="nova-carousel-nav">
-        <button type="button" @click="scrollReviews(-1)" :disabled="!canScrollLeft" class="nova-carousel-btn nova-carousel-btn-dark" aria-label="Previous Reviews" title="Previous">
-          &#8592;
-        </button>
-        <button type="button" @click="scrollReviews(1)" :disabled="!canScrollRight" class="nova-carousel-btn nova-carousel-btn-dark" aria-label="Next Reviews" title="Next">
-          &#8594;
-        </button>
-      </div>
-    </div>
-
-    <!-- Review Authority Metrics Bar -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 36px;">
-      <div style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-lg); padding: 20px; text-align: center;">
-        <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--color-acid-lime);">4.9 ★</div>
-        <div style="font-weight: 700; color: #FFF; font-size: 0.95rem; margin-top: 4px;">{% trans "Overall Rating" %}</div>
-        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6);">{% trans "Based on 186+ verified reviews" %}</div>
-      </div>
-
-      <div style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-lg); padding: 20px; text-align: center;">
-        <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--color-acid-lime);">100%</div>
-        <div style="font-weight: 700; color: #FFF; font-size: 0.95rem; margin-top: 4px;">{% trans "Safety Compliance" %}</div>
-        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6);">{% trans "Fitted child & adult life vests" %}</div>
-      </div>
-
-      <div style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-lg); padding: 20px; text-align: center;">
-        <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--color-acid-lime);">Zero</div>
-        <div style="font-weight: 700; color: #FFF; font-size: 0.95rem; margin-top: 4px;">{% trans "Beach Haggling" %}</div>
-        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6);">{% trans "Transparent pre-booked rates" %}</div>
-      </div>
-
-      <div style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-lg); padding: 20px; text-align: center;">
-        <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--color-acid-lime);">14+ Yrs</div>
-        <div style="font-weight: 700; color: #FFF; font-size: 0.95rem; margin-top: 4px;">{% trans "Captain Experience" %}</div>
-        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6);">{% trans "Licensed local lake captains" %}</div>
-      </div>
-    </div>
-
-    <!-- Verified Review Carousel Track -->
-    <div class="nova-carousel-track" x-ref="reviewTrack" @scroll.passive="updateReviewScroll()">
-      {% for item in testimonials %}
-      <div class="nova-carousel-slide" style="background: var(--color-obsidian-surface); border: 1px solid var(--color-obsidian-border); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-            <span style="color: #F59E0B; font-size: 1.05rem;">★★★★★</span>
-            <span class="nova-badge nova-badge-dark" style="font-size: 0.7rem; border-color: rgba(255,255,255,0.2);">{{ item.get_guest_segment_display }}</span>
-          </div>
-          <p style="font-size: 0.92rem; line-height: 1.65; color: rgba(255,255,255,0.88); margin-bottom: 16px;">
-            “{{ item.text }}”
-          </p>
-        </div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
-          <div style="font-weight: 700; font-size: 0.92rem; color: #FFF;">{{ item.guest_name }}</div>
-          <div style="font-size: 0.76rem; color: var(--color-acid-lime);">{% trans "Verified Trip" %} &bull; {{ item.trip_date }}</div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-  </div>
-</section>
-
+{% include 'core/partials/verified_crew.html' %}
+{% include 'core/partials/verified_reviews.html' %}
 <!-- 13. PLAN NAIVASHA & 14. JOURNAL -->
 <section class="nova-section">
   <div class="nova-shell">

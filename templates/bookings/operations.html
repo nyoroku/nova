@@ -1,0 +1,9 @@
+{% extends 'admin/base_site.html' %}
+{% block content %}
+<p>{{ total }} enquiries in the last 30 days. {% if response_hours != None %}Average time to first recorded response: {{ response_hours }} hours.{% else %}Response time has not yet been recorded.{% endif %}</p>
+<p>A click is not a confirmed booking. Revenue below includes only explicitly entered revenue for confirmed/completed leads. Currencies are reported separately.</p>
+<h2>Lead outcomes</h2><table><thead><tr><th>Status</th><th>Enquiries</th></tr></thead><tbody>{% for row in outcomes %}<tr><td>{{ row.status }}</td><td>{{ row.count }}</td></tr>{% endfor %}</tbody></table>
+<h2>Activities and acquisition</h2><table><thead><tr><th>Activity</th><th>Campaign</th><th>Content</th><th>Enquiries</th></tr></thead><tbody>{% for row in activities %}<tr><td>{{ row.tour__name|default:'Other enquiry' }}</td><td>{{ row.utm_campaign|default:'Unattributed' }}</td><td>{{ row.utm_content|default:'—' }}</td><td>{{ row.count }}</td></tr>{% endfor %}</tbody></table>
+<h2>Recorded revenue</h2>{% for row in revenues %}<p>{{ row.currency }} {{ row.total }}</p>{% empty %}<p>No confirmed revenue entered.</p>{% endfor %}
+<p><a href="{% url 'admin:bookings_bookinglead_changelist' %}">Manage lead statuses, ownership and revenue</a></p>
+{% endblock %}

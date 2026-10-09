@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, View
 from .models import Package
 from tours.models import Tour
 from stays.models import AccommodationProperty
+from tours.pricing import quote_activity
 
 class PackageListView(ListView):
     model = Package
@@ -26,7 +27,7 @@ class PackageDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         pkg = self.object
         context['components'] = pkg.components.order_by('order')
-        context['tours'] = pkg.eligible_tours.filter(is_active=True)
+        context['tours'] = pkg.eligible_tours.filter(is_active=True, status='PUBLISHED')
         context['stays'] = pkg.accommodation_properties.filter(is_active=True)
         return context
 
@@ -57,13 +58,12 @@ class PackageQuotePartialView(View):
             selected_stay = AccommodationProperty.objects.filter(pk=int(stay_id), is_active=True).first()
 
         # Estimated boat portion
-        tour = package.eligible_tours.filter(is_active=True).first()
-        boat_amount = 0
-        if tour:
-            boat_amount = tour.get_starting_price() * adults + (tour.get_starting_price() * children * Decimal('0.5'))
+        tour = package.eligible_tours.filter(is_active=True, status='PUBLISHED').first()
+        quote = quote_activity(tour, adults=adults, children=children) if tour else None
+        boat_amount = quote.boat_amount if quote else None
 
         # Hotel logistics portion
-        positioning_amount = 2000 if package.includes_hotel_origin_pickup else 0
+        positioning_amount = None if package.includes_hotel_origin_pickup else 0
 
         # Accommodation portion
         stay_amount = 0
@@ -71,20 +71,18 @@ class PackageQuotePartialView(View):
         if selected_stay:
             if selected_stay.inventory_mode in ['MANAGED', 'ALLOTMENT'] and selected_stay.starting_price > 0:
                 stay_amount = selected_stay.starting_price * package.duration_nights
-                is_provisional = False
+                is_provisional = True
             else:
                 stay_amount = selected_stay.starting_price * package.duration_nights
                 is_provisional = True
 
-        total_estimate = boat_amount + positioning_amount + stay_amount
+        total_estimate = None
 
         whatsapp_text = (
             f"Hi Nova. I would like to book the {package.name} for {adults} adult(s)"
             + (f" and {children} child(ren)" if children else "")
             + (f" at {selected_stay.name}" if selected_stay else "")
-            + f". Total estimate: KES {total_estimate:,.0f}"
-            + (" (accommodation subject to confirmation)" if is_provisional else "")
-            + "."
+            + ". Please confirm boat availability, accommodation, departure arrangements and the complete package quote."
         )
 
         return render(request, 'packages/partials/package_quote_card.html', {
@@ -98,4 +96,5 @@ class PackageQuotePartialView(View):
             'total_estimate': total_estimate,
             'is_provisional': is_provisional,
             'whatsapp_text': whatsapp_text,
+            'quote': quote,
         })

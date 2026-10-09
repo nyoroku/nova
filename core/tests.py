@@ -33,6 +33,14 @@ class CoreViewsTestCase(TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertContains(resp, "Find Nova on Lake Naivasha")
 
+    def test_analytics_requires_stream_setup_verification(self):
+        self.settings.ga4_measurement_id='G-TEST123'
+        self.settings.save()
+        self.assertNotContains(self.client.get('/'),'nova-analytics-config')
+        self.settings.ga4_setup_verified=True
+        self.settings.save()
+        self.assertContains(self.client.get('/'),'nova-analytics-config')
+
     def test_i18n_set_language_swahili(self):
         set_resp = self.client.post(reverse('set_language'), {'language': 'sw', 'next': reverse('core:home')})
         self.assertEqual(set_resp.status_code, 302)

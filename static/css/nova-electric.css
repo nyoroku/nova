@@ -543,7 +543,7 @@ img {
   gap: 4px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .desktop-nav {
     display: flex;
   }
@@ -676,7 +676,7 @@ img {
   transform: scale(0.94);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .mobile-toggle {
     display: none !important;
   }
@@ -705,7 +705,7 @@ img {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .nova-mobile-menu {
     display: none !important;
   }

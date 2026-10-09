@@ -1,0 +1,14 @@
+<div id="booking-card" class="nova-card" style="padding:clamp(18px,4vw,36px)">
+<h2>Reservation Request</h2><p>Choose your activity and option so your quote uses the correct duration and boat arrangement.</p>
+<form method="post" action="{% url 'bookings:book' %}" hx-post="{% url 'bookings:book' %}" hx-target="#booking-card" hx-swap="outerHTML">
+  {% csrf_token %}{{ form.submission_token }}
+  {% if form.non_field_errors %}<div role="alert">{{ form.non_field_errors }}</div>{% endif %}
+  {% for title, fields in form.field_groups %}{% if forloop.last %}<details {% if form.is_bound %}open{% endif %}><summary>Hotel, accommodation and other requests</summary>{% endif %}<fieldset class="activity-section"><legend><h3>{{ title }}</h3></legend><div class="activity-form-grid">
+  {% for field in fields %}<div><label for="{{ field.id_for_label }}">{{ field.label }}{% if field.field.required %} *{% endif %}</label>{{ field }}{% if field.errors %}<div role="alert">{{ field.errors }}</div>{% endif %}{% if field.help_text %}<p>{{ field.help_text }}</p>{% endif %}</div>{% endfor %}
+  </div></fieldset>{% if forloop.last %}</details>{% endif %}{% endfor %}
+  <label style="display:flex;align-items:flex-start;gap:12px;padding:20px 0">{{ form.consent_operational }}<span>I agree to operational messages about this enquiry, departure arrangements and safety updates.</span></label>{{ form.consent_operational.errors }}
+  <p>For children, include their ages in your notes. Nova will confirm suitable equipment and applicable prices. No child discount or boarding accessibility is assumed.</p>
+  <button type="submit" class="nova-btn-primary">Send availability enquiry</button>
+</form>
+<p>Prefer to chat? <a href="{{ brand.whatsapp_url }}" target="_blank" rel="noopener">Ask Nova on WhatsApp</a>.</p>
+</div>

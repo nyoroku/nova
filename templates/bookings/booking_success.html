@@ -1,13 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
-
-{% block meta_title %}Booking Request Received | Nova Boat Rides Naivasha{% endblock %}
-{% block meta_description %}Your Lake Naivasha booking request #{{ lead.reference_number }} has been received. Confirm on WhatsApp for instant confirmation.{% endblock %}
-
-{% block content %}
-<section class="nova-section">
-  <div class="nova-shell" style="max-width: 800px; margin: 40px auto;">
-    {% include 'bookings/partials/booking_success.html' %}
-  </div>
-</section>
-{% endblock %}
+{% block meta_title %}Enquiry Received | Nova Boat Rides Naivasha{% endblock %}
+{% block meta_description %}Your availability enquiry has been received. Discuss your departure and complete quote with Nova.{% endblock %}
+{% block robots %}noindex, nofollow{% endblock %}
+{% block content %}<section class="nova-section"><div class="nova-shell" style="max-width:850px">{% include 'bookings/partials/booking_success.html' %}</div></section>{% endblock %}

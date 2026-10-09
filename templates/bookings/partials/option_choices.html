@@ -1,0 +1,1 @@
+<option value="">Please recommend an option</option>{% for option in options %}<option value="{{ option.pk }}">{{ option.name }} · {{ option.min_guests }}–{{ option.max_guests }} guests</option>{% endfor %}

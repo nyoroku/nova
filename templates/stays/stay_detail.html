@@ -112,9 +112,9 @@
             {% for tour in pairable_tours %}
             <div class="nova-card" style="padding: 20px; background: #FFFFFF; display: flex; flex-direction: column;">
               <h4 style="font-size: 1.05rem; margin-bottom: 6px;">{{ tour.name }}</h4>
-              <div style="font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 12px;">⏱ {{ tour.duration_display }}</div>
+              <div style="font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 12px;">⏱ {{ tour.public_duration_display }}</div>
               <div style="font-weight: 800; font-size: 1.1rem; color: var(--color-ultraviolet); margin-top: auto; margin-bottom: 10px;">
-                From KES {{ tour.get_starting_price|floatformat:0 }}
+                {% include 'tours/partials/rate_summary.html' %}
               </div>
               <a href="{% url 'bookings:book' %}?stay={{ property.slug }}&tour={{ tour.slug }}" class="nova-btn-secondary" style="font-size: 0.82rem; padding: 6px 12px; text-align: center;">
                 Pair with Stay

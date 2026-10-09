@@ -2,7 +2,7 @@ from decimal import Decimal
 from django.test import TestCase, Client
 from django.urls import reverse
 from packages.models import Package, PackageComponent
-from tours.models import Tour, TourPriceTier
+from tours.models import Tour, TourPriceTier, TourOption, ExperienceRate
 from stays.models import AccommodationProperty
 
 class PackagesTestCase(TestCase):
@@ -12,8 +12,12 @@ class PackagesTestCase(TestCase):
             name="Classic Safari",
             slug="classic-safari",
             summary="Safari",
-            is_active=True
+            is_active=True,
+            status='PUBLISHED'
         )
+        option = TourOption.objects.create(tour=self.tour, name='Shared hour', mode='SHARED', duration_minutes=60, max_guests=8)
+        ExperienceRate.objects.create(experience=self.tour, option=option, name='Shared seat', pricing_model='PER_PERSON',
+            amount=3000, min_guests=1, max_guests=8, duration_minutes=60)
         TourPriceTier.objects.create(
             tour=self.tour,
             label="Std",
@@ -63,4 +67,6 @@ class PackagesTestCase(TestCase):
         url = reverse('packages:quote_partial', kwargs={'slug': self.package.slug})
         resp = self.client.get(f"{url}?adults=2&children=0&stay_id={self.stay.id}")
         self.assertEqual(resp.status_code, 200)
-        self.assertContains(resp, "23000")
+        self.assertContains(resp, "6000")
+        self.assertContains(resp, "complete package quote")
+        self.assertNotContains(resp, "23000")

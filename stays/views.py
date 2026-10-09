@@ -38,5 +38,5 @@ class StayDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['room_types'] = self.object.room_types.filter(is_active=True)
-        context['pairable_tours'] = Tour.objects.filter(is_active=True)[:3]
+        context['pairable_tours'] = Tour.objects.published()[:3]
         return context

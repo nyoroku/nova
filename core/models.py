@@ -53,7 +53,10 @@ class SiteSettings(models.Model):
     )
     default_meta_image = models.ImageField(upload_to="meta/", blank=True, null=True)
     logo = models.ImageField(upload_to="logo/", blank=True, null=True)
-    last_verified_at = models.DateField(auto_now=True)
+    last_verified_at = models.DateField(null=True, blank=True)
+    response_expectation = models.CharField(max_length=240, blank=True, help_text='Only publish a response time operations can meet')
+    ga4_measurement_id = models.CharField(max_length=30, blank=True, help_text='Optional G- identifier; analytics requires visitor opt-in')
+    ga4_setup_verified = models.BooleanField(default=False, help_text='Confirm that GA4 Enhanced Measurement is disabled for this stream before enabling Nova’s manual events. Automatic outbound tracking can capture WhatsApp message URLs.')
 
     @property
     def legal_business_name(self):
@@ -112,7 +115,7 @@ class ExternalFee(models.Model):
     effective_until = models.DateField(null=True, blank=True)
     source_url = models.URLField(blank=True, default="https://www.crescentisland.co/")
     source_name = models.CharField(max_length=150, blank=True, default="Official Conservation Schedule")
-    last_verified_at = models.DateField(default=timezone.now)
+    last_verified_at = models.DateField(null=True, blank=True, help_text='Date the external fee was actually checked')
     is_active = models.BooleanField(default=True)
     notes = models.TextField(blank=True)
 
@@ -123,4 +126,16 @@ class ExternalFee(models.Model):
 
     def __str__(self):
         return f"{self.provider_name} - {self.service_name} ({self.get_visitor_type_display()}): {self.currency} {self.adult_amount}"
+
+    def clean(self):
+        from django.core.exceptions import ValidationError
+        errors = {}
+        for name in ('adult_amount', 'child_amount', 'student_amount'):
+            amount = getattr(self, name)
+            if amount is not None and amount < 0:
+                errors[name] = 'Fees cannot be negative.'
+        if self.effective_from and self.effective_until and self.effective_until < self.effective_from:
+            errors['effective_until'] = 'End date must follow the start date.'
+        if errors:
+            raise ValidationError(errors)
 

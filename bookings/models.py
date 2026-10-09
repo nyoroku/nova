@@ -5,7 +5,7 @@ from django.utils import timezone
 
 def generate_booking_reference():
     date_str = timezone.now().strftime("%Y%m%d")
-    unique_suffix = uuid.uuid4().hex[:4].upper()
+    unique_suffix = uuid.uuid4().hex[:8].upper()
     return f"NOV-{date_str}-{unique_suffix}"
 
 class BookingLead(models.Model):
@@ -21,6 +21,7 @@ class BookingLead(models.Model):
 
     STATUS_CHOICES = [
         ('NEW', 'New Enquiry'),
+        ('CONTACTED', 'Contacted'),
         ('NEEDS_HOTEL_CONFIRMATION', 'Awaiting Hotel Clearance / Positioning Confirmation'),
         ('NEEDS_ACCOMMODATION_CONFIRMATION', 'Awaiting Room Rate / Availability Confirmation'),
         ('QUOTED', 'Quote Sent to Guest'),
@@ -38,6 +39,17 @@ class BookingLead(models.Model):
     ]
 
     reference = models.CharField(max_length=30, unique=True, default=generate_booking_reference)
+    submission_key = models.UUIDField(null=True, blank=True, unique=True, editable=False)
+    option = models.ForeignKey('tours.TourOption', null=True, blank=True, on_delete=models.PROTECT, related_name='leads')
+    visitor_type = models.CharField(max_length=20, default='RESIDENT', choices=[
+        ('CITIZEN', 'Kenyan citizen'), ('RESIDENT', 'Kenya / East African resident'), ('NON_RESIDENT', 'International visitor')])
+    quote_complete = models.BooleanField(default=False)
+    quote_snapshot = models.JSONField(default=dict, blank=True)
+    contacted_at = models.DateTimeField(null=True, blank=True)
+    confirmed_at = models.DateTimeField(null=True, blank=True)
+    completed_at = models.DateTimeField(null=True, blank=True)
+    actual_revenue = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
+    assigned_to = models.CharField(max_length=150, blank=True)
     lead_type = models.CharField(max_length=35, choices=LEAD_TYPE_CHOICES, default='BOAT_ONLY')
     status = models.CharField(max_length=35, choices=STATUS_CHOICES, default='NEW')
 
@@ -78,7 +90,8 @@ class BookingLead(models.Model):
     utm_source = models.CharField(max_length=100, blank=True)
     utm_medium = models.CharField(max_length=100, blank=True)
     utm_campaign = models.CharField(max_length=100, blank=True)
-    consent_operational = models.BooleanField(default=True)
+    utm_content = models.CharField(max_length=100, blank=True)
+    consent_operational = models.BooleanField(default=False)
     internal_notes = models.TextField(blank=True, help_text="Internal operations notes (never visible to guest)")
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -102,7 +115,7 @@ class BookingLead(models.Model):
         """
         experience_name = "a lake experience"
         if self.tour:
-            experience_name = self.tour.name
+            experience_name = self.quote_snapshot.get('activity_name', self.tour.name)
         elif self.package:
             experience_name = self.package.name
 
@@ -124,9 +137,11 @@ class BookingLead(models.Model):
         elif self.lead_type == 'ACCOMMODATION':
             interest = "accommodation booking"
 
-        if self.is_accommodation_provisional or (self.accommodation_property and self.quoted_accommodation_amount == 0):
+        if not self.quote_complete:
+            estimate_str = "total price awaiting confirmation"
+        elif self.is_accommodation_provisional or (self.accommodation_property and self.quoted_accommodation_amount == 0):
             estimate_str = "pending accommodation confirmation"
-        elif self.quoted_total_amount > 0:
+        elif self.quote_complete:
             estimate_str = f"{self.currency} {self.quoted_total_amount:,.0f}"
         else:
             estimate_str = "standard rate upon review"
@@ -134,8 +149,19 @@ class BookingLead(models.Model):
         return (
             f"Hi Nova. I’m planning {experience_name} on {self.preferred_date} for {party_size}. "
             f"I am {hotel_status}. I’m interested in {interest}. "
-            f"Website estimate: {estimate_str}. (Ref: {self.reference})"
+            f"Preferred time: {self.preferred_time}. "
+            f"Option: {self.quote_snapshot.get('option_name', 'please recommend')}. "
+            f"Website estimate: {estimate_str}. Please confirm availability and final price. (Ref: {self.reference})"
         )
+
+    def save(self, *args, **kwargs):
+        if self.status in ('CONTACTED', 'QUOTED', 'DEPOSIT_PENDING', 'CONFIRMED', 'COMPLETED') and not self.contacted_at:
+            self.contacted_at = timezone.now()
+        if self.status in ('CONFIRMED', 'COMPLETED') and not self.confirmed_at:
+            self.confirmed_at = timezone.now()
+        if self.status == 'COMPLETED' and not self.completed_at:
+            self.completed_at = timezone.now()
+        super().save(*args, **kwargs)
 
     def generate_whatsapp_url(self, whatsapp_number="254701215295"):
         msg = self.generate_whatsapp_message()

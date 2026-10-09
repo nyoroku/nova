@@ -3,6 +3,10 @@ from pathlib import Path
 from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+import hashlib
+# Also invalidate cached development URLs, where manifest hashes are not used.
+NOVA_ASSET_VERSION = hashlib.sha256(b''.join((BASE_DIR / path).read_bytes() for path in
+    ['static/css/nova-electric.css', 'static/css/activities.css', 'static/js/activities.js'])).hexdigest()[:12]
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY', default='nova-electric-2026-production-secret-key-lake-naivasha')
@@ -48,6 +52,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'tours.attribution.AttributionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

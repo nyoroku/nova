@@ -1,0 +1,5 @@
+<section id="boat-reviews" class="nova-section nova-section-dark"><div class="nova-shell"><span class="nova-kicker nova-kicker-lime">Guest experiences</span><h2 class="nova-title-section" style="color:#fff">Read about Nova</h2>
+{% if review_snapshot %}<p>{{ review_snapshot.rating }} / 5 · {{ review_snapshot.review_count }} {{ review_snapshot.get_source_display }} reviews · Captured {{ review_snapshot.captured_at|date:'j M Y' }}. <a href="{{ review_snapshot.source_url }}" target="_blank" rel="noopener">View the source</a></p>{% endif %}
+<div class="activity-grid">{% for item in testimonials %}<blockquote class="nova-card" style="padding:24px;color:#131218"><p>“{{ item.text }}”</p><footer>{{ item.guest_name }} · {{ item.trip_date }}</footer></blockquote>{% endfor %}</div>
+{% if site_settings.google_business_profile_url %}<p><a href="{{ site_settings.google_business_profile_url }}" class="nova-btn-secondary" target="_blank" rel="noopener">Read reviews on Google</a></p>{% endif %}
+</div></section>

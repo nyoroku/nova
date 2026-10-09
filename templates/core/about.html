@@ -2,17 +2,17 @@
 {% load static i18n %}
 
 {% block meta_title %}About Nova Boat Rides Naivasha | Trust, Captains & Lake Access{% endblock %}
-{% block meta_description %}Learn about Nova Boat Rides Naivasha. Operator-level local knowledge, certified captains, verified hotel jetty coordination, and passenger safety.{% endblock %}
+{% block meta_description %}Learn about Nova Boat Rides Naivasha. Operator-level local knowledge, local planning, hotel departure coordination, and passenger safety.{% endblock %}
 
 {% block content %}
 <section class="nova-section nova-section-dark">
   <div class="nova-shell">
     <span class="nova-kicker nova-kicker-lime">ABOUT NOVA</span>
     <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
-      The Lake-Access Layer for Naivasha
+      About Nova Boat Rides Naivasha
     </h1>
     <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 650px; line-height: 1.6;">
-      Nova is not merely another Lake Naivasha boat operator. Nova is the lake-access layer for visitors and hotel partners: discover a ride, start from the most convenient approved jetty or launch point, and coordinate the complete stay and lake day through one trusted local team.
+      Plan a Lake Naivasha experience with Nova, choose your activity and confirm the most suitable departure point with our team.
     </p>
   </div>
 </section>
@@ -53,9 +53,9 @@
     <!-- Captains Grid -->
     <div style="margin-top: 50px;">
       <span class="nova-kicker">{% trans "The People Behind the Plan" %}</span>
-      <h2 class="nova-title-section" style="margin-bottom: 12px;">{% trans "Certified Lake Naivasha Captains" %}</h2>
+      <h2 class="nova-title-section" style="margin-bottom: 12px;">{% trans "Nova Lake Naivasha Captains" %}</h2>
       <p style="color: var(--color-text-muted); font-size: 1.05rem; max-width: 720px; margin-bottom: 32px;">
-        {% trans "Meet the certified local captains who guide every Lake Naivasha boat safari and private boat ride. Each captain brings over a decade of hands-on watermanship, intimate hippo territory knowledge, and perfect marine safety compliance." %}
+        {% trans "Ask Nova about captain availability, guide languages and the equipment required for your party." %}
       </p>
       
       <div class="nova-grid-2">
@@ -73,7 +73,7 @@
                 </div>
                 <div style="display: flex; gap: 6px; flex-wrap: wrap;">
                   <span class="nova-badge nova-badge-lime" style="font-size: 0.72rem;">{{ cap.years_on_lake }} {% trans "Yrs on Lake" %}</span>
-                  <span class="nova-badge nova-badge-dark" style="font-size: 0.72rem;">{% trans "Certified KPA/KWS" %}</span>
+                  <span class="nova-badge nova-badge-dark" style="font-size: 0.72rem;">{{ cap.certification_text }}</span>
                 </div>
               </div>
             </div>

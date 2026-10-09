@@ -1,318 +1,69 @@
 {% extends 'base.html' %}
 {% load static %}
-
-{% block meta_title %}{{ tour.name }} | Lake Naivasha Boat Rides | Nova{% endblock %}
-{% block meta_description %}{{ tour.summary }} Rates starting from KES {{ tour.canonical_starting_rate_resident|floatformat:0 }}. Licensed captains, fitted life jackets, and hotel jetty departures.{% endblock %}
-
+{% block meta_title %}{{ tour.effective_seo_title }}{% endblock %}
+{% block meta_description %}{{ tour.meta_description|default:tour.summary }}{% endblock %}
+{% block robots %}{% if preview %}noindex, nofollow{% else %}index, follow{% endif %}{% endblock %}
 {% block extra_head %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": "{{ tour.name }}",
-  "description": "{{ tour.summary }}",
-  "touristType": ["Wildlife Enthusiasts", "Eco-tourists", "Families"],
-  "provider": {
-    "@type": "TouristInformationCenter",
-    "name": "{{ site_settings.business_name }}",
-    "url": "{{ site_settings.SITE_URL }}"
-  },
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "KES",
-    "lowPrice": "{{ tour.canonical_starting_rate_resident }}",
-    "offerCount": "{{ price_tiers.count }}"
-  }
-}
-</script>
+<script type="application/ld+json">{{ activity_schema|safe }}</script>
+{% with image=gallery.0 %}{% if image %}<link rel="preload" as="image" href="{% if image.webp_image %}{{ image.webp_image.url }}{% else %}{{ image.image.url }}{% endif %}" {% if image.webp_mobile and image.webp_image %}imagesrcset="{{ image.webp_mobile.url }} 480w, {{ image.webp_image.url }} 1280w" imagesizes="(max-width: 800px) 100vw, 65vw"{% endif %}>{% endif %}{% endwith %}
 {% endblock %}
-
 {% block content %}
-<!-- Hero Section -->
-<section class="nova-section nova-section-dark">
-  <div class="nova-shell">
-    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
-      <a href="{% url 'tours:tour_list' %}" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem;">&larr; All Boat Rides</a>
-      <span style="color: rgba(255,255,255,0.3);">/</span>
-      {% if tour.is_private %}
-        <span class="nova-badge nova-badge-purple">Private Charter</span>
-      {% else %}
-        <span class="nova-badge nova-badge-lime">Shared & Group Friendly</span>
-      {% endif %}
-      {% if tour.crescent_island_included %}
-        <span class="nova-badge nova-badge-purple">Crescent Island Route</span>
-      {% endif %}
+<div class="activity-page" data-activity-slug="{{ tour.slug }}" data-tour-type="{{ tour.category }}" data-duration-minutes="{{ tour.starting_rate.option.duration_minutes|default:tour.duration_minutes }}" data-price-currency="{{ tour.starting_rate.currency }}" data-price-value="{{ tour.starting_rate.amount }}" data-pricing-model="{{ tour.starting_rate.pricing_model }}">
+  {% if preview %}<aside class="activity-preview nova-shell"><strong>Staff preview · {{ tour.get_status_display }}</strong><ul>{% for issue in readiness %}<li>{{ issue }}</li>{% endfor %}</ul></aside>{% endif %}
+  <section class="nova-section nova-section-dark activity-hero"><div class="nova-shell">
+    <nav aria-label="Breadcrumb" class="activity-breadcrumb"><a href="{% url 'core:home' %}">Home</a> / <a href="{% url 'tours:tour_list' %}">Boat Rides</a> / <span>{{ tour.name }}</span></nav>
+    <span class="nova-kicker nova-kicker-lime">{{ tour.get_category_display }}</span>
+    <h1 class="nova-title-hero">{{ tour.name }}</h1>
+    <p>{{ tour.direct_answer|default:tour.summary }}</p>
+    {% include 'tours/partials/rate_summary.html' %}
+    <p>Availability enquiry · Departures confirmed by Nova</p>
+    <div class="activity-actions"><a class="nova-btn-primary" href="#price-booking" data-nova-event="activity_check_availability_click" data-cta-location="hero">Choose an option</a><a class="nova-btn-secondary" href="{{ tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="hero">Ask on WhatsApp</a></div>
+  </div></section>
+  <section class="nova-section"><div class="nova-shell activity-detail-layout">
+    <div>
+      {% if gallery %}
+      <section class="activity-gallery" aria-label="{{ tour.name }} photos" tabindex="0" x-data="novaGallery" @keydown.arrow-right.prevent="go(current + 1)" @keydown.arrow-left.prevent="go(current - 1)">
+        <div class="activity-gallery-track" role="group" aria-label="Activity images" tabindex="0" x-ref="track" @scroll.debounce.100ms="sync()">
+          {% for image in gallery %}<figure>
+            <img src="{% if image.webp_image %}{{ image.webp_image.url }}{% else %}{{ image.image.url }}{% endif %}" {% if image.webp_mobile and image.webp_image %}srcset="{{ image.webp_mobile.url }} 480w, {{ image.webp_image.url }} 1280w" sizes="(max-width: 800px) 100vw, 65vw"{% endif %} width="{{ image.width|default:1280 }}" height="{{ image.height|default:853 }}" alt="{{ image.alt_text }}" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+            {% if image.caption or image.credit %}<figcaption dir="auto">{{ image.caption }}{% if image.credit %} <span>Photo: {{ image.credit }}</span>{% endif %}</figcaption>{% endif %}
+          </figure>{% endfor %}
+        </div>
+        {% if gallery|length > 1 %}<div class="activity-gallery-controls" x-cloak><button type="button" @click="go(current - 1)" aria-label="Previous image">←</button><span x-text="(current + 1) + ' / ' + count">1 / {{ gallery|length }}</span><button type="button" @click="go(current + 1)" aria-label="Next image">→</button></div>
+        <div class="activity-thumbnails" x-cloak>{% for image in gallery %}<button type="button" @click="go({{ forloop.counter0 }})" :aria-current="current === {{ forloop.counter0 }} ? 'true' : 'false'" aria-label="View image {{ forloop.counter }}"><img src="{% if image.webp_mobile %}{{ image.webp_mobile.url }}{% else %}{{ image.image.url }}{% endif %}" alt="" width="80" height="54" loading="lazy"></button>{% endfor %}</div>{% endif %}
+      </section>
+      {% else %}<div class="activity-image-placeholder">Photos for this activity are being prepared.</div>{% endif %}
+
+      <section class="activity-section"><h2>Included and excluded</h2><div class="activity-inclusions">
+        <div><h3>Included</h3><ul>{% for text in tour.inclusion_items %}<li>{{ text }}</li>{% endfor %}</ul></div>
+        <div><h3>Not included</h3><ul>{% for text in tour.exclusion_items %}<li>{{ text }}</li>{% endfor %}</ul></div>
+      </div></section>
+      {% if highlights %}<section class="activity-section"><h2>Highlights</h2><ul class="activity-highlights">{% for item in highlights %}<li>{{ item.text }}</li>{% endfor %}</ul></section>{% endif %}
+      <section class="activity-section"><h2>Your experience</h2><div class="nova-prose">{{ tour.body|linebreaks }}</div></section>
+      {% if tour.itinerary_steps.exists %}<section class="activity-section" data-nova-observe="activity_itinerary_view"><h2>Typical itinerary</h2><p>Timing and route may change with conditions. Select an option for its total duration.</p><ol class="activity-timeline">{% for step in tour.itinerary_steps.all %}<li><h3>{{ step.title }}</h3><p>{{ step.description }}</p></li>{% endfor %}</ol></section>{% endif %}
+      <section class="activity-section" id="price-booking" data-nova-observe="activity_price_view">
+        <h2>Price and availability</h2><p>Choose an option with the duration and boat arrangement you need. This is an enquiry, and does not reserve a departure.</p>
+        {% if tour.external_booking_url %}<p><a href="{{ tour.external_booking_url }}" target="_blank" rel="noopener" class="nova-btn-secondary">Open the booking calendar</a></p>{% endif %}
+        <div class="activity-options">{% for rate in rates %}<article class="nova-card"><h3>{{ rate.option.name }}</h3><p>{{ rate.option.duration_minutes }} minutes · {{ rate.option.get_mode_display }} · {{ rate.min_guests }}–{{ rate.max_guests }} guests</p>{% if rate.has_exact_price %}<p><strong>{{ rate.currency }} {{ rate.amount|floatformat:"-2" }}</strong> {{ rate.unit_label }} · {{ rate.get_audience_type_display }}</p>{% else %}<p>Request an individual quote</p>{% endif %}{% if rate.has_exact_price and rate.min_guests > 1 %}<p>Minimum booking: {{ rate.currency }} {{ rate.minimum_total|floatformat:"-2" }}</p>{% endif %}{% if rate.option.external_fees.exists %}<p>Mandatory attraction fees are additional; see the table below.</p>{% endif %}<a href="{{ tour.enquiry_url }}&amp;option={{ rate.option_id }}&amp;currency={{ rate.currency }}&amp;visitor_type={% if rate.audience_type == 'NON_RESIDENT' %}NON_RESIDENT{% elif rate.audience_type == 'KENYAN_CITIZEN' %}CITIZEN{% else %}RESIDENT{% endif %}" class="nova-btn-secondary" data-nova-event="activity_check_availability_click" data-cta-location="option">Enquire about this option</a></article>{% empty %}<p>Please ask Nova for a current quote.</p>{% endfor %}</div>
+        {% include 'tours/partials/fees.html' %}
+        {% if options %}<form action="{% url 'tours:quote_partial' slug=tour.slug %}" method="get" hx-get="{% url 'tours:quote_partial' slug=tour.slug %}" hx-target="#quote-result" class="activity-quote-form">
+          <h3>Estimate your party’s total</h3><div class="activity-form-grid">
+          <label>Booking option<select name="option" required>{% for option in options %}<option value="{{ option.pk }}">{{ option.name }} · {{ option.min_guests }}–{{ option.max_guests }} guests</option>{% endfor %}</select></label>
+          <label>Preferred date<input type="date" name="date" required></label><label>Adults<input type="number" name="adults" min="1" max="500" value="1" required></label><label>Children<input type="number" name="children" min="0" max="500" value="0" required></label>
+          <label>Visitor category<select name="visitor_type"><option value="CITIZEN">Kenyan citizen</option><option value="RESIDENT">Kenya / East African resident</option><option value="NON_RESIDENT">International visitor</option></select></label><label>Currency<select name="currency"><option value="KES">KES</option><option value="USD">USD</option></select></label>
+          </div><p>For children, mixed visitor categories or hotel departures, Nova may need to confirm a complete quote.</p><button class="nova-btn-primary" type="submit">Calculate estimate</button>
+        </form><div id="quote-result"></div>{% endif %}
+      </section>
+      <section class="activity-section"><h2>Meeting and departure</h2><p>{{ tour.meeting_point }}</p><p>Arrive {{ tour.arrival_minutes_before }} minutes before your confirmed departure.</p><a href="{{ site_settings.google_maps_url }}" target="_blank" rel="noopener" data-nova-event="activity_directions_click">Open directions</a><p><a href="{% url 'partners:hotel_hub' %}" data-nova-event="hotel_departure_click">Check hotel departure arrangements</a></p></section>
+      <section class="activity-section"><h2>Wildlife and scenery</h2><p>{{ tour.what_guests_may_see|default:tour.summary }}</p><p>Wildlife is wild. Sightings vary with weather, water levels and animal movement.</p></section>
+      <section class="activity-section"><h2>What to bring</h2><ul>{% for item in tour.what_to_bring.splitlines %}<li>{{ item }}</li>{% endfor %}</ul></section>
+      <section class="activity-section"><h2>Before you book</h2><h3>Safety and children</h3><p>{{ tour.safety_briefing }}</p><p>{{ tour.child_policy }}</p><h3>Boarding and accessibility</h3><p>{{ tour.accessibility_notes }}</p><h3>Weather</h3><p>{{ tour.weather_policy }}</p><h3>Cancellations and payment</h3><p>{{ tour.cancellation_policy }}</p><p>No payment is taken by this enquiry form. Confirm the full price and terms with Nova before paying.</p></section>
+      {% if tour.best_for %}<section class="activity-section"><h2>Who this ride suits</h2><p>{{ tour.best_for }}</p></section>{% endif %}
+      {% if tour.faqs.exists %}<section class="activity-section"><h2>Questions about this ride</h2>{% for faq in tour.faqs.all %}<details class="activity-faq"><summary>{{ faq.question }}</summary><p>{{ faq.answer }}</p></details>{% endfor %}</section>{% endif %}
     </div>
-
-    <h1 class="nova-title-hero" style="color: #FFF; margin-bottom: 16px;">
-      {{ tour.name }}
-    </h1>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 0.95rem; color: rgba(255,255,255,0.85);">
-      <div>⏱ <strong>Duration:</strong> {{ tour.duration_display }}</div>
-      <div>👥 <strong>Capacity:</strong> Up to {{ tour.max_capacity }} passengers</div>
-      <div>⚓ <strong>Departure:</strong> Nova Karagita Base or Approved Hotel Jetty</div>
-    </div>
-  </div>
-</section>
-
-<!-- Content & Booking Quoter Section -->
-<section class="nova-section">
-  <div class="nova-shell">
-    <div style="display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start;" class="tour-detail-layout">
-      
-      <!-- Main Information Column -->
-      <div>
-        <!-- Tour Image -->
-        <div style="height: 380px; border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 30px; background: #131218;">
-          {% if tour.featured_image %}
-            <img src="{{ tour.featured_image.url }}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
-          {% else %}
-            <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ tour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
-          {% endif %}
-        </div>
-
-        <div style="margin-bottom: 36px;">
-          <span class="nova-kicker">Ride Overview</span>
-          <h2 class="nova-title-section" style="margin-bottom: 16px;">What You Will Experience</h2>
-          <div class="nova-prose" style="font-size: 1.05rem; line-height: 1.7;">
-            {{ tour.description|linebreaks }}
-          </div>
-        </div>
-
-        <!-- Inclusions & Safety Standards -->
-        <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 30px; margin-bottom: 36px; border: 1px solid var(--color-ice-muted);">
-          <h3 style="font-size: 1.25rem; margin-bottom: 16px;">The Nova Standards on Every Ride</h3>
-          <div class="nova-grid-2" style="gap: 16px;">
-            <div style="display: flex; gap: 10px;">
-              <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
-              <span style="font-size: 0.9rem;"><strong>Mandatory Life Jackets:</strong> Certified adult & child sizes fitted before boarding.</span>
-            </div>
-            <div style="display: flex; gap: 10px;">
-              <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
-              <span style="font-size: 0.9rem;"><strong>Certified Lake Captain:</strong> Licensed skipper with deep wildlife and birding expertise.</span>
-            </div>
-            <div style="display: flex; gap: 10px;">
-              <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
-              <span style="font-size: 0.9rem;"><strong>Hippo Safety Buffer:</strong> Safe observation distances strictly respected.</span>
-            </div>
-            <div style="display: flex; gap: 10px;">
-              <span style="color: var(--color-ultraviolet); font-weight: 800;">✓</span>
-              <span style="font-size: 0.9rem;"><strong>Clean Electric-Trim Boats:</strong> Well-maintained, quiet-running outboards.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Inclusions & Exclusions -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 36px;">
-          <div class="nova-card" style="padding: 24px; border: 1px solid var(--color-ice-muted); background: #FFF;">
-            <div style="font-weight: 700; color: #16A34A; margin-bottom: 10px; font-size: 1.05rem;">Included with Nova</div>
-            <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--color-text-body); margin: 0;">
-              <li>Dedicated boat charter &amp; licensed captain guide</li>
-              <li>Fitted life jackets for all adults and children</li>
-              <li>Lake navigation &amp; boat fuel</li>
-              <li>Complimentary bottled mineral water</li>
-            </ul>
-          </div>
-          <div class="nova-card" style="padding: 24px; border: 1px solid var(--color-ice-muted); background: #FFF;">
-            <div style="font-weight: 700; color: var(--color-text-muted); margin-bottom: 10px; font-size: 1.05rem;">Excluded</div>
-            <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--color-text-body); margin: 0;">
-              <li>Crescent Island sanctuary walking gate fee (paid at gate)</li>
-              <li>Meals &amp; alcoholic beverages</li>
-              <li>Personal travel/medical insurance</li>
-              <li>Gratuities / tips for captain</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Wildlife Disclaimer -->
-        <div style="background: rgba(103,80,232,0.06); border: 1px solid rgba(103,80,232,0.2); border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 36px; font-size: 0.88rem; color: var(--color-text-body); line-height: 1.6;">
-          <strong style="color: var(--color-ultraviolet);">Wildlife Observation Reality:</strong> Wildlife is wild, so sightings vary by day, weather, and lake conditions. Our captains know Lake Naivasha's hippo pods, cormorant roosts, and fish eagle perches intimately and position you for safe, respectful viewing.
-        </div>
-
-        <!-- Crescent Island Clarification -->
-        {% if tour.crescent_island_included %}
-        <div class="nova-card" style="padding: 28px; border-left: 4px solid var(--color-acid-lime); margin-bottom: 36px; background: #FFF;">
-          <div style="font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--color-ultraviolet); margin-bottom: 4px;">CONSERVATION FEE SCHEDULE</div>
-          <h3 style="font-size: 1.25rem; font-family: var(--font-display); margin-bottom: 10px;">Crescent Island Sanctuary Gate Fees</h3>
-          <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.6; margin-bottom: 14px;">
-            Nova's fee covers your private boat transit across Lake Naivasha, captain standby during your walk, and return voyage. The Sanctuary's walking conservation entry fees are settled directly at their entrance gate (cashless / card / M-Pesa):
-          </p>
-          <div style="overflow-x: auto; margin-bottom: 12px;">
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem;">
-              <tbody>
-                <tr style="border-bottom: 1px solid var(--color-ice-muted);">
-                  <td style="padding: 6px 0; font-weight: 600;">Kenyan Citizen:</td>
-                  <td style="padding: 6px 0; text-align: right;">Adult <strong>KES 800</strong> &bull; Child (4–12) <strong>KES 400</strong></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--color-ice-muted);">
-                  <td style="padding: 6px 0; font-weight: 600;">East African Resident:</td>
-                  <td style="padding: 6px 0; text-align: right;">Adult <strong>KES 1,100</strong> &bull; Child (4–12) <strong>KES 550</strong></td>
-                </tr>
-                <tr>
-                  <td style="padding: 6px 0; font-weight: 600;">Non-Resident / International:</td>
-                  <td style="padding: 6px 0; text-align: right; color: var(--color-ultraviolet);">Adult <strong>$33 USD</strong> &bull; Student <strong>$22 USD</strong> &bull; Child <strong>$16 USD</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div style="font-size: 0.78rem; color: var(--color-text-muted);">
-            *Last verified September 2026. Children under 4 enter free of charge.
-          </div>
-        </div>
-        {% endif %}
-
-        <!-- Available Add-Ons -->
-        {% if add_ons %}
-        <div style="margin-bottom: 36px;">
-          <span class="nova-kicker">Optional Enhancements</span>
-          <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Customize Your Experience</h3>
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            {% for add in add_ons %}
-            <div class="nova-card" style="padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px;">
-              <div>
-                <h4 style="font-size: 1.05rem; margin-bottom: 4px;">{{ add.name }}</h4>
-                <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">{{ add.description }}</p>
-              </div>
-              <div style="text-align: right; flex-shrink: 0;">
-                <span style="font-weight: 800; font-size: 1.1rem; color: var(--color-ultraviolet);">+ KES {{ add.price|floatformat:0 }}</span>
-                <span style="display: block; font-size: 0.75rem; color: var(--color-text-muted);">{{ add.get_pricing_unit_display }}</span>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
-
-        <!-- Hotel Departure Information -->
-        <div class="nova-card" style="padding: 28px; background: #FFF; border: 1px solid var(--color-ice-muted);">
-          <span class="nova-kicker">Departure Options</span>
-          <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Board at Your Lakeside Hotel</h3>
-          <p style="font-size: 0.92rem; color: var(--color-text-body); line-height: 1.5; margin-bottom: 16px;">
-            Staying at a partner hotel along the South Lake shore? Nova boats can pick you up directly from approved hotel jetties or coordinate hotel road pickup.
-          </p>
-          <a href="{% url 'partners:hotel_hub' %}" class="nova-btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">
-            Check Hotel Departure Availability &rarr;
-          </a>
-        </div>
-
-      </div>
-
-      <!-- Sticky Quoter Sidebar Column -->
-      <aside>
-        <div style="position: sticky; top: 90px;">
-          <!-- Quoter Inputs Card -->
-          <div class="nova-card" style="padding: 28px; margin-bottom: 20px;">
-            <span class="nova-kicker">Live Fare Estimator</span>
-            <h3 style="font-size: 1.35rem; margin-bottom: 16px;">Estimate Your Rate</h3>
-
-            <form hx-get="{% url 'tours:quote_partial' slug=tour.slug %}" 
-                  hx-target="#quote-result" 
-                  hx-trigger="change, input delay:200ms"
-                  id="tour-quoter-form">
-              
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
-                <div>
-                  <label class="nova-form-label" for="adults">Adults (12+)</label>
-                  <input type="number" id="adults" name="adults" min="1" max="15" value="2" class="nova-form-input">
-                </div>
-                <div>
-                  <label class="nova-form-label" for="children">Children (3-11)</label>
-                  <input type="number" id="children" name="children" min="0" max="10" value="0" class="nova-form-input">
-                </div>
-              </div>
-
-              <div style="margin-bottom: 14px;">
-                <label class="nova-form-label" for="resident_type">Guest Residency</label>
-                <select id="resident_type" name="resident_type" class="nova-form-input">
-                  <option value="RESIDENT" selected>Kenyan / EA Resident (KES)</option>
-                  <option value="NON_RESIDENT">International Visitor (USD/KES)</option>
-                </select>
-              </div>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">
-                  <input type="checkbox" name="is_private" value="true" {% if tour.is_private %}checked{% endif %} style="width: 18px; height: 18px; accent-color: var(--color-ultraviolet);">
-                  <span>Require Private Boat Only</span>
-                </label>
-              </div>
-
-            </form>
-
-            <!-- HTMX Partial Result Target (Initialized with default 2 adults) -->
-            <div id="quote-result" hx-get="{% url 'tours:quote_partial' slug=tour.slug %}?adults=2&children=0&resident_type=RESIDENT" hx-trigger="load">
-              <!-- Loading Skeleton -->
-              <div style="background: var(--color-obsidian); border-radius: var(--radius-lg); padding: 24px; text-align: center; color: #FFF;">
-                Calculating live quote...
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Direct Phone / Support Box -->
-          <div style="background: var(--color-ice); border-radius: var(--radius-lg); padding: 20px; text-align: center; border: 1px solid var(--color-ice-muted);">
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">Need a Custom Schedule?</div>
-            <div style="font-size: 1.05rem; font-weight: 700; color: var(--color-obsidian); margin: 6px 0;">
-              {{ site_settings.phone_display }}
-            </div>
-            <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 10px;">
-              Early sunrise photographer charters or corporate groups.
-            </p>
-            <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20have%20a%20custom%20request%20for%20{{ tour.name|urlencode }}." target="_blank" rel="noopener" style="font-size: 0.85rem; color: var(--color-ultraviolet); font-weight: 700;">
-              Chat on WhatsApp &rarr;
-            </a>
-          </div>
-
-        </div>
-      </aside>
-
-    </div>
-
-    <!-- Related Tours -->
-    {% if related_tours %}
-    <div style="margin-top: 80px; padding-top: 50px; border-top: 1px solid var(--color-ice-muted);">
-      <span class="nova-kicker">Explore More</span>
-      <h2 class="nova-title-section" style="margin-bottom: 30px;">Other Popular Lake Rides</h2>
-      
-      <div class="nova-grid-3">
-        {% for rtour in related_tours %}
-        <div class="nova-card" style="display: flex; flex-direction: column;">
-          <div style="height: 180px; background: #131218; overflow: hidden; position: relative;">
-            {% if rtour.featured_image %}
-              <img src="{{ rtour.featured_image.url }}" alt="{{ rtour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
-            {% else %}
-              <img src="{% static 'images/hero_wildlife.webp' %}" alt="{{ rtour.name }}" style="width: 100%; height: 100%; object-fit: cover;">
-            {% endif %}
-            <span class="nova-badge nova-badge-lime" style="position: absolute; bottom: 10px; right: 10px;">⏱ {{ rtour.duration_display }}</span>
-          </div>
-          <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
-            <h3 style="font-size: 1.15rem; margin-bottom: 6px;">
-              <a href="{% url 'tours:tour_detail' slug=rtour.slug %}" style="color: inherit; text-decoration: none;">
-                {{ rtour.name }}
-              </a>
-            </h3>
-            <p style="font-size: 0.85rem; color: var(--color-text-body); line-height: 1.4; margin-bottom: 14px; flex: 1;">
-              {{ rtour.summary|truncatewords:14 }}
-            </p>
-            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-ice); padding-top: 10px;">
-              <span style="font-weight: 800; color: var(--color-ultraviolet); font-size: 1.05rem;">From KES {{ rtour.get_starting_price|floatformat:0 }}</span>
-              <a href="{% url 'tours:tour_detail' slug=rtour.slug %}" style="font-size: 0.85rem; font-weight: 700; color: var(--color-obsidian);">View &rarr;</a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
-
-  </div>
-</section>
-
-<style>
-@media (min-width: 992px) {
-  .tour-detail-layout {
-    grid-template-columns: 1.6fr 1fr !important;
-  }
-}
-</style>
+    <aside class="activity-booking-aside nova-card"><span class="nova-kicker">Plan with Nova</span><h2>Your lake day</h2>{% include 'tours/partials/rate_summary.html' %}<p>Our team will confirm availability, departure point and your full quote.</p><a class="nova-btn-primary" href="{{ tour.enquiry_url }}" data-nova-event="activity_check_availability_click" data-cta-location="sidebar">Check availability</a><a class="nova-btn-secondary" href="{{ tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="sidebar">Ask on WhatsApp</a>{% if site_settings.response_expectation %}<p>{{ site_settings.response_expectation }}</p>{% endif %}<p><a href="tel:{{ site_settings.phone_e164 }}" data-nova-event="activity_phone_click">{{ site_settings.phone_display }}</a></p></aside>
+  </div></section>
+  <section class="nova-section activity-related"><div class="nova-shell"><h2 class="nova-title-section">Explore related rides</h2><div class="activity-grid">{% for tour in related_tours %}{% include 'tours/partials/activity_card.html' with related=True %}{% endfor %}</div></div></section>
+  <div class="activity-mobile-actions" aria-label="Activity booking actions"><a class="nova-btn-primary" href="{{ tour.enquiry_url }}" data-nova-event="activity_check_availability_click" data-cta-location="sticky">Check availability</a><a class="nova-btn-secondary" href="{{ tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="sticky">WhatsApp</a></div>
+</div>
 {% endblock %}

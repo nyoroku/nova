@@ -1,0 +1,10 @@
+{% with rate=tour.starting_rate %}
+{% if rate %}
+<div class="activity-rate"><strong>{{ rate.currency }} {{ rate.amount|floatformat:"-2" }}</strong> {{ rate.unit_label }}
+  <span>{{ rate.option.duration_minutes }} minutes · {{ rate.option.get_mode_display }} · {{ rate.min_guests }}–{{ rate.max_guests }} guests</span>
+  {% if rate.min_guests > 1 %}<span>Minimum booking: {{ rate.currency }} {{ rate.minimum_total|floatformat:"-2" }} for {{ rate.min_guests }} guests</span>{% endif %}
+  {% if rate.option.external_fees.exists %}<span>Mandatory attraction admission is additional; see the fee breakdown.</span>{% endif %}
+  {% with usd=tour.matching_usd_rate %}{% if usd %}<span>Matching option: USD {{ usd.amount|floatformat:"-2" }} {{ usd.unit_label }}</span>{% endif %}{% endwith %}
+</div>
+{% else %}<p class="activity-rate">Request a current quote</p>{% endif %}
+{% endwith %}

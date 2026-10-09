@@ -15,6 +15,7 @@ class ArticleSourceInline(admin.TabularInline):
 
 @admin.register(GuideArticle)
 class GuideArticleAdmin(admin.ModelAdmin):
+    readonly_fields = ('previous_price_copy',)
     list_display = ('title', 'category', 'author', 'is_featured', 'is_active', 'verified_at')
     list_filter = ('category', 'is_featured', 'is_active')
     search_fields = ('title', 'excerpt', 'body')
@@ -24,6 +25,7 @@ class GuideArticleAdmin(admin.ModelAdmin):
 
 @admin.register(QuestionAnswer)
 class QuestionAnswerAdmin(admin.ModelAdmin):
+    readonly_fields = ('previous_price_copy',)
     list_display = ('question', 'category', 'is_featured', 'is_active', 'order', 'verified_at')
     list_filter = ('category', 'is_featured', 'is_active')
     search_fields = ('question', 'answer')

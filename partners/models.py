@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
 from utils import OptimizedImageMixin
+from builtins import property as computed_property
 
 class HotelPartner(OptimizedImageMixin, models.Model):
     PROPERTY_TYPE_CHOICES = [
@@ -202,19 +203,35 @@ class HotelAccess(models.Model):
     ]
 
     property = models.OneToOneField(HotelPartner, on_delete=models.CASCADE, related_name='access_info')
-    relationship_type = models.CharField(max_length=30, choices=RELATIONSHIP_CHOICES, default='OPERATIONAL')
-    access_mode = models.CharField(max_length=30, choices=ACCESS_MODE_CHOICES, default='DIRECT_JETTY')
-    access_status = models.CharField(max_length=30, choices=ACCESS_STATUS_CHOICES, default='VERIFIED_ACTIVE')
-    positioning_fee = models.DecimalField(max_digits=10, decimal_places=2, default=1500.00)
+    relationship_type = models.CharField(max_length=30, choices=RELATIONSHIP_CHOICES, default='NO_FORMAL_PARTNERSHIP')
+    access_mode = models.CharField(max_length=30, choices=ACCESS_MODE_CHOICES, default='SUBJECT_TO_CONFIRMATION')
+    access_status = models.CharField(max_length=30, choices=ACCESS_STATUS_CHOICES, default='UNVERIFIED')
+    positioning_fee = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     currency = models.CharField(max_length=10, default='KES')
     advance_notice_hours = models.PositiveIntegerField(default=2)
     water_level_dependent = models.BooleanField(default=False)
     property_approval_required = models.BooleanField(default=False)
-    last_verified_at = models.DateField(auto_now=True)
-    verified_by = models.CharField(max_length=100, default='Nova Operations Team')
+    last_verified_at = models.DateField(null=True, blank=True, help_text='Date access was actually checked; saving does not verify it')
+    verification_evidence = models.TextField(blank=True, help_text='Internal evidence of access and pricing confirmation')
+    verified_by = models.CharField(max_length=100, blank=True)
     public_notes = models.TextField(blank=True)
     internal_notes = models.TextField(blank=True)
-    is_published = models.BooleanField(default=True)
+    is_published = models.BooleanField(default=False)
+
+    @computed_property
+    def is_operationally_verified(self):
+        return bool(self.last_verified_at and self.verification_evidence and self.positioning_fee is not None
+                    and self.access_status in ['VERIFIED_ACTIVE', 'VERIFIED_ON_REQUEST'])
+
+    @computed_property
+    def public_access_label(self):
+        return self.get_access_mode_display() if self.is_operationally_verified else 'Departure arrangements require confirmation'
+
+    def clean(self):
+        super().clean()
+        if self.is_published and not self.is_operationally_verified:
+            from django.core.exceptions import ValidationError
+            raise ValidationError({'is_published': 'Confirm access, the actual verification date, evidence and positioning fee before publication.'})
 
     class Meta:
         verbose_name = "Hotel Access Specification"

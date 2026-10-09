@@ -1,43 +1,11 @@
-<div style="background: var(--color-obsidian); color: #FFF; border-radius: var(--radius-lg); padding: 24px; border: 1px solid rgba(255,255,255,0.1);">
-  <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-acid-lime); letter-spacing: 0.08em; margin-bottom: 6px;">
-    Calculated Quote
-  </div>
-  
-  <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px;">
-    <span style="font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.7);">{{ currency }}</span>
-    <span style="font-size: 2.2rem; font-weight: 800; font-family: var(--font-display); color: #FFF;">
-      {{ boat_total|floatformat:0 }}
-    </span>
-  </div>
-
-  <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.5; margin-bottom: 16px;">
-    {% if tier %}
-      <strong>Matched Tier:</strong> {{ tier.label }} ({{ tier.get_pricing_unit_display }})<br>
-      For {{ total_guests }} guest(s) &bull; {{ resident_type|title }} rate
-    {% else %}
-      Standard estimate for {{ total_guests }} guest(s)
-    {% endif %}
-  </div>
-
-  <div style="background: rgba(255,255,255,0.06); border-radius: 8px; padding: 12px; font-size: 0.8rem; color: rgba(255,255,255,0.8); margin-bottom: 20px;">
-    <div style="display: flex; gap: 6px; margin-bottom: 4px;">
-      <span style="color: var(--color-acid-lime);">✓</span>
-      <span>Boat charter, certified captain, & life jackets included.</span>
-    </div>
-    {% if tour.crescent_island_included %}
-    <div style="display: flex; gap: 6px;">
-      <span style="color: var(--color-acid-lime);">ℹ</span>
-      <span>Crescent Island sanctuary walking fee paid at sanctuary gate.</span>
-    </div>
-    {% endif %}
-  </div>
-
-  <div style="display: flex; flex-direction: column; gap: 10px;">
-    <a href="{% url 'bookings:book' %}?tour={{ tour.slug }}&adults={{ adults }}&children={{ children }}&residency={{ resident_type }}" class="nova-btn-primary" style="width: 100%; text-align: center;">
-      Reserve This Slot
-    </a>
-    <a href="{{ brand.whatsapp_url }}?text={{ whatsapp_text|urlencode }}" target="_blank" rel="noopener" class="nova-btn-secondary" style="width: 100%; text-align: center; border-color: rgba(255,255,255,0.2); color: #FFF;">
-      Instant WhatsApp Lock
-    </a>
-  </div>
+<div class="activity-quote-result" role="status" aria-live="polite">
+{% if input_error %}<p>{{ input_error }}</p>
+{% elif quote %}
+  {% if quote.option %}<p><strong>{{ quote.option.name }}</strong> · {{ quote.option.duration_minutes }} minutes · {{ quote.option.get_mode_display }}</p>{% endif %}
+  {% for line in quote.lines %}<p>{{ line.label }}: <strong>{{ line.currency }} {{ line.amount }}</strong> <span>Payable to {{ line.pay_to }}</span></p>{% endfor %}
+  {% if quote.complete %}<p class="activity-quote-total">Estimated total: <strong>{{ quote.currency }} {{ quote.total|floatformat:"-2" }}</strong></p>
+  {% else %}<p><strong>Total price requires confirmation.</strong></p><ul>{% for reason in quote.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>{% endif %}
+  <p>Availability and the final quote require confirmation by Nova.</p>
+{% endif %}
+<a href="{{ enquiry_context_url|default:tour.enquiry_url }}" class="nova-btn-primary" data-nova-event="activity_check_availability_click" data-activity-slug="{{ tour.slug }}" data-cta-location="estimate">Send an availability enquiry</a>
 </div>

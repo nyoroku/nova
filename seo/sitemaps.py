@@ -19,6 +19,7 @@ class StaticViewSitemap(BaseSitemap):
             'core:home',
             'core:about',
             'core:prices',
+            'core:services',
             'core:plan_naivasha',
             'core:contact',
             'core:sitemap',
@@ -26,7 +27,6 @@ class StaticViewSitemap(BaseSitemap):
             'partners:hotel_hub',
             'stays:stay_list',
             'packages:package_list',
-            'bookings:book',
             'content:journal_list',
             'questions:faq_list',
         ]
@@ -40,10 +40,10 @@ class TourSitemap(BaseSitemap):
     changefreq = "weekly"
 
     def items(self):
-        return Tour.objects.filter(is_active=True)
+        return Tour.objects.published()
 
     def lastmod(self, obj):
-        return obj.verified_at
+        return obj.updated_at
 
 
 class HotelSitemap(BaseSitemap):

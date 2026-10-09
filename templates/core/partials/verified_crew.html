@@ -1,0 +1,3 @@
+<section id="lake-captains" class="nova-section"><div class="nova-shell"><span class="nova-kicker">The people at the helm</span><h2 class="nova-title-section">Meet the Nova team</h2><div class="activity-grid">
+{% for cap in captains %}<article class="nova-card" style="padding:24px"><h3>{{ cap.name }}</h3><p>{{ cap.role_title }}</p><p>{{ cap.bio }}</p>{% if cap.certification_text %}<p>{{ cap.certification_text }} · Checked {{ cap.verified_at|date:'j M Y' }}</p>{% endif %}<p>Languages: {{ cap.languages }}</p></article>{% empty %}<p>Ask Nova about captain availability, guide languages and the equipment needed for your party.</p>{% endfor %}
+</div></div></section>

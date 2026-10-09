@@ -1,0 +1,16 @@
+<article class="activity-card nova-card">
+  <a href="{{ tour.get_absolute_url }}" class="activity-card-image" {% if related %}data-nova-event="related_activity_click" data-related-activity-slug="{{ tour.slug }}"{% endif %}>
+    {% with image=tour.public_images.0 %}
+    {% if image %}<img src="{% if image.webp_image %}{{ image.webp_image.url }}{% else %}{{ image.image.url }}{% endif %}" {% if image.webp_mobile and image.webp_image %}srcset="{{ image.webp_mobile.url }} 480w, {{ image.webp_image.url }} 1280w" sizes="(max-width: 640px) 100vw, 33vw"{% endif %} alt="{{ image.alt_text }}" width="{{ image.width|default:1280 }}" height="{{ image.height|default:853 }}" loading="lazy" decoding="async">
+    {% elif tour.featured_image %}<img src="{{ tour.featured_image.url }}" alt="{{ tour.name }}" width="1280" height="853" loading="lazy">
+    {% else %}<span class="activity-image-placeholder">{{ tour.name }}</span>{% endif %}
+    {% endwith %}
+  </a>
+  <div class="activity-card-body">
+    <span class="nova-kicker">{{ tour.get_category_display }}</span>
+    <h2><a href="{{ tour.get_absolute_url }}" {% if related %}data-nova-event="related_activity_click" data-related-activity-slug="{{ tour.slug }}"{% endif %}>{{ tour.name }}</a></h2>
+    <p>{{ tour.summary }}</p>
+    {% include 'tours/partials/rate_summary.html' %}
+    <div class="activity-actions"><a href="{{ tour.get_absolute_url }}" class="nova-btn-secondary">View tour</a><a href="{{ tour.enquiry_url }}" class="nova-btn-primary" data-nova-event="activity_check_availability_click" data-activity-slug="{{ tour.slug }}" data-cta-location="card">Check availability</a></div>
+  </div>
+</article>

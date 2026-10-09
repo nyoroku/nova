@@ -1,0 +1,10 @@
+{% if external_fees %}
+<div class="activity-fees">
+  <h3>Mandatory attraction fees</h3>
+  <p>These fees are separate from Nova’s boat service and payable to the attraction provider, unless your confirmed quote expressly bundles them. Your total depends on your visitor category and party.</p>
+  <div class="activity-table-wrap"><table><caption>Attraction admission fees</caption><thead><tr><th scope="col">Attraction / category</th><th scope="col">Adult</th><th scope="col">Child</th><th scope="col">Last checked</th></tr></thead><tbody>
+  {% for fee in external_fees %}<tr><th scope="row">{{ fee.provider_name }} · {{ fee.get_visitor_type_display }}</th><td>{{ fee.currency }} {{ fee.adult_amount|floatformat:"-2" }}</td><td>{% if fee.child_amount != None %}{{ fee.currency }} {{ fee.child_amount|floatformat:"-2" }}{% else %}Confirm eligibility{% endif %}</td><td>{{ fee.last_verified_at|date:"j M Y" }}{% if fee.source_url %} · <a href="{{ fee.source_url }}" target="_blank" rel="noopener">Source</a>{% endif %}</td></tr>{% endfor %}
+  </tbody></table></div>
+  <p>Tell us children’s ages so admission categories can be checked. External fees may change.</p>
+</div>
+{% endif %}
