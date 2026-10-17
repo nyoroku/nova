@@ -11,8 +11,8 @@
     <h1 class="nova-title-hero" style="color: #FFF; margin-top: 10px; margin-bottom: 20px;">
       Find Nova on Lake Naivasha
     </h1>
-    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 680px; line-height: 1.6;">
-      Depart directly from Nova Karagita Base on Moi South Lake Road or arrange seamless pickup from your hotel's approved jetty.
+    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 720px; line-height: 1.6;">
+      Nova Boat Rides Naivasha operates from <strong>{{ site_settings.standard_launch_name }}</strong> on Moi South Lake Road ({{ site_settings.standard_launch_lat }}, {{ site_settings.standard_launch_lng }}) and coordinates departures from verified Lake Naivasha hotel jetties. Operating hours are <strong>{{ site_settings.operating_hours }}</strong>; reach our dispatch desk on WhatsApp or phone at <strong>{{ site_settings.phone_display }}</strong>.
     </p>
   </div>
 </section>
@@ -30,29 +30,33 @@
           <div>
             <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">WhatsApp & Direct Calling Desk</div>
             <div style="font-size: 1.25rem; font-weight: 700; color: var(--color-obsidian); margin-top: 4px;">
-              <a href="tel:{{ site_settings.phone_e164 }}" style="color: inherit; text-decoration: none;">{{ site_settings.phone_display }}</a>
+              <a href="tel:{{ site_settings.phone_e164 }}" data-nova-event="call_click" data-cta-location="contact_card" style="color: inherit; text-decoration: none;">{{ site_settings.phone_display }}</a>
             </div>
-            <div style="font-size: 0.88rem; color: var(--color-ultraviolet); font-weight: 600; margin-top: 4px;">Direct Call: 0701215295</div>
-            <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 2px;">Instant replies 06:30 to 20:00 EAT</div>
+            <div style="font-size: 0.88rem; color: var(--color-ultraviolet); font-weight: 600; margin-top: 4px;">Operating Hours: {{ site_settings.operating_hours }}</div>
+            {% if site_settings.response_expectation %}
+            <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 2px;">{{ site_settings.response_expectation }}</div>
+            {% endif %}
           </div>
 
           <div>
             <div style="font-size: 0.8rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase;">Official Email</div>
             <div style="font-size: 1.1rem; font-weight: 600; color: var(--color-obsidian); margin-top: 4px;">
-              {{ site_settings.email }}
+              <a href="mailto:{{ site_settings.email }}" style="color: inherit; text-decoration: none;">{{ site_settings.email }}</a>
             </div>
           </div>
-            </a>
-          </div>
+
           <div>
             <strong>Advance Booking Window:</strong><br>
             {{ site_settings.booking_notice }}
           </div>
         </div>
 
-        <div style="margin-top: 30px;">
-          <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20inquire%20about%20a%20boat%20departure." target="_blank" rel="noopener" class="nova-btn-primary" style="width: 100%; text-align: center;">
+        <div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px;">
+          <a href="{{ brand.whatsapp_url }}?text=Hi%20Nova.%20I%20would%20like%20to%20inquire%20about%20a%20boat%20departure." target="_blank" rel="noopener" data-nova-event="whatsapp_click" data-cta-location="contact_card" class="nova-btn-primary" style="flex: 1; text-align: center;">
             Chat via WhatsApp Now
+          </a>
+          <a href="tel:{{ site_settings.phone_e164 }}" data-nova-event="call_click" data-cta-location="contact_card_button" class="nova-btn-secondary" style="flex: 1; text-align: center;">
+            Call {{ site_settings.phone_display }}
           </a>
         </div>
       </div>
@@ -65,7 +69,7 @@
         <div style="display: flex; flex-direction: column; gap: 16px; font-size: 0.95rem;">
           <div>
             <strong>Physical Address:</strong><br>
-            Karagita Beach, Moi South Lake Road (8 km from Naivasha Town), Karagita, Naivasha, Nakuru County, Kenya.
+            {{ site_settings.physical_address }}
           </div>
 
           <div>
@@ -82,10 +86,16 @@
             </p>
           </div>
 
+          <div>
+            <a href="{{ site_settings.google_maps_url }}" target="_blank" rel="noopener" data-nova-event="directions_click" data-cta-location="contact_card" class="nova-btn-dark" style="display: inline-block;">
+              Open Google Maps Directions &rarr;
+            </a>
+          </div>
+
           <div style="padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.08);">
             <span class="nova-badge nova-badge-purple">Hotel Departures Note</span>
             <p style="font-size: 0.85rem; color: var(--color-text-body); margin-top: 8px;">
-              Staying along the lake? You don't need to drive to Nova Karagita Base. Check our <a href="{% url 'partners:hotel_hub' %}" style="color: var(--color-ultraviolet); font-weight: 700;">Hotel Departure Hub</a> to confirm if our boats can pick you up directly from your hotel jetty.
+              Staying along the lake? You don't need to drive to {{ site_settings.standard_launch_name }}. Check our <a href="{% url 'partners:hotel_hub' %}" style="color: var(--color-ultraviolet); font-weight: 700;">Hotel Departure Hub</a> to confirm if our boats can pick you up directly from your hotel jetty.
             </p>
           </div>
         </div>
@@ -98,8 +108,8 @@
       <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Driving Directions from Naivasha Town</h3>
       <ol style="margin-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: var(--color-text-body);">
         <li>From Naivasha Town roundabout or Nairobi highway exit, turn onto <strong>Moi South Lake Road</strong> heading towards Hell's Gate National Park.</li>
-        <li>Proceed past Buffalo Mall and continue along the tarmac for approximately 14 km.</li>
-        <li>Look for the clear <strong>Nova Boat Rides Base</strong> signage on the lakeside (right-hand side when coming from town).</li>
+        <li>Proceed past Buffalo Mall and continue along the tarmac for approximately 8 km towards Karagita Beach.</li>
+        <li>Look for the clear <strong>{{ site_settings.business_name }}</strong> signage on the lakeside (right-hand side when coming from town).</li>
         <li>Security clearance at the gate is immediate for reserved Nova guests. Quote your booking name or captain reference.</li>
       </ol>
     </div>

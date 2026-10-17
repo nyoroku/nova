@@ -43,6 +43,22 @@ class Captain(OptimizedImageMixin, models.Model):
     order = models.PositiveIntegerField(default=0)
     is_active = models.BooleanField(default=True)
 
+    @property
+    def role(self):
+        return self.role_title
+
+    @property
+    def credential_label(self):
+        return self.certification_text
+
+    @property
+    def credential_reference(self):
+        return self.certification_reference
+
+    @property
+    def public(self):
+        return bool(self.is_active and self.verified_at and self.verification_evidence)
+
     class Meta:
         ordering = ['order', 'name']
         verbose_name = "Captain"
@@ -76,9 +92,17 @@ class GuideArticle(OptimizedImageMixin, models.Model):
     author = models.CharField(max_length=100, default="Nova Lake Operations")
     reviewer = models.CharField(max_length=100, default="Senior Captain Team")
     category = models.CharField(max_length=30, choices=CATEGORY_CHOICES, default='PLANNING')
+    related_activity = models.ForeignKey(
+        'tours.Tour',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='guide_articles',
+        help_text="Primary bookable activity recommended as the next step from this guide (§11.1)"
+    )
     direct_quick_answer = models.TextField(
         blank=True,
-        help_text="AEO concise direct answer block for AI search extraction"
+        help_text="Concise direct answer block (40-90 words) for search and human readers"
     )
     hero_image = models.ImageField(upload_to='journal/', blank=True, null=True)
     webp_image = models.ImageField(upload_to='journal/webp/', blank=True, null=True)
@@ -125,7 +149,30 @@ class GuideArticle(OptimizedImageMixin, models.Model):
 
     @property
     def author_captain(self):
-        return Captain.objects.filter(is_active=True).first()
+        return Captain.objects.filter(is_active=True, verified_at__isnull=False).exclude(verification_evidence='').first() or Captain.objects.filter(is_active=True).first()
+
+    @property
+    def target_activity(self):
+        if self.related_activity_id and self.related_activity.is_active and self.related_activity.status == 'PUBLISHED':
+            return self.related_activity
+        from tours.models import Tour
+        slug_lower = (self.slug or '').lower()
+        target_slug = 'classic-lake-safari'
+        if 'crescent' in slug_lower:
+            target_slug = 'crescent-island'
+        elif any(k in slug_lower for k in ('bird', 'photo')):
+            target_slug = 'photography-birding'
+        elif any(k in slug_lower for k in ('hippo', 'safari', 'wildlife')):
+            target_slug = 'hippo-bird-safari'
+        elif any(k in slug_lower for k in ('family', 'children')):
+            target_slug = 'family-ride'
+        elif any(k in slug_lower for k in ('romantic', 'couple', 'sunset', 'timing')):
+            target_slug = 'sunset-cruise'
+        elif any(k in slug_lower for k in ('group', 'corporate', 'team')):
+            target_slug = 'groups-events'
+        elif any(k in slug_lower for k in ('private', 'full-day')):
+            target_slug = 'private-charter'
+        return Tour.objects.published().filter(slug=target_slug).first() or Tour.objects.published().first()
 
     @property
     def reading_time_minutes(self):

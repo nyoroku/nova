@@ -12,12 +12,12 @@
   {% if preview %}<aside class="activity-preview nova-shell"><strong>Staff preview · {{ tour.get_status_display }}</strong><ul>{% for issue in readiness %}<li>{{ issue }}</li>{% endfor %}</ul></aside>{% endif %}
   <section class="nova-section nova-section-dark activity-hero"><div class="nova-shell">
     <nav aria-label="Breadcrumb" class="activity-breadcrumb"><a href="{% url 'core:home' %}">Home</a> / <a href="{% url 'tours:tour_list' %}">Boat Rides</a> / <span>{{ tour.name }}</span></nav>
-    <span class="nova-kicker nova-kicker-lime">{{ tour.get_category_display }}</span>
+    <span class="nova-kicker nova-kicker-lime">{{ tour.get_category_display }}{% if tour.effective_branded_name and tour.effective_branded_name != tour.name %} · {{ tour.effective_branded_name }}{% endif %}</span>
     <h1 class="nova-title-hero">{{ tour.name }}</h1>
     <p>{{ tour.direct_answer|default:tour.summary }}</p>
     {% include 'tours/partials/rate_summary.html' %}
-    <p>Availability enquiry · Departures confirmed by Nova</p>
-    <div class="activity-actions"><a class="nova-btn-primary" href="#price-booking" data-nova-event="activity_check_availability_click" data-cta-location="hero">Choose an option</a><a class="nova-btn-secondary" href="{{ tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="hero">Ask on WhatsApp</a></div>
+    <p>Availability enquiry · Departures confirmed by Nova · Last verified {{ tour.last_verified_at|date:"j M Y" }}</p>
+    <div class="activity-actions"><a class="nova-btn-primary" href="#price-booking" data-nova-event="activity_check_availability_click" data-cta-location="hero">Choose an option</a><a class="nova-btn-secondary" href="{{ attributed_whatsapp_url|default:tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="hero">Ask on WhatsApp</a></div>
   </div></section>
   <section class="nova-section"><div class="nova-shell activity-detail-layout">
     <div>
@@ -33,6 +33,24 @@
         <div class="activity-thumbnails" x-cloak>{% for image in gallery %}<button type="button" @click="go({{ forloop.counter0 }})" :aria-current="current === {{ forloop.counter0 }} ? 'true' : 'false'" aria-label="View image {{ forloop.counter }}"><img src="{% if image.webp_mobile %}{{ image.webp_mobile.url }}{% else %}{{ image.image.url }}{% endif %}" alt="" width="80" height="54" loading="lazy"></button>{% endfor %}</div>{% endif %}
       </section>
       {% else %}<div class="activity-image-placeholder">Photos for this activity are being prepared.</div>{% endif %}
+
+      <section class="activity-section">
+        <h2>At a glance</h2>
+        <div class="activity-table-wrap">
+          <table>
+            <caption>Key facts for {{ tour.name }}</caption>
+            <tbody>
+              <tr><th scope="row">Experience name</th><td>{{ tour.name }}{% if tour.effective_branded_name and tour.effective_branded_name != tour.name %} ({{ tour.effective_branded_name }}){% endif %}</td></tr>
+              <tr><th scope="row">Duration</th><td>{{ tour.public_duration_display }}</td></tr>
+              <tr><th scope="row">Starting rate</th><td>{% include 'tours/partials/rate_summary.html' %}</td></tr>
+              <tr><th scope="row">Boat capacity</th><td>{% if tour.starting_rate %}{{ tour.starting_rate.min_guests }}–{{ tour.starting_rate.max_guests }} guests{% else %}Up to {{ tour.max_guests }} guests{% endif %}</td></tr>
+              <tr><th scope="row">Departure point</th><td>{{ tour.meeting_point }} (arrive {{ tour.arrival_minutes_before }} minutes before departure)</td></tr>
+              {% if tour.best_for %}<tr><th scope="row">Best suited for</th><td>{{ tour.best_for }}</td></tr>{% endif %}
+              <tr><th scope="row">Last verified</th><td>{{ tour.last_verified_at|date:"j M Y" }}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <section class="activity-section"><h2>Included and excluded</h2><div class="activity-inclusions">
         <div><h3>Included</h3><ul>{% for text in tour.inclusion_items %}<li>{{ text }}</li>{% endfor %}</ul></div>
@@ -61,9 +79,9 @@
       {% if tour.best_for %}<section class="activity-section"><h2>Who this ride suits</h2><p>{{ tour.best_for }}</p></section>{% endif %}
       {% if tour.faqs.exists %}<section class="activity-section"><h2>Questions about this ride</h2>{% for faq in tour.faqs.all %}<details class="activity-faq"><summary>{{ faq.question }}</summary><p>{{ faq.answer }}</p></details>{% endfor %}</section>{% endif %}
     </div>
-    <aside class="activity-booking-aside nova-card"><span class="nova-kicker">Plan with Nova</span><h2>Your lake day</h2>{% include 'tours/partials/rate_summary.html' %}<p>Our team will confirm availability, departure point and your full quote.</p><a class="nova-btn-primary" href="{{ tour.enquiry_url }}" data-nova-event="activity_check_availability_click" data-cta-location="sidebar">Check availability</a><a class="nova-btn-secondary" href="{{ tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="sidebar">Ask on WhatsApp</a>{% if site_settings.response_expectation %}<p>{{ site_settings.response_expectation }}</p>{% endif %}<p><a href="tel:{{ site_settings.phone_e164 }}" data-nova-event="activity_phone_click">{{ site_settings.phone_display }}</a></p></aside>
+    <aside class="activity-booking-aside nova-card"><span class="nova-kicker">Plan with Nova</span><h2>Your lake day</h2>{% include 'tours/partials/rate_summary.html' %}<p>Our team will confirm availability, departure point and your full quote.</p><a class="nova-btn-primary" href="{{ tour.enquiry_url }}" data-nova-event="activity_check_availability_click" data-cta-location="sidebar">Check availability</a><a class="nova-btn-secondary" href="{{ attributed_whatsapp_url|default:tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="sidebar">Ask on WhatsApp</a>{% if site_settings.response_expectation %}<p>{{ site_settings.response_expectation }}</p>{% endif %}<p><a href="tel:{{ site_settings.phone_e164 }}" data-nova-event="activity_phone_click">{{ site_settings.phone_display }}</a></p></aside>
   </div></section>
   <section class="nova-section activity-related"><div class="nova-shell"><h2 class="nova-title-section">Explore related rides</h2><div class="activity-grid">{% for tour in related_tours %}{% include 'tours/partials/activity_card.html' with related=True %}{% endfor %}</div></div></section>
-  <div class="activity-mobile-actions" aria-label="Activity booking actions"><a class="nova-btn-primary" href="{{ tour.enquiry_url }}" data-nova-event="activity_check_availability_click" data-cta-location="sticky">Check availability</a><a class="nova-btn-secondary" href="{{ tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="sticky">WhatsApp</a></div>
+  <div class="activity-mobile-actions" aria-label="Activity booking actions"><a class="nova-btn-primary" href="{{ tour.enquiry_url }}" data-nova-event="activity_check_availability_click" data-cta-location="sticky">Check availability</a><a class="nova-btn-secondary" href="{{ attributed_whatsapp_url|default:tour.whatsapp_url }}" target="_blank" rel="noopener" data-nova-event="activity_whatsapp_click" data-cta-location="sticky">WhatsApp</a></div>
 </div>
 {% endblock %}

@@ -1,6 +1,13 @@
 from urllib.parse import urlencode, urlsplit, urlunsplit, parse_qsl
 
-CAMPAIGNS = {'profile': 'gbp_profile', 'activity': 'gbp_activities', 'post': 'gbp_posts', 'things_to_do': 'things_to_do'}
+CAMPAIGNS = {
+    'website': 'gbp_website',
+    'profile': 'gbp_profile',
+    'activity': 'gbp_activities',
+    'post': 'gbp_posts',
+    'google_activities': 'google_activities',
+    'things_to_do': 'things_to_do',
+}
 UTM_KEYS = ('utm_source', 'utm_medium', 'utm_campaign', 'utm_content')
 
 
@@ -22,3 +29,4 @@ class AttributionMiddleware:
             request.session['nova_attribution'] = {key: request.GET.get(key, '')[:100] for key in UTM_KEYS}
         request.nova_attribution = request.session.get('nova_attribution', {})
         return self.get_response(request)
+

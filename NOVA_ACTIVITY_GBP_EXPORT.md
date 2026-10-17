@@ -1,6 +1,6 @@
 # Nova Google activity export and readiness
 
-Generated 2026-10-09.
+Generated 2026-10-17.
 
 Internal candidates only. BLOCKED rows must not be published. Six gallery photos is a Nova editorial requirement; channel acceptance is recorded separately. No external profile or feed was changed.
 

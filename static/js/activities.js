@@ -23,7 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
   try { preference = localStorage.getItem('nova_analytics'); } catch (_) {}
   const properties = () => {
     const page = document.querySelector('[data-activity-slug]');
-    const data = {activity_slug: page?.dataset.activitySlug || '', tour_type: page?.dataset.tourType || ''};
+    const data = {
+      activity_slug: page?.dataset.activitySlug || '',
+      tour_type: page?.dataset.tourType || '',
+      source_surface: config?.dataset.sourceSurface || '',
+      utm_campaign: config?.dataset.utmCampaign || '',
+      utm_content: config?.dataset.utmContent || '',
+    };
     if (page?.dataset.durationMinutes) data.duration_minutes = Number(page.dataset.durationMinutes);
     if (page?.dataset.priceCurrency) data.price_currency = page.dataset.priceCurrency;
     if (page?.dataset.pricingModel) data.pricing_model = page.dataset.pricingModel;
@@ -34,7 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.novaTrack = (name, details = {}) => {
     if (!active || !window.gtag) return;
     // Only code-defined non-personal fields enter analytics. Never copy hrefs, form values or WhatsApp messages.
-    const allowed = ['activity_slug', 'related_activity_slug', 'service_slug', 'cta_location', 'image_index', 'tour_type', 'duration_minutes', 'price_currency', 'price_value', 'pricing_model'];
+    const allowed = [
+      'activity_slug', 'related_activity_slug', 'service_slug', 'cta_location',
+      'image_index', 'tour_type', 'duration_minutes', 'price_currency',
+      'price_value', 'pricing_model', 'source_surface', 'utm_campaign', 'utm_content',
+    ];
     const safe = Object.fromEntries(Object.entries(details).filter(([key]) => allowed.includes(key)));
     window.gtag('event', name, {...properties(), ...safe});
   };
@@ -77,6 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
       activity_slug: link.dataset.activitySlug || properties().activity_slug,
       related_activity_slug: link.dataset.relatedActivitySlug || '',
       service_slug: link.dataset.serviceSlug || '', cta_location: link.dataset.ctaLocation || 'content'});
+  });
+  document.addEventListener('change', event => {
+    const form = event.target.closest('form[data-nova-event="hotel_access_check"]');
+    if (form) window.novaTrack('hotel_access_check', {cta_location: 'hotel_checker'});
   });
   document.body.addEventListener('booking_enquiry_submit', event => {
     window.novaTrack('booking_enquiry_submit', {activity_slug: event.detail?.activity_slug || ''});

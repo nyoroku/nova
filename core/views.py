@@ -4,7 +4,7 @@ from partners.models import HotelPartner
 from stays.models import AccommodationProperty
 from packages.models import Package
 from content.models import Captain, QuestionAnswer, Testimonial, GuideArticle, ReviewSnapshot
-from .models import SiteSettings
+from .models import SiteSettings, BusinessFact, ExternalFee
 from tours.pricing import valid_on
 from django.utils import timezone
 
@@ -17,7 +17,7 @@ class HomeView(TemplateView):
         context['settings'] = settings_obj
         context['featured_tours'] = Tour.objects.published().order_by('order')[:4]
         context['all_tours'] = Tour.objects.published().order_by('order')
-        context['hotel_partners'] = HotelPartner.objects.filter(is_active=True).prefetch_related('service_points')[:6]
+        context['hotel_partners'] = HotelPartner.objects.filter(is_active=True).select_related('access_info').prefetch_related('service_points')[:6]
         context['featured_stays'] = AccommodationProperty.objects.filter(is_active=True).order_by('order')[:3]
         context['featured_packages'] = Package.objects.filter(is_active=True).order_by('order')[:3]
         context['captain'] = Captain.objects.filter(is_active=True, verified_at__isnull=False).exclude(verification_evidence='').first()
@@ -26,6 +26,7 @@ class HomeView(TemplateView):
         context['quick_faqs'] = QuestionAnswer.objects.filter(is_active=True).order_by('order')[:8]
         context['latest_notes'] = GuideArticle.objects.filter(is_active=True).order_by('-published_at')[:4]
         context['review_snapshot'] = ReviewSnapshot.objects.filter(is_current=True).exclude(verification_evidence='').exclude(source_url='').first()
+        context['business_facts'] = BusinessFact.objects.filter(active=True)
         return context
 
 
@@ -46,7 +47,6 @@ class PricesView(TemplateView):
         context['settings'] = SiteSettings.get_solo()
         context['tours'] = Tour.objects.published().prefetch_related('rates__option').order_by('order')
         context['packages'] = Package.objects.filter(is_active=True).order_by('order')
-        from .models import ExternalFee
         from partners.models import HotelAccess
         context['crescent_fees'] = ExternalFee.objects.filter(
             is_active=True,
@@ -55,6 +55,7 @@ class PricesView(TemplateView):
         context['all_external_fees'] = valid_on(ExternalFee.objects.all(), timezone.localdate()).order_by('provider_name', 'visitor_type')
         context['hotel_accesses'] = HotelAccess.objects.filter(is_published=True).select_related('property').order_by('property__order', 'property__name')
         context['review_snapshot'] = ReviewSnapshot.objects.filter(is_current=True).exclude(verification_evidence='').exclude(source_url='').first()
+        context['business_facts'] = BusinessFact.objects.filter(active=True)
         return context
 
 
@@ -72,6 +73,7 @@ class ContactView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['settings'] = SiteSettings.get_solo()
+        context['business_facts'] = BusinessFact.objects.filter(active=True)
         return context
 
 

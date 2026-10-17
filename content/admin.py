@@ -16,8 +16,8 @@ class ArticleSourceInline(admin.TabularInline):
 @admin.register(GuideArticle)
 class GuideArticleAdmin(admin.ModelAdmin):
     readonly_fields = ('previous_price_copy',)
-    list_display = ('title', 'category', 'author', 'is_featured', 'is_active', 'verified_at')
-    list_filter = ('category', 'is_featured', 'is_active')
+    list_display = ('title', 'category', 'related_activity', 'author', 'is_featured', 'is_active', 'verified_at')
+    list_filter = ('category', 'related_activity', 'is_featured', 'is_active')
     search_fields = ('title', 'excerpt', 'body')
     prepopulated_fields = {'slug': ('title',)}
     inlines = [ArticleSourceInline]

@@ -74,6 +74,20 @@ class SiteSettings(models.Model):
     def longitude(self):
         return self.standard_launch_lng
 
+    @property
+    def gbp_website_url(self):
+        from django.conf import settings
+        from tours.attribution import campaign_url
+        return campaign_url(settings.SITE_URL.rstrip('/') + '/', 'website', 'home')
+
+    @property
+    def same_as_urls(self):
+        urls = []
+        for url in (self.facebook_url, self.instagram_url, self.tiktok_url, self.google_business_profile_url, self.gbp_url):
+            if url and url.startswith('https://') and url not in urls:
+                urls.append(url)
+        return urls
+
     class Meta:
         verbose_name = "Site Settings"
         verbose_name_plural = "Site Settings"
@@ -117,7 +131,20 @@ class ExternalFee(models.Model):
     source_name = models.CharField(max_length=150, blank=True, default="Official Conservation Schedule")
     last_verified_at = models.DateField(null=True, blank=True, help_text='Date the external fee was actually checked')
     is_active = models.BooleanField(default=True)
+    disclaimer = models.CharField(
+        max_length=300,
+        blank=True,
+        default="Paid directly to the attraction provider; separate from Nova boat rates unless explicitly bundled."
+    )
     notes = models.TextField(blank=True)
+
+    @property
+    def verified_at(self):
+        return self.last_verified_at
+
+    @property
+    def active(self):
+        return self.is_active
 
     class Meta:
         verbose_name = "External Fee"
@@ -138,4 +165,79 @@ class ExternalFee(models.Model):
             errors['effective_until'] = 'End date must follow the start date.'
         if errors:
             raise ValidationError(errors)
+
+
+class BusinessFact(models.Model):
+    """
+    Canonical key-value record for business facts (NAP, hours, coordinates,
+    WhatsApp, website URL) with explicit verification metadata (§3.2).
+    """
+    key = models.SlugField(max_length=100, unique=True)
+    public_label = models.CharField(max_length=150)
+    value = models.TextField()
+    last_verified_at = models.DateField(null=True, blank=True)
+    verification_source = models.CharField(max_length=255, blank=True)
+    active = models.BooleanField(default=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['key']
+        verbose_name = "Business Fact"
+        verbose_name_plural = "Business Facts"
+
+    def __str__(self):
+        return f"{self.public_label}: {self.value}"
+
+    @property
+    def is_stale(self):
+        if not self.last_verified_at:
+            return True
+        return (timezone.localdate() - self.last_verified_at).days > 180
+
+
+class ClaimEvidence(models.Model):
+    """
+    Proof record for sensitive operational, safety, or marketing claims (§3.2).
+    """
+    EVIDENCE_TYPES = [
+        ('OFFICIAL_TARIFF', 'Official Tariff Schedule'),
+        ('LICENCE', 'Government Licence / Permit'),
+        ('HOTEL_WRITTEN', 'Hotel Written Confirmation'),
+        ('GBP_SNAPSHOT', 'Google Business Profile Snapshot'),
+        ('OPERATIONAL_LOG', 'Operational Field Verification'),
+    ]
+
+    claim_key = models.SlugField(max_length=100, unique=True)
+    claim_text = models.TextField()
+    evidence_type = models.CharField(max_length=40, choices=EVIDENCE_TYPES, default='OPERATIONAL_LOG')
+    evidence_reference = models.CharField(max_length=255, blank=True)
+    verified_at = models.DateField(null=True, blank=True)
+    expires_at = models.DateField(null=True, blank=True)
+    publishable = models.BooleanField(default=False)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['claim_key']
+        verbose_name = "Claim Evidence"
+        verbose_name_plural = "Claim Evidence Records"
+
+    def __str__(self):
+        return f"{self.claim_key} ({'Publishable' if self.publishable else 'Internal'})"
+
+    @property
+    def is_stale(self):
+        today = timezone.localdate()
+        if not self.verified_at:
+            return True
+        if self.expires_at and self.expires_at < today:
+            return True
+        return (today - self.verified_at).days > 180
+
+    def clean(self):
+        from django.core.exceptions import ValidationError
+        if self.publishable and (not self.verified_at or not self.evidence_reference):
+            raise ValidationError("Publishable claims require both a verification date and an evidence reference.")
+        if self.verified_at and self.expires_at and self.expires_at < self.verified_at:
+            raise ValidationError({'expires_at': "Expiry date must follow the verification date."})
+
 

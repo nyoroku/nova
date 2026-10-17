@@ -20,6 +20,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
     
+    # Machine & SEO Discovery Endpoints (§8)
+    path('', include('seo.urls')),
+
     # Nova Primary Architecture (§9)
     path('', include('core.urls')),
     path('boat-rides/', include('tours.urls')),
@@ -37,7 +40,6 @@ urlpatterns = [
     path('faq/', RedirectView.as_view(url='/questions/', permanent=True)),
 
     path("tinymce/", include("tinymce.urls")),
-    path('', include('seo.urls')),
 
     # Sitemaps (XML for Google Search Console & Search Engines)
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),

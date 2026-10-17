@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
 from django.urls import reverse
 from django.views.generic import ListView, DetailView, View
-from .models import Tour, ServiceIntent
+from .models import Tour, ServiceIntent, GBPService
 from .pricing import quote_activity, valid_on
 from core.models import SiteSettings, ExternalFee
 from partners.models import HotelAccess
@@ -56,13 +56,45 @@ class TourDetailView(DetailView):
         context['related_tours'] = Tour.objects.published().exclude(pk=tour.pk).order_by('order')[:3]
         context['external_fees'] = valid_on(ExternalFee.objects.filter(touroption__tour=tour).distinct(), timezone.localdate())
         context['readiness'] = tour.publication_issues() if context['preview'] else []
+        attr = getattr(self.request, 'nova_attribution', None) or {}
+        context['attributed_whatsapp_url'] = tour.get_whatsapp_url(
+            source_surface=attr.get('source_surface', ''),
+            campaign=attr.get('utm_campaign', ''),
+            content=attr.get('utm_content', ''),
+        )
         config = SiteSettings.get_solo()
-        graph = [{'@type': 'TouristTrip', 'name': tour.name, 'description': tour.summary,
-                  'url': tour.canonical_url, 'provider': {'@type': 'LocalBusiness', 'name': config.business_name, 'url': settings.SITE_URL}},
-                 {'@type': 'BreadcrumbList', 'itemListElement': [
-                     {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': settings.SITE_URL + '/'},
-                     {'@type': 'ListItem', 'position': 2, 'name': 'Boat Rides', 'item': settings.SITE_URL + reverse('tours:tour_list')},
-                     {'@type': 'ListItem', 'position': 3, 'name': tour.name, 'item': tour.canonical_url}]}]
+        trip_node = {
+            '@type': 'TouristTrip',
+            'name': tour.name,
+            'alternateName': tour.effective_branded_name,
+            'description': tour.direct_answer or tour.summary,
+            'url': tour.canonical_url,
+            'provider': {'@type': 'LocalBusiness', 'name': config.business_name, 'url': settings.SITE_URL},
+        }
+        if tour.audience_tags:
+            trip_node['touristType'] = [t.strip() for t in tour.audience_tags.split(',') if t.strip()]
+        elif tour.best_for:
+            trip_node['touristType'] = tour.best_for
+        start_rate = tour.starting_rate
+        if start_rate and start_rate.has_exact_price:
+            trip_node['offers'] = {
+                '@type': 'Offer',
+                'price': str(start_rate.amount),
+                'priceCurrency': start_rate.currency,
+                'availability': 'https://schema.org/InStock',
+                'url': tour.canonical_url,
+            }
+        graph = [
+            trip_node,
+            {
+                '@type': 'BreadcrumbList',
+                'itemListElement': [
+                    {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': settings.SITE_URL + '/'},
+                    {'@type': 'ListItem', 'position': 2, 'name': 'Boat Rides', 'item': settings.SITE_URL + reverse('tours:tour_list')},
+                    {'@type': 'ListItem', 'position': 3, 'name': tour.name, 'item': tour.canonical_url},
+                ],
+            },
+        ]
         context['activity_schema'] = json.dumps({'@context':'https://schema.org', '@graph':graph}).replace('<', '\\u003c')
         return context
 
@@ -114,4 +146,5 @@ class ServicesView(ListView):
                 group['items'].append(service)
                 group['destinations'].add(destination)
         context['service_groups'] = list(groups.values())
+        context['gbp_services'] = GBPService.objects.filter(is_active=True).select_related('activity').order_by('number', 'name')
         return context

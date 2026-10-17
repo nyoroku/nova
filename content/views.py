@@ -28,11 +28,14 @@ class JournalDetailView(DetailView):
     context_object_name = 'article'
 
     def get_object(self, queryset=None):
-        return get_object_or_404(GuideArticle, slug=self.kwargs['slug'], is_active=True)
+        return get_object_or_404(GuideArticle.objects.select_related('related_activity'), slug=self.kwargs['slug'], is_active=True)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        from tours.models import Tour
         context['related_articles'] = GuideArticle.objects.filter(is_active=True).exclude(pk=self.object.pk)[:3]
+        context['target_activity'] = self.object.target_activity
+        context['published_tours'] = Tour.objects.published().prefetch_related('rates__option').order_by('order')[:6]
         return context
 
 

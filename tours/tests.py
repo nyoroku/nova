@@ -179,3 +179,208 @@ class PricingAndCatalogueTests(TestCase):
         response=self.client.get(self.tour.get_absolute_url())
         self.assertContains(response,'Request an individual quote')
         self.assertNotContains(response,'KES 4500')
+
+
+class AeoGeoGbpMasterTests(TestCase):
+    PUBLISHED_SLUGS = [
+        'classic-lake-safari',
+        'hippo-bird-safari',
+        'crescent-island',
+        'sunset-cruise',
+        'private-charter',
+        'family-ride',
+        'photography-birding',
+        'groups-events',
+    ]
+
+    def setUp(self):
+        self.today = timezone.localdate()
+        Tour.objects.filter(slug__in=self.PUBLISHED_SLUGS).update(
+            status='PUBLISHED',
+            is_active=True,
+            legacy_publication=True,
+        )
+        for tour in Tour.objects.filter(slug__in=self.PUBLISHED_SLUGS):
+            option, _ = TourOption.objects.get_or_create(
+                tour=tour,
+                name='Standard Private Boat',
+                defaults={
+                    'mode': 'PRIVATE',
+                    'duration_minutes': tour.duration_minutes or 60,
+                    'min_guests': 1,
+                    'max_guests': 7,
+                    'is_active': True,
+                },
+            )
+            ExperienceRate.objects.get_or_create(
+                experience=tour,
+                option=option,
+                name='Standard Private Rate',
+                defaults={
+                    'pricing_model': 'PER_BOAT',
+                    'currency': 'KES',
+                    'amount': Decimal('4500'),
+                    'duration_minutes': option.duration_minutes,
+                    'min_guests': 1,
+                    'max_guests': 7,
+                    'effective_from': self.today,
+                    'is_active': True,
+                },
+            )
+
+    def test_overlapping_active_rate_validation(self):
+        tour = Tour.objects.get(slug='classic-lake-safari')
+        option = tour.options.filter(is_active=True).first()
+        existing = tour.rates.filter(option=option, is_active=True).first()
+        duplicate = ExperienceRate(
+            experience=tour,
+            option=option,
+            name='Conflicting Duplicate Rate',
+            pricing_model=existing.pricing_model,
+            currency=existing.currency,
+            amount=existing.amount + Decimal('500'),
+            audience_type=existing.audience_type,
+            duration_minutes=existing.duration_minutes,
+            min_guests=existing.min_guests,
+            max_guests=existing.max_guests,
+            effective_from=self.today,
+            is_active=True,
+        )
+        with self.assertRaises(ValidationError):
+            duplicate.full_clean()
+
+    def test_gbp_services_scorecard_and_utm_urls(self):
+        from .models import GBPService, GBPQueryScorecard, GBPPostTheme
+        from core.models import SiteSettings, BusinessFact, ClaimEvidence
+
+        self.assertEqual(GBPService.objects.filter(is_active=True).count(), 16)
+        for svc in GBPService.objects.filter(is_active=True):
+            svc.full_clean()
+            resp = self.client.get(svc.destination_url)
+            self.assertEqual(resp.status_code, 200, f"GBPService {svc.name} destination {svc.destination_url} failed")
+
+        bad_svc = GBPService(
+            number=99,
+            name='Boat Ride 0701215295 Special',
+            slug='bad-svc',
+            description='Invalid service with phone number in name',
+            primary_cluster='Core',
+        )
+        with self.assertRaises(ValidationError):
+            bad_svc.full_clean()
+
+        self.assertGreaterEqual(GBPQueryScorecard.objects.count(), 2)
+        self.assertEqual(GBPPostTheme.objects.filter(is_active=True).count(), 12)
+        self.assertGreaterEqual(BusinessFact.objects.filter(active=True).count(), 10)
+        self.assertGreaterEqual(ClaimEvidence.objects.filter(publishable=True).count(), 3)
+
+        settings_obj = SiteSettings.get_solo()
+        self.assertIn('utm_source=google', settings_obj.gbp_website_url)
+        self.assertIn('utm_medium=organic', settings_obj.gbp_website_url)
+        self.assertIn('utm_campaign=gbp_website', settings_obj.gbp_website_url)
+
+        classic = Tour.objects.get(slug='classic-lake-safari')
+        self.assertIn('utm_source=google', classic.gbp_booking_url)
+        self.assertIn('utm_medium=organic', classic.gbp_booking_url)
+        self.assertIn('utm_campaign=gbp_activities', classic.gbp_booking_url)
+        self.assertIn('utm_content=classic-lake-safari', classic.gbp_booking_url)
+
+    def test_machine_endpoints_parity_etag_and_draft_exclusion(self):
+        # 1. Index JSON
+        idx_resp = self.client.get('/activities/index.json')
+        self.assertEqual(idx_resp.status_code, 200)
+        self.assertIn('application/json', idx_resp['Content-Type'])
+        self.assertTrue(idx_resp.has_header('ETag'))
+        self.assertTrue(idx_resp.has_header('Last-Modified'))
+        idx_data = json.loads(idx_resp.content)
+        self.assertEqual(idx_data['count'], 8)
+        slugs_in_index = [a['slug'] for a in idx_data['activities']]
+        self.assertNotIn('sunrise-wildlife', slugs_in_index)
+        self.assertNotIn('full-lake-explorer', slugs_in_index)
+
+        # Conditional GET 304 check
+        etag = idx_resp['ETag']
+        not_mod = self.client.get('/activities/index.json', HTTP_IF_NONE_MATCH=etag)
+        self.assertEqual(not_mod.status_code, 304)
+
+        # 2. Activity JSON & Markdown parity with HTML
+        json_resp = self.client.get('/activities/classic-lake-safari.json')
+        self.assertEqual(json_resp.status_code, 200)
+        act_json = json.loads(json_resp.content)
+        self.assertEqual(act_json['slug'], 'classic-lake-safari')
+        self.assertEqual(act_json['branded_name'], 'Nova Classic Lake Safari')
+
+        md_resp = self.client.get('/activities/classic-lake-safari.md')
+        self.assertEqual(md_resp.status_code, 200)
+        self.assertIn('text/markdown', md_resp['Content-Type'])
+        md_text = md_resp.content.decode('utf-8')
+        self.assertIn(act_json['name'], md_text)
+        self.assertIn(act_json['rates'][0]['amount'], md_text)
+
+        alias_md_resp = self.client.get('/boat-rides/classic-lake-safari.md')
+        self.assertEqual(alias_md_resp.status_code, 200)
+        self.assertEqual(alias_md_resp.content, md_resp.content)
+
+        # 3. Draft activities must 404 on machine endpoints
+        self.assertEqual(self.client.get('/activities/sunrise-wildlife.json').status_code, 404)
+        self.assertEqual(self.client.get('/activities/sunrise-wildlife.md').status_code, 404)
+        self.assertEqual(self.client.get('/boat-rides/sunrise-wildlife.md').status_code, 404)
+
+    def test_llms_txt_and_hub_markdown_endpoints(self):
+        for route in [
+            '/llms.txt',
+            '/llms-full.txt',
+            '/.well-known/ai-catalog.json',
+            '/boat-rides.md',
+            '/prices.md',
+            '/services.md',
+            '/questions.md',
+            '/hotel-boat-rides.md',
+        ]:
+            resp = self.client.get(route)
+            self.assertEqual(resp.status_code, 200, f"Machine endpoint {route} failed")
+            text = resp.content.decode('utf-8')
+            self.assertNotIn('/boat-rides/sunrise-wildlife/', text)
+            self.assertNotIn('/boat-rides/full-lake-explorer/', text)
+
+        from content.models import GuideArticle
+        article = GuideArticle.objects.filter(is_active=True).first()
+        if article:
+            j_md = self.client.get(f'/journal/{article.slug}.md')
+            self.assertEqual(j_md.status_code, 200)
+            self.assertIn(article.title, j_md.content.decode('utf-8'))
+
+    def test_whatsapp_and_booking_attribution_from_gbp(self):
+        resp = self.client.get(
+            '/boat-rides/classic-lake-safari/?utm_source=google&utm_medium=gbp&utm_campaign=gbp_activities&utm_content=classic-lake-safari'
+        )
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn('gbp_activities', resp.content.decode('utf-8'))
+
+    def test_seo_aeo_regression_truth_layer_and_schema(self):
+        from content.models import GuideArticle
+        for tour in Tour.objects.published():
+            words = len((tour.direct_answer or '').split())
+            self.assertGreaterEqual(words, 35, f"{tour.slug} direct_answer too short ({words} words)")
+            self.assertLessEqual(words, 100, f"{tour.slug} direct_answer too long ({words} words)")
+            self.assertTrue(tour.branded_name)
+            self.assertTrue(tour.gbp_activity_name)
+
+        for route in ['/', '/boat-rides/', '/prices/', '/services/', '/hotel-boat-rides/', '/questions/', '/contact/']:
+            resp = self.client.get(route + '?utm_source=google&utm_medium=gbp')
+            self.assertEqual(resp.status_code, 200)
+            html = resp.content.decode('utf-8')
+            soup = BeautifulSoup(html, 'html.parser')
+            self.assertEqual(len(soup.find_all('h1')), 1, f"Route {route} must have exactly 1 h1")
+            canonical = soup.find('link', rel='canonical')['href']
+            self.assertNotIn('utm_', canonical)
+            self.assertNotIn('AEO TIMING GUIDE', html)
+            self.assertNotIn('AEO KNOWLEDGE BASE', html)
+            for script in soup.find_all('script', type='application/ld+json'):
+                parsed = json.loads(script.string)
+                self.assertTrue('@graph' in parsed or '@type' in parsed)
+
+        for article in GuideArticle.objects.filter(is_active=True):
+            self.assertIsNotNone(article.target_activity, f"GuideArticle {article.slug} missing target_activity")
+
+

@@ -1,6 +1,6 @@
 # Nova activity current-state inventory
 
-Generated 2026-10-09.
+Generated 2026-10-17.
 
 Existing URLs are preserved. Historical public products remain available while their checklist is completed. New products are drafts. Indexing status is unknown without Search Console.
 

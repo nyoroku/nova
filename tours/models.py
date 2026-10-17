@@ -18,6 +18,11 @@ class Tour(OptimizedImageMixin, models.Model):
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='DRAFT')
     legacy_publication = models.BooleanField(default=False, editable=False)
     internal_name = models.CharField(max_length=200, blank=True)
+    branded_name = models.CharField(max_length=200, blank=True, help_text="Optional Nova secondary label, e.g. Nova Classic Lake Safari")
+    gbp_activity_name = models.CharField(max_length=200, blank=True, help_text="Approved Google Business Profile Activity name")
+    primary_intent = models.CharField(max_length=120, blank=True, help_text="Primary query cluster / search intent")
+    audience_tags = models.CharField(max_length=255, blank=True, help_text="Comma-separated audience tags")
+    review_prompt = models.CharField(max_length=300, blank=True, help_text="Experience-specific honest feedback prompt for guests (§10.1)")
     legacy_body = models.TextField(blank=True, editable=False)
     duration_minutes = models.PositiveIntegerField(default=60)
     category = models.CharField(max_length=30, default='wildlife', choices=[
@@ -199,17 +204,53 @@ class Tour(OptimizedImageMixin, models.Model):
         return settings.SITE_URL.rstrip('/') + self.get_absolute_url()
 
     @property
+    def effective_branded_name(self):
+        if self.branded_name:
+            return self.branded_name
+        if self.internal_name:
+            return self.internal_name if self.internal_name.startswith('Nova') else f"Nova {self.internal_name}"
+        return ''
+
+    @property
+    def effective_gbp_activity_name(self):
+        return self.gbp_activity_name or self.name
+
+    @property
+    def short_answer(self):
+        return self.direct_answer or self.summary
+
+    @property
+    def gbp_activity_enabled(self):
+        return self.google_activity_enabled
+
+    @property
+    def last_verified_at(self):
+        return self.operational_verified_at
+
+    @property
+    def gbp_booking_url(self):
+        from .attribution import campaign_url
+        return campaign_url(self.canonical_url, 'activity', self.slug)
+
+    @property
     def enquiry_url(self):
         return reverse('bookings:book') + '?tour=' + self.slug
 
-    @property
-    def whatsapp_url(self):
+    def get_whatsapp_url(self, source_surface='', campaign='', content=''):
         from urllib.parse import urlencode
         from core.models import SiteSettings
-        message = (f"Hi Nova Boat Rides Naivasha, I'd like to enquire about {self.name}. "
+        attr_note = ''
+        if campaign or source_surface:
+            ref_parts = [p for p in (source_surface, campaign, content or self.slug) if p]
+            attr_note = f"\nSource ref: {' / '.join(ref_parts)}"
+        message = (f"Hi Nova Boat Rides Naivasha, I'd like to enquire about {self.name} ({self.slug}). "
                    'Preferred date: \nPreferred time: \nAdults: \nChildren: \nHotel / starting location: \n'
-                   'Please confirm availability and total price.')
+                   f'Please confirm availability and total price.{attr_note}')
         return 'https://wa.me/' + SiteSettings.get_solo().whatsapp_number + '?' + urlencode({'text': message})
+
+    @property
+    def whatsapp_url(self):
+        return self.get_whatsapp_url()
 
     def publication_issues(self, google=False):
         from .readiness import publication_issues
@@ -317,6 +358,24 @@ class ExperienceRate(models.Model):
         if self.option and (self.option.tour_id != self.experience_id or self.duration_minutes != self.option.duration_minutes
                             or self.min_guests != self.option.min_guests or self.max_guests != self.option.max_guests):
             errors['option'] = 'Rate tour, duration and guest bounds must match its booking option.'
+        if self.is_active and self.experience_id:
+            qs = ExperienceRate.objects.filter(
+                experience_id=self.experience_id,
+                option_id=self.option_id,
+                currency=self.currency,
+                audience_type=self.audience_type,
+                pricing_model=self.pricing_model,
+                duration_minutes=self.duration_minutes,
+                is_active=True,
+            )
+            if self.pk:
+                qs = qs.exclude(pk=self.pk)
+            if self.effective_until:
+                qs = qs.filter(effective_from__lte=self.effective_until)
+            if self.effective_from:
+                qs = qs.filter(models.Q(effective_until__isnull=True) | models.Q(effective_until__gte=self.effective_from))
+            if qs.exists():
+                errors['effective_from'] = 'Conflicting active rate overlaps for the same experience, option, currency, audience and pricing model.'
         if errors:
             raise ValidationError(errors)
 
@@ -529,3 +588,151 @@ class AddOn(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.currency} {self.amount:.0f})"
+
+
+class GBPService(models.Model):
+    """
+    Canonical 16 Google Business Profile Services (§5.5) with approved copy,
+    query cluster, wave priority, and website landing-page mapping.
+    """
+    number = models.PositiveSmallIntegerField(unique=True)
+    name = models.CharField(max_length=180, unique=True)
+    slug = models.SlugField(max_length=180, unique=True)
+    description = models.TextField()
+    primary_cluster = models.CharField(max_length=120)
+    wave = models.PositiveSmallIntegerField(default=1)
+    activity = models.ForeignKey(Tour, null=True, blank=True, related_name='gbp_services', on_delete=models.SET_NULL)
+    destination_name = models.CharField(max_length=60, blank=True, help_text='Named Django route if mapping to a hub')
+    show_price_in_gbp = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    excluded_reason = models.CharField(max_length=255, blank=True)
+    last_verified_at = models.DateField(null=True, blank=True)
+
+    class Meta:
+        ordering = ['number']
+        verbose_name = "GBP Canonical Service"
+        verbose_name_plural = "GBP Canonical Services"
+
+    def __str__(self):
+        return f"#{self.number} {self.name}"
+
+    @property
+    def destination_url(self):
+        if self.activity_id:
+            if self.activity.is_active and self.activity.status == 'PUBLISHED':
+                return self.activity.get_absolute_url()
+            return '/boat-rides/'
+        if self.destination_name:
+            return reverse(self.destination_name)
+        return '/boat-rides/'
+
+    @property
+    def destination(self):
+        return self.destination_url
+
+    @property
+    def service_name(self):
+        return self.name
+
+    @property
+    def gbp_category_name(self):
+        return self.primary_cluster
+
+    @property
+    def short_description(self):
+        return self.description
+
+    @property
+    def order(self):
+        return self.number
+
+    @property
+    def canonical_rate_display(self):
+        if self.show_price_in_gbp and self.activity_id and self.activity.starting_rate:
+            r = self.activity.starting_rate
+            return f"{r.currency} {r.amount:,.0f} {r.unit_label}"
+        return ''
+
+    def clean(self):
+        import re
+        if re.search(r'(?:KES|USD|Ksh|\$|\+254|07\d{8}|\d{7,})', self.name, re.I):
+            raise ValidationError({'name': 'GBP service names must not contain phone numbers or prices (§5.6).'})
+
+
+class GBPQueryScorecard(models.Model):
+    """
+    Monthly Google Business Profile query-breadth and AI visibility scorecard (§12.5).
+    Editable in Django Admin without code changes (§17.31).
+    """
+    period_label = models.CharField(max_length=60, unique=True, help_text="e.g. Baseline (Oct 2026), Month 1, Month 2, Month 3")
+    period_start = models.DateField(default=timezone.now)
+    unique_discovery_queries = models.PositiveIntegerField(default=0)
+    lake_naivasha_boat_ride_searches = models.PositiveIntegerField(default=0)
+    boat_ride_on_lake_naivasha_searches = models.PositiveIntegerField(default=0)
+    lake_naivasha_tour_searches = models.PositiveIntegerField(default=0)
+    tourist_attraction_naivasha_searches = models.PositiveIntegerField(default=0)
+    crescent_island_searches = models.PositiveIntegerField(default=0)
+    boat_safari_hippo_searches = models.PositiveIntegerField(default=0)
+    price_cost_searches = models.PositiveIntegerField(default=0)
+    family_couple_group_searches = models.PositiveIntegerField(default=0)
+    website_clicks = models.PositiveIntegerField(default=0)
+    calls = models.PositiveIntegerField(default=0)
+    directions = models.PositiveIntegerField(default=0)
+    tracked_whatsapp_clicks = models.PositiveIntegerField(default=0)
+    gsc_ai_impressions = models.PositiveIntegerField(default=0, help_text="Google Search Console Generative AI impressions")
+    bing_ai_citations = models.PositiveIntegerField(default=0, help_text="Bing Webmaster Tools AI Performance total citations")
+    notes = models.TextField(blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['period_start', 'pk']
+        verbose_name = "GBP & AI Monthly Scorecard"
+        verbose_name_plural = "GBP & AI Monthly Scorecards"
+
+    def __str__(self):
+        return f"{self.period_label} ({self.unique_discovery_queries} discovery queries)"
+
+
+class GBPPostTheme(models.Model):
+    """
+    Rotating 4-week GBP post cadence (§10.3) with UTM link generation.
+    """
+    week_number = models.PositiveSmallIntegerField(default=1)
+    post_order = models.PositiveSmallIntegerField(default=1)
+    theme_title = models.CharField(max_length=180)
+    slug = models.SlugField(max_length=180, unique=True)
+    target_cluster = models.CharField(max_length=120)
+    suggested_summary = models.TextField()
+    activity = models.ForeignKey(Tour, null=True, blank=True, on_delete=models.SET_NULL, related_name='gbp_post_themes')
+    destination_name = models.CharField(max_length=60, blank=True)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['week_number', 'post_order']
+        verbose_name = "GBP Post Cadence Theme"
+        verbose_name_plural = "GBP Post Cadence Themes"
+
+    def __str__(self):
+        return f"Week {self.week_number}.{self.post_order}: {self.theme_title}"
+
+    @property
+    def destination_url(self):
+        base = settings.SITE_URL.rstrip('/')
+        if self.activity_id and self.activity.is_active and self.activity.status == 'PUBLISHED':
+            path = self.activity.get_absolute_url()
+        elif self.destination_name:
+            path = reverse(self.destination_name)
+        else:
+            path = '/boat-rides/'
+        from .attribution import campaign_url
+        return campaign_url(base + path, 'post', self.slug)
+
+    @property
+    def title(self):
+        return self.theme_title
+
+    @property
+    def gbp_cta_url(self):
+        return self.destination_url
+
+

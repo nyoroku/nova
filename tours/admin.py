@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import (Tour, TourPriceTier, AddOn, ExperienceRate, TourOption, ActivityDetail,
-                     ItineraryStep, ActivityFAQ, ActivityImage, ServiceIntent)
+                     ItineraryStep, ActivityFAQ, ActivityImage, ServiceIntent,
+                     GBPService, GBPQueryScorecard, GBPPostTheme)
 from django.contrib import messages
 from django.utils.html import format_html
 
@@ -36,13 +37,20 @@ class TourPriceTierInline(admin.TabularInline):
 
 @admin.register(Tour)
 class TourAdmin(admin.ModelAdmin):
-    list_display = ('name', 'status', 'duration_minutes', 'operations_owner', 'is_active', 'readiness', 'preview')
+    list_display = (
+        'name', 'effective_branded_name', 'effective_gbp_activity_name', 'status',
+        'duration_minutes', 'google_activity_enabled', 'is_active',
+        'readiness', 'gbp_url_preview', 'machine_endpoints', 'preview'
+    )
     list_filter = ('status', 'category', 'is_active', 'google_activity_enabled')
-    search_fields = ('name', 'summary', 'best_for')
+    search_fields = ('name', 'branded_name', 'gbp_activity_name', 'primary_intent', 'summary', 'best_for')
     prepopulated_fields = {'slug': ('name',)}
     inlines = [OptionInline, ExperienceRateInline, DetailInline, ItineraryInline, FAQInline, ImageInline]
-    readonly_fields = ('readiness', 'google_checklist', 'legacy_publication', 'legacy_body', 'duration_hours', 'capacity', 'updated_at', 'preview')
-    actions = ['publish_verified', 'pause_activities']
+    readonly_fields = (
+        'readiness', 'google_checklist', 'gbp_url_preview', 'machine_endpoints',
+        'legacy_publication', 'legacy_body', 'duration_hours', 'capacity', 'updated_at', 'preview'
+    )
+    actions = ['publish_verified', 'pause_activities', 'run_consistency_audit']
 
     def readiness(self, obj):
         if not obj.pk:
@@ -52,6 +60,19 @@ class TourAdmin(admin.ModelAdmin):
 
     def google_checklist(self, obj):
         return '\n'.join(obj.publication_issues(google=True)) if obj.pk else 'Save as draft first.'
+
+    def gbp_url_preview(self, obj):
+        if not obj.pk:
+            return ''
+        return format_html('<a href="{}" target="_blank" rel="noopener">GBP UTM URL</a>', obj.gbp_booking_url)
+
+    def machine_endpoints(self, obj):
+        if not obj.pk:
+            return ''
+        return format_html(
+            '<a href="/activities/{}.json" target="_blank">JSON</a> · <a href="/activities/{}.md" target="_blank">MD</a>',
+            obj.slug, obj.slug
+        )
 
     def preview(self, obj):
         return format_html('<a href="{}?preview=1">Preview activity</a>', obj.get_absolute_url()) if obj.pk else ''
@@ -73,6 +94,26 @@ class TourAdmin(admin.ModelAdmin):
     @admin.action(description='Pause selected activities')
     def pause_activities(self, request, queryset):
         queryset.update(status='PAUSED')
+
+    @admin.action(description='Run canonical consistency & GBP readiness audit')
+    def run_consistency_audit(self, request, queryset):
+        from core.models import BusinessFact, ClaimEvidence
+        stale_facts = [f.key for f in BusinessFact.objects.filter(active=True) if f.is_stale]
+        stale_claims = [c.claim_key for c in ClaimEvidence.objects.filter(publishable=True) if c.is_stale]
+        if stale_facts or stale_claims:
+            self.message_user(
+                request,
+                f'Truth layer warning — stale facts: {stale_facts or "none"}; stale claims: {stale_claims or "none"}',
+                level=messages.WARNING,
+            )
+        for tour in queryset:
+            pub_issues = tour.publication_issues()
+            gbp_issues = tour.publication_issues(google=True)
+            if not pub_issues and not gbp_issues:
+                self.message_user(request, f'{tour.name}: Web & Google Activities checklists passed.', level=messages.SUCCESS)
+            else:
+                detail = '; '.join(dict.fromkeys(pub_issues + gbp_issues))
+                self.message_user(request, f'{tour.name}: {detail}', level=messages.WARNING)
 
 @admin.register(ExperienceRate)
 class ExperienceRateAdmin(admin.ModelAdmin):
@@ -113,4 +154,28 @@ class ServiceIntentAdmin(admin.ModelAdmin):
     list_display = ('name', 'level', 'category', 'activity', 'operational_verified_at', 'is_active')
     list_filter = ('level', 'category', 'is_active')
     prepopulated_fields = {'slug': ('name',)}
+
+@admin.register(GBPService)
+class GBPServiceAdmin(admin.ModelAdmin):
+    list_display = ('number', 'name', 'primary_cluster', 'wave', 'activity', 'destination_url', 'is_active', 'last_verified_at')
+    list_filter = ('primary_cluster', 'wave', 'is_active')
+    search_fields = ('name', 'description')
+
+@admin.register(GBPQueryScorecard)
+class GBPQueryScorecardAdmin(admin.ModelAdmin):
+    list_display = (
+        'period_label', 'period_start', 'unique_discovery_queries',
+        'lake_naivasha_boat_ride_searches', 'lake_naivasha_tour_searches',
+        'crescent_island_searches', 'website_clicks', 'tracked_whatsapp_clicks',
+        'gsc_ai_impressions', 'bing_ai_citations'
+    )
+    list_filter = ('period_start',)
+
+@admin.register(GBPPostTheme)
+class GBPPostThemeAdmin(admin.ModelAdmin):
+    list_display = ('week_number', 'post_order', 'theme_title', 'target_cluster', 'activity', 'destination_url', 'is_active')
+    list_filter = ('week_number', 'target_cluster', 'is_active')
+    search_fields = ('theme_title', 'suggested_summary')
+
+
 

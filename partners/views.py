@@ -10,7 +10,7 @@ class HotelHubView(ListView):
     context_object_name = 'partners'
 
     def get_queryset(self):
-        return HotelPartner.objects.filter(is_active=True).prefetch_related('service_points')
+        return HotelPartner.objects.filter(is_active=True).select_related('access_info').prefetch_related('service_points')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

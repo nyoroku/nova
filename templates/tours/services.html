@@ -2,6 +2,25 @@
 {% block meta_title %}Boat Ride & Tour Services in Naivasha | Nova{% endblock %}
 {% block meta_description %}Find the right Nova experience for wildlife, Crescent Island, private cruises, families, photography, groups and hotel departures.{% endblock %}
 {% block content %}<section class="nova-section nova-section-dark activity-hero"><div class="nova-shell"><span class="nova-kicker nova-kicker-lime">Choose by interest</span><h1 class="nova-title-hero">Boat Ride & Tour Services in Naivasha</h1><p>Start with what you want from your lake day. Each service leads to an actual activity or useful planning hub.</p></div></section>
-<section class="nova-section"><div class="nova-shell activity-grid">
-{% for group in service_groups %}<article class="nova-card activity-service-card"><h2>{{ group.name }}</h2><ul>{% for service in group.items %}<li><a href="{{ service.destination }}" data-nova-event="service_to_activity_click" data-service-slug="{{ service.slug }}">{{ service.name }}</a></li>{% endfor %}</ul></article>{% endfor %}
+{% if gbp_services %}
+<section class="nova-section"><div class="nova-shell">
+  <h2>Core Lake Naivasha Services</h2>
+  <p>Direct links to Nova’s verified boat rides, safari experiences, island transfers, and departure hubs.</p>
+  <div class="activity-grid">
+    {% for gbp in gbp_services %}
+    <article class="nova-card activity-service-card">
+      <span class="nova-kicker">{{ gbp.gbp_category_name }}</span>
+      <h3><a href="{{ gbp.destination }}" data-nova-event="service_to_activity_click" data-service-slug="{{ gbp.service_name|slugify }}">{{ gbp.service_name }}</a></h3>
+      <p>{{ gbp.short_description }}</p>
+      <p><a href="{{ gbp.destination }}" class="nova-btn-secondary" data-nova-event="service_to_activity_click" data-service-slug="{{ gbp.service_name|slugify }}">View details &rarr;</a></p>
+    </article>
+    {% endfor %}
+  </div>
+</div></section>
+{% endif %}
+<section class="nova-section activity-soft"><div class="nova-shell">
+  <h2>Browse by Activity Category</h2>
+  <div class="activity-grid">
+    {% for group in service_groups %}<article class="nova-card activity-service-card"><h3>{{ group.name }}</h3><ul>{% for service in group.items %}<li><a href="{{ service.destination }}" data-nova-event="service_to_activity_click" data-service-slug="{{ service.slug }}">{{ service.name }}</a></li>{% endfor %}</ul></article>{% endfor %}
+  </div>
 </div></section>{% endblock %}

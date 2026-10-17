@@ -99,6 +99,13 @@ class Command(BaseCommand):
         for service in ServiceIntent.objects.select_related('activity'):
             service_lines.append('| ' + ' | '.join(map(cell,[service.name,service.level,service.destination,
                 'Pending operations verification' if not service.operational_verified_at else 'Verified'])) + ' |')
+        from tours.models import GBPService, GBPPostTheme
+        service_lines += ['', '## Canonical 16 GBP Services', '| Category | Service Name | Short Description | Destination |', '|---|---|---|---|']
+        for gs in GBPService.objects.select_related('activity').order_by('number', 'name'):
+            service_lines.append('| ' + ' | '.join(map(cell, [gs.primary_cluster, gs.name, gs.description, gs.destination_url])) + ' |')
+        service_lines += ['', '## GBP 4-Week Post Cadence', '| Week | Cluster | Title | CTA URL |', '|---|---|---|---|']
+        for post in GBPPostTheme.objects.select_related('activity').order_by('week_number', 'post_order'):
+            service_lines.append('| ' + ' | '.join(map(cell, [f"{post.week_number}.{post.post_order}", post.target_cluster, post.theme_title, post.destination_url])) + ' |')
         documents = {'NOVA_ACTIVITY_CURRENT_STATE.md':inventory,'NOVA_ACTIVITY_PRICE_AUDIT.md':prices,
             'NOVA_ACTIVITY_GBP_EXPORT.md':gbp,'NOVA_ACTIVITY_FACT_MATRIX.md':matrix,'NOVA_ACTIVITY_SERVICE_EXPORT.md':service_lines,
             'NOVA_ACTIVITY_REDIRECT_MAP.md':['# Nova activity URL preservation','No activity slugs were changed. The eight legacy activity URLs remain canonical. Existing unrelated legacy redirects are retained.']}
