@@ -1,6 +1,6 @@
 # Nova activity price audit
 
-Generated 2026-10-17.
+Generated 2026-11-06.
 
 All customer quote paths use ExperienceRate linked to TourOption. Legacy TourPriceTier rows are retained for history but are not a public price fallback. Missing, ambiguous, expired or unsupported rates request a quote.
 

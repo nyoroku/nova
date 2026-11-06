@@ -24,7 +24,24 @@ class HomeView(TemplateView):
         context['captains'] = Captain.objects.filter(is_active=True, verified_at__isnull=False).exclude(verification_evidence='').order_by('order')
         context['testimonials'] = Testimonial.objects.filter(is_active=True).exclude(verification_evidence='')[:6]
         context['quick_faqs'] = QuestionAnswer.objects.filter(is_active=True).order_by('order')[:8]
-        context['latest_notes'] = GuideArticle.objects.filter(is_active=True).order_by('-published_at')[:4]
+        # Primary search-intent guide articles for 'boat rides naivasha'
+        primary_slugs = [
+            'lake-naivasha-boat-ride-price-guide',
+            'best-boat-rides-naivasha-operator-comparison',
+            'lake-naivasha-boat-ride-and-crescent-island-guide',
+            'lake-naivasha-boat-timing-sunrise-midday-sunset',
+            'lake-naivasha-boat-ride-review-2026',
+            'direct-hotel-jetty-boat-departures-lake-naivasha-resort-guide',
+        ]
+        guides_dict = {g.slug: g for g in GuideArticle.objects.filter(slug__in=primary_slugs, is_active=True)}
+        ordered_guides = [guides_dict[s] for s in primary_slugs if s in guides_dict]
+        if len(ordered_guides) < 6:
+            remaining = list(GuideArticle.objects.filter(is_active=True).exclude(slug__in=primary_slugs).order_by('-published_at')[:6 - len(ordered_guides)])
+            ordered_guides.extend(remaining)
+
+        context['featured_guides'] = ordered_guides
+        context['latest_notes'] = ordered_guides
+        context['total_guide_count'] = GuideArticle.objects.filter(is_active=True).count()
         context['review_snapshot'] = ReviewSnapshot.objects.filter(is_current=True).exclude(verification_evidence='').exclude(source_url='').first()
         context['business_facts'] = BusinessFact.objects.filter(active=True)
         return context
